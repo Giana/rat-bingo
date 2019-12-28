@@ -4,7 +4,7 @@ public class Board
 {
     private int size = 5;                                     // Length/width of bingo board
     private ArrayList<Integer> numbers = new ArrayList<>();   // Holds numbers on board
-    private Tile[][] map;                             // Holds all tiles in matrix
+    private Tile[][] map;                                     // Holds all tiles in matrix
 
     // Default constructor
     public Board()
@@ -88,6 +88,21 @@ public class Board
                 map[n][4] = new Tile(rand);
                 n++;
             }
+        }
+    }
+
+    // For testing purposes
+    public void printBoard()
+    {
+        System.out.println("  B   I   N   G   O  ");
+
+        for(int i = 0; i < size; i++)
+        {
+            for(int j = 0; j < size; j++)
+            {
+                System.out.printf("%3d ", map[i][j].getNumber());
+            }
+            System.out.println();
         }
     }
 }
