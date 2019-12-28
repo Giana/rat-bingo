@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Board
 {
+    // TODO: Remove numbers if it's unnecessary
     private int size = 5;                                     // Length/width of bingo board
     private ArrayList<Integer> numbers = new ArrayList<>();   // Holds numbers on board
     private Tile[][] map;                                     // Holds all tiles in matrix
@@ -12,6 +13,13 @@ public class Board
         map = new Tile[size][size];
         numbersGenerator();
     }
+
+    // Getters & setters
+    public int getSize() { return size; }
+
+    public ArrayList<Integer> getNumbers() { return numbers; }
+
+    public Tile[][] getMap() { return map; }
 
     // Randomly selects numbers for the board
     public void numbersGenerator()
