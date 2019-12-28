@@ -2,12 +2,14 @@ import java.util.ArrayList;
 
 public class Board
 {
-    private int size = 5;
+    private int size = 5;                                     // Length/width of bingo board
     private ArrayList<Integer> numbers = new ArrayList<>();   // Holds numbers on board
+    private Tile[][] map;                             // Holds all tiles in matrix
 
     // Default constructor
     public Board()
     {
+        map = new Tile[size][size];
         numbersGenerator();
     }
 
@@ -31,6 +33,7 @@ public class Board
             if(!numbers.contains(rand))
             {
                 numbers.add(rand);
+                map[i][0] = new Tile(rand);
                 i++;
             }
         }
@@ -43,6 +46,7 @@ public class Board
             if(!numbers.contains(rand))
             {
                 numbers.add(rand);
+                map[j][1] = new Tile(rand);
                 j++;
             }
         }
@@ -55,6 +59,7 @@ public class Board
             if(!numbers.contains(rand))
             {
                 numbers.add(rand);
+                map[k][2] = new Tile(rand);
                 k++;
             }
         }
@@ -67,6 +72,7 @@ public class Board
             if(!numbers.contains(rand))
             {
                 numbers.add(rand);
+                map[m][3] = new Tile(rand);
                 m++;
             }
         }
@@ -79,6 +85,7 @@ public class Board
             if(!numbers.contains(rand))
             {
                 numbers.add(rand);
+                map[n][4] = new Tile(rand);
                 n++;
             }
         }
