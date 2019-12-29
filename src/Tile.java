@@ -11,6 +11,8 @@ public class Tile
     public Tile(int number)
     {
         this.number = number;
+        called = false;
+        selected = false;
     }
 
     // Various getters & setters
