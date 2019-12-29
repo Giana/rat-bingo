@@ -27,4 +27,60 @@ public class Game
     public String getNpcState() { return npcState; }
 
     public void setNpcState(String npcState) { this.npcState = npcState; }
+
+    // Checks for a horizontal win
+    public String checkHorizontal(Board board)
+    {
+        int rowCount = 0;
+        String state = "N/A";
+
+        while(rowCount < 5)
+        {
+            for(int i = 0; i < 5; i++)
+            {
+                if(board.getMap()[rowCount][i].getCalled() == true &&
+                        board.getMap()[rowCount][i].getSelected() == true)
+                {
+                    state = "horizonal";
+                }
+                else
+                {
+                    state = "N/A";
+                    break;
+                }
+            }
+
+            rowCount++;
+        }
+
+        return state;
+    }
+
+    // Checks for a verticle win
+    public String checkVerticle(Board board)
+    {
+        int columnCount = 0;
+        String state = "N/A";
+
+        while(columnCount < 5)
+        {
+            for(int i = 0; i < 5; i++)
+            {
+                if(board.getMap()[i][columnCount].getCalled() == true &&
+                        board.getMap()[i][columnCount].getSelected() == true)
+                {
+                    state = "verticle";
+                }
+                else
+                {
+                    state = "N/A";
+                    break;
+                }
+            }
+
+            columnCount++;
+        }
+
+        return state;
+    }
 }
