@@ -34,24 +34,36 @@ public class Game
         int size = board.getSize();
         int rowCount = 0;
         String state = "N/A";
+        boolean status = false;
 
+        // For each row
         while(rowCount < size)
         {
-            for(int i = 0; i < size; i++)
+            // If a horizontal hasn't been confirmed yet
+            if(status == false)
             {
-                if(board.getMap()[rowCount][i].getCalled() &&
-                        board.getMap()[rowCount][i].getSelected())
+                for(int i = 0; i < size; i++)
                 {
-                    state = "horizonal";
+                    if(board.getMap()[rowCount][i].getCalled() &&
+                            board.getMap()[rowCount][i].getSelected())
+                    {
+                        state = "horizonal";
+                    }
+                    else
+                    {
+                        state = "N/A";
+                        break;
+                    }
                 }
-                else
-                {
-                    state = "N/A";
-                    break;
-                }
-            }
 
-            rowCount++;
+                // Found a horizontal
+                if(state == "horizontal")
+                {
+                    status = true;
+                }
+
+                rowCount++;
+            }
         }
 
         return state;
