@@ -1,11 +1,15 @@
-public class Tile
+ public class Tile
 {
     private int number;
     private boolean called;
     private boolean selected;
 
     // Default constructor
-    public Tile() { }
+    public Tile()
+    {
+        called = false;
+        selected = false;
+    }
 
     // Parameterized constructor
     public Tile(int number)
