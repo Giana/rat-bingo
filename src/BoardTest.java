@@ -8,46 +8,64 @@ public class BoardTest
     public void testBoard()
     {
         Board testBoard = new Board();
-        Tile testTile1 = testBoard.getMap()[0][0];
-        Tile testTile2 = testBoard.getMap()[0][1];
-        Tile testTile3 = testBoard.getMap()[0][2];
-        Tile testTile4 = testBoard.getMap()[0][3];
-        Tile testTile5 = testBoard.getMap()[0][4];
+        int size = testBoard.getSize();
 
-        // Tile 1
-        System.out.println("Tile[0][0] Value = " + testTile1.getNumber());
-        assertTrue(testTile1.getNumber() >= 1);
-        assertTrue(testTile1.getNumber() <= 15);
-        assertFalse(testTile1.getCalled());
-        assertFalse(testTile1.getSelected());
+        // Ranges for letters
+        int bMin = 1, bMax = 15;
+        int iMin = 16, iMax = 30;
+        int nMin = 31, nMax = 45;
+        int gMin = 46, gMax = 60;
+        int oMin = 61, oMax = 75;
 
-        // Tile 2
-        System.out.println("Tile[0][1] Value = " + testTile2.getNumber());
-        assertTrue(testTile2.getNumber() >= 16);
-        assertTrue(testTile2.getNumber() <= 30);
-        assertFalse(testTile2.getCalled());
-        assertFalse(testTile2.getSelected());
+        // Check Bs
+        for(int i = 0; i < size; i++)
+        {
+            Tile testTile = testBoard.getMap()[i][0];
+            assertTrue(testTile.getNumber() >= bMin);
+            assertTrue(testTile.getNumber() <= bMax);
+            assertFalse(testTile.getCalled());
+            assertFalse(testTile.getSelected());
+        }
 
-        // Tile 3
-        System.out.println("Tile[0][2] Value = " + testTile3.getNumber());
-        assertTrue(testTile3.getNumber() >= 31);
-        assertTrue(testTile3.getNumber() <= 45);
-        assertFalse(testTile3.getCalled());
-        assertFalse(testTile3.getSelected());
+        // Check Is
+        for(int i = 0; i < size; i++)
+        {
+            Tile testTile = testBoard.getMap()[i][1];
+            assertTrue(testTile.getNumber() >= iMin);
+            assertTrue(testTile.getNumber() <= iMax);
+            assertFalse(testTile.getCalled());
+            assertFalse(testTile.getSelected());
+        }
 
-        // Tile 4
-        System.out.println("Tile[0][3] Value = " + testTile4.getNumber());
-        assertTrue(testTile4.getNumber() >= 46);
-        assertTrue(testTile4.getNumber() <= 60);
-        assertFalse(testTile4.getCalled());
-        assertFalse(testTile4.getSelected());
+        // Check Ns
+        for(int i = 0; i < size; i++)
+        {
+            Tile testTile = testBoard.getMap()[i][2];
+            assertTrue(testTile.getNumber() >= nMin);
+            assertTrue(testTile.getNumber() <= nMax);
+            assertFalse(testTile.getCalled());
+            assertFalse(testTile.getSelected());
+        }
 
-        // Tile 5
-        System.out.println("Tile[0][4] Value = " + testTile5.getNumber());
-        assertTrue(testTile5.getNumber() >= 61);
-        assertTrue(testTile5.getNumber() <= 75);
-        assertFalse(testTile5.getCalled());
-        assertFalse(testTile5.getSelected());
+        // Check Gs
+        for(int i = 0; i < size; i++)
+        {
+            Tile testTile = testBoard.getMap()[i][3];
+            assertTrue(testTile.getNumber() >= gMin);
+            assertTrue(testTile.getNumber() <= gMax);
+            assertFalse(testTile.getCalled());
+            assertFalse(testTile.getSelected());
+        }
+
+        // Check Os
+        for(int i = 0; i < size; i++)
+        {
+            Tile testTile = testBoard.getMap()[i][4];
+            assertTrue(testTile.getNumber() >= oMin);
+            assertTrue(testTile.getNumber() <= oMax);
+            assertFalse(testTile.getCalled());
+            assertFalse(testTile.getSelected());
+        }
 
         assertEquals(5, testBoard.getSize());
     }
