@@ -174,50 +174,17 @@ public class Game
     // Check for an X win
     public String checkX(Board board)
     {
-        int size = board.getSize();
-        int j = 4;
-        String state = "N/A";
-        String rightState = "N/A";
-        String leftState = "N/A";
+        String state = checkDiagonal(board);
 
-        // Check from top left
-        for(int i = 0; i < size; i++)
+        // Two diagonals found (an X)
+        if(state == "diagonalLR")
         {
-            if(board.getMap()[i][i].getCalled() &&
-                    board.getMap()[i][i].getSelected())
-            {
-                leftState = "diagonal";
-            }
-            else
-            {
-                leftState = "N/A";
-                break;
-            }
+            return "x";
         }
-
-        // Check from top right
-        for(int i = 0; i < size; i++)
+        else
         {
-            if(board.getMap()[i][j].getCalled() &&
-                    board.getMap()[i][j].getSelected())
-            {
-                rightState = "diagonal";
-                j--;
-            }
-            else
-            {
-                rightState = "N/A";
-                break;
-            }
+            return "N/A";
         }
-
-        // Check for X conditions
-        if(leftState == "diagonal" && rightState == "diagonal")
-        {
-            state = "x";
-        }
-
-        return state;
     }
 
     // Check for a four corners win
