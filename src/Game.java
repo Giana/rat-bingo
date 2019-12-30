@@ -191,7 +191,7 @@ public class Game
     public String checkCorners(Board board)
     {
         int lowerBound = 0;
-        int upperBound = board.getSize();
+        int upperBound = (board.getSize() - 1);
         String state = "N/A";
 
         if(board.getMap()[lowerBound][lowerBound].getCalled() &&

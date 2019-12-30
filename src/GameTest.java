@@ -204,4 +204,28 @@ public class GameTest
 
         assertEquals("x", testGame.checkX(testBoard));
     }
+
+    @Test // Test checkCorners()
+    public void checkCornersTest()
+    {
+        Game testGame = new Game();
+        Board testBoard = testGame.getPlayerBoard();
+        int lowerBound = 0;
+        int upperBound = (testBoard.getSize() - 1);
+
+        // Check default
+        assertEquals("N/A", testGame.checkX(testBoard));
+
+        // Fill the four corners, check
+        testBoard.getMap()[lowerBound][lowerBound].setCalled(true);
+        testBoard.getMap()[lowerBound][lowerBound].setSelected(true);
+        testBoard.getMap()[lowerBound][upperBound].setCalled(true);
+        testBoard.getMap()[lowerBound][upperBound].setSelected(true);
+        testBoard.getMap()[upperBound][lowerBound].setCalled(true);
+        testBoard.getMap()[upperBound][lowerBound].setSelected(true);
+        testBoard.getMap()[upperBound][upperBound].setCalled(true);
+        testBoard.getMap()[upperBound][upperBound].setSelected(true);
+
+        assertEquals("corners", testGame.checkCorners(testBoard));
+    }
 }
