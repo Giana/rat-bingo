@@ -228,49 +228,17 @@ public class Game
     // Check for L win
     public String checkL(Board board)
     {
-        int size = board.getSize();
-        int row = (size - 1);
+        int row = 4;
         int column = 0;
-        String state = "N/A";
-        String horizontalState = "N/A";
-        String verticleState = "N/A";
 
-        // Check horizontal
-        for(int i = 0; i < size; i++)
+        // Check row and column that make a L
+        if(checkRow(board, row) && checkColumn(board, column))
         {
-            if(board.getMap()[row][i].getCalled() &&
-                    board.getMap()[row][i].getSelected())
-            {
-                horizontalState = "horizonal";
-            }
-            else
-            {
-                horizontalState = "N/A";
-                break;
-            }
-        }
-        // Check verticle
-        for(int i = 0; i < size; i++)
-        {
-            if(board.getMap()[i][column].getCalled() &&
-                    board.getMap()[i][column].getSelected())
-            {
-                verticleState = "verticle";
-            }
-            else
-            {
-                verticleState = "N/A";
-                break;
-            }
+            return "l";
         }
 
-        // Check for T conditions
-        if(horizontalState == "horizontal" && verticleState == "verticle")
-        {
-            state = "t";
-        }
-
-        return state;
+        // Nothing found
+        return "N/A";
     }
 
     // Check for all win
