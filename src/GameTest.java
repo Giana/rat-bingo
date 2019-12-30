@@ -228,4 +228,31 @@ public class GameTest
 
         assertEquals("corners", testGame.checkCorners(testBoard));
     }
+
+    @Test // Test checkT()
+    public void checkTTest()
+    {
+        Game testGame = new Game();
+        Board testBoard = testGame.getPlayerBoard();
+        int size = testBoard.getSize();
+        int row = 0;
+        int column = 2;
+
+        // Check default
+        assertEquals("N/A", testGame.checkT(testBoard));
+
+        // Fill row & column for T, check
+        for(int i = 0; i < size; i++)
+        {
+            // Row
+            testBoard.getMap()[row][i].setCalled(true);
+            testBoard.getMap()[row][i].setSelected(true);
+
+            // Column
+            testBoard.getMap()[i][column].setCalled(true);
+            testBoard.getMap()[i][column].setSelected(true);
+        }
+
+        assertEquals("t", testGame.checkT(testBoard));
+    }
 }
