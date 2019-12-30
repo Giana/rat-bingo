@@ -255,4 +255,31 @@ public class GameTest
 
         assertEquals("t", testGame.checkT(testBoard));
     }
+
+    @Test // Test checkL()
+    public void checkLTest()
+    {
+        Game testGame = new Game();
+        Board testBoard = testGame.getPlayerBoard();
+        int size = testBoard.getSize();
+        int row = 4;
+        int column = 0;
+
+        // Check default
+        assertEquals("N/A", testGame.checkL(testBoard));
+
+        // Fill row & column for L, check
+        for(int i = 0; i < size; i++)
+        {
+            // Row
+            testBoard.getMap()[row][i].setCalled(true);
+            testBoard.getMap()[row][i].setSelected(true);
+
+            // Column
+            testBoard.getMap()[i][column].setCalled(true);
+            testBoard.getMap()[i][column].setSelected(true);
+        }
+
+        assertEquals("l", testGame.checkL(testBoard));
+    }
 }
