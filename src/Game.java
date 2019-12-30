@@ -115,7 +115,6 @@ public class Game
     {
         int size = board.getSize();
         int j = 4;
-        String state = "N/A";
         String rightState = "N/A";
         String leftState = "N/A";
 
@@ -134,6 +133,12 @@ public class Game
             }
         }
 
+        // Stop if left diagonal was found
+        if(leftState == "diagonal")
+        {
+            return "diagonalL";
+        }
+
         // Check from top right
         for(int i = 0; i < size; i++)
         {
@@ -150,12 +155,14 @@ public class Game
             }
         }
 
-        if(leftState == "diagonal" || rightState == "diagonal")
+        // Stop if right diagonal was found
+        if(rightState == "diagonal")
         {
-            state = "diagonal";
+            return "diagonalR";
         }
 
-        return state;
+        // Nothing was found
+        return "N/A";
     }
 
     // Check for an X win
