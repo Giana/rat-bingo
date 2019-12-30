@@ -5,44 +5,103 @@ import static org.junit.Assert.assertTrue;
 
 public class GameTest
 {
-    @Test
+    @Test // Test checkRow()
+    public void checkRowTest()
+    {
+        Game testGame = new Game();
+        Board testBoard = testGame.getPlayerBoard();
+        int size = testBoard.getSize();
+
+        // Check default
+        for(int i = 0; i < size; i++)
+        {
+            assertFalse(testGame.checkRow(testBoard, i));
+        }
+
+        // Fill a row, check for horizontal win, repeat
+        for(int i = 0; i < size; i++)
+        {
+            for(int j = 0; j < size; j++)
+            {
+                testBoard.getMap()[i][j].setCalled(true);
+                testBoard.getMap()[i][j].setSelected(true);
+            }
+
+            assertTrue(testGame.checkRow(testBoard, i));
+        }
+    }
+
+    @Test // Test checkHorizontal()
     public void checkHorizontalTest()
     {
         Game testGame = new Game();
-        Board testBoard1 = testGame.getPlayerBoard();
-        Board testBoard2 = testGame.getNpcBoard();
-        int size1 = testBoard1.getSize();
-        int size2 = testBoard2.getSize();
+        Board testBoard = testGame.getPlayerBoard();
+        int size = testBoard.getSize();
 
-        for(int i = 0; i < size1; i++)
+        // Check default
+        assertEquals("N/A", testGame.checkHorizontal(testBoard));
+
+        // Fill a row, check for horizontal win, reset, repeat
+        for(int i = 0; i < size; i++)
         {
-            testBoard1.getMap()[i][i].setCalled(true);
-            testBoard1.getMap()[i][i].setSelected(true);
-        }
-        // Every tile is called & selected
-        for(int i = 0; i < size1; i++)
-        {
-            for(int j = 0; j < size1; j++)
+            for(int j = 0; j < size; j++)
             {
-                testBoard1.getMap()[i][i].setCalled(true);
-                testBoard1.getMap()[i][i].setSelected(true);
+                testBoard.getMap()[i][j].setCalled(true);
+                testBoard.getMap()[i][j].setSelected(true);
             }
+
+            assertEquals("horizontal" + i, testGame.checkHorizontal(testBoard));
+            testGame.reset();
+        }
+    }
+
+    @Test // Test checkColumn()
+    public void checkColumnTest()
+    {
+        Game testGame = new Game();
+        Board testBoard = testGame.getPlayerBoard();
+        int size = testBoard.getSize();
+
+        // Check default
+        for(int i = 0; i < size; i++)
+        {
+            assertFalse(testGame.checkColumn(testBoard, i));
         }
 
-        assertEquals("horizontal" + 0, testGame.checkHorizontal(testBoard1));
+        // Fill a row, check for horizontal win, repeat
+        for(int i = 0; i < size; i++)
+        {
+            for(int j = 0; j < size; j++)
+            {
+                testBoard.getMap()[j][i].setCalled(true);
+                testBoard.getMap()[j][i].setSelected(true);
+            }
 
+            assertTrue(testGame.checkColumn(testBoard, i));
+        }
+    }
 
-        testBoard2.getMap()[1][0].setCalled(true);
-        testBoard2.getMap()[1][0].setSelected(true);
-        testBoard2.getMap()[1][1].setCalled(true);
-        testBoard2.getMap()[1][1].setSelected(true);
-        testBoard2.getMap()[1][2].setCalled(false);
-        testBoard2.getMap()[1][2].setSelected(false);
-        testBoard2.getMap()[1][3].setCalled(true);
-        testBoard2.getMap()[1][3].setSelected(true);
-        testBoard2.getMap()[1][4].setCalled(false);
-        testBoard2.getMap()[1][4].setSelected(false);
+    @Test // Test checkVerticle()
+    public void checkVerticleTest()
+    {
+        Game testGame = new Game();
+        Board testBoard = testGame.getPlayerBoard();
+        int size = testBoard.getSize();
 
-        assertEquals("N/A", testGame.checkHorizontal(testBoard2));
+        // Check default
+        assertEquals("N/A", testGame.checkVerticle(testBoard));
+
+        // Fill a column, check for verticle win, reset, repeat
+        for(int i = 0; i < size; i++)
+        {
+            for(int j = 0; j < size; j++)
+            {
+                testBoard.getMap()[j][i].setCalled(true);
+                testBoard.getMap()[j][i].setSelected(true);
+            }
+
+            assertEquals("verticle" + i, testGame.checkVerticle(testBoard));
+            testGame.reset();
+        }
     }
 }
