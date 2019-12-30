@@ -2,17 +2,28 @@ public class Game
 {
     private Board playerBoard;     // Board for the player
     private Board npcBoard;        // Board for the NPC
-    private String playerState;   // Winning state for player
-    private String npcState;      // Winning state for NPC
+    private String playerState;    // Winning state for player
+    private String npcState;       // Winning state for NPC
+    private String mode;           // Game mode
 
 
-    // Default constructor
+    // Default constructor - for testing where mode is irrelevant
     public Game()
     {
         playerBoard = new Board();
         npcBoard = new Board();
         playerState = "N/A";
         npcState = "N/A";
+    }
+
+    // Parameterized constructor
+    public Game(String mode)
+    {
+        playerBoard = new Board();
+        npcBoard = new Board();
+        playerState = "N/A";
+        npcState = "N/A";
+        this.mode = mode;
     }
 
     // Getters & setters
@@ -27,6 +38,8 @@ public class Game
     public String getNpcState() { return npcState; }
 
     public void setNpcState(String npcState) { this.npcState = npcState; }
+
+    public String getMode() { return mode; }
 
     // Checks a single row for a horizontal win
     public boolean checkRow(Board board, int row)
@@ -279,5 +292,46 @@ public class Game
                 npcState = "N/A";
             }
         }
+    }
+
+    // Checks a board for a win based on the game mode
+    public String checkWin(Board board)
+    {
+        String state = "N/A";
+
+        if(mode == "horizontal")
+        {
+            state = checkHorizontal(board);
+        }
+        else if(mode == "verticle")
+        {
+            state = checkVerticle(board);
+        }
+        else if(mode == "diagonal")
+        {
+            state = checkDiagonal(board);
+        }
+        else if(mode == "x")
+        {
+            state = checkX(board);
+        }
+        else if(mode == "corners")
+        {
+            state = checkCorners(board);
+        }
+        else if(mode == "t")
+        {
+            state = checkT(board);
+        }
+        else if(mode == "l")
+        {
+            state = checkL(board);
+        }
+        else if(mode == "all")
+        {
+            state = checkAll(board);
+        }
+
+        return state;
     }
 }
