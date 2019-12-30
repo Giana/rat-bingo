@@ -154,4 +154,54 @@ public class GameTest
 
         assertEquals("diagonalLR", testGame.checkDiagonal(testBoard));
     }
+
+    @Test // Test checkX()
+    public void checkXTest()
+    {
+        Game testGame = new Game();
+        Board testBoard = testGame.getPlayerBoard();
+        int size = testBoard.getSize();
+        int j = 4;
+
+        // Check default
+        assertEquals("N/A", testGame.checkX(testBoard));
+
+        // Fill left diagonal, check, reset
+        for(int i = 0; i < size; i++)
+        {
+            testBoard.getMap()[i][i].setCalled(true);
+            testBoard.getMap()[i][i].setSelected(true);
+        }
+
+        assertEquals("N/A", testGame.checkX(testBoard));
+        testGame.reset();
+
+        // Fill right diagonal, check, reset
+        for(int i = 0; i < size; i++)
+        {
+            testBoard.getMap()[i][j].setCalled(true);
+            testBoard.getMap()[i][j].setSelected(true);
+            j--;
+        }
+
+        assertEquals("N/A", testGame.checkX(testBoard));
+        testGame.reset();
+
+        j = 4;
+
+        // Fill both diagonals, check
+        for(int i = 0; i < size; i++)
+        {
+            // Left
+            testBoard.getMap()[i][i].setCalled(true);
+            testBoard.getMap()[i][i].setSelected(true);
+
+            // Right
+            testBoard.getMap()[i][j].setCalled(true);
+            testBoard.getMap()[i][j].setSelected(true);
+            j--;
+        }
+
+        assertEquals("x", testGame.checkX(testBoard));
+    }
 }
