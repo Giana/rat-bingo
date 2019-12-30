@@ -282,4 +282,27 @@ public class GameTest
 
         assertEquals("l", testGame.checkL(testBoard));
     }
+
+    @Test // Test checkAll()
+    public void checkAllTest()
+    {
+        Game testGame = new Game();
+        Board testBoard = testGame.getPlayerBoard();
+        int size = testBoard.getSize();
+
+        // Check default
+        assertEquals("N/A", testGame.checkAll(testBoard));
+
+        // Fill every cell of board, check
+        for(int i = 0; i < size; i++)
+        {
+            for(int j = 0; j < size; j++)
+            {
+                testBoard.getMap()[i][j].setCalled(true);
+                testBoard.getMap()[i][j].setSelected(true);
+            }
+        }
+
+        assertEquals("all", testGame.checkAll(testBoard));
+    }
 }
