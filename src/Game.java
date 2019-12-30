@@ -245,35 +245,20 @@ public class Game
     public String checkAll(Board board)
     {
         int size = board.getSize();
-        int rowCount = 0;
-        String horizontalState = "N/A";
-        String state = "N/A";
 
-        while(rowCount < size)
+        for(int i = 0; i < size; i++)
         {
-            for(int i = 0; i < size; i++)
+            if(checkRow(board, i))
             {
-                if(board.getMap()[rowCount][i].getCalled() &&
-                        board.getMap()[rowCount][i].getSelected())
-                {
-                    horizontalState = "horizontal";
-                }
-                else
-                {
-                    state = "N/A";
-                    break;
-                }
+                continue;
             }
-
-            rowCount++;
+            else
+            {
+                return "N/A";
+            }
         }
 
-        if(horizontalState == "horizontal")
-        {
-            state = "all";
-        }
-
-        return state;
+        return "all";
     }
 
     // Resets player and NPC boards to have no calls/selections/wins
