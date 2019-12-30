@@ -139,7 +139,7 @@ public class GameTest
 
         j = 4;
 
-        // Fill both diagonals, check for left
+        // Fill both diagonals, check
         for(int i = 0; i < size; i++)
         {
             // Left
@@ -152,6 +152,6 @@ public class GameTest
             j--;
         }
 
-        assertEquals("diagonalL", testGame.checkDiagonal(testBoard));
+        assertEquals("diagonalLR", testGame.checkDiagonal(testBoard));
     }
 }

@@ -133,12 +133,6 @@ public class Game
             }
         }
 
-        // Stop if left diagonal was found
-        if(leftState == "diagonal")
-        {
-            return "diagonalL";
-        }
-
         // Check from top right
         for(int i = 0; i < size; i++)
         {
@@ -155,14 +149,26 @@ public class Game
             }
         }
 
-        // Stop if right diagonal was found
-        if(rightState == "diagonal")
+        // Only a left diagonal
+        if(leftState == "diagonal" && rightState == "N/A")
+        {
+            return "diagonalL";
+        }
+        // Only a right diagonal
+        else if(leftState == "N/A" && rightState == "diagonal")
         {
             return "diagonalR";
         }
-
+        // Both diagonals
+        else if(leftState == "diagonal" && rightState == "diagonal")
+        {
+            return "diagonalLR";
+        }
         // Nothing was found
-        return "N/A";
+        else
+        {
+            return "N/A";
+        }
     }
 
     // Check for an X win
