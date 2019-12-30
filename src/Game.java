@@ -28,74 +28,86 @@ public class Game
 
     public void setNpcState(String npcState) { this.npcState = npcState; }
 
+    // Checks a single row for a horizontal win
+    public boolean checkRow(Board board, int row)
+    {
+        int size = board.getSize();
+
+        for(int i = 0; i < size; i++)
+        {
+            if(board.getMap()[row][i].getCalled() &&
+                    board.getMap()[row][i].getSelected())
+            {
+                continue;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     // Checks for a horizontal win
     public String checkHorizontal(Board board)
     {
         int size = board.getSize();
-        int rowCount = 0;
-        String state = "N/A";
-        boolean status = false;
 
-        // For each row
-        while(rowCount < size)
+        for(int i = 0; i < size; i++)
         {
-            // If a horizontal hasn't been confirmed yet
-            if(status == false)
+            if(checkRow(board, i))
             {
-                for(int i = 0; i < size; i++)
-                {
-                    if(board.getMap()[rowCount][i].getCalled() &&
-                            board.getMap()[rowCount][i].getSelected())
-                    {
-                        state = "horizonal";
-                    }
-                    else
-                    {
-                        state = "N/A";
-                        break;
-                    }
-                }
-
-                // Found a horizontal
-                if(state == "horizontal")
-                {
-                    status = true;
-                }
-
-                rowCount++;
+                return "horizontal" + i;
+            }
+            else
+            {
+                continue;
             }
         }
 
-        return state;
+        return "N/A";
+    }
+
+    // Checks a single column for a verticle win
+    public boolean checkColumn(Board board, int column)
+    {
+        int size = board.getSize();
+
+        for(int i = 0; i < size; i++)
+        {
+            if(board.getMap()[i][column].getCalled() &&
+                    board.getMap()[i][column].getSelected())
+            {
+                continue;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     // Checks for a verticle win
     public String checkVerticle(Board board)
     {
         int size = board.getSize();
-        int columnCount = 0;
-        String state = "N/A";
 
-        while(columnCount < size)
+        for(int i = 0; i < size; i++)
         {
-            for(int i = 0; i < size; i++)
+            if(checkColumn(board, i))
             {
-                if(board.getMap()[i][columnCount].getCalled() &&
-                        board.getMap()[i][columnCount].getSelected())
-                {
-                    state = "verticle";
-                }
-                else
-                {
-                    state = "N/A";
-                    break;
-                }
+                return "verticle" + i;
             }
-
-            columnCount++;
+            else
+            {
+                continue;
+            }
         }
 
-        return state;
+        return "N/A";
     }
 
     // Check for a diagonal win
@@ -346,5 +358,25 @@ public class Game
         }
 
         return state;
+    }
+
+    // Resets player and NPC boards to have no calls/selections/wins
+    public void reset()
+    {
+        int size = playerBoard.getSize();
+
+        for(int i = 0; i < size; i++)
+        {
+            for(int j = 0; j < size; j++)
+            {
+                playerBoard.getMap()[i][j].setCalled(false);
+                playerBoard.getMap()[i][j].setSelected(false);
+                playerState = "N/A";
+
+                npcBoard.getMap()[i][j].setCalled(false);
+                npcBoard.getMap()[i][j].setSelected(false);
+                npcState = "N/A";
+            }
+        }
     }
 }

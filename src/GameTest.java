@@ -5,24 +5,32 @@ import static org.junit.Assert.assertTrue;
 
 public class GameTest
 {
-    /*@Test
+    @Test
     public void checkHorizontalTest()
     {
         Game testGame = new Game();
         Board testBoard1 = testGame.getPlayerBoard();
         Board testBoard2 = testGame.getNpcBoard();
+        int size1 = testBoard1.getSize();
+        int size2 = testBoard2.getSize();
 
+        for(int i = 0; i < size1; i++)
+        {
+            testBoard1.getMap()[i][i].setCalled(true);
+            testBoard1.getMap()[i][i].setSelected(true);
+        }
+        // Every tile is called & selected
+        for(int i = 0; i < size1; i++)
+        {
+            for(int j = 0; j < size1; j++)
+            {
+                testBoard1.getMap()[i][i].setCalled(true);
+                testBoard1.getMap()[i][i].setSelected(true);
+            }
+        }
 
-        testBoard1.getMap()[0][0].setCalled(true);
-        testBoard1.getMap()[0][0].setSelected(true);
-        testBoard1.getMap()[0][1].setCalled(true);
-        testBoard1.getMap()[0][1].setSelected(true);
-        testBoard1.getMap()[0][2].setCalled(true);
-        testBoard1.getMap()[0][2].setSelected(true);
-        testBoard1.getMap()[0][3].setCalled(true);
-        testBoard1.getMap()[0][3].setSelected(true);
-        testBoard1.getMap()[0][4].setCalled(true);
-        testBoard1.getMap()[0][4].setSelected(true);
+        assertEquals("horizontal" + 0, testGame.checkHorizontal(testBoard1));
+
 
         testBoard2.getMap()[1][0].setCalled(true);
         testBoard2.getMap()[1][0].setSelected(true);
@@ -35,7 +43,6 @@ public class GameTest
         testBoard2.getMap()[1][4].setCalled(false);
         testBoard2.getMap()[1][4].setSelected(false);
 
-        assertEquals("horizontal", testGame.checkHorizontal(testBoard1));
         assertEquals("N/A", testGame.checkHorizontal(testBoard2));
-    }*/
+    }
 }
