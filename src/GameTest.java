@@ -305,4 +305,52 @@ public class GameTest
 
         assertEquals("all", testGame.checkAll(testBoard));
     }
+
+    @Test // Test reset()
+    public void resetTest()
+    {
+        Game testGame = new Game();
+        Board testBoard1 = testGame.getPlayerBoard();
+        Board testBoard2 = testGame.getNpcBoard();
+        int size1 = testBoard1.getSize();
+        int size2 = testBoard2.getSize();
+        int k = 4;
+
+        // Check two random defaults (for X and all)
+        assertEquals("N/A", testGame.checkX(testBoard1));
+        assertEquals("N/A", testGame.checkAll(testBoard2));
+
+        // Fill X, check
+        for(int i = 0; i < size1; i++)
+        {
+            // Left diagonal
+            testBoard1.getMap()[i][i].setCalled(true);
+            testBoard1.getMap()[i][i].setSelected(true);
+
+            // Right diagonal
+            testBoard1.getMap()[i][k].setCalled(true);
+            testBoard1.getMap()[i][k].setSelected(true);
+            k--;
+        }
+
+        assertEquals("x", testGame.checkX(testBoard1));
+
+        // Fill every cell, check
+        for(int i = 0; i < size2; i++)
+        {
+            for(int j = 0; j < size2; j++)
+            {
+                testBoard2.getMap()[i][j].setCalled(true);
+                testBoard2.getMap()[i][j].setSelected(true);
+            }
+        }
+
+        assertEquals("all", testGame.checkAll(testBoard2));
+
+        // Reset, check again
+        testGame.reset();
+
+        assertEquals("N/A", testGame.checkX(testBoard1));
+        assertEquals("N/A", testGame.checkAll(testBoard2));
+    }
 }
