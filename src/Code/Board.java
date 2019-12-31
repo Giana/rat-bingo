@@ -1,8 +1,9 @@
+package Code;
+
 import java.util.ArrayList;
 
 public class Board
 {
-    // TODO: Remove numbers if it's unnecessary
     private int size = 5;                                     // Length/width of bingo board
     private ArrayList<Integer> numbers = new ArrayList<>();   // Holds numbers on board
     private Tile[][] map;                                     // Holds all tiles in matrix

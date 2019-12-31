@@ -1,4 +1,6 @@
- public class Tile
+package Code;
+
+public class Tile
 {
     private int number;
     private boolean called;

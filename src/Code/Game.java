@@ -1,3 +1,5 @@
+package Code;
+
 public class Game
 {
     private Board playerBoard;     // Board for the player
