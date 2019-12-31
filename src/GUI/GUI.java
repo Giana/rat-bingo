@@ -3,6 +3,8 @@ package GUI;
 import java.awt.*;
 import javax.swing.*;
 
+// TODO: try extending JFrame
+
 public class GUI
 {
 
@@ -14,10 +16,5 @@ public class GUI
         gameFrame.setSize(650, 700);                   // Set size
         gameFrame.setLocationRelativeTo(null);                      // Center on screen
         gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   // Close application
-
-
-        JPanel mainMenuPanel = new JPanel();
-        mainMenuPanel.setLayout(new BorderLayout());
-        gameFrame.add(mainMenuPanel);
     }
 }
