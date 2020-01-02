@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="GUI.GUI">
+  <grid id="27dc6" binding="parentPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="1200" height="750"/>
+    </constraints>
+    <properties>
+      <background color="-5516801"/>
+      <maximumSize width="1200" height="680"/>
+      <minimumSize width="1200" height="680"/>
+      <preferredSize width="1200" height="680"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="e1cc6" binding="leftMenuPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints border-constraint="West"/>
+        <properties>
+          <background color="-10986669"/>
+          <maximumSize width="200" height="680"/>
+          <minimumSize width="200" height="680"/>
+          <preferredSize width="200" height="680"/>
+        </properties>
+        <border type="none"/>
+        <children/>
+      </grid>
+      <grid id="c3841" binding="rightMenuPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints border-constraint="East"/>
+        <properties>
+          <background color="-10986669"/>
+          <maximumSize width="200" height="680"/>
+          <minimumSize width="200" height="680"/>
+          <opaque value="true"/>
+          <preferredSize width="200" height="680"/>
+        </properties>
+        <border type="none"/>
+        <children/>
+      </grid>
+      <grid id="c9349" binding="switchPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints border-constraint="Center"/>
+        <properties>
+          <background color="-7548360"/>
+          <opaque value="true"/>
+        </properties>
+        <border type="none"/>
+        <children/>
+      </grid>
+    </children>
+  </grid>
+</form>
