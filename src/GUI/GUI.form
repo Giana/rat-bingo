@@ -46,6 +46,70 @@
                   <text value=""/>
                 </properties>
               </component>
+              <component id="d1db8" class="javax.swing.JLabel" binding="cornersLogoImage">
+                <constraints/>
+                <properties>
+                  <horizontalAlignment value="0"/>
+                  <icon value="Images/CornersLogo.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="941de" class="javax.swing.JLabel" binding="diagonalLogoImage">
+                <constraints/>
+                <properties>
+                  <horizontalAlignment value="0"/>
+                  <icon value="Images/DiagonalLogo.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="8194c" class="javax.swing.JLabel" binding="horizontalLogoImage">
+                <constraints/>
+                <properties>
+                  <horizontalAlignment value="0"/>
+                  <icon value="Images/HorizontalLogo.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="fafbc" class="javax.swing.JLabel" binding="verticalLogoImage">
+                <constraints/>
+                <properties>
+                  <horizontalAlignment value="0"/>
+                  <icon value="Images/VerticalLogo.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="13795" class="javax.swing.JLabel" binding="lLogoImage">
+                <constraints/>
+                <properties>
+                  <horizontalAlignment value="0"/>
+                  <icon value="Images/LLogo.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="63b6c" class="javax.swing.JLabel" binding="tLogoImage">
+                <constraints/>
+                <properties>
+                  <horizontalAlignment value="0"/>
+                  <icon value="Images/TLogo.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="3b0bc" class="javax.swing.JLabel" binding="xLogoImage">
+                <constraints/>
+                <properties>
+                  <horizontalAlignment value="0"/>
+                  <icon value="Images/XLogo.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="a69f9" class="javax.swing.JLabel" binding="allLogoImage">
+                <constraints/>
+                <properties>
+                  <horizontalAlignment value="0"/>
+                  <icon value="Images/AllLogo.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
             </children>
           </grid>
         </children>

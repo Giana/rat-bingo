@@ -1,6 +1,7 @@
 package GUI;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 
 public class GUI
 {
@@ -49,4 +50,13 @@ public class GUI
     private JLabel smallRatBingoLogoImage;
     private JPanel gameModeSelectionPanel;
     private JLabel newGameTitleLogoImage;
+    private JLabel cornersLogoImage;
+    private JLabel diagonalLogoImage;
+    private JLabel horizontalLogoImage;
+    private JLabel verticalLogoImage;
+    private JLabel lLogoImage;
+    private JLabel tLogoImage;
+    private JLabel xLogoImage;
+    private JLabel allLogoImage;
+    private JButton cornersButton;
 }
