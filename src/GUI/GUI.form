@@ -15,7 +15,7 @@
       <grid id="e1cc6" binding="leftMenuPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
         <constraints border-constraint="West"/>
         <properties>
-          <background color="-327697"/>
+          <background color="-503240"/>
           <maximumSize width="200" height="680"/>
           <minimumSize width="200" height="680"/>
           <preferredSize width="200" height="680"/>
@@ -34,14 +34,16 @@
           <grid id="d01d0" binding="gameModeSelectionPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints border-constraint="Center"/>
             <properties>
-              <background color="-196626"/>
+              <background color="-503240"/>
             </properties>
             <border type="none"/>
             <children>
-              <component id="bb09f" class="javax.swing.JLabel" binding="newGameTitleLogoImage">
+              <component id="f809a" class="javax.swing.JLabel" binding="newGameTitleLogoImage">
                 <constraints/>
                 <properties>
-                  <text value="Label"/>
+                  <horizontalAlignment value="0"/>
+                  <icon value="Images/NewGameLogo.png"/>
+                  <text value=""/>
                 </properties>
               </component>
             </children>
@@ -51,7 +53,7 @@
       <grid id="c3841" binding="rightMenuPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
         <constraints border-constraint="East"/>
         <properties>
-          <background color="-10986669"/>
+          <background color="-503240"/>
           <maximumSize width="200" height="680"/>
           <minimumSize width="200" height="680"/>
           <opaque value="true"/>
