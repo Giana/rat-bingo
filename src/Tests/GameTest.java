@@ -94,7 +94,7 @@ public class GameTest
         int size = testBoard.getSize();
 
         // Check default
-        assertEquals("N/A", testGame.checkVerticle(testBoard));
+        assertEquals("N/A", testGame.checkVertical(testBoard));
 
         // Fill a column, check for verticle win, reset, repeat
         for(int i = 0; i < size; i++)
@@ -105,7 +105,7 @@ public class GameTest
                 testBoard.getMap()[j][i].setSelected(true);
             }
 
-            assertEquals("verticle" + i, testGame.checkVerticle(testBoard));
+            assertEquals("verticle" + i, testGame.checkVertical(testBoard));
             testGame.reset();
         }
     }

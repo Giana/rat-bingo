@@ -84,7 +84,7 @@ public class Game
         return "N/A";
     }
 
-    // Checks a single column for a verticle win
+    // Checks a single column for a vertical win
     public boolean checkColumn(Board board, int column)
     {
         int size = board.getSize();
@@ -105,8 +105,8 @@ public class Game
         return true;
     }
 
-    // Checks for a verticle win
-    public String checkVerticle(Board board)
+    // Checks for a vertical win
+    public String checkVertical(Board board)
     {
         int size = board.getSize();
 
@@ -114,7 +114,7 @@ public class Game
         {
             if(checkColumn(board, i))
             {
-                return "verticle" + i;
+                return "vertical" + i;
             }
             else
             {
@@ -305,9 +305,9 @@ public class Game
         {
             state = checkHorizontal(board);
         }
-        else if(mode == "verticle")
+        else if(mode == "vertical")
         {
-            state = checkVerticle(board);
+            state = checkVertical(board);
         }
         else if(mode == "diagonal")
         {
