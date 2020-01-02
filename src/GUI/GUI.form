@@ -110,6 +110,30 @@
                   <text value=""/>
                 </properties>
               </component>
+              <component id="433ee" class="javax.swing.JLabel" binding="emptySpaceLabel">
+                <constraints/>
+                <properties>
+                  <horizontalTextPosition value="0"/>
+                  <icon value="Images/EmptySpace.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="695a0" class="javax.swing.JLabel" binding="creditsLogoImage">
+                <constraints/>
+                <properties>
+                  <horizontalAlignment value="0"/>
+                  <icon value="Images/CreditsLogo.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="50208" class="javax.swing.JLabel" binding="helpLogoImage">
+                <constraints/>
+                <properties>
+                  <horizontalAlignment value="0"/>
+                  <icon value="Images/HelpLogo.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
             </children>
           </grid>
         </children>

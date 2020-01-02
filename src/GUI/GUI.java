@@ -58,5 +58,8 @@ public class GUI
     private JLabel tLogoImage;
     private JLabel xLogoImage;
     private JLabel allLogoImage;
+    private JLabel helpLogoImage;
+    private JLabel creditsLogoImage;
+    private JLabel emptySpaceLabel;
     private JButton cornersButton;
 }
