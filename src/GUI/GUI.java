@@ -46,4 +46,7 @@ public class GUI
     private JLabel nLogoImage;
     private JLabel gLogoImage;
     private JLabel oLogoImage;
+    private JLabel smallRatBingoLogoImage;
+    private JLabel newGameTitleLogoImage;
+    private JPanel gameModeSelectionPanel;
 }

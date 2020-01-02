@@ -15,13 +15,38 @@
       <grid id="e1cc6" binding="leftMenuPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
         <constraints border-constraint="West"/>
         <properties>
-          <background color="-10986669"/>
+          <background color="-327697"/>
           <maximumSize width="200" height="680"/>
           <minimumSize width="200" height="680"/>
           <preferredSize width="200" height="680"/>
         </properties>
         <border type="none"/>
-        <children/>
+        <children>
+          <component id="f53cb" class="javax.swing.JLabel" binding="smallRatBingoLogoImage">
+            <constraints border-constraint="North"/>
+            <properties>
+              <focusTraversalPolicyProvider value="true"/>
+              <horizontalAlignment value="0"/>
+              <icon value="Images/200pxRatBingoLogo.png"/>
+              <text value="Label"/>
+            </properties>
+          </component>
+          <grid id="d01d0" binding="gameModeSelectionPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints border-constraint="Center"/>
+            <properties>
+              <background color="-196626"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="bb09f" class="javax.swing.JLabel" binding="newGameTitleLogoImage">
+                <constraints/>
+                <properties>
+                  <text value="Label"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
       </grid>
       <grid id="c3841" binding="rightMenuPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
         <constraints border-constraint="East"/>
