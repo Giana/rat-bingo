@@ -27,8 +27,9 @@
             <properties>
               <focusTraversalPolicyProvider value="true"/>
               <horizontalAlignment value="0"/>
-              <icon value="Images/200pxRatBingoLogo.png"/>
-              <text value="Label"/>
+              <icon value="Images/SmallRatBingoLogo.png"/>
+              <inheritsPopupMenu value="true"/>
+              <text value=""/>
             </properties>
           </component>
           <grid id="d01d0" binding="gameModeSelectionPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
