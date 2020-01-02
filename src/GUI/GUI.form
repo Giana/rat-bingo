@@ -35,14 +35,62 @@
         <border type="none"/>
         <children/>
       </grid>
-      <grid id="c9349" binding="switchPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+      <grid id="c9349" binding="switchPanel" layout-manager="CardLayout" hgap="0" vgap="0">
         <constraints border-constraint="Center"/>
         <properties>
           <background color="-7548360"/>
           <opaque value="true"/>
         </properties>
         <border type="none"/>
-        <children/>
+        <children>
+          <grid id="ea562" binding="mainMenuPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints>
+              <card name="Card1"/>
+            </constraints>
+            <properties>
+              <autoscrolls value="false"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="f7d5c" class="javax.swing.JLabel" binding="ratBingoLogoImage">
+                <constraints border-constraint="North"/>
+                <properties>
+                  <alignmentX value="1.0"/>
+                  <alignmentY value="1.0"/>
+                  <disabledIcon value="Images/RatBingoLogo.png"/>
+                  <enabled value="false"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="0"/>
+                  <text value=""/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="2c74c" binding="gamePanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints>
+              <card name="Card2"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children/>
+          </grid>
+          <grid id="93f4d" binding="winPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints>
+              <card name="Card3"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children/>
+          </grid>
+          <grid id="8bc4c" binding="lossPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints>
+              <card name="Card4"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children/>
+          </grid>
+        </children>
       </grid>
     </children>
   </grid>
