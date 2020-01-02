@@ -80,7 +80,367 @@
             </constraints>
             <properties/>
             <border type="none"/>
-            <children/>
+            <children>
+              <grid id="4fb8" binding="boardPanel" layout-manager="GridBagLayout">
+                <constraints border-constraint="Center"/>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="76383" class="javax.swing.JButton" binding="b1">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <borderPainted value="true"/>
+                      <contentAreaFilled value="true"/>
+                      <doubleBuffered value="false"/>
+                      <enabled value="true"/>
+                      <maximumSize width="100" height="100"/>
+                      <minimumSize width="100" height="100"/>
+                      <preferredSize width="100" height="100"/>
+                      <text value="Button"/>
+                    </properties>
+                    <clientProperties>
+                      <hideActionText class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                  <component id="927ca" class="javax.swing.JButton" binding="i1">
+                    <constraints>
+                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="100" height="100"/>
+                      <minimumSize width="100" height="100"/>
+                      <preferredSize width="100" height="100"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="c4190" class="javax.swing.JButton" binding="n1">
+                    <constraints>
+                      <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="100" height="100"/>
+                      <minimumSize width="100" height="100"/>
+                      <preferredSize width="100" height="100"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="b2fa5" class="javax.swing.JButton" binding="g1">
+                    <constraints>
+                      <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="100" height="100"/>
+                      <minimumSize width="100" height="100"/>
+                      <preferredSize width="100" height="100"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="94d19" class="javax.swing.JButton" binding="o1">
+                    <constraints>
+                      <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="100" height="100"/>
+                      <minimumSize width="100" height="100"/>
+                      <preferredSize width="100" height="100"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="fb09c" class="javax.swing.JButton" binding="b2">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="100" height="100"/>
+                      <minimumSize width="100" height="100"/>
+                      <preferredSize width="100" height="100"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="23dc8" class="javax.swing.JButton" binding="i2">
+                    <constraints>
+                      <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="100" height="100"/>
+                      <minimumSize width="100" height="100"/>
+                      <preferredSize width="100" height="100"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="f4639" class="javax.swing.JButton" binding="n2">
+                    <constraints>
+                      <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="100" height="100"/>
+                      <minimumSize width="100" height="100"/>
+                      <preferredSize width="100" height="100"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="d5280" class="javax.swing.JButton" binding="g2">
+                    <constraints>
+                      <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="100" height="100"/>
+                      <minimumSize width="100" height="100"/>
+                      <preferredSize width="100" height="100"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="444e7" class="javax.swing.JButton" binding="o2">
+                    <constraints>
+                      <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="100" height="100"/>
+                      <minimumSize width="100" height="100"/>
+                      <preferredSize width="100" height="100"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="833fd" class="javax.swing.JButton" binding="b3">
+                    <constraints>
+                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="100" height="100"/>
+                      <minimumSize width="100" height="100"/>
+                      <preferredSize width="100" height="100"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="8459f" class="javax.swing.JButton" binding="i3">
+                    <constraints>
+                      <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="100" height="100"/>
+                      <minimumSize width="100" height="100"/>
+                      <preferredSize width="100" height="100"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="af39" class="javax.swing.JButton" binding="n3">
+                    <constraints>
+                      <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="100" height="100"/>
+                      <minimumSize width="100" height="100"/>
+                      <preferredSize width="100" height="100"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="646f4" class="javax.swing.JButton" binding="g3">
+                    <constraints>
+                      <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="100" height="100"/>
+                      <minimumSize width="100" height="100"/>
+                      <preferredSize width="100" height="100"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="a318c" class="javax.swing.JButton" binding="o3">
+                    <constraints>
+                      <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="100" height="100"/>
+                      <minimumSize width="100" height="100"/>
+                      <preferredSize width="100" height="100"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="ab983" class="javax.swing.JButton" binding="b4">
+                    <constraints>
+                      <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="100" height="100"/>
+                      <minimumSize width="100" height="100"/>
+                      <preferredSize width="100" height="100"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="81097" class="javax.swing.JButton" binding="i4">
+                    <constraints>
+                      <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="100" height="100"/>
+                      <minimumSize width="100" height="100"/>
+                      <preferredSize width="100" height="100"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="b0b22" class="javax.swing.JButton" binding="n4">
+                    <constraints>
+                      <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="100" height="100"/>
+                      <minimumSize width="100" height="100"/>
+                      <preferredSize width="100" height="100"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="3be39" class="javax.swing.JButton" binding="g4">
+                    <constraints>
+                      <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="100" height="100"/>
+                      <minimumSize width="100" height="100"/>
+                      <preferredSize width="100" height="100"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="a73cb" class="javax.swing.JButton" binding="o4">
+                    <constraints>
+                      <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="100" height="100"/>
+                      <minimumSize width="100" height="100"/>
+                      <preferredSize width="100" height="100"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="1faec" class="javax.swing.JButton" binding="b5">
+                    <constraints>
+                      <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="100" height="100"/>
+                      <minimumSize width="100" height="100"/>
+                      <preferredSize width="100" height="100"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="ecd33" class="javax.swing.JButton" binding="i5">
+                    <constraints>
+                      <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="100" height="100"/>
+                      <minimumSize width="100" height="100"/>
+                      <preferredSize width="100" height="100"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="c6b79" class="javax.swing.JButton" binding="n5">
+                    <constraints>
+                      <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="100" height="100"/>
+                      <minimumSize width="100" height="100"/>
+                      <preferredSize width="100" height="100"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="53e10" class="javax.swing.JButton" binding="g5">
+                    <constraints>
+                      <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="100" height="100"/>
+                      <minimumSize width="100" height="100"/>
+                      <preferredSize width="100" height="100"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="b6dc1" class="javax.swing.JButton" binding="o5">
+                    <constraints>
+                      <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="100" height="100"/>
+                      <minimumSize width="100" height="100"/>
+                      <preferredSize width="100" height="100"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="e07d" class="javax.swing.JLabel" binding="bLogoImage">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Label"/>
+                    </properties>
+                  </component>
+                  <component id="ca74c" class="javax.swing.JLabel" binding="iLogoImage">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Label"/>
+                    </properties>
+                  </component>
+                  <component id="4eb94" class="javax.swing.JLabel" binding="nLogoImage">
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Label"/>
+                    </properties>
+                  </component>
+                  <component id="fd39d" class="javax.swing.JLabel" binding="gLogoImage">
+                    <constraints>
+                      <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Label"/>
+                    </properties>
+                  </component>
+                  <component id="62f29" class="javax.swing.JLabel" binding="oLogoImage">
+                    <constraints>
+                      <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Label"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+            </children>
           </grid>
           <grid id="93f4d" binding="winPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
             <constraints>
