@@ -49,19 +49,27 @@
             </constraints>
             <properties>
               <autoscrolls value="false"/>
+              <focusable value="true"/>
+              <foreground color="-10986669"/>
+              <opaque value="true"/>
             </properties>
             <border type="none"/>
             <children>
               <component id="f7d5c" class="javax.swing.JLabel" binding="ratBingoLogoImage">
-                <constraints border-constraint="North"/>
+                <constraints border-constraint="Center"/>
                 <properties>
                   <alignmentX value="1.0"/>
                   <alignmentY value="1.0"/>
-                  <disabledIcon value="Images/RatBingoLogo.png"/>
-                  <enabled value="false"/>
+                  <autoscrolls value="false"/>
+                  <enabled value="true"/>
+                  <focusable value="false"/>
                   <horizontalAlignment value="0"/>
                   <horizontalTextPosition value="0"/>
+                  <icon value="Images/RatBingoLogo.png"/>
+                  <requestFocusEnabled value="true"/>
                   <text value=""/>
+                  <verifyInputWhenFocusTarget value="true"/>
+                  <visible value="true"/>
                 </properties>
               </component>
             </children>
@@ -80,7 +88,25 @@
             </constraints>
             <properties/>
             <border type="none"/>
-            <children/>
+            <children>
+              <component id="27ac0" class="javax.swing.JLabel" binding="ratBingoVictoryLogoImage">
+                <constraints border-constraint="Center"/>
+                <properties>
+                  <alignmentX value="1.0"/>
+                  <alignmentY value="1.0"/>
+                  <autoscrolls value="false"/>
+                  <enabled value="true"/>
+                  <focusable value="false"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="0"/>
+                  <icon value="Images/VictoryLogo.png"/>
+                  <requestFocusEnabled value="true"/>
+                  <text value=""/>
+                  <verifyInputWhenFocusTarget value="true"/>
+                  <visible value="true"/>
+                </properties>
+              </component>
+            </children>
           </grid>
           <grid id="8bc4c" binding="lossPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
             <constraints>
@@ -88,7 +114,25 @@
             </constraints>
             <properties/>
             <border type="none"/>
-            <children/>
+            <children>
+              <component id="1c95b" class="javax.swing.JLabel" binding="ratBingoDefeatLogoImage">
+                <constraints border-constraint="Center"/>
+                <properties>
+                  <alignmentX value="1.0"/>
+                  <alignmentY value="1.0"/>
+                  <autoscrolls value="false"/>
+                  <enabled value="true"/>
+                  <focusable value="true"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="0"/>
+                  <icon value="Images/DefeatLogo.png"/>
+                  <requestFocusEnabled value="true"/>
+                  <text value=""/>
+                  <verifyInputWhenFocusTarget value="true"/>
+                  <visible value="true"/>
+                </properties>
+              </component>
+            </children>
           </grid>
         </children>
       </grid>

@@ -13,4 +13,6 @@ public class GUI
     private JPanel winPanel;
     private JPanel lossPanel;
     private JLabel ratBingoLogoImage;
+    private JLabel ratBingoVictoryLogoImage;
+    private JLabel ratBingoDefeatLogoImage;
 }
