@@ -162,7 +162,11 @@
                 <properties>
                   <horizontalAlignment value="0"/>
                   <icon value="Images/CallerLogo.png"/>
+                  <opaque value="false"/>
+                  <requestFocusEnabled value="true"/>
                   <text value=""/>
+                  <verifyInputWhenFocusTarget value="true"/>
+                  <visible value="false"/>
                 </properties>
               </component>
               <component id="ff65a" class="javax.swing.JLabel" binding="callerCurrentLabel">
@@ -173,6 +177,7 @@
                   <foreground color="-12636826"/>
                   <horizontalAlignment value="0"/>
                   <text value="0"/>
+                  <visible value="false"/>
                 </properties>
               </component>
               <component id="1095a" class="javax.swing.JLabel" binding="winsLogoImage">
@@ -209,12 +214,22 @@
                   <text value="0"/>
                 </properties>
               </component>
+              <component id="e36ea" class="javax.swing.JLabel" binding="startGameLogoImage">
+                <constraints/>
+                <properties>
+                  <horizontalAlignment value="0"/>
+                  <icon value="Images/StartGameLogo.png"/>
+                  <text value=""/>
+                  <visible value="false"/>
+                </properties>
+              </component>
               <component id="ed5b" class="javax.swing.JLabel" binding="bingoLogoImage">
                 <constraints/>
                 <properties>
                   <horizontalAlignment value="0"/>
                   <icon value="Images/BingoLogo.png"/>
                   <text value=""/>
+                  <visible value="false"/>
                 </properties>
               </component>
             </children>

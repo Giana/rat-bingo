@@ -78,6 +78,7 @@ public class GUI
     private JLabel bingoLogoImage;
     private JPanel creditsPanel;
     private JPanel helpPanel;
+    private JLabel startGameLogoImage;
     private JButton cornersButton;
 
     private Game currentGame;
@@ -92,6 +93,11 @@ public class GUI
             public void mouseClicked(MouseEvent e)
             {
                 super.mouseClicked(e);
+
+                // Things you should just see in game
+                setGameStatsVisibility(false);
+
+                // Display main menu panel
                 switchPanel.removeAll();
                 switchPanel.add(mainMenuPanel);
                 switchPanel.repaint();
@@ -105,15 +111,24 @@ public class GUI
             @Override
             public void mouseClicked(MouseEvent e)
             {
-                // Create new game
-                currentGame = new Game("corners");
+                super.mouseClicked(e);
+
+                // Things you need to see while in game
+                setGameStatsVisibility(true);
 
                 // Display game panel
-                super.mouseClicked(e);
                 switchPanel.removeAll();
                 switchPanel.add(gamePanel);
-                switchPanel.repaint();
                 switchPanel.revalidate();
+                switchPanel.repaint();
+
+                // Create new game
+                //currentGame = new Game("corners");
+
+                //Initialize board GUI
+                //initBoardGUI();
+                //gamePanel.repaint();
+                //gamePanel.revalidate();
             }
         });
 
@@ -123,11 +138,15 @@ public class GUI
             @Override
             public void mouseClicked(MouseEvent e)
             {
+                super.mouseClicked(e);
+
                 // Create new game
-                currentGame = new Game("diagonal");
+                //currentGame = new Game("diagonal");
+
+                // Things you need to see while in game
+                setGameStatsVisibility(true);
 
                 // Display game panel
-                super.mouseClicked(e);
                 switchPanel.removeAll();
                 switchPanel.add(gamePanel);
                 switchPanel.repaint();
@@ -141,11 +160,15 @@ public class GUI
             @Override
             public void mouseClicked(MouseEvent e)
             {
+                super.mouseClicked(e);
+
                 // Create new game
-                currentGame = new Game("horizontal");
+                //currentGame = new Game("horizontal");
+
+                // Things you need to see while in game
+                setGameStatsVisibility(true);
 
                 // Display game panel
-                super.mouseClicked(e);
                 switchPanel.removeAll();
                 switchPanel.add(gamePanel);
                 switchPanel.repaint();
@@ -159,11 +182,15 @@ public class GUI
             @Override
             public void mouseClicked(MouseEvent e)
             {
+                super.mouseClicked(e);
+
                 // Create new game
-                currentGame = new Game("vertical");
+                //currentGame = new Game("vertical");
+
+                // Things you need to see while in game
+                setGameStatsVisibility(true);
 
                 // Display game panel
-                super.mouseClicked(e);
                 switchPanel.removeAll();
                 switchPanel.add(gamePanel);
                 switchPanel.repaint();
@@ -177,11 +204,15 @@ public class GUI
             @Override
             public void mouseClicked(MouseEvent e)
             {
+                super.mouseClicked(e);
+
                 // Create new game
-                currentGame = new Game("l");
+                //currentGame = new Game("l");
+
+                // Things you need to see while in game
+                setGameStatsVisibility(true);
 
                 // Display game panel
-                super.mouseClicked(e);
                 switchPanel.removeAll();
                 switchPanel.add(gamePanel);
                 switchPanel.repaint();
@@ -195,11 +226,15 @@ public class GUI
             @Override
             public void mouseClicked(MouseEvent e)
             {
+                super.mouseClicked(e);
+
                 // Create new game
-                currentGame = new Game("t");
+                //currentGame = new Game("t");
+
+                // Things you need to see while in game
+                setGameStatsVisibility(true);
 
                 // Display game panel
-                super.mouseClicked(e);
                 switchPanel.removeAll();
                 switchPanel.add(gamePanel);
                 switchPanel.repaint();
@@ -213,11 +248,15 @@ public class GUI
             @Override
             public void mouseClicked(MouseEvent e)
             {
+                super.mouseClicked(e);
+
                 // Create new game
-                currentGame = new Game("x");
+                //currentGame = new Game("x");
+
+                // Things you need to see while in game
+                setGameStatsVisibility(true);
 
                 // Display game panel
-                super.mouseClicked(e);
                 switchPanel.removeAll();
                 switchPanel.add(gamePanel);
                 switchPanel.repaint();
@@ -231,11 +270,15 @@ public class GUI
             @Override
             public void mouseClicked(MouseEvent e)
             {
+                super.mouseClicked(e);
+
                 // Create new game
-                currentGame = new Game("all");
+                //currentGame = new Game("all");
+
+                // Things you need to see while in game
+                setGameStatsVisibility(true);
 
                 // Display game panel
-                super.mouseClicked(e);
                 switchPanel.removeAll();
                 switchPanel.add(gamePanel);
                 switchPanel.repaint();
@@ -250,6 +293,11 @@ public class GUI
             public void mouseClicked(MouseEvent e)
             {
                 super.mouseClicked(e);
+
+                // Things you should just see in game
+                setGameStatsVisibility(false);
+
+                // Display credits panel
                 switchPanel.removeAll();
                 switchPanel.add(creditsPanel);
                 switchPanel.repaint();
@@ -264,6 +312,11 @@ public class GUI
             public void mouseClicked(MouseEvent e)
             {
                 super.mouseClicked(e);
+
+                // Things you should just see in game
+                setGameStatsVisibility(false);
+
+                // Display help panel
                 switchPanel.removeAll();
                 switchPanel.add(helpPanel);
                 switchPanel.repaint();
@@ -301,6 +354,24 @@ public class GUI
                 k++;
             }
             System.out.println();
+        }
+    }
+
+    public void setGameStatsVisibility(boolean bool)
+    {
+        if(bool)
+        {
+            callerLogoImage.setVisible(true);
+            callerCurrentLabel.setVisible(true);
+            startGameLogoImage.setVisible(true);
+            bingoLogoImage.setVisible(true);
+        }
+        else
+        {
+            callerLogoImage.setVisible(false);
+            callerCurrentLabel.setVisible(false);
+            startGameLogoImage.setVisible(false);
+            bingoLogoImage.setVisible(false);
         }
     }
 
