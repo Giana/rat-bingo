@@ -511,20 +511,24 @@
                   </component>
                   <component id="e07d" class="javax.swing.JLabel" binding="bLogoImage">
                     <constraints>
-                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                       <gridbag weightx="0.0" weighty="0.0"/>
                     </constraints>
                     <properties>
-                      <text value="Label"/>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/BLogo.png"/>
+                      <text value=""/>
                     </properties>
                   </component>
                   <component id="ca74c" class="javax.swing.JLabel" binding="iLogoImage">
                     <constraints>
-                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                       <gridbag weightx="0.0" weighty="0.0"/>
                     </constraints>
                     <properties>
-                      <text value="Label"/>
+                      <horizontalTextPosition value="0"/>
+                      <icon value="Images/ILogo.png"/>
+                      <text value=""/>
                     </properties>
                   </component>
                   <component id="4eb94" class="javax.swing.JLabel" binding="nLogoImage">
@@ -533,7 +537,9 @@
                       <gridbag weightx="0.0" weighty="0.0"/>
                     </constraints>
                     <properties>
-                      <text value="Label"/>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/NLogo.png"/>
+                      <text value=""/>
                     </properties>
                   </component>
                   <component id="fd39d" class="javax.swing.JLabel" binding="gLogoImage">
@@ -542,7 +548,9 @@
                       <gridbag weightx="0.0" weighty="0.0"/>
                     </constraints>
                     <properties>
-                      <text value="Label"/>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/GLogo.png"/>
+                      <text value=""/>
                     </properties>
                   </component>
                   <component id="62f29" class="javax.swing.JLabel" binding="oLogoImage">
@@ -551,7 +559,9 @@
                       <gridbag weightx="0.0" weighty="0.0"/>
                     </constraints>
                     <properties>
-                      <text value="Label"/>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/OLogo.png"/>
+                      <text value=""/>
                     </properties>
                   </component>
                 </children>
