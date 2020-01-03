@@ -1,5 +1,7 @@
 package GUI;
 
+import Code.Game;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -77,6 +79,8 @@ public class GUI
     private JPanel helpPanel;
     private JButton cornersButton;
 
+    Game currentGame;
+
     public GUI()
     {
         // Click small "Rat Bingo" logo on left panel
@@ -99,9 +103,167 @@ public class GUI
             @Override
             public void mouseClicked(MouseEvent e)
             {
+                // Create new game
+                currentGame = new Game("corners");
+
+                // Display game panel
                 super.mouseClicked(e);
                 switchPanel.removeAll();
                 switchPanel.add(gamePanel);
+                switchPanel.repaint();
+                switchPanel.revalidate();
+            }
+        });
+
+        // Click "Diagonal" on left panel
+        diagonalLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                // Create new game
+                currentGame = new Game("diagonal");
+
+                // Display game panel
+                super.mouseClicked(e);
+                switchPanel.removeAll();
+                switchPanel.add(gamePanel);
+                switchPanel.repaint();
+                switchPanel.revalidate();
+            }
+        });
+
+        // Click "Horizontal" on left panel
+        horizontalLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                // Create new game
+                currentGame = new Game("horizontal");
+
+                // Display game panel
+                super.mouseClicked(e);
+                switchPanel.removeAll();
+                switchPanel.add(gamePanel);
+                switchPanel.repaint();
+                switchPanel.revalidate();
+            }
+        });
+
+        // Click "Vertical" on left panel
+        verticalLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                // Create new game
+                currentGame = new Game("vertical");
+
+                // Display game panel
+                super.mouseClicked(e);
+                switchPanel.removeAll();
+                switchPanel.add(gamePanel);
+                switchPanel.repaint();
+                switchPanel.revalidate();
+            }
+        });
+
+        // Click "L" on left panel
+        lLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                // Create new game
+                currentGame = new Game("l");
+
+                // Display game panel
+                super.mouseClicked(e);
+                switchPanel.removeAll();
+                switchPanel.add(gamePanel);
+                switchPanel.repaint();
+                switchPanel.revalidate();
+            }
+        });
+
+        // Click "T" on left panel
+        tLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                // Create new game
+                currentGame = new Game("t");
+
+                // Display game panel
+                super.mouseClicked(e);
+                switchPanel.removeAll();
+                switchPanel.add(gamePanel);
+                switchPanel.repaint();
+                switchPanel.revalidate();
+            }
+        });
+
+        // Click "X" on left panel
+        xLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                // Create new game
+                currentGame = new Game("x");
+
+                // Display game panel
+                super.mouseClicked(e);
+                switchPanel.removeAll();
+                switchPanel.add(gamePanel);
+                switchPanel.repaint();
+                switchPanel.revalidate();
+            }
+        });
+
+        // Click "All" on left panel
+        allLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                // Create new game
+                currentGame = new Game("all");
+
+                // Display game panel
+                super.mouseClicked(e);
+                switchPanel.removeAll();
+                switchPanel.add(gamePanel);
+                switchPanel.repaint();
+                switchPanel.revalidate();
+            }
+        });
+
+        // Click "Credits" on left panel
+        creditsLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+                switchPanel.removeAll();
+                switchPanel.add(creditsPanel);
+                switchPanel.repaint();
+                switchPanel.revalidate();
+            }
+        });
+
+        // Click "Help" on left panel
+        helpLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+                switchPanel.removeAll();
+                switchPanel.add(helpPanel);
                 switchPanel.repaint();
                 switchPanel.revalidate();
             }
