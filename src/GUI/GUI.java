@@ -80,8 +80,8 @@ public class GUI
     private JPanel helpPanel;
     private JButton cornersButton;
 
-    Game currentGame;
-    List<JButton> buttons;
+    private Game currentGame;
+    private static List<JButton> buttons;
 
     public GUI()
     {
@@ -272,24 +272,36 @@ public class GUI
         });
     }
 
+    // Puts every JButton into "buttons" to be referenced
+    public void createButtonList()
+    {
+        for(Component x: boardPanel.getComponents())
+        {
+            if(x instanceof JButton)
+            {
+                buttons.add((JButton) x);
+            }
+        }
+    }
+
     public void initBoardGUI()
     {
+        int k = 0;
         int size = currentGame.getPlayerBoard().getSize();
+
+        createButtonList();
 
         for(int i = 0; i < size; i++)
         {
             for(int j = 0; j < size; j++)
             {
-                System.out.printf("%3d ", map[i][j].getNumber());
+                JButton currButton = buttons.get(k);
+                String currText = Integer.toString(currentGame.getPlayerBoard().getMap()[i][j].getNumber());
+                currButton.setText(currText);
+                k++;
             }
             System.out.println();
         }
-    }
-
-    // Puts every JButton into "buttons" to be referenced
-    public void createButtonList()
-    {
-        
     }
 
     public static void main(String[] args)
