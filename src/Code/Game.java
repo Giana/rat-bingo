@@ -1,12 +1,16 @@
 package Code;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Game
 {
-    private Board playerBoard;     // Board for the player
-    private Board npcBoard;        // Board for the NPC
-    private String playerState;    // Winning state for player
-    private String npcState;       // Winning state for NPC
-    private String mode;           // Game mode
+    private Board playerBoard;           // Board for the player
+    private Board npcBoard;              // Board for the NPC
+    private String playerState;          // Winning state for player
+    private String npcState;             // Winning state for NPC
+    private String mode;                 // Game mode
+    private ArrayList<Integer> calls;   // List of random numbers to call
 
 
     // Default constructor - for testing where mode is irrelevant
@@ -16,6 +20,7 @@ public class Game
         npcBoard = new Board();
         playerState = "N/A";
         npcState = "N/A";
+        callsGenerator();
     }
 
     // Parameterized constructor
@@ -26,6 +31,7 @@ public class Game
         playerState = "N/A";
         npcState = "N/A";
         this.mode = mode;
+        callsGenerator();
     }
 
     // Getters & setters
@@ -301,39 +307,52 @@ public class Game
     {
         String state = "N/A";
 
-        if(mode == "horizontal")
+        if(mode.equals("horizontal"))
         {
             state = checkHorizontal(board);
         }
-        else if(mode == "vertical")
+        else if(mode.equals("vertical"))
         {
             state = checkVertical(board);
         }
-        else if(mode == "diagonal")
+        else if(mode.equals("diagonal"))
         {
             state = checkDiagonal(board);
         }
-        else if(mode == "x")
+        else if(mode.equals("x"))
         {
             state = checkX(board);
         }
-        else if(mode == "corners")
+        else if(mode.equals("corners"))
         {
             state = checkCorners(board);
         }
-        else if(mode == "t")
+        else if(mode.equals("t"))
         {
             state = checkT(board);
         }
-        else if(mode == "l")
+        else if(mode.equals("l"))
         {
             state = checkL(board);
         }
-        else if(mode == "all")
+        else if(mode.equals("all"))
         {
             state = checkAll(board);
         }
 
         return state;
+    }
+
+    // Initializes calls list
+    public void callsGenerator()
+    {
+        // Add possible numbers to calls list (1 - 75)
+        for(int i = 1; i <= 75; i++)
+        {
+            calls.add(i);
+        }
+
+        // Shuffle so it's not in order
+        Collections.shuffle(calls);
     }
 }

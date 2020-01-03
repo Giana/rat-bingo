@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.List;
 
 public class GUI
 {
@@ -80,6 +81,7 @@ public class GUI
     private JButton cornersButton;
 
     Game currentGame;
+    List<JButton> buttons;
 
     public GUI()
     {
@@ -268,6 +270,26 @@ public class GUI
                 switchPanel.revalidate();
             }
         });
+    }
+
+    public void initBoardGUI()
+    {
+        int size = currentGame.getPlayerBoard().getSize();
+
+        for(int i = 0; i < size; i++)
+        {
+            for(int j = 0; j < size; j++)
+            {
+                System.out.printf("%3d ", map[i][j].getNumber());
+            }
+            System.out.println();
+        }
+    }
+
+    // Puts every JButton into "buttons" to be referenced
+    public void createButtonList()
+    {
+        
     }
 
     public static void main(String[] args)
