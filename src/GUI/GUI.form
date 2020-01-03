@@ -165,6 +165,7 @@
             </constraints>
             <properties>
               <autoscrolls value="false"/>
+              <background color="-6103067"/>
               <focusable value="true"/>
               <foreground color="-10986669"/>
               <opaque value="true"/>
@@ -177,6 +178,7 @@
                   <alignmentX value="1.0"/>
                   <alignmentY value="1.0"/>
                   <autoscrolls value="false"/>
+                  <background color="-6103067"/>
                   <enabled value="true"/>
                   <focusable value="false"/>
                   <horizontalAlignment value="0"/>
@@ -194,12 +196,16 @@
             <constraints>
               <card name="Card2"/>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-6103067"/>
+            </properties>
             <border type="none"/>
             <children>
               <grid id="4fb8" binding="boardPanel" layout-manager="GridBagLayout">
                 <constraints border-constraint="Center"/>
-                <properties/>
+                <properties>
+                  <background color="-6103067"/>
+                </properties>
                 <border type="none"/>
                 <children>
                   <component id="76383" class="javax.swing.JButton" binding="b1">
@@ -572,7 +578,9 @@
             <constraints>
               <card name="Card3"/>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-6103067"/>
+            </properties>
             <border type="none"/>
             <children>
               <component id="27ac0" class="javax.swing.JLabel" binding="ratBingoVictoryLogoImage">
@@ -598,7 +606,9 @@
             <constraints>
               <card name="Card4"/>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-6103067"/>
+            </properties>
             <border type="none"/>
             <children>
               <component id="1c95b" class="javax.swing.JLabel" binding="ratBingoDefeatLogoImage">
