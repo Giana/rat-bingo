@@ -49,6 +49,9 @@ public class Game
 
     public String getMode() { return mode; }
 
+    public String setMode(String mode) { this.mode = mode; }
+
+
     // Checks a single row for a horizontal win
     public boolean checkRow(Board board, int row)
     {

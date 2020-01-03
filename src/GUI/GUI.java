@@ -82,6 +82,7 @@ public class GUI
     private JButton cornersButton;
 
     private Game currentGame;
+    private String currentMode;
     private static List<JButton> buttons;
 
     public GUI()
@@ -112,6 +113,9 @@ public class GUI
             public void mouseClicked(MouseEvent e)
             {
                 super.mouseClicked(e);
+
+                // Set game mode
+                currentMode = "corners";
 
                 // Things you need to see while in game
                 setGameStatsVisibility(true);
@@ -323,6 +327,32 @@ public class GUI
                 switchPanel.revalidate();
             }
         });
+
+        // Click small "StartGame" on right panel
+        startGameLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                // Pause before button vanishes
+                try
+                {
+                    Thread.sleep(5000);
+                }
+                catch(InterruptedException ex)
+                {
+                    ex.printStackTrace();
+                }
+
+                startGameLogoImage.setVisible(false);
+
+                currentGame = new Game(currentMode);
+
+                initBoardGUI();
+            }
+        });
     }
 
     // Puts every JButton into "buttons" to be referenced
@@ -339,7 +369,7 @@ public class GUI
 
     public void initBoardGUI()
     {
-        int k = 0;
+        /*int k = 0;
         int size = currentGame.getPlayerBoard().getSize();
 
         createButtonList();
@@ -350,11 +380,12 @@ public class GUI
             {
                 JButton currButton = buttons.get(k);
                 String currText = Integer.toString(currentGame.getPlayerBoard().getMap()[i][j].getNumber());
-                currButton.setText(currText);
+                currButton.setText("00");
                 k++;
             }
             System.out.println();
-        }
+        }*/
+        b1.setText("00");
     }
 
     public void setGameStatsVisibility(boolean bool)
