@@ -1,7 +1,11 @@
 package GUI;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class GUI
 {
@@ -66,5 +70,50 @@ public class GUI
     private JLabel winsTotalLabel;
     private JLabel lossesLogoImage;
     private JLabel lossesTotalLabel;
+    private JLabel callerLogoImage;
+    private JLabel callerCurrentLabel;
+    private JLabel bingoLogoImage;
+    private JPanel creditsPanel;
+    private JPanel helpPanel;
     private JButton cornersButton;
+
+    public GUI()
+    {
+        // Click small "Rat Bingo" logo on left panel
+        smallRatBingoLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+                switchPanel.removeAll();
+                switchPanel.add(mainMenuPanel);
+                switchPanel.repaint();
+                switchPanel.revalidate();
+            }
+        });
+
+        // Click "Corners" on left panel
+        cornersLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+                switchPanel.removeAll();
+                switchPanel.add(gamePanel);
+                switchPanel.repaint();
+                switchPanel.revalidate();
+            }
+        });
+    }
+
+    public static void main(String[] args)
+    {
+        JFrame gameFrame = new JFrame("Rat Bingo");
+        gameFrame.setContentPane(new GUI().parentPanel);
+        gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        gameFrame.pack();
+        gameFrame.setVisible(true);
+    }
 }

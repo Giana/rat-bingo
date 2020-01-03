@@ -157,6 +157,24 @@
             </properties>
             <border type="none"/>
             <children>
+              <component id="cd8d0" class="javax.swing.JLabel" binding="callerLogoImage">
+                <constraints/>
+                <properties>
+                  <horizontalAlignment value="0"/>
+                  <icon value="Images/CallerLogo.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="ff65a" class="javax.swing.JLabel" binding="callerCurrentLabel">
+                <constraints/>
+                <properties>
+                  <background color="-12636826"/>
+                  <font name="Segoe MDL2 Assets" size="36" style="1"/>
+                  <foreground color="-12636826"/>
+                  <horizontalAlignment value="0"/>
+                  <text value="0"/>
+                </properties>
+              </component>
               <component id="1095a" class="javax.swing.JLabel" binding="winsLogoImage">
                 <constraints/>
                 <properties>
@@ -191,11 +209,19 @@
                   <text value="0"/>
                 </properties>
               </component>
+              <component id="ed5b" class="javax.swing.JLabel" binding="bingoLogoImage">
+                <constraints/>
+                <properties>
+                  <horizontalAlignment value="0"/>
+                  <icon value="Images/BingoLogo.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
             </children>
           </grid>
         </children>
       </grid>
-      <grid id="c9349" binding="switchPanel" layout-manager="CardLayout" hgap="0" vgap="0">
+      <grid id="c9349" binding="switchPanel" layout-manager="CardLayout" hgap="0" vgap="0" show="ea562">
         <constraints border-constraint="Center"/>
         <properties>
           <background color="-7548360"/>
@@ -624,6 +650,7 @@
             </constraints>
             <properties>
               <background color="-6103067"/>
+              <name value="winPanel"/>
             </properties>
             <border type="none"/>
             <children>
@@ -673,6 +700,26 @@
                 </properties>
               </component>
             </children>
+          </grid>
+          <grid id="782dc" binding="creditsPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints>
+              <card name="Card5"/>
+            </constraints>
+            <properties>
+              <background color="-6103067"/>
+            </properties>
+            <border type="none"/>
+            <children/>
+          </grid>
+          <grid id="6873d" binding="helpPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints>
+              <card name="Card6"/>
+            </constraints>
+            <properties>
+              <background color="-6103067"/>
+            </properties>
+            <border type="none"/>
+            <children/>
           </grid>
         </children>
       </grid>
