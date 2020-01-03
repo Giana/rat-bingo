@@ -5,12 +5,12 @@ import java.util.Collections;
 
 public class Game
 {
-    private Board playerBoard;           // Board for the player
-    private Board npcBoard;              // Board for the NPC
-    private String playerState;          // Winning state for player
-    private String npcState;             // Winning state for NPC
-    private String mode;                 // Game mode
-    private ArrayList<Integer> calls;   // List of random numbers to call
+    private Board playerBoard;                              // Board for the player
+    private Board npcBoard;                                 // Board for the NPC
+    private String playerState;                             // Winning state for player
+    private String npcState;                                // Winning state for NPC
+    private String mode;                                    // Game mode
+    private ArrayList<Integer> calls = new ArrayList<>();   // List of random numbers to call
 
 
     // Default constructor - for testing where mode is irrelevant
@@ -49,7 +49,7 @@ public class Game
 
     public String getMode() { return mode; }
 
-    public String setMode(String mode) { this.mode = mode; }
+    public void setMode(String mode) { this.mode = mode; }
 
 
     // Checks a single row for a horizontal win

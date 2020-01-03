@@ -81,7 +81,7 @@ public class GUI
     private JLabel startGameLogoImage;
     private JButton cornersButton;
 
-    private Game currentGame;
+    private Game currentGame = new Game();
     private String currentMode;
     private static List<JButton> buttons;
 
@@ -336,21 +336,11 @@ public class GUI
             {
                 super.mouseClicked(e);
 
-                // Pause before button vanishes
-                try
-                {
-                    Thread.sleep(5000);
-                }
-                catch(InterruptedException ex)
-                {
-                    ex.printStackTrace();
-                }
-
                 startGameLogoImage.setVisible(false);
 
-                currentGame = new Game(currentMode);
+                //currentGame.setMode(currentMode);
 
-                initBoardGUI();
+                //initBoardGUI();
             }
         });
     }
