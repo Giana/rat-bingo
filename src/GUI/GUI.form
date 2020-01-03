@@ -149,7 +149,51 @@
           <preferredSize width="200" height="680"/>
         </properties>
         <border type="none"/>
-        <children/>
+        <children>
+          <grid id="8f914" binding="infoPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints border-constraint="Center"/>
+            <properties>
+              <background color="-503240"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="1095a" class="javax.swing.JLabel" binding="winsLogoImage">
+                <constraints/>
+                <properties>
+                  <horizontalAlignment value="0"/>
+                  <icon value="Images/WinsLogo.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="f5134" class="javax.swing.JLabel" binding="winsTotalLabel">
+                <constraints/>
+                <properties>
+                  <background color="-12636826"/>
+                  <font name="Segoe MDL2 Assets" size="28" style="1"/>
+                  <foreground color="-12636826"/>
+                  <text value="0"/>
+                </properties>
+              </component>
+              <component id="96a0f" class="javax.swing.JLabel" binding="lossesLogoImage">
+                <constraints/>
+                <properties>
+                  <horizontalAlignment value="0"/>
+                  <icon value="Images/LossesLogo.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="ab658" class="javax.swing.JLabel" binding="lossesTotalLabel">
+                <constraints/>
+                <properties>
+                  <background color="-12636826"/>
+                  <font name="Segoe MDL2 Assets" size="28" style="1"/>
+                  <foreground color="-12636826"/>
+                  <text value="0"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
       </grid>
       <grid id="c9349" binding="switchPanel" layout-manager="CardLayout" hgap="0" vgap="0">
         <constraints border-constraint="Center"/>

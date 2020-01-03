@@ -61,5 +61,10 @@ public class GUI
     private JLabel helpLogoImage;
     private JLabel creditsLogoImage;
     private JLabel emptySpaceLabel;
+    private JPanel infoPanel;
+    private JLabel winsLogoImage;
+    private JLabel winsTotalLabel;
+    private JLabel lossesLogoImage;
+    private JLabel lossesTotalLabel;
     private JButton cornersButton;
 }
