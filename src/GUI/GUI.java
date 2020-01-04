@@ -116,7 +116,7 @@ public class GUI
                 // Set game mode
                 currentMode = "corners";
 
-                // Remove things you need to see while in game
+                // Display things you need to see while in game
                 setGameStatsVisibility(true);
 
                 // Reset board GUI
@@ -138,17 +138,20 @@ public class GUI
             {
                 super.mouseClicked(e);
 
-                // Create new game
-                //currentGame = new Game("diagonal");
+                // Set game mode
+                currentMode = "diagonal";
 
-                // Things you need to see while in game
+                // Display things you need to see while in game
                 setGameStatsVisibility(true);
+
+                // Reset board GUI
+                resetBoardGUI();
 
                 // Display game panel
                 switchPanel.removeAll();
                 switchPanel.add(gamePanel);
-                switchPanel.repaint();
                 switchPanel.revalidate();
+                switchPanel.repaint();
             }
         });
 
@@ -160,17 +163,20 @@ public class GUI
             {
                 super.mouseClicked(e);
 
-                // Create new game
-                //currentGame = new Game("horizontal");
+                // Set game mode
+                currentMode = "horizontal";
 
-                // Things you need to see while in game
+                // Display things you need to see while in game
                 setGameStatsVisibility(true);
+
+                // Reset board GUI
+                resetBoardGUI();
 
                 // Display game panel
                 switchPanel.removeAll();
                 switchPanel.add(gamePanel);
-                switchPanel.repaint();
                 switchPanel.revalidate();
+                switchPanel.repaint();
             }
         });
 
@@ -182,17 +188,20 @@ public class GUI
             {
                 super.mouseClicked(e);
 
-                // Create new game
-                //currentGame = new Game("vertical");
+                // Set game mode
+                currentMode = "vertical";
 
-                // Things you need to see while in game
+                // Display things you need to see while in game
                 setGameStatsVisibility(true);
+
+                // Reset board GUI
+                resetBoardGUI();
 
                 // Display game panel
                 switchPanel.removeAll();
                 switchPanel.add(gamePanel);
-                switchPanel.repaint();
                 switchPanel.revalidate();
+                switchPanel.repaint();
             }
         });
 
@@ -204,17 +213,20 @@ public class GUI
             {
                 super.mouseClicked(e);
 
-                // Create new game
-                //currentGame = new Game("l");
+                // Set game mode
+                currentMode = "l";
 
-                // Things you need to see while in game
+                // Display things you need to see while in game
                 setGameStatsVisibility(true);
+
+                // Reset board GUI
+                resetBoardGUI();
 
                 // Display game panel
                 switchPanel.removeAll();
                 switchPanel.add(gamePanel);
-                switchPanel.repaint();
                 switchPanel.revalidate();
+                switchPanel.repaint();
             }
         });
 
@@ -226,17 +238,20 @@ public class GUI
             {
                 super.mouseClicked(e);
 
-                // Create new game
-                //currentGame = new Game("t");
+                // Set game mode
+                currentMode = "t";
 
-                // Things you need to see while in game
+                // Display things you need to see while in game
                 setGameStatsVisibility(true);
+
+                // Reset board GUI
+                resetBoardGUI();
 
                 // Display game panel
                 switchPanel.removeAll();
                 switchPanel.add(gamePanel);
-                switchPanel.repaint();
                 switchPanel.revalidate();
+                switchPanel.repaint();
             }
         });
 
@@ -248,17 +263,20 @@ public class GUI
             {
                 super.mouseClicked(e);
 
-                // Create new game
-                //currentGame = new Game("x");
+                // Set game mode
+                currentMode = "x";
 
-                // Things you need to see while in game
+                // Display things you need to see while in game
                 setGameStatsVisibility(true);
+
+                // Reset board GUI
+                resetBoardGUI();
 
                 // Display game panel
                 switchPanel.removeAll();
                 switchPanel.add(gamePanel);
-                switchPanel.repaint();
                 switchPanel.revalidate();
+                switchPanel.repaint();
             }
         });
 
@@ -270,17 +288,20 @@ public class GUI
             {
                 super.mouseClicked(e);
 
-                // Create new game
-                //currentGame = new Game("all");
+                // Set game mode
+                currentMode = "all";
 
-                // Things you need to see while in game
+                // Display things you need to see while in game
                 setGameStatsVisibility(true);
+
+                // Reset board GUI
+                resetBoardGUI();
 
                 // Display game panel
                 switchPanel.removeAll();
                 switchPanel.add(gamePanel);
-                switchPanel.repaint();
                 switchPanel.revalidate();
+                switchPanel.repaint();
             }
         });
 
@@ -370,6 +391,26 @@ public class GUI
                 }
             }
         });
+
+        // Click on b1 (0,0)
+        b1.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                currentGame.getPlayerBoard().getMap()[0][0].setSelected(true);
+            }
+        });
+
+        // Click on b2 (1,0)
+        b2.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                currentGame.getPlayerBoard().getMap()[1][0].setSelected(true);
+            }
+        });
     }
 
 /*    // Puts every JButton into "buttons" to be referenced
@@ -427,39 +468,39 @@ public class GUI
     public void resetBoardGUI()
     {
         // Set Bs
-        b1.setText("0");
-        b2.setText("0");
-        b3.setText("0");
-        b4.setText("0");
-        b5.setText("0");
+        b1.setText("");
+        b2.setText("");
+        b3.setText("");
+        b4.setText("");
+        b5.setText("");
 
         // Sets Is
-        i1.setText("0");
-        i2.setText("0");
-        i3.setText("0");
-        i4.setText("0");
-        i5.setText("0");
+        i1.setText("");
+        i2.setText("");
+        i3.setText("");
+        i4.setText("");
+        i5.setText("");
 
         // Set Ns
-        n1.setText("0");
-        n2.setText("0");
-        n3.setText("0");
-        n4.setText("0");
-        n5.setText("0");
+        n1.setText("");
+        n2.setText("");
+        n3.setText("");
+        n4.setText("");
+        n5.setText("");
 
         // Set Gs
-        g1.setText("0");
-        g2.setText("0");
-        g3.setText("0");
-        g4.setText("0");
-        g5.setText("0");
+        g1.setText("");
+        g2.setText("");
+        g3.setText("");
+        g4.setText("");
+        g5.setText("");
 
         // Set Os
-        o1.setText("0");
-        o2.setText("0");
-        o3.setText("0");
-        o4.setText("0");
-        o5.setText("0");
+        o1.setText("");
+        o2.setText("");
+        o3.setText("");
+        o4.setText("");
+        o5.setText("");
     }
 
     public void setGameStatsVisibility(boolean bool)
