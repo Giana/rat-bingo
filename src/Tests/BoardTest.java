@@ -29,7 +29,6 @@ public class BoardTest
             Tile testTile = testBoard.getMap()[i][0];
             assertTrue(testTile.getNumber() >= bMin);
             assertTrue(testTile.getNumber() <= bMax);
-            assertFalse(testTile.getCalled());
             assertFalse(testTile.getSelected());
         }
 
@@ -39,7 +38,6 @@ public class BoardTest
             Tile testTile = testBoard.getMap()[i][1];
             assertTrue(testTile.getNumber() >= iMin);
             assertTrue(testTile.getNumber() <= iMax);
-            assertFalse(testTile.getCalled());
             assertFalse(testTile.getSelected());
         }
 
@@ -49,7 +47,6 @@ public class BoardTest
             Tile testTile = testBoard.getMap()[i][2];
             assertTrue(testTile.getNumber() >= nMin);
             assertTrue(testTile.getNumber() <= nMax);
-            assertFalse(testTile.getCalled());
             assertFalse(testTile.getSelected());
         }
 
@@ -59,7 +56,6 @@ public class BoardTest
             Tile testTile = testBoard.getMap()[i][3];
             assertTrue(testTile.getNumber() >= gMin);
             assertTrue(testTile.getNumber() <= gMax);
-            assertFalse(testTile.getCalled());
             assertFalse(testTile.getSelected());
         }
 
@@ -69,7 +65,6 @@ public class BoardTest
             Tile testTile = testBoard.getMap()[i][4];
             assertTrue(testTile.getNumber() >= oMin);
             assertTrue(testTile.getNumber() <= oMax);
-            assertFalse(testTile.getCalled());
             assertFalse(testTile.getSelected());
         }
 
