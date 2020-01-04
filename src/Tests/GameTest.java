@@ -17,7 +17,7 @@ public class GameTest
     {
         Game testGame = new Game();
         Board testBoard = testGame.getPlayerBoard();
-        //ArrayList<Integer> called = testGame.getCalled();
+        ArrayList<Integer> called = testGame.getCalled();
         int size = testBoard.getSize();
 
         // Check default
@@ -31,7 +31,7 @@ public class GameTest
         {
             for(int j = 0; j < size; j++)
             {
-                testBoard.getMap()[i][j].setCalled(true);
+                called.add(testBoard.getMap()[i][j].getNumber());
                 testBoard.getMap()[i][j].setSelected(true);
             }
 
@@ -44,6 +44,7 @@ public class GameTest
     {
         Game testGame = new Game();
         Board testBoard = testGame.getPlayerBoard();
+        ArrayList<Integer> called = testGame.getCalled();
         int size = testBoard.getSize();
 
         // Check default
@@ -54,7 +55,7 @@ public class GameTest
         {
             for(int j = 0; j < size; j++)
             {
-                testBoard.getMap()[i][j].setCalled(true);
+                called.add(testBoard.getMap()[i][j].getNumber());
                 testBoard.getMap()[i][j].setSelected(true);
             }
 
@@ -68,6 +69,7 @@ public class GameTest
     {
         Game testGame = new Game();
         Board testBoard = testGame.getPlayerBoard();
+        ArrayList<Integer> called = testGame.getCalled();
         int size = testBoard.getSize();
 
         // Check default
@@ -81,7 +83,7 @@ public class GameTest
         {
             for(int j = 0; j < size; j++)
             {
-                testBoard.getMap()[j][i].setCalled(true);
+                called.add(testBoard.getMap()[j][i].getNumber());
                 testBoard.getMap()[j][i].setSelected(true);
             }
 
@@ -89,26 +91,27 @@ public class GameTest
         }
     }
 
-    @Test // Test checkVerticle()
-    public void checkVerticleTest()
+    @Test // Test checkVertical()
+    public void checkVerticalTest()
     {
         Game testGame = new Game();
         Board testBoard = testGame.getPlayerBoard();
+        ArrayList<Integer> called = testGame.getCalled();
         int size = testBoard.getSize();
 
         // Check default
         assertEquals("N/A", testGame.checkVertical(testBoard));
 
-        // Fill a column, check for verticle win, reset, repeat
+        // Fill a column, check for vertical win, reset, repeat
         for(int i = 0; i < size; i++)
         {
             for(int j = 0; j < size; j++)
             {
-                testBoard.getMap()[j][i].setCalled(true);
+                called.add(testBoard.getMap()[j][i].getNumber());
                 testBoard.getMap()[j][i].setSelected(true);
             }
 
-            assertEquals("verticle" + i, testGame.checkVertical(testBoard));
+            assertEquals("vertical" + i, testGame.checkVertical(testBoard));
             testGame.reset();
         }
     }
@@ -118,6 +121,7 @@ public class GameTest
     {
         Game testGame = new Game();
         Board testBoard = testGame.getPlayerBoard();
+        ArrayList<Integer> called = testGame.getCalled();
         int size = testBoard.getSize();
         int j = 4;
 
@@ -127,7 +131,7 @@ public class GameTest
         // Fill left diagonal, check, reset
         for(int i = 0; i < size; i++)
         {
-            testBoard.getMap()[i][i].setCalled(true);
+            called.add(testBoard.getMap()[i][i].getNumber());
             testBoard.getMap()[i][i].setSelected(true);
         }
 
@@ -137,7 +141,7 @@ public class GameTest
         // Fill right diagonal, check, reset
         for(int i = 0; i < size; i++)
         {
-            testBoard.getMap()[i][j].setCalled(true);
+            called.add(testBoard.getMap()[i][j].getNumber());
             testBoard.getMap()[i][j].setSelected(true);
             j--;
         }
@@ -151,11 +155,11 @@ public class GameTest
         for(int i = 0; i < size; i++)
         {
             // Left
-            testBoard.getMap()[i][i].setCalled(true);
+            called.add(testBoard.getMap()[i][i].getNumber());
             testBoard.getMap()[i][i].setSelected(true);
 
             // Right
-            testBoard.getMap()[i][j].setCalled(true);
+            called.add(testBoard.getMap()[i][j].getNumber());
             testBoard.getMap()[i][j].setSelected(true);
             j--;
         }
@@ -168,6 +172,7 @@ public class GameTest
     {
         Game testGame = new Game();
         Board testBoard = testGame.getPlayerBoard();
+        ArrayList<Integer> called = testGame.getCalled();
         int size = testBoard.getSize();
         int j = 4;
 
@@ -177,7 +182,7 @@ public class GameTest
         // Fill left diagonal, check, reset
         for(int i = 0; i < size; i++)
         {
-            testBoard.getMap()[i][i].setCalled(true);
+            called.add(testBoard.getMap()[i][i].getNumber());
             testBoard.getMap()[i][i].setSelected(true);
         }
 
@@ -187,7 +192,7 @@ public class GameTest
         // Fill right diagonal, check, reset
         for(int i = 0; i < size; i++)
         {
-            testBoard.getMap()[i][j].setCalled(true);
+            called.add(testBoard.getMap()[i][j].getNumber());
             testBoard.getMap()[i][j].setSelected(true);
             j--;
         }
@@ -201,11 +206,11 @@ public class GameTest
         for(int i = 0; i < size; i++)
         {
             // Left
-            testBoard.getMap()[i][i].setCalled(true);
+            called.add(testBoard.getMap()[i][i].getNumber());
             testBoard.getMap()[i][i].setSelected(true);
 
             // Right
-            testBoard.getMap()[i][j].setCalled(true);
+            called.add(testBoard.getMap()[i][j].getNumber());
             testBoard.getMap()[i][j].setSelected(true);
             j--;
         }
@@ -218,6 +223,7 @@ public class GameTest
     {
         Game testGame = new Game();
         Board testBoard = testGame.getPlayerBoard();
+        ArrayList<Integer> called = testGame.getCalled();
         int lowerBound = 0;
         int upperBound = (testBoard.getSize() - 1);
 
@@ -225,13 +231,13 @@ public class GameTest
         assertEquals("N/A", testGame.checkX(testBoard));
 
         // Fill the four corners, check
-        testBoard.getMap()[lowerBound][lowerBound].setCalled(true);
+        called.add(testBoard.getMap()[lowerBound][lowerBound].getNumber());
         testBoard.getMap()[lowerBound][lowerBound].setSelected(true);
-        testBoard.getMap()[lowerBound][upperBound].setCalled(true);
+        called.add(testBoard.getMap()[lowerBound][upperBound].getNumber());
         testBoard.getMap()[lowerBound][upperBound].setSelected(true);
-        testBoard.getMap()[upperBound][lowerBound].setCalled(true);
+        called.add(testBoard.getMap()[upperBound][lowerBound].getNumber());
         testBoard.getMap()[upperBound][lowerBound].setSelected(true);
-        testBoard.getMap()[upperBound][upperBound].setCalled(true);
+        called.add(testBoard.getMap()[upperBound][upperBound].getNumber());
         testBoard.getMap()[upperBound][upperBound].setSelected(true);
 
         assertEquals("corners", testGame.checkCorners(testBoard));
@@ -242,6 +248,7 @@ public class GameTest
     {
         Game testGame = new Game();
         Board testBoard = testGame.getPlayerBoard();
+        ArrayList<Integer> called = testGame.getCalled();
         int size = testBoard.getSize();
         int row = 0;
         int column = 2;
@@ -253,11 +260,11 @@ public class GameTest
         for(int i = 0; i < size; i++)
         {
             // Row
-            testBoard.getMap()[row][i].setCalled(true);
+            called.add(testBoard.getMap()[row][i].getNumber());
             testBoard.getMap()[row][i].setSelected(true);
 
             // Column
-            testBoard.getMap()[i][column].setCalled(true);
+            called.add(testBoard.getMap()[i][column].getNumber());
             testBoard.getMap()[i][column].setSelected(true);
         }
 
@@ -269,6 +276,7 @@ public class GameTest
     {
         Game testGame = new Game();
         Board testBoard = testGame.getPlayerBoard();
+        ArrayList<Integer> called = testGame.getCalled();
         int size = testBoard.getSize();
         int row = 4;
         int column = 0;
@@ -280,11 +288,11 @@ public class GameTest
         for(int i = 0; i < size; i++)
         {
             // Row
-            testBoard.getMap()[row][i].setCalled(true);
+            called.add(testBoard.getMap()[row][i].getNumber());
             testBoard.getMap()[row][i].setSelected(true);
 
             // Column
-            testBoard.getMap()[i][column].setCalled(true);
+            called.add(testBoard.getMap()[i][column].getNumber());
             testBoard.getMap()[i][column].setSelected(true);
         }
 
@@ -296,6 +304,7 @@ public class GameTest
     {
         Game testGame = new Game();
         Board testBoard = testGame.getPlayerBoard();
+        ArrayList<Integer> called = testGame.getCalled();
         int size = testBoard.getSize();
 
         // Check default
@@ -306,7 +315,7 @@ public class GameTest
         {
             for(int j = 0; j < size; j++)
             {
-                testBoard.getMap()[i][j].setCalled(true);
+                called.add(testBoard.getMap()[i][j].getNumber());
                 testBoard.getMap()[i][j].setSelected(true);
             }
         }
@@ -320,6 +329,7 @@ public class GameTest
         Game testGame = new Game();
         Board testBoard1 = testGame.getPlayerBoard();
         Board testBoard2 = testGame.getNpcBoard();
+        ArrayList<Integer> called = testGame.getCalled();
         int size1 = testBoard1.getSize();
         int size2 = testBoard2.getSize();
         int k = 4;
@@ -332,11 +342,11 @@ public class GameTest
         for(int i = 0; i < size1; i++)
         {
             // Left diagonal
-            testBoard1.getMap()[i][i].setCalled(true);
+            called.add(testBoard1.getMap()[i][i].getNumber());
             testBoard1.getMap()[i][i].setSelected(true);
 
             // Right diagonal
-            testBoard1.getMap()[i][k].setCalled(true);
+            called.add(testBoard1.getMap()[i][k].getNumber());
             testBoard1.getMap()[i][k].setSelected(true);
             k--;
         }
@@ -348,7 +358,7 @@ public class GameTest
         {
             for(int j = 0; j < size2; j++)
             {
-                testBoard2.getMap()[i][j].setCalled(true);
+                called.add(testBoard2.getMap()[i][j].getNumber());
                 testBoard2.getMap()[i][j].setSelected(true);
             }
         }
