@@ -5,12 +5,13 @@ import java.util.Collections;
 
 public class Game
 {
-    private Board playerBoard;                              // Board for the player
-    private Board npcBoard;                                 // Board for the NPC
-    private String playerState;                             // Winning state for player
-    private String npcState;                                // Winning state for NPC
-    private String mode;                                    // Game mode
-    private ArrayList<Integer> calls = new ArrayList<>();   // List of random numbers to call
+    private Board playerBoard;                               // Board for the player
+    private Board npcBoard;                                  // Board for the NPC
+    private String playerState;                              // Winning state for player
+    private String npcState;                                 // Winning state for NPC
+    private String mode;                                     // Game mode
+    private ArrayList<Integer> toCall = new ArrayList<>();   // List of random numbers to call
+    private ArrayList<Integer> called = new ArrayList<>();   // List of numbers already called
 
 
     // Default constructor - for testing where mode is irrelevant
@@ -352,10 +353,10 @@ public class Game
         // Add possible numbers to calls list (1 - 75)
         for(int i = 1; i <= 75; i++)
         {
-            calls.add(i);
+            toCall.add(i);
         }
 
         // Shuffle so it's not in order
-        Collections.shuffle(calls);
+        Collections.shuffle(toCall);
     }
 }

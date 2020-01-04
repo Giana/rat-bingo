@@ -83,7 +83,6 @@ public class GUI
 
     private Game currentGame = new Game();
     private String currentMode;
-    private static List<JButton> buttons;
 
     public GUI()
     {
@@ -95,7 +94,7 @@ public class GUI
             {
                 super.mouseClicked(e);
 
-                // Things you should just see in game
+                // Remove things you should just see in game
                 setGameStatsVisibility(false);
 
                 // Display main menu panel
@@ -117,22 +116,17 @@ public class GUI
                 // Set game mode
                 currentMode = "corners";
 
-                // Things you need to see while in game
+                // Remove things you need to see while in game
                 setGameStatsVisibility(true);
+
+                // Reset board GUI
+                resetBoardGUI();
 
                 // Display game panel
                 switchPanel.removeAll();
                 switchPanel.add(gamePanel);
                 switchPanel.revalidate();
                 switchPanel.repaint();
-
-                // Create new game
-                //currentGame = new Game("corners");
-
-                //Initialize board GUI
-                //initBoardGUI();
-                //gamePanel.repaint();
-                //gamePanel.revalidate();
             }
         });
 
@@ -317,7 +311,7 @@ public class GUI
             {
                 super.mouseClicked(e);
 
-                // Things you should just see in game
+                // Remove things you should just see in game
                 setGameStatsVisibility(false);
 
                 // Display help panel
@@ -328,7 +322,7 @@ public class GUI
             }
         });
 
-        // Click small "StartGame" on right panel
+        // Click "StartGame" on right panel
         startGameLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -336,16 +330,49 @@ public class GUI
             {
                 super.mouseClicked(e);
 
+                // Remove things you should just see in game
                 startGameLogoImage.setVisible(false);
 
-                //currentGame.setMode(currentMode);
+                // Create game of current game mode
+                currentGame = new Game(currentMode);
 
-                //initBoardGUI();
+                initBoardGUI();
+            }
+        });
+
+        // Click "BINGO!" on right panel
+        bingoLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                String winState = currentGame.checkWin(currentGame.getPlayerBoard());
+
+                setGameStatsVisibility(false);
+
+                if(winState.equals("N/A"))
+                {
+                    // Display loss panel
+                    switchPanel.removeAll();
+                    switchPanel.add(lossPanel);
+                    switchPanel.repaint();
+                    switchPanel.revalidate();
+                }
+                else
+                {
+                    // Display win panel
+                    switchPanel.removeAll();
+                    switchPanel.add(winPanel);
+                    switchPanel.repaint();
+                    switchPanel.revalidate();
+                }
             }
         });
     }
 
-    // Puts every JButton into "buttons" to be referenced
+/*    // Puts every JButton into "buttons" to be referenced
     public void createButtonList()
     {
         for(Component x: boardPanel.getComponents())
@@ -355,27 +382,84 @@ public class GUI
                 buttons.add((JButton) x);
             }
         }
-    }
+    }*/
 
+    // Gives values to player board buttons on GUI
     public void initBoardGUI()
     {
-        /*int k = 0;
-        int size = currentGame.getPlayerBoard().getSize();
+        // Set Bs
+        b1.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[0][0].getNumber()));
+        b2.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[1][0].getNumber()));
+        b3.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[2][0].getNumber()));
+        b4.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[3][0].getNumber()));
+        b5.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[4][0].getNumber()));
 
-        createButtonList();
+        // Sets Is
+        i1.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[0][1].getNumber()));
+        i2.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[1][1].getNumber()));
+        i3.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[2][1].getNumber()));
+        i4.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[3][1].getNumber()));
+        i5.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[4][1].getNumber()));
 
-        for(int i = 0; i < size; i++)
-        {
-            for(int j = 0; j < size; j++)
-            {
-                JButton currButton = buttons.get(k);
-                String currText = Integer.toString(currentGame.getPlayerBoard().getMap()[i][j].getNumber());
-                currButton.setText("00");
-                k++;
-            }
-            System.out.println();
-        }*/
-        b1.setText("00");
+        // Set Ns
+        n1.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[0][2].getNumber()));
+        n2.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[1][2].getNumber()));
+        n3.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[2][2].getNumber()));
+        n4.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[3][2].getNumber()));
+        n5.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[4][2].getNumber()));
+
+        // Set Gs
+        g1.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[0][3].getNumber()));
+        g2.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[1][3].getNumber()));
+        g3.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[2][3].getNumber()));
+        g4.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[3][3].getNumber()));
+        g5.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[4][3].getNumber()));
+
+        // Set Os
+        o1.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[0][4].getNumber()));
+        o2.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[1][4].getNumber()));
+        o3.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[2][4].getNumber()));
+        o4.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[3][4].getNumber()));
+        o5.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[4][4].getNumber()));
+    }
+
+    // Sets all buttons on board GUI back to 0
+    public void resetBoardGUI()
+    {
+        // Set Bs
+        b1.setText("0");
+        b2.setText("0");
+        b3.setText("0");
+        b4.setText("0");
+        b5.setText("0");
+
+        // Sets Is
+        i1.setText("0");
+        i2.setText("0");
+        i3.setText("0");
+        i4.setText("0");
+        i5.setText("0");
+
+        // Set Ns
+        n1.setText("0");
+        n2.setText("0");
+        n3.setText("0");
+        n4.setText("0");
+        n5.setText("0");
+
+        // Set Gs
+        g1.setText("0");
+        g2.setText("0");
+        g3.setText("0");
+        g4.setText("0");
+        g5.setText("0");
+
+        // Set Os
+        o1.setText("0");
+        o2.setText("0");
+        o3.setText("0");
+        o4.setText("0");
+        o5.setText("0");
     }
 
     public void setGameStatsVisibility(boolean bool)
