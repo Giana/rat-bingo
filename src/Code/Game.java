@@ -21,6 +21,7 @@ public class Game
         npcBoard = new Board();
         playerState = "N/A";
         npcState = "N/A";
+        reset();
         callsGenerator();
     }
 
@@ -32,6 +33,7 @@ public class Game
         playerState = "N/A";
         npcState = "N/A";
         this.mode = mode;
+        reset();
         callsGenerator();
     }
 
@@ -60,8 +62,8 @@ public class Game
 
         for(int i = 0; i < size; i++)
         {
-            if(!(board.getMap()[row][i].getCalled() &&
-                    board.getMap()[row][i].getSelected()))
+            if(!(board.getMap()[row][i].getSelected() &&
+                    called.contains(board.getMap()[row][i].getNumber())))
             {
                 return false;
             }
@@ -93,8 +95,8 @@ public class Game
 
         for(int i = 0; i < size; i++)
         {
-            if(!(board.getMap()[i][column].getCalled() &&
-                    board.getMap()[i][column].getSelected()))
+            if(!(board.getMap()[i][column].getSelected() &&
+                    called.contains(board.getMap()[i][column].getNumber())))
             {
                 return false;
             }
@@ -130,8 +132,8 @@ public class Game
         // Check from top left
         for(int i = 0; i < size; i++)
         {
-            if(board.getMap()[i][i].getCalled() &&
-                    board.getMap()[i][i].getSelected())
+            if(board.getMap()[i][i].getSelected() &&
+                    called.contains(board.getMap()[i][i].getNumber()))
             {
                 leftState = "diagonal";
             }
@@ -145,8 +147,8 @@ public class Game
         // Check from top right
         for(int i = 0; i < size; i++)
         {
-            if(board.getMap()[i][j].getCalled() &&
-                    board.getMap()[i][j].getSelected())
+            if(board.getMap()[i][j].getSelected() &&
+                    called.contains(board.getMap()[i][j].getNumber()))
             {
                 rightState = "diagonal";
                 j--;
@@ -203,14 +205,14 @@ public class Game
         int upperBound = (board.getSize() - 1);
         String state = "N/A";
 
-        if(board.getMap()[lowerBound][lowerBound].getCalled() &&
-                board.getMap()[lowerBound][lowerBound].getSelected() &&
-                board.getMap()[lowerBound][upperBound].getCalled() &&
+        if(board.getMap()[lowerBound][lowerBound].getSelected() &&
+                called.contains(board.getMap()[lowerBound][lowerBound].getNumber()) &&
                 board.getMap()[lowerBound][upperBound].getSelected() &&
-                board.getMap()[upperBound][lowerBound].getCalled() &&
+                called.contains(board.getMap()[lowerBound][upperBound].getNumber()) &&
                 board.getMap()[upperBound][lowerBound].getSelected() &&
-                board.getMap()[upperBound][upperBound].getCalled() &&
-                board.getMap()[upperBound][upperBound].getSelected())
+                called.contains(board.getMap()[upperBound][lowerBound].getNumber()) &&
+                board.getMap()[upperBound][upperBound].getSelected() &&
+                called.contains(board.getMap()[upperBound][upperBound].getNumber()))
         {
             state = "corners";
         }
@@ -266,7 +268,7 @@ public class Game
         return "all";
     }
 
-    // Resets player and NPC boards to have no calls/selections/wins
+    // Resets player and NPC boards to have no calls/wins, resets call lists
     public void reset()
     {
         int size = playerBoard.getSize();
@@ -275,15 +277,16 @@ public class Game
         {
             for(int j = 0; j < size; j++)
             {
-                playerBoard.getMap()[i][j].setCalled(false);
                 playerBoard.getMap()[i][j].setSelected(false);
                 playerState = "N/A";
 
-                npcBoard.getMap()[i][j].setCalled(false);
                 npcBoard.getMap()[i][j].setSelected(false);
                 npcState = "N/A";
             }
         }
+
+        toCall.clear();
+        called.clear();
     }
 
     // Checks a board for a win based on the game mode
@@ -335,7 +338,6 @@ public class Game
         Collections.shuffle(toCall);
     }
 
-    // TODO: empty lists when starting a new game
     // Returns first number from the toCall list (pre-shuffled)
     public int runCaller()
     {
