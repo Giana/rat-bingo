@@ -307,10 +307,12 @@
                       <focusPainted value="true"/>
                       <focusTraversalPolicyProvider value="false"/>
                       <focusable value="true"/>
-                      <foreground color="-16750977"/>
+                      <foreground color="-10106156"/>
                       <inheritsPopupMenu value="false"/>
+                      <label value=""/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
+                      <name value=""/>
                       <opaque value="true"/>
                       <preferredSize width="100" height="100"/>
                       <text value=""/>
@@ -326,7 +328,8 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
-                      <foreground color="-16750977"/>
+                      <foreground color="-10106156"/>
+                      <label value=""/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
                       <preferredSize width="100" height="100"/>
@@ -340,7 +343,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
-                      <foreground color="-16750977"/>
+                      <foreground color="-10106156"/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
                       <preferredSize width="100" height="100"/>
@@ -354,7 +357,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
-                      <foreground color="-16750977"/>
+                      <foreground color="-10106156"/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
                       <preferredSize width="100" height="100"/>
@@ -368,7 +371,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
-                      <foreground color="-16750977"/>
+                      <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
@@ -383,7 +386,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
-                      <foreground color="-16750977"/>
+                      <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
@@ -398,7 +401,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
-                      <foreground color="-16750977"/>
+                      <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
@@ -413,7 +416,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
-                      <foreground color="-16750977"/>
+                      <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
@@ -428,7 +431,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
-                      <foreground color="-16750977"/>
+                      <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
@@ -443,7 +446,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
-                      <foreground color="-16750977"/>
+                      <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
@@ -458,7 +461,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
-                      <foreground color="-16750977"/>
+                      <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
@@ -473,7 +476,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
-                      <foreground color="-16750977"/>
+                      <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
@@ -488,7 +491,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
-                      <foreground color="-16750977"/>
+                      <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
@@ -503,7 +506,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
-                      <foreground color="-16750977"/>
+                      <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
@@ -518,7 +521,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
-                      <foreground color="-16750977"/>
+                      <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
@@ -533,7 +536,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
-                      <foreground color="-16750977"/>
+                      <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
@@ -548,7 +551,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
-                      <foreground color="-16750977"/>
+                      <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
@@ -563,7 +566,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
-                      <foreground color="-16750977"/>
+                      <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
@@ -578,7 +581,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
-                      <foreground color="-16750977"/>
+                      <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
@@ -593,7 +596,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
-                      <foreground color="-16750977"/>
+                      <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
@@ -608,7 +611,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
-                      <foreground color="-16750977"/>
+                      <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
@@ -623,7 +626,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
-                      <foreground color="-16750977"/>
+                      <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
@@ -638,7 +641,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
-                      <foreground color="-16750977"/>
+                      <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
@@ -653,7 +656,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
-                      <foreground color="-16750977"/>
+                      <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
@@ -668,7 +671,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
-                      <foreground color="-16750977"/>
+                      <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>

@@ -389,6 +389,8 @@ public class GUI
                     switchPanel.repaint();
                     switchPanel.revalidate();
                 }
+
+                currentGame.reset();
             }
         });
 
@@ -398,7 +400,7 @@ public class GUI
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                currentGame.getPlayerBoard().getMap()[0][0].setSelected(true);
+                alterTileGUI(b1, 0, 0);
             }
         });
 
@@ -408,7 +410,237 @@ public class GUI
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                currentGame.getPlayerBoard().getMap()[1][0].setSelected(true);
+                alterTileGUI(b2, 1, 0);
+            }
+        });
+
+        // Click on b3 (2,0)
+        b3.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                alterTileGUI(b3, 2, 0);
+            }
+        });
+
+        // Click on b4 (3,0)
+        b4.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                alterTileGUI(b4, 3, 0);
+            }
+        });
+
+        // Click on b5 (4,0)
+        b5.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                alterTileGUI(b5, 4, 0);
+            }
+        });
+
+        // Click on i1 (0,1)
+        i1.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                alterTileGUI(i1, 0, 1);
+            }
+        });
+
+        // Click on i2 (1,1)
+        i2.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                alterTileGUI(i2, 1, 1);
+            }
+        });
+
+        // Click on i3 (2,1)
+        i3.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                alterTileGUI(i3, 2, 1);
+            }
+        });
+
+        // Click on i4 (3,1)
+        i4.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                alterTileGUI(i4, 3, 1);
+            }
+        });
+
+        // Click on i5 (4,1)
+        i5.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                alterTileGUI(i5, 4, 1);
+            }
+        });
+
+        // Click on n1 (0,2)
+        n1.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                alterTileGUI(n1, 0, 2);
+            }
+        });
+
+        // Click on n2 (1,2)
+        n2.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                alterTileGUI(n2, 1, 2);
+            }
+        });
+
+        // Click on n3 (2,2)
+        n3.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                alterTileGUI(n3, 2, 2);
+            }
+        });
+
+        // Click on n4 (3,2)
+        n4.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                alterTileGUI(n4, 3, 2);
+            }
+        });
+
+        // Click on n5 (4,2)
+        n5.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                alterTileGUI(n5, 4, 2);
+            }
+        });
+
+        // Click on g1 (0,3)
+        g1.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                alterTileGUI(g1, 0, 3);
+            }
+        });
+
+        // Click on g2 (1,3)
+        g2.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                alterTileGUI(g2, 1, 3);
+            }
+        });
+
+        // Click on g3 (2,3)
+        g3.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                alterTileGUI(g3, 2, 3);
+            }
+        });
+
+        // Click on g4 (3,3)
+        g4.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                alterTileGUI(g4, 3, 3);
+            }
+        });
+
+        // Click on g5 (4,3)
+        g5.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                alterTileGUI(g5, 4, 3);
+            }
+        });
+
+        // Click on o1 (0,4)
+        o1.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                alterTileGUI(o1, 0, 4);
+            }
+        });
+
+        // Click on o2 (1,4)
+        o2.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                alterTileGUI(o2, 1, 4);
+            }
+        });
+
+        // Click on o3 (2,4)
+        o3.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                alterTileGUI(o3, 2, 4);
+            }
+        });
+
+        // Click on o4 (3,4)
+        o4.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                alterTileGUI(o4, 3, 4);
+            }
+        });
+
+        // Click on o5 (4,4)
+        o5.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                alterTileGUI(o5, 4, 4);
             }
         });
     }
@@ -518,6 +750,23 @@ public class GUI
             callerCurrentLabel.setVisible(false);
             startGameLogoImage.setVisible(false);
             bingoLogoImage.setVisible(false);
+        }
+    }
+
+    // Alters button on board depending on circumstances
+    public void alterTileGUI(JButton button, int x, int y)
+    {
+        // If it's selected (and user is therefore clicking to deselect)
+        if(currentGame.getPlayerBoard().getMap()[x][y].getSelected())
+        {
+            currentGame.getPlayerBoard().getMap()[x][y].setSelected(false);
+            button.setBackground(Color.decode("#00667F"));
+        }
+        // If it's not selected (and user is therefore clicking to select)
+        else
+        {
+            currentGame.getPlayerBoard().getMap()[x][y].setSelected(true);
+            button.setBackground(Color.decode("#F85238"));
         }
     }
 
