@@ -371,4 +371,7 @@ public class GameTest
         assertEquals("N/A", testGame.checkX(testBoard1));
         assertEquals("N/A", testGame.checkAll(testBoard2));
     }
+
+    // TODO: Add tests for new methods
+
 }

@@ -12,6 +12,8 @@ public class Game
     private String mode;                                     // Game mode
     private ArrayList<Integer> toCall = new ArrayList<>();   // List of random numbers to call
     private ArrayList<Integer> called = new ArrayList<>();   // List of numbers already called
+    private int totalWins = 0;                               // Total amount of game wins
+    private int totalLosses = 0;                             // Total amount of game losses
 
 
     // Default constructor - for testing where mode is irrelevant
@@ -57,6 +59,14 @@ public class Game
     public ArrayList<Integer> getToCall() { return toCall; }
 
     public ArrayList<Integer> getCalled() { return called; }
+
+    public int getTotalWins() { return totalWins; }
+
+    public void setTotalWins(int totalWins) { this.totalWins = totalWins; }
+
+    public int getTotalLosses() { return totalLosses; }
+
+    public void setTotalLosses(int totalLosses) { this.totalLosses = totalLosses; }
 
     // Checks a single row for a horizontal win
     public boolean checkRow(Board board, int row)
