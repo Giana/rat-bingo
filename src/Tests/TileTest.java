@@ -30,7 +30,6 @@ public class TileTest
             Tile testTile = testBoard.getMap()[i][0];
             assertTrue(testTile.getNumber() >= bMin);
             assertTrue(testTile.getNumber() <= bMax);
-            assertFalse(testTile.getCalled());
             assertFalse(testTile.getSelected());
         }
 
@@ -40,7 +39,6 @@ public class TileTest
             Tile testTile = testBoard.getMap()[i][1];
             assertTrue(testTile.getNumber() >= iMin);
             assertTrue(testTile.getNumber() <= iMax);
-            assertFalse(testTile.getCalled());
             assertFalse(testTile.getSelected());
         }
 
@@ -50,7 +48,6 @@ public class TileTest
             Tile testTile = testBoard.getMap()[i][2];
             assertTrue(testTile.getNumber() >= nMin);
             assertTrue(testTile.getNumber() <= nMax);
-            assertFalse(testTile.getCalled());
             assertFalse(testTile.getSelected());
         }
 
@@ -60,7 +57,6 @@ public class TileTest
             Tile testTile = testBoard.getMap()[i][3];
             assertTrue(testTile.getNumber() >= gMin);
             assertTrue(testTile.getNumber() <= gMax);
-            assertFalse(testTile.getCalled());
             assertFalse(testTile.getSelected());
         }
 
@@ -70,27 +66,7 @@ public class TileTest
             Tile testTile = testBoard.getMap()[i][4];
             assertTrue(testTile.getNumber() >= oMin);
             assertTrue(testTile.getNumber() <= oMax);
-            assertFalse(testTile.getCalled());
             assertFalse(testTile.getSelected());
-        }
-    }
-
-    @Test // Test setCalled()
-    public void setCalledTest()
-    {
-        Game testGame = new Game();
-        Board testBoard = testGame.getPlayerBoard();
-        int size = testBoard.getSize();
-
-        for(int i = 0; i < size; i++)
-        {
-            for(int j = 0; j < size; j++)
-            {
-                Tile testTile = testBoard.getMap()[i][j];
-                assertFalse(testTile.getCalled());
-                testTile.setCalled(true);
-                assertTrue(testTile.getCalled());
-            }
         }
     }
 
