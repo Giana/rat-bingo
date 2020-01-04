@@ -60,12 +60,8 @@ public class Game
 
         for(int i = 0; i < size; i++)
         {
-            if(board.getMap()[row][i].getCalled() &&
-                    board.getMap()[row][i].getSelected())
-            {
-                continue;
-            }
-            else
+            if(!(board.getMap()[row][i].getCalled() &&
+                    board.getMap()[row][i].getSelected()))
             {
                 return false;
             }
@@ -85,10 +81,6 @@ public class Game
             {
                 return "horizontal" + i;
             }
-            else
-            {
-                continue;
-            }
         }
 
         return "N/A";
@@ -101,12 +93,8 @@ public class Game
 
         for(int i = 0; i < size; i++)
         {
-            if(board.getMap()[i][column].getCalled() &&
-                    board.getMap()[i][column].getSelected())
-            {
-                continue;
-            }
-            else
+            if(!(board.getMap()[i][column].getCalled() &&
+                    board.getMap()[i][column].getSelected()))
             {
                 return false;
             }
@@ -125,10 +113,6 @@ public class Game
             if(checkColumn(board, i))
             {
                 return "vertical" + i;
-            }
-            else
-            {
-                continue;
             }
         }
 
@@ -175,17 +159,17 @@ public class Game
         }
 
         // Only a left diagonal
-        if(leftState == "diagonal" && rightState == "N/A")
+        if(leftState.equals("diagonal") && rightState.equals("N/A"))
         {
             return "diagonalL";
         }
         // Only a right diagonal
-        else if(leftState == "N/A" && rightState == "diagonal")
+        else if(leftState.equals("N/A") && rightState.equals("diagonal"))
         {
             return "diagonalR";
         }
         // Both diagonals
-        else if(leftState == "diagonal" && rightState == "diagonal")
+        else if(leftState.equals("diagonal") && rightState.equals("diagonal"))
         {
             return "diagonalLR";
         }
@@ -202,7 +186,7 @@ public class Game
         String state = checkDiagonal(board);
 
         // Two diagonals found (an X)
-        if(state == "diagonalLR")
+        if(state.equals("diagonalLR"))
         {
             return "x";
         }
@@ -273,11 +257,7 @@ public class Game
 
         for(int i = 0; i < size; i++)
         {
-            if(checkRow(board, i))
-            {
-                continue;
-            }
-            else
+            if(!(checkRow(board, i)))
             {
                 return "N/A";
             }
@@ -311,37 +291,32 @@ public class Game
     {
         String state = "N/A";
 
-        if(mode.equals("horizontal"))
+        switch (mode)
         {
-            state = checkHorizontal(board);
-        }
-        else if(mode.equals("vertical"))
-        {
-            state = checkVertical(board);
-        }
-        else if(mode.equals("diagonal"))
-        {
-            state = checkDiagonal(board);
-        }
-        else if(mode.equals("x"))
-        {
-            state = checkX(board);
-        }
-        else if(mode.equals("corners"))
-        {
-            state = checkCorners(board);
-        }
-        else if(mode.equals("t"))
-        {
-            state = checkT(board);
-        }
-        else if(mode.equals("l"))
-        {
-            state = checkL(board);
-        }
-        else if(mode.equals("all"))
-        {
-            state = checkAll(board);
+            case "horizontal":
+                state = checkHorizontal(board);
+                break;
+            case "vertical":
+                state = checkVertical(board);
+                break;
+            case "diagonal":
+                state = checkDiagonal(board);
+                break;
+            case "x":
+                state = checkX(board);
+                break;
+            case "corners":
+                state = checkCorners(board);
+                break;
+            case "t":
+                state = checkT(board);
+                break;
+            case "l":
+                state = checkL(board);
+                break;
+            case "all":
+                state = checkAll(board);
+                break;
         }
 
         return state;
@@ -358,5 +333,17 @@ public class Game
 
         // Shuffle so it's not in order
         Collections.shuffle(toCall);
+    }
+
+    // TODO: empty lists when starting a new game
+    // Returns first number from the toCall list (pre-shuffled)
+    public int runCaller()
+    {
+        int calling = toCall.get(0);
+
+        // Add to list of numbers called
+        called.add(calling);
+
+        return calling;
     }
 }
