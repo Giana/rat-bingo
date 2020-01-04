@@ -54,6 +54,9 @@ public class Game
 
     public void setMode(String mode) { this.mode = mode; }
 
+    public ArrayList<Integer> getToCall() { return toCall; }
+
+    public ArrayList<Integer> getCalled() { return called; }
 
     // Checks a single row for a horizontal win
     public boolean checkRow(Board board, int row)

@@ -8,6 +8,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 public class GameTest
 {
     @Test // Test checkRow()
@@ -15,6 +17,7 @@ public class GameTest
     {
         Game testGame = new Game();
         Board testBoard = testGame.getPlayerBoard();
+        //ArrayList<Integer> called = testGame.getCalled();
         int size = testBoard.getSize();
 
         // Check default
