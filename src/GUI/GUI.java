@@ -701,38 +701,63 @@ public class GUI
     {
         // Set Bs
         b1.setText("");
+        b1.setBackground(Color.decode("#00667F"));
         b2.setText("");
+        b2.setBackground(Color.decode("#00667F"));
         b3.setText("");
+        b3.setBackground(Color.decode("#00667F"));
         b4.setText("");
+        b4.setBackground(Color.decode("#00667F"));
         b5.setText("");
+        b5.setBackground(Color.decode("#00667F"));
 
         // Sets Is
         i1.setText("");
+        i1.setBackground(Color.decode("#00667F"));
         i2.setText("");
+        i2.setBackground(Color.decode("#00667F"));
         i3.setText("");
+        i3.setBackground(Color.decode("#00667F"));
         i4.setText("");
+        i4.setBackground(Color.decode("#00667F"));
         i5.setText("");
+        i5.setBackground(Color.decode("#00667F"));
 
         // Set Ns
         n1.setText("");
+        n1.setBackground(Color.decode("#00667F"));
         n2.setText("");
+        n2.setBackground(Color.decode("#00667F"));
         n3.setText("");
+        n3.setBackground(Color.decode("#00667F"));
         n4.setText("");
+        n4.setBackground(Color.decode("#00667F"));
         n5.setText("");
+        n5.setBackground(Color.decode("#00667F"));
 
         // Set Gs
         g1.setText("");
+        g1.setBackground(Color.decode("#00667F"));
         g2.setText("");
+        g2.setBackground(Color.decode("#00667F"));
         g3.setText("");
+        g3.setBackground(Color.decode("#00667F"));
         g4.setText("");
+        g4.setBackground(Color.decode("#00667F"));
         g5.setText("");
+        g5.setBackground(Color.decode("#00667F"));
 
         // Set Os
         o1.setText("");
+        o1.setBackground(Color.decode("#00667F"));
         o2.setText("");
+        o2.setBackground(Color.decode("#00667F"));
         o3.setText("");
+        o3.setBackground(Color.decode("#00667F"));
         o4.setText("");
+        o4.setBackground(Color.decode("#00667F"));
         o5.setText("");
+        o5.setBackground(Color.decode("#00667F"));
     }
 
     public void setGameStatsVisibility(boolean bool)
@@ -753,7 +778,7 @@ public class GUI
         }
     }
 
-    // Alters button on board depending on circumstances
+    // Alters button on board depending on circumstances, during game
     public void alterTileGUI(JButton button, int x, int y)
     {
         // If it's selected (and user is therefore clicking to deselect)
