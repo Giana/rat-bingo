@@ -122,6 +122,9 @@ public class GUI
                 // Reset board GUI
                 resetBoardGUI();
 
+                // Reset caller text
+                callerCurrentLabel.setText("0");
+
                 // Display game panel
                 switchPanel.removeAll();
                 switchPanel.add(gamePanel);
@@ -146,6 +149,9 @@ public class GUI
 
                 // Reset board GUI
                 resetBoardGUI();
+
+                // Reset caller text
+                callerCurrentLabel.setText("0");
 
                 // Display game panel
                 switchPanel.removeAll();
@@ -172,6 +178,9 @@ public class GUI
                 // Reset board GUI
                 resetBoardGUI();
 
+                // Reset caller text
+                callerCurrentLabel.setText("0");
+
                 // Display game panel
                 switchPanel.removeAll();
                 switchPanel.add(gamePanel);
@@ -196,6 +205,9 @@ public class GUI
 
                 // Reset board GUI
                 resetBoardGUI();
+
+                // Reset caller text
+                callerCurrentLabel.setText("0");
 
                 // Display game panel
                 switchPanel.removeAll();
@@ -222,6 +234,9 @@ public class GUI
                 // Reset board GUI
                 resetBoardGUI();
 
+                // Reset caller text
+                callerCurrentLabel.setText("0");
+
                 // Display game panel
                 switchPanel.removeAll();
                 switchPanel.add(gamePanel);
@@ -246,6 +261,9 @@ public class GUI
 
                 // Reset board GUI
                 resetBoardGUI();
+
+                // Reset caller text
+                callerCurrentLabel.setText("0");
 
                 // Display game panel
                 switchPanel.removeAll();
@@ -272,6 +290,9 @@ public class GUI
                 // Reset board GUI
                 resetBoardGUI();
 
+                // Reset caller text
+                callerCurrentLabel.setText("0");
+
                 // Display game panel
                 switchPanel.removeAll();
                 switchPanel.add(gamePanel);
@@ -296,6 +317,9 @@ public class GUI
 
                 // Reset board GUI
                 resetBoardGUI();
+
+                // Reset caller text
+                callerCurrentLabel.setText("0");
 
                 // Display game panel
                 switchPanel.removeAll();
@@ -359,22 +383,32 @@ public class GUI
 
                 initBoardGUI();
 
-                for(int i = 0; i < 75; i++)
+                // Start/run caller and NPC
+                Thread backgroundCaller = new Thread(new Runnable()
                 {
-                    int currentInt = currentGame.runCaller();
-
-                    callerCurrentLabel.setText(Integer.toString(currentInt));
-
-                    // Pause for 10 seconds to allow time to respond
-                    try
+                    @Override
+                    public void run()
                     {
-                        Thread.sleep(10000);
+                        for(int i = 0; i < 75; i++)
+                        {
+                            // Sleep for 8 seconds
+                            try
+                            {
+                                Thread.sleep(8000);
+                            }
+                            catch (InterruptedException e)
+                            {
+                                e.printStackTrace();
+                            }
+                            // Change caller label
+                            callerCurrentLabel.setText(Integer.toString(currentGame.runCaller()));
+
+                            // Now do NPC stuff
+                        }
                     }
-                    catch (InterruptedException ex)
-                    {
-                        ex.printStackTrace();
-                    }
-                }
+                });
+
+                backgroundCaller.start();
             }
         });
 
@@ -798,12 +832,6 @@ public class GUI
             currentGame.getPlayerBoard().getMap()[x][y].setSelected(true);
             button.setBackground(Color.decode("#F85238"));
         }
-    }
-
-    // TODO: try creating this method
-    public void runCallerGUI()
-    {
-
     }
 
     public static void main(String[] args)

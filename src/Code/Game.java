@@ -359,6 +359,8 @@ public class Game
         // Add to list of numbers called
         called.add(calling);
 
+        toCall.remove(0);
+
         return calling;
     }
 }
