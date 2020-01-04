@@ -12,8 +12,8 @@ public class Game
     private String mode;                                     // Game mode
     private ArrayList<Integer> toCall = new ArrayList<>();   // List of random numbers to call
     private ArrayList<Integer> called = new ArrayList<>();   // List of numbers already called
-    private int totalWins = 0;                               // Total amount of game wins
-    private int totalLosses = 0;                             // Total amount of game losses
+    private int totalWins;                                   // Total amount of game wins
+    private int totalLosses;                                 // Total amount of game losses
 
 
     // Default constructor - for testing where mode is irrelevant

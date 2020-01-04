@@ -358,6 +358,23 @@ public class GUI
                 currentGame = new Game(currentMode);
 
                 initBoardGUI();
+
+                for(int i = 0; i < 75; i++)
+                {
+                    int currentInt = currentGame.runCaller();
+
+                    callerCurrentLabel.setText(Integer.toString(currentInt));
+
+                    // Pause for 10 seconds to allow time to respond
+                    try
+                    {
+                        Thread.sleep(10000);
+                    }
+                    catch (InterruptedException ex)
+                    {
+                        ex.printStackTrace();
+                    }
+                }
             }
         });
 
@@ -645,18 +662,6 @@ public class GUI
         });
     }
 
-/*    // Puts every JButton into "buttons" to be referenced
-    public void createButtonList()
-    {
-        for(Component x: boardPanel.getComponents())
-        {
-            if(x instanceof JButton)
-            {
-                buttons.add((JButton) x);
-            }
-        }
-    }*/
-
     // Gives values to player board buttons on GUI
     public void initBoardGUI()
     {
@@ -793,6 +798,12 @@ public class GUI
             currentGame.getPlayerBoard().getMap()[x][y].setSelected(true);
             button.setBackground(Color.decode("#F85238"));
         }
+    }
+
+    // TODO: try creating this method
+    public void runCallerGUI()
+    {
+
     }
 
     public static void main(String[] args)
