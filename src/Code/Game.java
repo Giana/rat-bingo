@@ -14,6 +14,7 @@ public class Game
     private ArrayList<Integer> called = new ArrayList<>();   // List of numbers already called
     private int totalWins;                                   // Total amount of game wins
     private int totalLosses;                                 // Total amount of game losses
+    private NPC npcPlayer;                                   // NPC playing against player
 
 
     // Default constructor - for testing where mode is irrelevant
@@ -21,6 +22,7 @@ public class Game
     {
         playerBoard = new Board();
         npcBoard = new Board();
+        npcPlayer = new NPC();
         playerState = "N/A";
         npcState = "N/A";
         reset();
@@ -32,6 +34,7 @@ public class Game
     {
         playerBoard = new Board();
         npcBoard = new Board();
+        npcPlayer = new NPC();
         playerState = "N/A";
         npcState = "N/A";
         this.mode = mode;
@@ -67,6 +70,10 @@ public class Game
     public int getTotalLosses() { return totalLosses; }
 
     public void setTotalLosses(int totalLosses) { this.totalLosses = totalLosses; }
+
+    public NPC getNpcPlayer() { return npcPlayer; }
+
+    public void setNpcPlayer(NPC npcPlayer) { this.npcPlayer = npcPlayer; }
 
     // Checks a single row for a horizontal win
     public boolean checkRow(Board board, int row)

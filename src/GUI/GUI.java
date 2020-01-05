@@ -1,6 +1,7 @@
 package GUI;
 
 import Code.Game;
+import Code.NPC;
 
 import javax.swing.*;
 import java.awt.*;
@@ -404,6 +405,7 @@ public class GUI
                             callerCurrentLabel.setText(Integer.toString(currentGame.runCaller()));
 
                             // Now do NPC stuff
+
                         }
                     }
                 });
