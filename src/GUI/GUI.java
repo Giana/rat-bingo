@@ -80,6 +80,7 @@ public class GUI
     private JPanel creditsPanel;
     private JPanel helpPanel;
     private JLabel startGameLogoImage;
+    private JLabel letterCurrentlabel;
     private JButton cornersButton;
 
     private Game currentGame = new Game();
@@ -693,7 +694,7 @@ public class GUI
         // Set Ns
         n1.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[0][2].getNumber()));
         n2.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[1][2].getNumber()));
-        n3.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[2][2].getNumber()));
+        n3.setText("FREE");
         n4.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[3][2].getNumber()));
         n5.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[4][2].getNumber()));
 
@@ -712,7 +713,7 @@ public class GUI
         o5.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[4][4].getNumber()));
     }
 
-    // Sets all buttons on board GUI back to 0
+    // Sets all buttons on board GUI back to nothing
     public void resetBoardGUI()
     {
         // Set Bs
@@ -829,6 +830,41 @@ public class GUI
         switchPanel.revalidate();
     }
 
+    // Give a number from the caller, get the letter that goes with it
+    public String getDisplayLetter(int called)
+    {
+        // B
+        if(called >= 1 && called <= 15)
+        {
+            return "B";
+        }
+        // I
+        else if(called >= 16 && called <= 30)
+        {
+            return "I";
+        }
+        // N
+        else if(called >= 31 && called <= 45)
+        {
+            return "N";
+        }
+        // G
+        else if(called >= 46 && called <= 60)
+        {
+            return "G";
+        }
+        // O
+        else if(called >= 61 && called <= 75)
+        {
+            return "O";
+        }
+        else
+        {
+            System.out.println("Error: Value out of range");
+            return "-1";
+        }
+    }
+
     // Sets up thread for background caller
     public void setUpBackgroundProcesses()
     {
@@ -838,24 +874,32 @@ public class GUI
             @Override
             public void run()
             {
+                int called = currentGame.runCaller();
+
+                String letter = getDisplayLetter(called);
+
                 // Change caller label (once, so we don't have to wait for first call)
-                callerCurrentLabel.setText(Integer.toString(currentGame.runCaller()));
+                callerCurrentLabel.setText(Integer.toString(called));
 
                 // Now continue for the next 74
                 for(int i = 0; i < 74; i++)
                 {
-                    // Sleep for 8 seconds
+                    // Sleep for 6 seconds
                     try
                     {
-                        Thread.sleep(8000);
+                        Thread.sleep(500);
                     }
                     catch(InterruptedException e)
                     {
                         e.printStackTrace();
                     }
 
+                    called = currentGame.runCaller();
+
+                    letter = getDisplayLetter(called);
+
                     // Change caller label
-                    callerCurrentLabel.setText(Integer.toString(currentGame.runCaller()));
+                    callerCurrentLabel.setText(Integer.toString(called));
 
                     // NPC plays
                     currentGame.getNpcPlayer().scanBoard(Integer.parseInt(callerCurrentLabel.getText()), currentGame);
@@ -865,7 +909,8 @@ public class GUI
                     {
                         setGameStatsVisibility(false);
                         displayDefeatScreen();
-                        lossesTotalLabel.setText(Integer.toString(Integer.parseInt(lossesTotalLabel.getText()) + 1));
+                        int playerLosses = (Integer.parseInt(lossesTotalLabel.getText())) + 1;
+                        lossesTotalLabel.setText(Integer.toString(playerLosses));
 
                         backgroundProcesses.interrupt();
                     }

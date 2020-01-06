@@ -169,6 +169,16 @@
                   <visible value="false"/>
                 </properties>
               </component>
+              <component id="912d0" class="javax.swing.JLabel" binding="letterCurrentlabel">
+                <constraints/>
+                <properties>
+                  <background color="-12636826"/>
+                  <foreground color="-12636826"/>
+                  <horizontalAlignment value="0"/>
+                  <text value=""/>
+                  <visible value="false"/>
+                </properties>
+              </component>
               <component id="ff65a" class="javax.swing.JLabel" binding="callerCurrentLabel">
                 <constraints/>
                 <properties>
@@ -503,7 +513,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
-                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
+                      <font name="Segoe MDL2 Assets" size="24" style="1"/>
                       <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>

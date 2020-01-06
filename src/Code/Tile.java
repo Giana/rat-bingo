@@ -26,4 +26,10 @@ public class Tile
     public boolean getSelected() { return selected; }
 
     public void setSelected(boolean selected) { this.selected = selected; }
+
+    // Returns tile value as a string
+    public String toString()
+    {
+        return Integer.toString(number);
+    }
 }

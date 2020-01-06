@@ -11,7 +11,7 @@ public class Game
     private String npcState;                                 // Winning state for NPC
     private String mode;                                     // Game mode
     private ArrayList<Integer> toCall = new ArrayList<>();   // List of random numbers to call
-    private ArrayList<Integer> called = new ArrayList<>();   // List of numbers already called
+    private ArrayList<String> called = new ArrayList<>();   // List of numbers already called
     private int totalWins;                                   // Total amount of game wins
     private int totalLosses;                                 // Total amount of game losses
     private NPC npcPlayer;                                   // NPC playing against player
@@ -27,6 +27,7 @@ public class Game
         npcState = "N/A";
         reset();
         callsGenerator();
+        called.add("FREE");
     }
 
     // Parameterized constructor
@@ -40,6 +41,7 @@ public class Game
         this.mode = mode;
         reset();
         callsGenerator();
+        called.add("FREE");
     }
 
     // Getters & setters
@@ -61,7 +63,7 @@ public class Game
 
     public ArrayList<Integer> getToCall() { return toCall; }
 
-    public ArrayList<Integer> getCalled() { return called; }
+    public ArrayList<String> getCalled() { return called; }
 
     public int getTotalWins() { return totalWins; }
 
@@ -83,7 +85,7 @@ public class Game
         for(int i = 0; i < size; i++)
         {
             if(!(board.getMap()[row][i].getSelected() &&
-                    called.contains(board.getMap()[row][i].getNumber())))
+                    called.contains(board.getMap()[row][i].toString())))
             {
                 return false;
             }
@@ -116,7 +118,7 @@ public class Game
         for(int i = 0; i < size; i++)
         {
             if(!(board.getMap()[i][column].getSelected() &&
-                    called.contains(board.getMap()[i][column].getNumber())))
+                    called.contains(board.getMap()[i][column].toString())))
             {
                 return false;
             }
@@ -153,7 +155,7 @@ public class Game
         for(int i = 0; i < size; i++)
         {
             if(board.getMap()[i][i].getSelected() &&
-                    called.contains(board.getMap()[i][i].getNumber()))
+                    called.contains(board.getMap()[i][i].toString()))
             {
                 leftState = "diagonal";
             }
@@ -168,7 +170,7 @@ public class Game
         for(int i = 0; i < size; i++)
         {
             if(board.getMap()[i][j].getSelected() &&
-                    called.contains(board.getMap()[i][j].getNumber()))
+                    called.contains(board.getMap()[i][j].toString()))
             {
                 rightState = "diagonal";
                 j--;
@@ -226,13 +228,13 @@ public class Game
         String state = "N/A";
 
         if(board.getMap()[lowerBound][lowerBound].getSelected() &&
-                called.contains(board.getMap()[lowerBound][lowerBound].getNumber()) &&
+                called.contains(board.getMap()[lowerBound][lowerBound].toString()) &&
                 board.getMap()[lowerBound][upperBound].getSelected() &&
-                called.contains(board.getMap()[lowerBound][upperBound].getNumber()) &&
+                called.contains(board.getMap()[lowerBound][upperBound].toString()) &&
                 board.getMap()[upperBound][lowerBound].getSelected() &&
-                called.contains(board.getMap()[upperBound][lowerBound].getNumber()) &&
+                called.contains(board.getMap()[upperBound][lowerBound].toString()) &&
                 board.getMap()[upperBound][upperBound].getSelected() &&
-                called.contains(board.getMap()[upperBound][upperBound].getNumber()))
+                called.contains(board.getMap()[upperBound][upperBound].toString()))
         {
             state = "corners";
         }
@@ -364,7 +366,7 @@ public class Game
         int calling = toCall.get(0);
 
         // Add to list of numbers called
-        called.add(calling);
+        called.add(Integer.toString(calling));
 
         toCall.remove(0);
 
