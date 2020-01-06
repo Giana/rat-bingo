@@ -1,7 +1,6 @@
 package GUI;
 
 import Code.Game;
-import Code.NPC;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,7 +10,6 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
-import java.util.List;
 
 public class GUI
 {
@@ -86,8 +84,7 @@ public class GUI
 
     private Game currentGame = new Game();
     private String currentMode;
-    Thread backgroundCaller;
-    Thread backgroundNPC;
+    Thread backgroundProcesses;
 
     public GUI()
     {
@@ -387,11 +384,9 @@ public class GUI
                 currentGame = new Game(currentMode);
 
                 initBoardGUI();
-                setUpBackgroundCaller();
-                setUpBackgroundNPC();
+                setUpBackgroundProcesses();
 
-                backgroundCaller.start();
-                backgroundNPC.start();
+                backgroundProcesses.start();
             }
         });
 
@@ -418,9 +413,8 @@ public class GUI
                     displayVictoryScreen();
                 }
 
-                // Interrupt caller & NPC threads in background
-                backgroundCaller.interrupt();
-                backgroundNPC.interrupt();
+                // Interrupt background processes
+                backgroundProcesses.interrupt();
 
                 currentGame.reset();
             }
@@ -683,7 +677,7 @@ public class GUI
             public void propertyChange(PropertyChangeEvent evt)
             {
                 // New number called, now NPC can continue
-                notify();
+                // backgroundCaller.notify();
             }
         });
     }
@@ -845,10 +839,10 @@ public class GUI
     }
 
     // Sets up thread for background caller
-    public void setUpBackgroundCaller()
+    public void setUpBackgroundProcesses()
     {
         // Thread for caller
-        backgroundCaller = new Thread(new Runnable()
+        backgroundProcesses = new Thread(new Runnable()
         {
             @Override
             public void run()
@@ -872,91 +866,15 @@ public class GUI
                     // Change caller label
                     callerCurrentLabel.setText(Integer.toString(currentGame.runCaller()));
 
-                    // Change text of wins to keep track of how many numbers called (for testing)
-                    //winsTotalLabel.setText(Integer.toString(i));
-                }
-            }
-        });
-    }
-
-    // Sets up thread for background NPC
-    public void setUpBackgroundNPC()
-    {
-        // Thread for NPC
-        backgroundNPC = new Thread(new Runnable()
-        {
-            @Override
-            public void run()
-            {
-                // Sleep for 3.5 seconds (mimics the time it takes to read the current call & scan for it)
-                try
-                {
-                    Thread.sleep(3500);
-                }
-                catch(InterruptedException e)
-                {
-                    e.printStackTrace();
-                }
-
-                currentGame.getNpcPlayer().scanBoard(Integer.parseInt(callerCurrentLabel.getText()), currentGame);
-
-                // Sleep for 1 second (mimics the time it takes to check for bingo)
-                try
-                {
-                    Thread.sleep(1000);
-                }
-                catch(InterruptedException e)
-                {
-                    e.printStackTrace();
-                }
-
-                // If NPC won
-                if(currentGame.getNpcPlayer().checkForBingo(currentGame))
-                {
-                    setGameStatsVisibility(false);
-                    displayDefeatScreen();
-                }
-
-                // Do it up to 74 more times
-                for(int i = 0; i < 74; i++)
-                {
-                    // Now wait to continue (when next number is called)
-                    try
-                    {
-                        backgroundNPC.wait();
-                    }
-                    catch(InterruptedException e)
-                    {
-                        e.printStackTrace();
-                    }
-
-                    // Sleep for 3.5 seconds (mimics the time it takes to read the current call & scan for it)
-                    try
-                    {
-                        Thread.sleep(3500);
-                    }
-                    catch(InterruptedException e)
-                    {
-                        e.printStackTrace();
-                    }
-
+                    // NPC plays
                     currentGame.getNpcPlayer().scanBoard(Integer.parseInt(callerCurrentLabel.getText()), currentGame);
-
-                    // Sleep for 1 second (mimics the time it takes to check for bingo)
-                    try
-                    {
-                        Thread.sleep(1000);
-                    }
-                    catch(InterruptedException e)
-                    {
-                        e.printStackTrace();
-                    }
 
                     // If NPC won
                     if(currentGame.getNpcPlayer().checkForBingo(currentGame))
                     {
                         setGameStatsVisibility(false);
                         displayDefeatScreen();
+                        backgroundProcesses.interrupt();
                     }
                 }
             }
