@@ -406,11 +406,13 @@ public class GUI
                 {
                     // Display loss panel
                     displayDefeatScreen();
+                    lossesTotalLabel.setText(Integer.toString(Integer.parseInt(lossesTotalLabel.getText()) + 1));
                 }
                 else
                 {
                     // Display win panel
                     displayVictoryScreen();
+                    winsTotalLabel.setText(Integer.toString(Integer.parseInt(winsTotalLabel.getText()) + 1));
                 }
 
                 // Interrupt background processes
@@ -669,17 +671,6 @@ public class GUI
                 alterTileGUI(o5, 4, 4);
             }
         });
-
-        // When a newly called number is displayed
-        callerCurrentLabel.addPropertyChangeListener(new PropertyChangeListener()
-        {
-            @Override
-            public void propertyChange(PropertyChangeEvent evt)
-            {
-                // New number called, now NPC can continue
-                // backgroundCaller.notify();
-            }
-        });
     }
 
     // Gives values to player board buttons on GUI
@@ -874,6 +865,8 @@ public class GUI
                     {
                         setGameStatsVisibility(false);
                         displayDefeatScreen();
+                        lossesTotalLabel.setText(Integer.toString(Integer.parseInt(lossesTotalLabel.getText()) + 1));
+
                         backgroundProcesses.interrupt();
                     }
                 }

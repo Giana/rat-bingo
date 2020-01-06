@@ -2,8 +2,27 @@ package Code;
 
 public class NPC
 {
+    private int totalWins;     // Total wins for NPC
+    private int totalLosses;   // Total losses for NPC
+
     // Default constructor
     public NPC() { }
+
+    // Parameterized constructor
+    public NPC(int totalWins, int totalLosses)
+    {
+        this.totalWins = totalWins;
+        this.totalLosses = totalLosses;
+    }
+
+    // Getters & setters
+    public int getTotalWins() { return totalWins; }
+
+    public void setTotalWins(int totalWins) { this.totalWins = totalWins; }
+
+    public int getTotalLosses() { return totalLosses; }
+
+    public void setTotalLosses(int totalLosses) { this.totalLosses = totalLosses; }
 
     // Selects location on board depending on circumstances, during game
     public void selectTile(Game currentGame, int x, int y)
