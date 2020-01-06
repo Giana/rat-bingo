@@ -307,6 +307,7 @@
                       <focusPainted value="true"/>
                       <focusTraversalPolicyProvider value="false"/>
                       <focusable value="true"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
                       <foreground color="-10106156"/>
                       <inheritsPopupMenu value="false"/>
                       <label value=""/>
@@ -328,6 +329,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
                       <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
@@ -343,6 +345,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
                       <foreground color="-10106156"/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
@@ -357,6 +360,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
                       <foreground color="-10106156"/>
                       <maximumSize width="100" height="100"/>
                       <minimumSize width="100" height="100"/>
@@ -371,6 +375,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
                       <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
@@ -386,6 +391,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
                       <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
@@ -401,6 +407,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
                       <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
@@ -416,6 +423,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
                       <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
@@ -431,6 +439,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
                       <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
@@ -446,6 +455,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
                       <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
@@ -461,6 +471,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
                       <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
@@ -476,6 +487,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
                       <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
@@ -491,6 +503,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
                       <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
@@ -506,6 +519,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
                       <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
@@ -521,6 +535,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
                       <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
@@ -536,6 +551,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
                       <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
@@ -551,6 +567,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
                       <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
@@ -566,6 +583,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
                       <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
@@ -581,6 +599,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
                       <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
@@ -596,6 +615,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
                       <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
@@ -611,6 +631,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
                       <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
@@ -626,6 +647,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
                       <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
@@ -641,6 +663,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
                       <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
@@ -656,6 +679,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
                       <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
@@ -671,6 +695,7 @@
                     </constraints>
                     <properties>
                       <background color="-16750977"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
                       <foreground color="-10106156"/>
                       <label value=""/>
                       <maximumSize width="100" height="100"/>
