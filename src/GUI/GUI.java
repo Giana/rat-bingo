@@ -815,6 +815,7 @@ public class GUI
         switchPanel.revalidate();
 
         changeLosses();
+        backgroundProcesses.interrupt();
     }
 
     // Give a number from the caller, get the letter that goes with it
@@ -916,7 +917,7 @@ public class GUI
                     // Change caller label
                     callerCurrentLabel.setText(Integer.toString(called));
 
-                    // NPC plays
+                    // NPC plays game
                     currentGame.getNpcPlayer().scanBoard(Integer.parseInt(callerCurrentLabel.getText()), currentGame);
 
                     // If NPC won
@@ -924,10 +925,11 @@ public class GUI
                     {
                         setGameStatsVisibility(false);
                         displayDefeatScreen();
-
-                        backgroundProcesses.interrupt();
+                        break;
                     }
                 }
+
+                backgroundProcesses.interrupt();
             }
         });
     }
