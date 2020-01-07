@@ -875,6 +875,25 @@
             <border type="none"/>
             <children/>
           </grid>
+          <grid id="7ac9" binding="savedPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints>
+              <card name="Card7"/>
+            </constraints>
+            <properties>
+              <background color="-6103067"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="3b81b" class="javax.swing.JLabel" binding="largeSavedLogoImage">
+                <constraints border-constraint="Center"/>
+                <properties>
+                  <horizontalAlignment value="0"/>
+                  <icon value="Images/LargeSavedLogo.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+            </children>
+          </grid>
         </children>
       </grid>
     </children>

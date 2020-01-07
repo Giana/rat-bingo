@@ -83,6 +83,8 @@ public class GUI
     private JLabel loadLogoImage;
     private JLabel saveLogoImage;
     private JLabel currentGameModeLogoImage;
+    private JPanel savedPanel;
+    private JLabel largeSavedLogoImage;
     private JButton cornersButton;
     private Icon cornersIcon = new ImageIcon("src/Images/CornersLogo.png");
     private Icon diagonalIcon = new ImageIcon("src/Images/DiagonalLogo.png");
@@ -698,6 +700,7 @@ public class GUI
                 try
                 {
                     currentGame.saveGame();
+                    displaySavedScreen();
                 }
                 catch(IOException ex)
                 {
@@ -874,6 +877,15 @@ public class GUI
 
         changeLosses();
         backgroundProcesses.interrupt();
+    }
+
+    // Displays saved panel
+    public void displaySavedScreen()
+    {
+        switchPanel.removeAll();
+        switchPanel.add(savedPanel);
+        switchPanel.repaint();
+        switchPanel.revalidate();
     }
 
     // Give a number from the caller, get the letter that goes with it
