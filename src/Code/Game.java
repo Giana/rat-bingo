@@ -1,26 +1,34 @@
 package Code;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.util.Scanner;
+import java.io.PrintWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class Game
 {
-    private Board playerBoard;                               // Board for the player
-    private Board npcBoard;                                  // Board for the NPC
-    private String playerState;                              // Winning state for player
-    private String npcState;                                 // Winning state for NPC
-    private String mode;                                     // Game mode
-    private ArrayList<Integer> toCall = new ArrayList<>();   // List of random numbers to call
-    private ArrayList<String> called = new ArrayList<>();   // List of numbers already called
-    private int totalWins;                                   // Total amount of game wins
-    private int totalLosses;                                 // Total amount of game losses
-    private NPC npcPlayer;                                   // NPC playing against player
+    private Board playerBoard;                                 // Board for the player
+    private Board npcBoard;                                    // Board for the NPC
+    private String playerState;                                // Winning state for player
+    private String npcState;                                   // Winning state for NPC
+    private String mode;                                       // Game mode
+    private ArrayList<Integer> toCall = new ArrayList<>();     // List of random numbers to call
+    private ArrayList<String> called = new ArrayList<>();      // List of numbers already called
+    private int totalWins;                                     // Total amount of game wins
+    private int totalLosses;                                   // Total amount of game losses
+    private NPC npcPlayer;                                     // NPC playing against player
+    private Player player;                                     // The player
+    private ArrayList<Integer> gameData = new ArrayList<>();   // List for game stats
 
 
     // Default constructor - for testing where mode is irrelevant
     public Game()
     {
         playerBoard = new Board();
+        player = new Player();
         npcBoard = new Board();
         npcPlayer = new NPC();
         playerState = "N/A";
@@ -34,6 +42,7 @@ public class Game
     public Game(String mode)
     {
         playerBoard = new Board();
+        player = new Player();
         npcBoard = new Board();
         npcPlayer = new NPC();
         playerState = "N/A";
@@ -76,6 +85,10 @@ public class Game
     public NPC getNpcPlayer() { return npcPlayer; }
 
     public void setNpcPlayer(NPC npcPlayer) { this.npcPlayer = npcPlayer; }
+
+    public Player getPlayer() { return player; }
+
+    public void setPlayer(Player player) { this.player = player; }
 
     // Checks a single row for a horizontal win
     public boolean checkRow(Board board, int row)
@@ -371,5 +384,27 @@ public class Game
         toCall.remove(0);
 
         return calling;
+    }
+
+    // Saves the total wins and losses of Player
+    public void saveGame() throws IOException
+    {
+        FileWriter fileWriter = new FileWriter("Saves/Save.txt");
+        PrintWriter printWriter = new PrintWriter(fileWriter);
+        printWriter.println(player.getTotalWins());
+        printWriter.println(player.getTotalLosses());
+        printWriter.close();
+    }
+
+    // Loads the total wins and losses of Player
+    public void loadGame() throws IOException
+    {
+        File saveFile = new File("Saves/Save.txt");
+        Scanner input = new Scanner(saveFile);
+
+        while(input.hasNextLine())
+        {
+            gameData.add(Integer.parseInt(input.nextLine()));
+        }
     }
 }

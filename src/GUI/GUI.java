@@ -10,6 +10,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.io.IOException;
 
 public class GUI
 {
@@ -407,13 +408,17 @@ public class GUI
                 {
                     // Display loss panel
                     displayDefeatScreen();
-                    lossesTotalLabel.setText(Integer.toString(Integer.parseInt(lossesTotalLabel.getText()) + 1));
+
+                    // Change amount of losses
+                    // changeLosses();
                 }
                 else
                 {
                     // Display win panel
                     displayVictoryScreen();
-                    winsTotalLabel.setText(Integer.toString(Integer.parseInt(winsTotalLabel.getText()) + 1));
+
+                    // Change amount of wins
+                    // changeWins();
                 }
 
                 // Interrupt background processes
@@ -819,6 +824,8 @@ public class GUI
         switchPanel.add(winPanel);
         switchPanel.repaint();
         switchPanel.revalidate();
+
+        changeWins();
     }
 
     // Displays loss panel
@@ -828,6 +835,8 @@ public class GUI
         switchPanel.add(lossPanel);
         switchPanel.repaint();
         switchPanel.revalidate();
+
+        changeLosses();
     }
 
     // Give a number from the caller, get the letter that goes with it
@@ -865,6 +874,28 @@ public class GUI
         }
     }
 
+    // Changes the amount of wins in GUI and in Player class
+    public void changeWins()
+    {
+        int winsListed = Integer.parseInt(winsTotalLabel.getText());
+        currentGame.getPlayer().setTotalWins(winsListed);
+
+        int updatedWins = (currentGame.getPlayer().getTotalWins()) + 1;
+        winsTotalLabel.setText(Integer.toString(updatedWins));
+        currentGame.getPlayer().setTotalWins(updatedWins);
+    }
+
+    // Changes the amount of losses in GUI and in Player class
+    public void changeLosses()
+    {
+        int lossesListed = Integer.parseInt(lossesTotalLabel.getText());
+        currentGame.getPlayer().setTotalLosses(lossesListed);
+
+        int updatedLosses = (currentGame.getPlayer().getTotalLosses()) + 1;
+        lossesTotalLabel.setText(Integer.toString(updatedLosses));
+        currentGame.getPlayer().setTotalLosses(updatedLosses);
+    }
+
     // Sets up thread for background caller
     public void setUpBackgroundProcesses()
     {
@@ -898,6 +929,9 @@ public class GUI
 
                     letter = getDisplayLetter(called);
 
+                    // Change letter label
+                    letterCurrentlabel.setText(letter);
+
                     // Change caller label
                     callerCurrentLabel.setText(Integer.toString(called));
 
@@ -909,8 +943,6 @@ public class GUI
                     {
                         setGameStatsVisibility(false);
                         displayDefeatScreen();
-                        int playerLosses = (Integer.parseInt(lossesTotalLabel.getText())) + 1;
-                        lossesTotalLabel.setText(Integer.toString(playerLosses));
 
                         backgroundProcesses.interrupt();
                     }
