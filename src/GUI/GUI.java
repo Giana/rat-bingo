@@ -8,9 +8,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
-import java.io.IOException;
 
 public class GUI
 {
@@ -123,11 +120,8 @@ public class GUI
                 // Display things you need to see while in game
                 setGameStatsVisibility(true);
 
-                // Reset board GUI
-                resetBoardGUI();
-
-                // Reset caller text
-                callerCurrentLabel.setText("0");
+                // Reset game GUI
+                resetGameGUI();
 
                 // Display game panel
                 switchPanel.removeAll();
@@ -151,11 +145,8 @@ public class GUI
                 // Display things you need to see while in game
                 setGameStatsVisibility(true);
 
-                // Reset board GUI
-                resetBoardGUI();
-
-                // Reset caller text
-                callerCurrentLabel.setText("0");
+                // Reset game GUI
+                resetGameGUI();
 
                 // Display game panel
                 switchPanel.removeAll();
@@ -179,11 +170,8 @@ public class GUI
                 // Display things you need to see while in game
                 setGameStatsVisibility(true);
 
-                // Reset board GUI
-                resetBoardGUI();
-
-                // Reset caller text
-                callerCurrentLabel.setText("0");
+                // Reset game GUI
+                resetGameGUI();
 
                 // Display game panel
                 switchPanel.removeAll();
@@ -207,11 +195,8 @@ public class GUI
                 // Display things you need to see while in game
                 setGameStatsVisibility(true);
 
-                // Reset board GUI
-                resetBoardGUI();
-
-                // Reset caller text
-                callerCurrentLabel.setText("0");
+                // Reset game GUI
+                resetGameGUI();
 
                 // Display game panel
                 switchPanel.removeAll();
@@ -235,11 +220,8 @@ public class GUI
                 // Display things you need to see while in game
                 setGameStatsVisibility(true);
 
-                // Reset board GUI
-                resetBoardGUI();
-
-                // Reset caller text
-                callerCurrentLabel.setText("0");
+                // Reset game GUI
+                resetGameGUI();
 
                 // Display game panel
                 switchPanel.removeAll();
@@ -263,11 +245,8 @@ public class GUI
                 // Display things you need to see while in game
                 setGameStatsVisibility(true);
 
-                // Reset board GUI
-                resetBoardGUI();
-
-                // Reset caller text
-                callerCurrentLabel.setText("0");
+                // Reset game GUI
+                resetGameGUI();
 
                 // Display game panel
                 switchPanel.removeAll();
@@ -291,11 +270,8 @@ public class GUI
                 // Display things you need to see while in game
                 setGameStatsVisibility(true);
 
-                // Reset board GUI
-                resetBoardGUI();
-
-                // Reset caller text
-                callerCurrentLabel.setText("0");
+                // Reset game GUI
+                resetGameGUI();
 
                 // Display game panel
                 switchPanel.removeAll();
@@ -319,11 +295,8 @@ public class GUI
                 // Display things you need to see while in game
                 setGameStatsVisibility(true);
 
-                // Reset board GUI
-                resetBoardGUI();
-
-                // Reset caller text
-                callerCurrentLabel.setText("0");
+                // Reset game GUI
+                resetGameGUI();
 
                 // Display game panel
                 switchPanel.removeAll();
@@ -719,7 +692,7 @@ public class GUI
     }
 
     // Sets all buttons on board GUI back to nothing
-    public void resetBoardGUI()
+    public void resetGameGUI()
     {
         // Set Bs
         b1.setText("");
@@ -780,6 +753,9 @@ public class GUI
         o4.setBackground(Color.decode("#00667F"));
         o5.setText("");
         o5.setBackground(Color.decode("#00667F"));
+
+        letterCurrentlabel.setText("");
+        callerCurrentLabel.setText("");
     }
 
     public void setGameStatsVisibility(boolean bool)
@@ -788,6 +764,7 @@ public class GUI
         {
             callerLogoImage.setVisible(true);
             callerCurrentLabel.setVisible(true);
+            letterCurrentlabel.setVisible(true);
             startGameLogoImage.setVisible(true);
             bingoLogoImage.setVisible(true);
         }
@@ -795,6 +772,7 @@ public class GUI
         {
             callerLogoImage.setVisible(false);
             callerCurrentLabel.setVisible(false);
+            letterCurrentlabel.setVisible(false);
             startGameLogoImage.setVisible(false);
             bingoLogoImage.setVisible(false);
         }
@@ -909,6 +887,9 @@ public class GUI
 
                 String letter = getDisplayLetter(called);
 
+                // Change letter label (once, so we don't have to wait for first call)
+                letterCurrentlabel.setText(letter);
+
                 // Change caller label (once, so we don't have to wait for first call)
                 callerCurrentLabel.setText(Integer.toString(called));
 
@@ -918,7 +899,7 @@ public class GUI
                     // Sleep for 6 seconds
                     try
                     {
-                        Thread.sleep(500);
+                        Thread.sleep(6000);
                     }
                     catch(InterruptedException e)
                     {

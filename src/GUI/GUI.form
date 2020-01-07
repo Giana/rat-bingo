@@ -173,6 +173,7 @@
                 <constraints/>
                 <properties>
                   <background color="-12636826"/>
+                  <font name="Segoe MDL2 Assets" size="36" style="1"/>
                   <foreground color="-12636826"/>
                   <horizontalAlignment value="0"/>
                   <text value=""/>
