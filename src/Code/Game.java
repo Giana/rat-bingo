@@ -90,6 +90,10 @@ public class Game
 
     public void setPlayer(Player player) { this.player = player; }
 
+    public ArrayList<Integer> getGameData() { return gameData; }
+
+    public void setGameData(ArrayList<Integer> gameData) { this.gameData = gameData; }
+
     // Checks a single row for a horizontal win
     public boolean checkRow(Board board, int row)
     {
@@ -386,7 +390,7 @@ public class Game
         return calling;
     }
 
-    // Saves the total wins and losses of Player
+    // Saves the total wins and losses of Player for the game
     public void saveGame() throws IOException
     {
         FileWriter fileWriter = new FileWriter("Saves/Save.txt");
@@ -396,7 +400,7 @@ public class Game
         printWriter.close();
     }
 
-    // Loads the total wins and losses of Player
+    // Loads the total wins and losses of Player for the game
     public void loadGame() throws IOException
     {
         File saveFile = new File("Saves/Save.txt");

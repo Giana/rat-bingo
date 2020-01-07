@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.IOException;
 
 public class GUI
 {
@@ -661,6 +662,49 @@ public class GUI
                 alterTileGUI(o5, 4, 4);
             }
         });
+
+        // Click on "Load" on left panel
+        loadLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                try
+                {
+                    currentGame.loadGame();
+                }
+                catch(IOException ex)
+                {
+                    ex.printStackTrace();
+                }
+
+                winsTotalLabel.setText(Integer.toString(currentGame.getGameData().get(0)));
+                lossesTotalLabel.setText(Integer.toString(currentGame.getGameData().get(1)));
+            }
+        });
+
+        // TODO: display confirmation when you click save
+        // TODO: create a delete save function
+        // Click on "Save" on left panel
+        saveLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                try
+                {
+                    currentGame.saveGame();
+                }
+                catch(IOException ex)
+                {
+                    ex.printStackTrace();
+                }
+            }
+        });
     }
 
     // Gives values to player board buttons on GUI
@@ -867,7 +911,7 @@ public class GUI
         }
     }
 
-    // Changes the amount of wins in GUI and in Player class
+    // Changes the amount of wins in GUI and in Player class by 1
     public void changeWins()
     {
         int winsListed = Integer.parseInt(winsTotalLabel.getText());
@@ -878,7 +922,7 @@ public class GUI
         currentGame.getPlayer().setTotalWins(updatedWins);
     }
 
-    // Changes the amount of losses in GUI and in Player class
+    // Changes the amount of losses in GUI and in Player class by 1
     public void changeLosses()
     {
         int lossesListed = Integer.parseInt(lossesTotalLabel.getText());
@@ -934,6 +978,7 @@ public class GUI
                     // NPC plays game
                     currentGame.getNpcPlayer().scanBoard(Integer.parseInt(callerCurrentLabel.getText()), currentGame);
 
+                    // TODO: move point adjustments out of win/defeat screens
                     // If NPC won
                     if(currentGame.getNpcPlayer().checkForBingo(currentGame))
                     {
