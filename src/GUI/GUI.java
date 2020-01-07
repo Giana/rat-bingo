@@ -81,7 +81,16 @@ public class GUI
     private JLabel letterCurrentlabel;
     private JLabel loadLogoImage;
     private JLabel saveLogoImage;
+    private JLabel currentGameModeLogoImage;
     private JButton cornersButton;
+    private Icon cornersIcon = new ImageIcon("src/Images/CornersLogo.png");
+    private Icon diagonalIcon = new ImageIcon("src/Images/DiagonalLogo.png");
+    private Icon horizontalIcon = new ImageIcon("src/Images/HorizontalLogo.png");
+    private Icon verticalIcon = new ImageIcon("src/Images/VerticalLogo.png");
+    private Icon lIcon = new ImageIcon("src/Images/LLogo.png");
+    private Icon tIcon = new ImageIcon("src/Images/TLogo.png");
+    private Icon xIcon = new ImageIcon("src/Images/XLogo.png");
+    private Icon allIcon = new ImageIcon("src/Images/AllLogo.png");
 
     private Game currentGame = new Game();
     private String currentMode;
@@ -769,6 +778,8 @@ public class GUI
             letterCurrentlabel.setVisible(true);
             startGameLogoImage.setVisible(true);
             bingoLogoImage.setVisible(true);
+            setGameModeIcon();
+            currentGameModeLogoImage.setVisible(true);
         }
         else
         {
@@ -777,6 +788,7 @@ public class GUI
             letterCurrentlabel.setVisible(false);
             startGameLogoImage.setVisible(false);
             bingoLogoImage.setVisible(false);
+            currentGameModeLogoImage.setVisible(false);
         }
     }
 
@@ -934,6 +946,47 @@ public class GUI
                 backgroundProcesses.interrupt();
             }
         });
+    }
+
+    public void setGameModeIcon()
+    {
+        if(currentMode.equals("corners"))
+        {
+            currentGameModeLogoImage.setIcon(cornersIcon);
+        }
+        else if(currentMode.equals("diagonal"))
+        {
+            currentGameModeLogoImage.setIcon(diagonalIcon);
+        }
+        else if(currentMode.equals("horizontal"))
+        {
+            currentGameModeLogoImage.setIcon(horizontalIcon);
+        }
+        else if(currentMode.equals("vertical"))
+        {
+            currentGameModeLogoImage.setIcon(verticalIcon);
+        }
+        else if(currentMode.equals("l"))
+        {
+            currentGameModeLogoImage.setIcon(lIcon);
+        }
+        else if(currentMode.equals("t"))
+        {
+            currentGameModeLogoImage.setIcon(tIcon);
+        }
+        else if(currentMode.equals("x"))
+        {
+            currentGameModeLogoImage.setIcon(xIcon);
+        }
+        else if(currentMode.equals("all"))
+        {
+            currentGameModeLogoImage.setIcon(allIcon);
+        }
+        else
+        {
+            System.out.println("Error: Invalid game mode");
+            currentGameModeLogoImage.setVisible(false);
+        }
     }
 
     public static void main(String[] args)
