@@ -79,6 +79,8 @@ public class GUI
     private JPanel helpPanel;
     private JLabel startGameLogoImage;
     private JLabel letterCurrentlabel;
+    private JLabel loadLogoImage;
+    private JLabel saveLogoImage;
     private JButton cornersButton;
 
     private Game currentGame = new Game();

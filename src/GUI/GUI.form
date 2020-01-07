@@ -119,6 +119,22 @@
                   <text value=""/>
                 </properties>
               </component>
+              <component id="31b42" class="javax.swing.JLabel" binding="loadLogoImage">
+                <constraints/>
+                <properties>
+                  <horizontalAlignment value="0"/>
+                  <icon value="Images/LoadLogo.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="1e502" class="javax.swing.JLabel" binding="saveLogoImage">
+                <constraints/>
+                <properties>
+                  <horizontalAlignment value="0"/>
+                  <icon value="Images/SaveLogo.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
               <component id="695a0" class="javax.swing.JLabel" binding="creditsLogoImage">
                 <constraints/>
                 <properties>
