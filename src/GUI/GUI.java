@@ -397,7 +397,9 @@ public class GUI
                     displayDefeatScreen();
 
                     // Change amount of losses
-                    // changeLosses();
+                    changeLosses();
+
+                    backgroundProcesses.interrupt();
                 }
                 else
                 {
@@ -405,7 +407,9 @@ public class GUI
                     displayVictoryScreen();
 
                     // Change amount of wins
-                    // changeWins();
+                    changeWins();
+
+                    backgroundProcesses.interrupt();
                 }
 
                 // Interrupt background processes
@@ -687,7 +691,6 @@ public class GUI
             }
         });
 
-        // TODO: display confirmation when you click save
         // TODO: create a delete save function
         // Click on "Save" on left panel
         saveLogoImage.addMouseListener(new MouseAdapter()
@@ -701,6 +704,9 @@ public class GUI
                 {
                     currentGame.saveGame();
                     displaySavedScreen();
+
+                    // Remove things you should just see in game
+                    setGameStatsVisibility(false);
                 }
                 catch(IOException ex)
                 {
@@ -863,8 +869,6 @@ public class GUI
         switchPanel.add(winPanel);
         switchPanel.repaint();
         switchPanel.revalidate();
-
-        changeWins();
     }
 
     // Displays loss panel
@@ -874,9 +878,6 @@ public class GUI
         switchPanel.add(lossPanel);
         switchPanel.repaint();
         switchPanel.revalidate();
-
-        changeLosses();
-        backgroundProcesses.interrupt();
     }
 
     // Displays saved panel
@@ -996,6 +997,7 @@ public class GUI
                     {
                         setGameStatsVisibility(false);
                         displayDefeatScreen();
+                        changeLosses();
                         break;
                     }
                 }
