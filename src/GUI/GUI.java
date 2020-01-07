@@ -971,7 +971,7 @@ public class GUI
                     // Sleep for 6 seconds
                     try
                     {
-                        Thread.sleep(6000);
+                        Thread.sleep(3000);
                     }
                     catch(InterruptedException e)
                     {
@@ -1007,6 +1007,7 @@ public class GUI
         });
     }
 
+    // Sets game mode icon when you select a game mode (so you can see current one)
     public void setGameModeIcon()
     {
         if(currentMode.equals("corners"))
