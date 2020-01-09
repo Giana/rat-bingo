@@ -937,7 +937,70 @@
               <background color="-6103067"/>
             </properties>
             <border type="none"/>
-            <children/>
+            <children>
+              <grid id="39a07" binding="shopItemsPanel" layout-manager="GridBagLayout">
+                <constraints border-constraint="Center"/>
+                <properties>
+                  <background color="-6103067"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="e20d9" class="javax.swing.JLabel" binding="agoutiRatImage">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/AgoutiRat.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <hspacer id="7cd6b">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                  </hspacer>
+                  <vspacer id="456d8">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                  </vspacer>
+                  <component id="27509" class="javax.swing.JLabel" binding="albinoRatImage">
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/AlbinoRat.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="464d4" class="javax.swing.JLabel" binding="berkshireRatImage">
+                    <constraints>
+                      <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="0.0" weighty="0.0"/>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/BerkshireRat.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <component id="30789" class="javax.swing.JLabel" binding="ratShopLogoImage">
+                <constraints border-constraint="North"/>
+                <properties>
+                  <horizontalAlignment value="0"/>
+                  <icon value="Images/RatShopLogo.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+            </children>
           </grid>
           <grid id="68713" binding="optionsPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
             <constraints>

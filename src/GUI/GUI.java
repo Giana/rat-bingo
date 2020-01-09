@@ -96,6 +96,11 @@ public class GUI
     private JLabel shopLogoImage;
     private JPanel collectionPanel;
     private JLabel collectionLogoImage;
+    private JPanel shopItemsPanel;
+    private JLabel ratShopLogoImage;
+    private JLabel agoutiRatImage;
+    private JLabel albinoRatImage;
+    private JLabel berkshireRatImage;
     private JButton cornersButton;
     private Icon cornersIcon = new ImageIcon("src/Images/CornersLogo.png");
     private Icon diagonalIcon = new ImageIcon("src/Images/DiagonalLogo.png");
