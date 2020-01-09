@@ -129,6 +129,12 @@ public class GUI
                 switchPanel.add(mainMenuPanel);
                 switchPanel.repaint();
                 switchPanel.revalidate();
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    ratSqueakSound();
+                }
             }
         });
 
@@ -154,6 +160,12 @@ public class GUI
                 switchPanel.add(gamePanel);
                 switchPanel.revalidate();
                 switchPanel.repaint();
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
+                }
             }
         });
 
@@ -179,6 +191,12 @@ public class GUI
                 switchPanel.add(gamePanel);
                 switchPanel.revalidate();
                 switchPanel.repaint();
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
+                }
             }
         });
 
@@ -204,6 +222,12 @@ public class GUI
                 switchPanel.add(gamePanel);
                 switchPanel.revalidate();
                 switchPanel.repaint();
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
+                }
             }
         });
 
@@ -229,6 +253,12 @@ public class GUI
                 switchPanel.add(gamePanel);
                 switchPanel.revalidate();
                 switchPanel.repaint();
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
+                }
             }
         });
 
@@ -254,6 +284,12 @@ public class GUI
                 switchPanel.add(gamePanel);
                 switchPanel.revalidate();
                 switchPanel.repaint();
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
+                }
             }
         });
 
@@ -279,6 +315,12 @@ public class GUI
                 switchPanel.add(gamePanel);
                 switchPanel.revalidate();
                 switchPanel.repaint();
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
+                }
             }
         });
 
@@ -304,6 +346,12 @@ public class GUI
                 switchPanel.add(gamePanel);
                 switchPanel.revalidate();
                 switchPanel.repaint();
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
+                }
             }
         });
 
@@ -329,6 +377,12 @@ public class GUI
                 switchPanel.add(gamePanel);
                 switchPanel.revalidate();
                 switchPanel.repaint();
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
+                }
             }
         });
 
@@ -348,6 +402,12 @@ public class GUI
                 switchPanel.add(creditsPanel);
                 switchPanel.repaint();
                 switchPanel.revalidate();
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
+                }
             }
         });
 
@@ -367,6 +427,12 @@ public class GUI
                 switchPanel.add(helpPanel);
                 switchPanel.repaint();
                 switchPanel.revalidate();
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
+                }
             }
         });
 
@@ -388,6 +454,12 @@ public class GUI
                 setUpBackgroundProcesses();
 
                 backgroundProcesses.start();
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    startGameSound();
+                }
             }
         });
 
@@ -704,6 +776,12 @@ public class GUI
                 try
                 {
                     currentGame.loadGame();
+
+                    // Play sound if enabled
+                    if(currentGame.getSoundStatus())
+                    {
+                        saveLoadSound();
+                    }
                 }
                 catch(IOException ex)
                 {
@@ -731,6 +809,12 @@ public class GUI
 
                     // Remove things you should just see in game
                     setGameStatsVisibility(false);
+
+                    // Play sound if enabled
+                    if(currentGame.getSoundStatus())
+                    {
+                        saveLoadSound();
+                    }
                 }
                 catch(IOException ex)
                 {
@@ -1161,12 +1245,12 @@ public class GUI
     }
 
     // TODO: find a non-deprecated way of playing sound
-    // Plays click sound
+    // Plays click sound 1
     public void clickSound1()
     {
         try
         {
-            URL soundByte = new File("src/Sounds/Click1.wav").toURI().toURL();
+            URL soundByte = new File("src/Sounds/ClickSound1.wav").toURI().toURL();
             java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
             clickSound.play();
         }
@@ -1174,7 +1258,22 @@ public class GUI
         {
             e1.printStackTrace();
         }
+    }
 
+    // TODO: find a non-deprecated way of playing sound
+    // Plays click sound 2
+    public void clickSound2()
+    {
+        try
+        {
+            URL soundByte = new File("src/Sounds/ClickSound2.wav").toURI().toURL();
+            java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
+            clickSound.play();
+        }
+        catch(MalformedURLException e1)
+        {
+            e1.printStackTrace();
+        }
     }
 
     // TODO: find a non-deprecated way of playing sound
@@ -1191,7 +1290,6 @@ public class GUI
         {
             e1.printStackTrace();
         }
-
     }
 
     // TODO: find a non-deprecated way of playing sound
@@ -1208,7 +1306,54 @@ public class GUI
         {
             e1.printStackTrace();
         }
+    }
 
+    // TODO: find a non-deprecated way of playing sound
+    // Plays save/load sound
+    public void saveLoadSound()
+    {
+        try
+        {
+            URL soundByte = new File("src/Sounds/SaveLoadSound.wav").toURI().toURL();
+            java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
+            clickSound.play();
+        }
+        catch(MalformedURLException e1)
+        {
+            e1.printStackTrace();
+        }
+    }
+
+    // TODO: find a non-deprecated way of playing sound
+    // Plays rat squeak sound
+    public void ratSqueakSound()
+    {
+        try
+        {
+            URL soundByte = new File("src/Sounds/RatSqueakSound.wav").toURI().toURL();
+            java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
+            clickSound.play();
+        }
+        catch(MalformedURLException e1)
+        {
+            e1.printStackTrace();
+        }
+    }
+
+    // TODO: find a non-deprecated way of playing sound
+    // Plays start game sound
+    public void startGameSound()
+    {
+        try
+        {
+            URL soundByte = new File("src/Sounds/StartGameSound.wav").toURI().toURL();
+            java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
+            clickSound.play();
+        }
+        catch(MalformedURLException e1)
+        {
+            e1.printStackTrace();
+        }
     }
 
     public static void main(String[] args)
