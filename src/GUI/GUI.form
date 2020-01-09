@@ -938,215 +938,6 @@
             </properties>
             <border type="none"/>
             <children>
-              <grid id="39a07" binding="shopItemsPanel" layout-manager="GridBagLayout">
-                <constraints border-constraint="Center"/>
-                <properties>
-                  <background color="-6103067"/>
-                </properties>
-                <border type="none"/>
-                <children>
-                  <component id="e20d9" class="javax.swing.JLabel" binding="agoutiRatImage">
-                    <constraints>
-                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                      <gridbag weightx="0.0" weighty="0.0"/>
-                    </constraints>
-                    <properties>
-                      <horizontalAlignment value="0"/>
-                      <icon value="Images/AgoutiRat.png"/>
-                      <text value=""/>
-                    </properties>
-                  </component>
-                  <component id="27509" class="javax.swing.JLabel" binding="albinoRatImage">
-                    <constraints>
-                      <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                      <gridbag weightx="0.0" weighty="0.0"/>
-                    </constraints>
-                    <properties>
-                      <horizontalAlignment value="0"/>
-                      <icon value="Images/AlbinoRat.png"/>
-                      <text value=""/>
-                    </properties>
-                  </component>
-                  <component id="c1ece" class="javax.swing.JLabel" binding="hoodedRatImage">
-                    <constraints>
-                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                      <gridbag weightx="0.0" weighty="0.0"/>
-                    </constraints>
-                    <properties>
-                      <horizontalAlignment value="0"/>
-                      <icon value="Images/HoodedRat.png"/>
-                      <text value=""/>
-                    </properties>
-                  </component>
-                  <component id="464d4" class="javax.swing.JLabel" binding="berkshireRatImage">
-                    <constraints>
-                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                      <gridbag weightx="0.0" weighty="0.0"/>
-                    </constraints>
-                    <properties>
-                      <horizontalAlignment value="0"/>
-                      <icon value="Images/BerkshireRat.png"/>
-                      <text value=""/>
-                    </properties>
-                  </component>
-                  <component id="6028" class="javax.swing.JLabel" binding="roanRatImage">
-                    <constraints>
-                      <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                      <gridbag weightx="0.0" weighty="0.0"/>
-                    </constraints>
-                    <properties>
-                      <horizontalAlignment value="0"/>
-                      <icon value="Images/RoanRat.png"/>
-                      <text value=""/>
-                    </properties>
-                  </component>
-                  <component id="9720b" class="javax.swing.JButton" binding="hoodedRatButton">
-                    <constraints>
-                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                      <gridbag weightx="0.0" weighty="0.0"/>
-                    </constraints>
-                    <properties>
-                      <text value="Button"/>
-                    </properties>
-                  </component>
-                  <component id="551f6" class="javax.swing.JButton" binding="agoutiRatButton">
-                    <constraints>
-                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                      <gridbag weightx="0.0" weighty="0.0"/>
-                    </constraints>
-                    <properties>
-                      <text value="Button"/>
-                    </properties>
-                  </component>
-                  <component id="5ca18" class="javax.swing.JLabel" binding="siameseRatImage">
-                    <constraints>
-                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                      <gridbag weightx="0.0" weighty="0.0"/>
-                    </constraints>
-                    <properties>
-                      <horizontalAlignment value="0"/>
-                      <icon value="Images/SiameseRat.png"/>
-                      <text value=""/>
-                    </properties>
-                  </component>
-                  <component id="91c2" class="javax.swing.JButton" binding="berkshireRatButton">
-                    <constraints>
-                      <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                      <gridbag weightx="0.0" weighty="0.0"/>
-                    </constraints>
-                    <properties>
-                      <text value="Button"/>
-                    </properties>
-                  </component>
-                  <component id="691e8" class="javax.swing.JButton" binding="roanRatButton">
-                    <constraints>
-                      <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                      <gridbag weightx="0.0" weighty="0.0"/>
-                    </constraints>
-                    <properties>
-                      <text value="Button"/>
-                    </properties>
-                  </component>
-                  <component id="1fc34" class="javax.swing.JButton" binding="albinoRatButton">
-                    <constraints>
-                      <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                      <gridbag weightx="0.0" weighty="0.0"/>
-                    </constraints>
-                    <properties>
-                      <text value="Button"/>
-                    </properties>
-                  </component>
-                  <component id="74bf7" class="javax.swing.JLabel" binding="hairlessRatImage">
-                    <constraints>
-                      <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                      <gridbag weightx="0.0" weighty="0.0"/>
-                    </constraints>
-                    <properties>
-                      <horizontalAlignment value="0"/>
-                      <icon value="Images/HairlessRat.png"/>
-                      <text value=""/>
-                    </properties>
-                  </component>
-                  <component id="ec2bb" class="javax.swing.JLabel" binding="russianBlueRatImage">
-                    <constraints>
-                      <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                      <gridbag weightx="0.0" weighty="0.0"/>
-                    </constraints>
-                    <properties>
-                      <horizontalAlignment value="0"/>
-                      <icon value="Images/RussianBlueRat.png"/>
-                      <text value=""/>
-                    </properties>
-                  </component>
-                  <component id="17c26" class="javax.swing.JLabel" binding="patchworkRatImage">
-                    <constraints>
-                      <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                      <gridbag weightx="0.0" weighty="0.0"/>
-                    </constraints>
-                    <properties>
-                      <horizontalAlignment value="0"/>
-                      <icon value="Images/PatchworkRat.png"/>
-                      <text value=""/>
-                    </properties>
-                  </component>
-                  <component id="1b5c0" class="javax.swing.JLabel" binding="manxRatImage">
-                    <constraints>
-                      <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                      <gridbag weightx="0.0" weighty="0.0"/>
-                    </constraints>
-                    <properties>
-                      <horizontalAlignment value="0"/>
-                      <icon value="Images/ManxRat.png"/>
-                      <text value=""/>
-                    </properties>
-                  </component>
-                  <component id="aa5fb" class="javax.swing.JButton" binding="siameseRatButton">
-                    <constraints>
-                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                      <gridbag weightx="0.0" weighty="0.0"/>
-                    </constraints>
-                    <properties>
-                      <text value="Button"/>
-                    </properties>
-                  </component>
-                  <component id="17569" class="javax.swing.JButton" binding="hairlessRatButton">
-                    <constraints>
-                      <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                      <gridbag weightx="0.0" weighty="0.0"/>
-                    </constraints>
-                    <properties>
-                      <text value="Button"/>
-                    </properties>
-                  </component>
-                  <component id="1140d" class="javax.swing.JButton" binding="russianBlueRatButton">
-                    <constraints>
-                      <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                      <gridbag weightx="0.0" weighty="0.0"/>
-                    </constraints>
-                    <properties>
-                      <text value="Button"/>
-                    </properties>
-                  </component>
-                  <component id="6804c" class="javax.swing.JButton" binding="patchworkRatButton">
-                    <constraints>
-                      <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                      <gridbag weightx="0.0" weighty="0.0"/>
-                    </constraints>
-                    <properties>
-                      <text value="Button"/>
-                    </properties>
-                  </component>
-                  <component id="52928" class="javax.swing.JButton" binding="manxRatButton">
-                    <constraints>
-                      <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                      <gridbag weightx="0.0" weighty="0.0"/>
-                    </constraints>
-                    <properties>
-                      <text value="Button"/>
-                    </properties>
-                  </component>
-                </children>
-              </grid>
               <component id="30789" class="javax.swing.JLabel" binding="ratShopLogoImage">
                 <constraints border-constraint="North"/>
                 <properties>
@@ -1155,6 +946,245 @@
                   <text value=""/>
                 </properties>
               </component>
+              <grid id="d0154" layout-manager="GridBagLayout">
+                <constraints border-constraint="Center"/>
+                <properties>
+                  <background color="-6103067"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="74e5d" class="javax.swing.JLabel" binding="hoodedRatImage">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="1.0" weighty="1.0"/>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/HoodedRat.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="4228a" class="javax.swing.JLabel" binding="agoutiRatImage">
+                    <constraints>
+                      <grid row="0" column="1" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="1.0" weighty="1.0"/>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/AgoutiRat.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="36033" class="javax.swing.JLabel" binding="berkshireRatImage">
+                    <constraints>
+                      <grid row="0" column="2" row-span="3" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="1.0" weighty="1.0"/>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/BerkshireRat.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="20f02" class="javax.swing.JLabel" binding="roanRatImage">
+                    <constraints>
+                      <grid row="0" column="3" row-span="4" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="1.0" weighty="1.0"/>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/RoanRat.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="34c5e" class="javax.swing.JLabel" binding="albinoRatImage">
+                    <constraints>
+                      <grid row="0" column="4" row-span="5" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="1.0" weighty="1.0"/>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/AlbinoRat.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="93550" class="javax.swing.JButton" binding="hoodedRatButton">
+                    <constraints>
+                      <grid row="1" column="0" row-span="5" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="1.0" weighty="1.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="68" height="45"/>
+                      <minimumSize width="68" height="45"/>
+                      <preferredSize width="68" height="45"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="1cfbf" class="javax.swing.JButton" binding="agoutiRatButton">
+                    <constraints>
+                      <grid row="2" column="1" row-span="5" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="1.0" weighty="1.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="68" height="45"/>
+                      <minimumSize width="68" height="45"/>
+                      <preferredSize width="68" height="45"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="d4c58" class="javax.swing.JButton" binding="berkshireRatButton">
+                    <constraints>
+                      <grid row="3" column="2" row-span="5" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="1.0" weighty="1.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="68" height="45"/>
+                      <minimumSize width="68" height="45"/>
+                      <preferredSize width="68" height="45"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="3e6f0" class="javax.swing.JButton" binding="roanRatButton">
+                    <constraints>
+                      <grid row="4" column="3" row-span="5" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="1.0" weighty="1.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="68" height="45"/>
+                      <minimumSize width="68" height="45"/>
+                      <preferredSize width="68" height="45"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="a0a21" class="javax.swing.JButton" binding="albinoRatButton">
+                    <constraints>
+                      <grid row="5" column="4" row-span="5" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="1.0" weighty="1.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="68" height="45"/>
+                      <minimumSize width="68" height="45"/>
+                      <preferredSize width="68" height="45"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="adc32" class="javax.swing.JLabel" binding="siameseRatImage">
+                    <constraints>
+                      <grid row="6" column="0" row-span="5" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="1.0" weighty="1.0"/>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/SiameseRat.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="515b9" class="javax.swing.JLabel" binding="hairlessRatImage">
+                    <constraints>
+                      <grid row="7" column="1" row-span="5" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="1.0" weighty="1.0"/>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/HairlessRat.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="46fcf" class="javax.swing.JLabel" binding="russianBlueRatImage">
+                    <constraints>
+                      <grid row="8" column="2" row-span="5" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="1.0" weighty="1.0"/>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/RussianBlueRat.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="afdbb" class="javax.swing.JLabel" binding="patchworkRatImage">
+                    <constraints>
+                      <grid row="9" column="3" row-span="5" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="1.0" weighty="1.0"/>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/PatchworkRat.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="36bb2" class="javax.swing.JLabel" binding="manxRatImage">
+                    <constraints>
+                      <grid row="10" column="4" row-span="5" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="1.0" weighty="1.0"/>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/ManxRat.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="1f82f" class="javax.swing.JButton" binding="siameseRatButton">
+                    <constraints>
+                      <grid row="11" column="0" row-span="5" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="1.0" weighty="1.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="68" height="45"/>
+                      <minimumSize width="68" height="45"/>
+                      <preferredSize width="68" height="45"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="2ec6d" class="javax.swing.JButton" binding="hairlessRatButton">
+                    <constraints>
+                      <grid row="12" column="1" row-span="4" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="1.0" weighty="1.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="68" height="45"/>
+                      <minimumSize width="68" height="45"/>
+                      <preferredSize width="68" height="45"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="926b" class="javax.swing.JButton" binding="russianBlueRatButton">
+                    <constraints>
+                      <grid row="13" column="2" row-span="3" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="1.0" weighty="1.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="68" height="45"/>
+                      <minimumSize width="68" height="45"/>
+                      <preferredSize width="68" height="45"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="cb856" class="javax.swing.JButton" binding="patchworkRatButton">
+                    <constraints>
+                      <grid row="14" column="3" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="1.0" weighty="1.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="68" height="45"/>
+                      <minimumSize width="68" height="45"/>
+                      <preferredSize width="68" height="45"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                  <component id="393c4" class="javax.swing.JButton" binding="manxRatButton">
+                    <constraints>
+                      <grid row="15" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="1.0" weighty="1.0"/>
+                    </constraints>
+                    <properties>
+                      <maximumSize width="68" height="45"/>
+                      <minimumSize width="68" height="45"/>
+                      <preferredSize width="68" height="45"/>
+                      <text value="Button"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
             </children>
           </grid>
           <grid id="68713" binding="optionsPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
