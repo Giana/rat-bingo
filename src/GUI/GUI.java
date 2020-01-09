@@ -522,6 +522,12 @@ public class GUI
             public void actionPerformed(ActionEvent e)
             {
                 alterTileGUI(b1, 0, 0);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound2();
+                }
             }
         });
 
@@ -532,6 +538,12 @@ public class GUI
             public void actionPerformed(ActionEvent e)
             {
                 alterTileGUI(b2, 1, 0);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound2();
+                }
             }
         });
 
@@ -542,6 +554,12 @@ public class GUI
             public void actionPerformed(ActionEvent e)
             {
                 alterTileGUI(b3, 2, 0);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound2();
+                }
             }
         });
 
@@ -552,6 +570,12 @@ public class GUI
             public void actionPerformed(ActionEvent e)
             {
                 alterTileGUI(b4, 3, 0);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound2();
+                }
             }
         });
 
@@ -562,6 +586,12 @@ public class GUI
             public void actionPerformed(ActionEvent e)
             {
                 alterTileGUI(b5, 4, 0);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound2();
+                }
             }
         });
 
@@ -572,6 +602,12 @@ public class GUI
             public void actionPerformed(ActionEvent e)
             {
                 alterTileGUI(i1, 0, 1);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound2();
+                }
             }
         });
 
@@ -582,6 +618,12 @@ public class GUI
             public void actionPerformed(ActionEvent e)
             {
                 alterTileGUI(i2, 1, 1);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound2();
+                }
             }
         });
 
@@ -592,6 +634,12 @@ public class GUI
             public void actionPerformed(ActionEvent e)
             {
                 alterTileGUI(i3, 2, 1);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound2();
+                }
             }
         });
 
@@ -602,6 +650,12 @@ public class GUI
             public void actionPerformed(ActionEvent e)
             {
                 alterTileGUI(i4, 3, 1);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound2();
+                }
             }
         });
 
@@ -612,6 +666,12 @@ public class GUI
             public void actionPerformed(ActionEvent e)
             {
                 alterTileGUI(i5, 4, 1);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound2();
+                }
             }
         });
 
@@ -622,6 +682,12 @@ public class GUI
             public void actionPerformed(ActionEvent e)
             {
                 alterTileGUI(n1, 0, 2);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound2();
+                }
             }
         });
 
@@ -632,6 +698,12 @@ public class GUI
             public void actionPerformed(ActionEvent e)
             {
                 alterTileGUI(n2, 1, 2);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound2();
+                }
             }
         });
 
@@ -642,6 +714,12 @@ public class GUI
             public void actionPerformed(ActionEvent e)
             {
                 alterTileGUI(n3, 2, 2);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound2();
+                }
             }
         });
 
@@ -652,6 +730,12 @@ public class GUI
             public void actionPerformed(ActionEvent e)
             {
                 alterTileGUI(n4, 3, 2);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound2();
+                }
             }
         });
 
@@ -662,6 +746,12 @@ public class GUI
             public void actionPerformed(ActionEvent e)
             {
                 alterTileGUI(n5, 4, 2);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound2();
+                }
             }
         });
 
@@ -672,6 +762,12 @@ public class GUI
             public void actionPerformed(ActionEvent e)
             {
                 alterTileGUI(g1, 0, 3);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound2();
+                }
             }
         });
 
@@ -682,6 +778,12 @@ public class GUI
             public void actionPerformed(ActionEvent e)
             {
                 alterTileGUI(g2, 1, 3);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound2();
+                }
             }
         });
 
@@ -692,6 +794,12 @@ public class GUI
             public void actionPerformed(ActionEvent e)
             {
                 alterTileGUI(g3, 2, 3);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound2();
+                }
             }
         });
 
@@ -702,6 +810,12 @@ public class GUI
             public void actionPerformed(ActionEvent e)
             {
                 alterTileGUI(g4, 3, 3);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound2();
+                }
             }
         });
 
@@ -712,6 +826,12 @@ public class GUI
             public void actionPerformed(ActionEvent e)
             {
                 alterTileGUI(g5, 4, 3);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound2();
+                }
             }
         });
 
@@ -722,6 +842,12 @@ public class GUI
             public void actionPerformed(ActionEvent e)
             {
                 alterTileGUI(o1, 0, 4);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound2();
+                }
             }
         });
 
@@ -732,6 +858,12 @@ public class GUI
             public void actionPerformed(ActionEvent e)
             {
                 alterTileGUI(o2, 1, 4);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound2();
+                }
             }
         });
 
@@ -742,6 +874,12 @@ public class GUI
             public void actionPerformed(ActionEvent e)
             {
                 alterTileGUI(o3, 2, 4);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound2();
+                }
             }
         });
 
@@ -752,6 +890,12 @@ public class GUI
             public void actionPerformed(ActionEvent e)
             {
                 alterTileGUI(o4, 3, 4);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound2();
+                }
             }
         });
 
@@ -762,6 +906,12 @@ public class GUI
             public void actionPerformed(ActionEvent e)
             {
                 alterTileGUI(o5, 4, 4);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound2();
+                }
             }
         });
 
