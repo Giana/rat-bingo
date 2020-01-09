@@ -1616,6 +1616,16 @@ public class GUI
             @Override
             public void run()
             {
+                // Sleep for 3 seconds before starting caller
+                try
+                {
+                    Thread.sleep(3000);
+                }
+                catch(InterruptedException e)
+                {
+                    e.printStackTrace();
+                }
+
                 int called = currentGame.runCaller();
 
                 String letter = getDisplayLetter(called);
@@ -1625,6 +1635,12 @@ public class GUI
 
                 // Change caller label (once, so we don't have to wait for first call)
                 callerCurrentLabel.setText(Integer.toString(called));
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    callerSound();
+                }
 
                 // Now continue for the next 74
                 for(int i = 0; i < 74; i++)
@@ -1648,6 +1664,12 @@ public class GUI
 
                     // Change caller label
                     callerCurrentLabel.setText(Integer.toString(called));
+
+                    // Play sound if enabled
+                    if(currentGame.getSoundStatus())
+                    {
+                        callerSound();
+                    }
 
                     // NPC plays game
                     currentGame.getNpcPlayer().scanBoard(Integer.parseInt(callerCurrentLabel.getText()), currentGame);
@@ -1836,6 +1858,22 @@ public class GUI
         try
         {
             URL soundByte = new File("src/Sounds/PurchaseSound.wav").toURI().toURL();
+            java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
+            clickSound.play();
+        }
+        catch(MalformedURLException e1)
+        {
+            e1.printStackTrace();
+        }
+    }
+
+    // TODO: find a non-deprecated way of playing sound
+    // Plays caller sound
+    public void callerSound()
+    {
+        try
+        {
+            URL soundByte = new File("src/Sounds/callerSound.wav").toURI().toURL();
             java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
             clickSound.play();
         }
