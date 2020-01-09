@@ -87,6 +87,9 @@ public class GUI
     private JLabel largeSavedLogoImage;
     private JPanel shopPanel;
     private JPanel settingsPanel;
+    private JPanel menuButtonsPanel;
+    private JLabel optionsLogoImage;
+    private JLabel shopLogoImage;
     private JButton cornersButton;
     private Icon cornersIcon = new ImageIcon("src/Images/CornersLogo.png");
     private Icon diagonalIcon = new ImageIcon("src/Images/DiagonalLogo.png");

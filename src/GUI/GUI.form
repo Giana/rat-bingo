@@ -310,6 +310,31 @@
                   <visible value="true"/>
                 </properties>
               </component>
+              <grid id="ed59b" binding="menuButtonsPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                <constraints border-constraint="South"/>
+                <properties>
+                  <background color="-6103067"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="f57ab" class="javax.swing.JLabel" binding="optionsLogoImage">
+                    <constraints/>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/OptionsLogo.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="9a511" class="javax.swing.JLabel" binding="shopLogoImage">
+                    <constraints/>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/ShopLogo.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
             </children>
           </grid>
           <grid id="2c74c" binding="gamePanel" layout-manager="BorderLayout" hgap="0" vgap="0">
