@@ -1209,6 +1209,146 @@ public class GUI
                 }
             }
         });
+
+        // Click hooded rat purchase button
+        hoodedRatButton.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    purchaseSound();
+                }
+            }
+        });
+
+        // Click agouti rat purchase button
+        agoutiRatButton.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    purchaseSound();
+                }
+            }
+        });
+
+        // Click berkshire rat purchase button
+        berkshireRatButton.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    purchaseSound();
+                }
+            }
+        });
+
+        // Click roan rat purchase button
+        roanRatButton.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    purchaseSound();
+                }
+            }
+        });
+
+        // Click albino rat purchase button
+        albinoRatButton.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    purchaseSound();
+                }
+            }
+        });
+
+        // Click siamese rat purchase button
+        siameseRatButton.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    purchaseSound();
+                }
+            }
+        });
+
+        // Click hairless rat purchase button
+        hairlessRatButton.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    purchaseSound();
+                }
+            }
+        });
+
+        // Click Russian blue rat purchase button
+        russianBlueRatButton.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    purchaseSound();
+                }
+            }
+        });
+
+        // Click patchwork rat purchase button
+        patchworkRatButton.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    purchaseSound();
+                }
+            }
+        });
+
+        // Click manx rat purchase button
+        manxRatButton.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    purchaseSound();
+                }
+            }
+        });
     }
 
     // Gives values to player board buttons on GUI
@@ -1680,6 +1820,22 @@ public class GUI
         try
         {
             URL soundByte = new File("src/Sounds/StartGameSound.wav").toURI().toURL();
+            java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
+            clickSound.play();
+        }
+        catch(MalformedURLException e1)
+        {
+            e1.printStackTrace();
+        }
+    }
+
+    // TODO: find a non-deprecated way of playing sound
+    // Plays purchase sound
+    public void purchaseSound()
+    {
+        try
+        {
+            URL soundByte = new File("src/Sounds/PurchaseSound.wav").toURI().toURL();
             java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
             clickSound.play();
         }
