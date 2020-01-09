@@ -86,10 +86,12 @@ public class GUI
     private JPanel savedPanel;
     private JLabel largeSavedLogoImage;
     private JPanel shopPanel;
-    private JPanel settingsPanel;
+    private JPanel optionsPanel;
     private JPanel menuButtonsPanel;
     private JLabel optionsLogoImage;
     private JLabel shopLogoImage;
+    private JPanel collectionPanel;
+    private JLabel collectionLogoImage;
     private JButton cornersButton;
     private Icon cornersIcon = new ImageIcon("src/Images/CornersLogo.png");
     private Icon diagonalIcon = new ImageIcon("src/Images/DiagonalLogo.png");
@@ -719,6 +721,42 @@ public class GUI
                 }
             }
         });
+
+        // Click on "Collection" on main menu panel
+        collectionLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                displayCollectionScreen();
+            }
+        });
+
+        // Click on "Options" on main menu panel
+        optionsLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                displayOptionsScreen();
+            }
+        });
+
+        // Click on "Shop" on main menu panel
+        shopLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                displayShopScreen();
+            }
+        });
     }
 
     // Gives values to player board buttons on GUI
@@ -890,6 +928,32 @@ public class GUI
     {
         switchPanel.removeAll();
         switchPanel.add(savedPanel);
+        switchPanel.repaint();
+        switchPanel.revalidate();
+    }
+
+    // Displays collection panel
+    public void displayCollectionScreen()
+    {
+        switchPanel.removeAll();
+        switchPanel.add(collectionPanel);
+        switchPanel.repaint();
+        switchPanel.revalidate();
+    }
+    // Displays options panel
+    public void displayOptionsScreen()
+    {
+        switchPanel.removeAll();
+        switchPanel.add(optionsPanel);
+        switchPanel.repaint();
+        switchPanel.revalidate();
+    }
+
+    // Displays shop panel
+    public void displayShopScreen()
+    {
+        switchPanel.removeAll();
+        switchPanel.add(shopPanel);
         switchPanel.repaint();
         switchPanel.revalidate();
     }

@@ -317,6 +317,16 @@
                 </properties>
                 <border type="none"/>
                 <children>
+                  <component id="e303" class="javax.swing.JLabel" binding="collectionLogoImage">
+                    <constraints/>
+                    <properties>
+                      <alignmentX value="0.0"/>
+                      <alignmentY value="0.5"/>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/CollectionLogo.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
                   <component id="f57ab" class="javax.swing.JLabel" binding="optionsLogoImage">
                     <constraints/>
                     <properties>
@@ -927,9 +937,17 @@
             <border type="none"/>
             <children/>
           </grid>
-          <grid id="68713" binding="settingsPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+          <grid id="68713" binding="optionsPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
             <constraints>
               <card name="Card9"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children/>
+          </grid>
+          <grid id="b13e2" binding="collectionPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints>
+              <card name="Card10"/>
             </constraints>
             <properties/>
             <border type="none"/>
