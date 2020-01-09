@@ -22,6 +22,7 @@ public class Game
     private NPC npcPlayer;                                     // NPC playing against player
     private Player player;                                     // The player
     private ArrayList<Integer> gameData = new ArrayList<>();   // List for game stats
+    private boolean soundStatus = true;                        // If sound is on/muted
 
 
     // Default constructor - for testing where mode is irrelevant
@@ -93,6 +94,10 @@ public class Game
     public ArrayList<Integer> getGameData() { return gameData; }
 
     public void setGameData(ArrayList<Integer> gameData) { this.gameData = gameData; }
+
+    public boolean getSoundStatus() { return soundStatus; }
+
+    public void setSoundStatus(boolean soundStatus) { this.soundStatus = soundStatus; }
 
     // Checks a single row for a horizontal win
     public boolean checkRow(Board board, int row)

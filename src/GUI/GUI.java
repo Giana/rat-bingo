@@ -1,6 +1,7 @@
 package GUI;
 
 import Code.Game;
+import com.sun.media.jfxmedia.AudioClip;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,7 +9,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class GUI
 {
@@ -105,6 +109,7 @@ public class GUI
     private Game currentGame = new Game();
     private String currentMode;
     Thread backgroundProcesses;
+    AudioClip wetClick;
 
     public GUI()
     {
@@ -406,6 +411,12 @@ public class GUI
                     // Change amount of losses
                     changeLosses();
 
+                    // Play sound if enabled
+                    if(currentGame.getSoundStatus())
+                    {
+                        defeatSound();
+                    }
+
                     backgroundProcesses.interrupt();
                 }
                 else
@@ -415,6 +426,12 @@ public class GUI
 
                     // Change amount of wins
                     changeWins();
+
+                    // Play sound if enabled
+                    if(currentGame.getSoundStatus())
+                    {
+                        victorySound();
+                    }
 
                     backgroundProcesses.interrupt();
                 }
@@ -731,6 +748,12 @@ public class GUI
                 super.mouseClicked(e);
 
                 displayCollectionScreen();
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
+                }
             }
         });
 
@@ -743,6 +766,12 @@ public class GUI
                 super.mouseClicked(e);
 
                 displayOptionsScreen();
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
+                }
             }
         });
 
@@ -755,6 +784,12 @@ public class GUI
                 super.mouseClicked(e);
 
                 displayShopScreen();
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
+                }
             }
         });
     }
@@ -1067,6 +1102,13 @@ public class GUI
                         setGameStatsVisibility(false);
                         displayDefeatScreen();
                         changeLosses();
+
+                        // Play sound if enabled
+                        if(currentGame.getSoundStatus())
+                        {
+                            defeatSound();
+                        }
+
                         break;
                     }
                 }
@@ -1116,6 +1158,57 @@ public class GUI
             System.out.println("Error: Invalid game mode");
             currentGameModeLogoImage.setVisible(false);
         }
+    }
+
+    // TODO: find a non-deprecated way of playing sound
+    // Plays click sound
+    public void clickSound1()
+    {
+        try
+        {
+            URL soundByte = new File("src/Sounds/Click1.wav").toURI().toURL();
+            java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
+            clickSound.play();
+        }
+        catch(MalformedURLException e1)
+        {
+            e1.printStackTrace();
+        }
+
+    }
+
+    // TODO: find a non-deprecated way of playing sound
+    // Plays victory sound
+    public void victorySound()
+    {
+        try
+        {
+            URL soundByte = new File("src/Sounds/VictorySound.wav").toURI().toURL();
+            java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
+            clickSound.play();
+        }
+        catch(MalformedURLException e1)
+        {
+            e1.printStackTrace();
+        }
+
+    }
+
+    // TODO: find a non-deprecated way of playing sound
+    // Plays defeat sound
+    public void defeatSound()
+    {
+        try
+        {
+            URL soundByte = new File("src/Sounds/DefeatSound.wav").toURI().toURL();
+            java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
+            clickSound.play();
+        }
+        catch(MalformedURLException e1)
+        {
+            e1.printStackTrace();
+        }
+
     }
 
     public static void main(String[] args)

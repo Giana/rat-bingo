@@ -933,7 +933,9 @@
             <constraints>
               <card name="Card8"/>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-6103067"/>
+            </properties>
             <border type="none"/>
             <children/>
           </grid>
@@ -941,7 +943,9 @@
             <constraints>
               <card name="Card9"/>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-6103067"/>
+            </properties>
             <border type="none"/>
             <children/>
           </grid>
@@ -949,7 +953,9 @@
             <constraints>
               <card name="Card10"/>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-6103067"/>
+            </properties>
             <border type="none"/>
             <children/>
           </grid>
