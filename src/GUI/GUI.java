@@ -97,6 +97,7 @@ public class GUI
     private JPanel collectionPanel;
     private JLabel collectionLogoImage;
     private JLabel ratShopLogoImage;
+    private JPanel shopItemsPanel;
     private JLabel hoodedRatImage;
     private JLabel agoutiRatImage;
     private JLabel berkshireRatImage;
@@ -107,16 +108,16 @@ public class GUI
     private JButton berkshireRatButton;
     private JButton roanRatButton;
     private JButton albinoRatButton;
-    private JLabel siameseRatImage;
-    private JLabel hairlessRatImage;
-    private JLabel russianBlueRatImage;
-    private JLabel patchworkRatImage;
-    private JLabel manxRatImage;
     private JButton siameseRatButton;
     private JButton hairlessRatButton;
     private JButton russianBlueRatButton;
     private JButton patchworkRatButton;
     private JButton manxRatButton;
+    private JLabel siameseRatImage;
+    private JLabel hairlessRatImage;
+    private JLabel russianBlueRatImage;
+    private JLabel patchworkRatImage;
+    private JLabel manxRatImage;
     private JButton cornersButton;
     private Icon cornersIcon = new ImageIcon("src/Images/CornersLogo.png");
     private Icon diagonalIcon = new ImageIcon("src/Images/DiagonalLogo.png");
@@ -1044,6 +1045,167 @@ public class GUI
                 if(currentGame.getSoundStatus())
                 {
                     clickSound1();
+                }
+            }
+        });
+
+
+        // Click hooded rat image on shop panel
+        hoodedRatImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    ratSqueakSound();
+                }
+            }
+        });
+
+        // Click agouti rat image on shop panel
+        agoutiRatImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    ratSqueakSound();
+                }
+            }
+        });
+
+        // Click berkshire rat image on shop panel
+        berkshireRatImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    ratSqueakSound();
+                }
+            }
+        });
+
+        // Click roan rat image on shop panel
+        roanRatImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    ratSqueakSound();
+                }
+            }
+        });
+
+        // Click albino rat image on shop panel
+        albinoRatImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    ratSqueakSound();
+                }
+            }
+        });
+
+        // Click siamese rat image on shop panel
+        siameseRatImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    ratSqueakSound();
+                }
+            }
+        });
+
+        // Click hairless rat image on shop panel
+        hairlessRatImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    ratSqueakSound();
+                }
+            }
+        });
+
+        // Click Russian blue rat image on shop panel
+        russianBlueRatImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    ratSqueakSound();
+                }
+            }
+        });
+
+        // Click patchwork rat image on shop panel
+        patchworkRatImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    ratSqueakSound();
+                }
+            }
+        });
+
+        // Click manx rat image on shop panel
+        manxRatImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    ratSqueakSound();
                 }
             }
         });
