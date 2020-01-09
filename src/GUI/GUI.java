@@ -118,6 +118,27 @@ public class GUI
     private JLabel russianBlueRatImage;
     private JLabel patchworkRatImage;
     private JLabel manxRatImage;
+    private JPanel collectionItemsPanel;
+    private JLabel hoodedRatCollectionImage;
+    private JLabel agoutiRatCollectionImage;
+    private JLabel berkshireRatCollectionImage;
+    private JLabel roanRatCollectionImage;
+    private JLabel albinoRatCollectionImage;
+    private JLabel siameseRatCollectionImage;
+    private JLabel hairlessRatCollectionImage;
+    private JLabel russianBlueRatCollectionImage;
+    private JLabel patchworkRatCollectionImage;
+    private JLabel manxRatCollectionImage;
+    private JLabel hoodedRatCollectionTotal;
+    private JLabel agoutiRatCollectionTotal;
+    private JLabel berkshireRatCollectionTotal;
+    private JLabel roanRatCollectionTotal;
+    private JLabel albinoRatCollectionTotal;
+    private JLabel siameseRatCollectionTotal;
+    private JLabel hairlessRatCollectionTotal;
+    private JLabel russianBlueRatCollectionTotal;
+    private JLabel patchworkRatCollectionTotal;
+    private JLabel manxRatCollectionTotal;
     private JButton cornersButton;
     private Icon cornersIcon = new ImageIcon("src/Images/CornersLogo.png");
     private Icon diagonalIcon = new ImageIcon("src/Images/DiagonalLogo.png");
@@ -962,6 +983,8 @@ public class GUI
 
                 winsTotalLabel.setText(Integer.toString(currentGame.getGameData().get(0)));
                 lossesTotalLabel.setText(Integer.toString(currentGame.getGameData().get(1)));
+
+                // Code for dollars and rat data labels
             }
         });
 

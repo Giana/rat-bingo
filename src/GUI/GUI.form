@@ -1157,7 +1157,199 @@
               <background color="-6103067"/>
             </properties>
             <border type="none"/>
-            <children/>
+            <children>
+              <grid id="e93a3" binding="collectionItemsPanel" layout-manager="GridLayoutManager" row-count="4" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints border-constraint="Center"/>
+                <properties>
+                  <background color="-6103067"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="37cab" class="javax.swing.JLabel" binding="hoodedRatCollectionImage">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="11"/>
+                      <horizontalTextPosition value="0"/>
+                      <icon value="Images/HoodedRat.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="f3920" class="javax.swing.JLabel" binding="agoutiRatCollectionImage">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/AgoutiRat.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="b931f" class="javax.swing.JLabel" binding="berkshireRatCollectionImage">
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/BerkshireRat.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="7b2f5" class="javax.swing.JLabel" binding="roanRatCollectionImage">
+                    <constraints>
+                      <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/RoanRat.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="e7241" class="javax.swing.JLabel" binding="albinoRatCollectionImage">
+                    <constraints>
+                      <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/AlbinoRat.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="e0498" class="javax.swing.JLabel" binding="hoodedRatCollectionTotal">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Label"/>
+                    </properties>
+                  </component>
+                  <component id="85155" class="javax.swing.JLabel" binding="agoutiRatCollectionTotal">
+                    <constraints>
+                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Label"/>
+                    </properties>
+                  </component>
+                  <component id="8b394" class="javax.swing.JLabel" binding="berkshireRatCollectionTotal">
+                    <constraints>
+                      <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Label"/>
+                    </properties>
+                  </component>
+                  <component id="e3665" class="javax.swing.JLabel" binding="roanRatCollectionTotal">
+                    <constraints>
+                      <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Label"/>
+                    </properties>
+                  </component>
+                  <component id="97738" class="javax.swing.JLabel" binding="albinoRatCollectionTotal">
+                    <constraints>
+                      <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Label"/>
+                    </properties>
+                  </component>
+                  <component id="39a00" class="javax.swing.JLabel" binding="siameseRatCollectionImage">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/SiameseRat.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="ccb29" class="javax.swing.JLabel" binding="hairlessRatCollectionImage">
+                    <constraints>
+                      <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/HairlessRat.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="87221" class="javax.swing.JLabel" binding="russianBlueRatCollectionImage">
+                    <constraints>
+                      <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/RussianBlueRat.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="89812" class="javax.swing.JLabel" binding="patchworkRatCollectionImage">
+                    <constraints>
+                      <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/PatchworkRat.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="7438a" class="javax.swing.JLabel" binding="manxRatCollectionImage">
+                    <constraints>
+                      <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <icon value="Images/ManxRat.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="31c54" class="javax.swing.JLabel" binding="siameseRatCollectionTotal">
+                    <constraints>
+                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Label"/>
+                    </properties>
+                  </component>
+                  <component id="18518" class="javax.swing.JLabel" binding="hairlessRatCollectionTotal">
+                    <constraints>
+                      <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Label"/>
+                    </properties>
+                  </component>
+                  <component id="2ae3f" class="javax.swing.JLabel" binding="russianBlueRatCollectionTotal">
+                    <constraints>
+                      <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Label"/>
+                    </properties>
+                  </component>
+                  <component id="60e9c" class="javax.swing.JLabel" binding="patchworkRatCollectionTotal">
+                    <constraints>
+                      <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Label"/>
+                    </properties>
+                  </component>
+                  <component id="5318e" class="javax.swing.JLabel" binding="manxRatCollectionTotal">
+                    <constraints>
+                      <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Label"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+            </children>
           </grid>
         </children>
       </grid>
