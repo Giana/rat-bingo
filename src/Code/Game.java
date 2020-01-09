@@ -17,13 +17,10 @@ public class Game
     private String mode;                                       // Game mode
     private ArrayList<Integer> toCall = new ArrayList<>();     // List of random numbers to call
     private ArrayList<String> called = new ArrayList<>();      // List of numbers already called
-    private int totalWins;                                     // Total amount of game wins
-    private int totalLosses;                                   // Total amount of game losses
     private NPC npcPlayer;                                     // NPC playing against player
     private Player player;                                     // The player
     private ArrayList<Integer> gameData = new ArrayList<>();   // List for game stats
     private boolean soundStatus = true;                        // If sound is on/muted
-
 
     // Default constructor - for testing where mode is irrelevant
     public Game()
@@ -74,14 +71,6 @@ public class Game
     public ArrayList<Integer> getToCall() { return toCall; }
 
     public ArrayList<String> getCalled() { return called; }
-
-    public int getTotalWins() { return totalWins; }
-
-    public void setTotalWins(int totalWins) { this.totalWins = totalWins; }
-
-    public int getTotalLosses() { return totalLosses; }
-
-    public void setTotalLosses(int totalLosses) { this.totalLosses = totalLosses; }
 
     public NPC getNpcPlayer() { return npcPlayer; }
 
@@ -395,6 +384,7 @@ public class Game
         return calling;
     }
 
+    // TODO: encrypt data
     // Saves the total wins and losses of Player for the game
     public void saveGame() throws IOException
     {
@@ -402,6 +392,13 @@ public class Game
         PrintWriter printWriter = new PrintWriter(fileWriter);
         printWriter.println(player.getTotalWins());
         printWriter.println(player.getTotalLosses());
+        printWriter.println(player.getTotalDollars());
+
+        for(int i = 0; i < 10; i++)
+        {
+            printWriter.println(player.getRatData().get(i));
+        }
+
         printWriter.close();
     }
 
