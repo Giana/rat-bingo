@@ -139,6 +139,8 @@ public class GUI
     private JLabel russianBlueRatCollectionTotal;
     private JLabel patchworkRatCollectionTotal;
     private JLabel manxRatCollectionTotal;
+    private JLabel dollarLogoImage;
+    private JLabel dollarsTotalLabel;
     private JButton cornersButton;
     private Icon cornersIcon = new ImageIcon("src/Images/CornersLogo.png");
     private Icon diagonalIcon = new ImageIcon("src/Images/DiagonalLogo.png");
@@ -495,14 +497,15 @@ public class GUI
 
                 initBoardGUI();
                 setUpBackgroundProcesses();
-
-                backgroundProcesses.start();
+                changeDollars(false);
 
                 // Play sound if enabled
                 if(currentGame.getSoundStatus())
                 {
                     startGameSound();
                 }
+
+                backgroundProcesses.start();
             }
         });
 
@@ -541,6 +544,9 @@ public class GUI
 
                     // Change amount of wins
                     changeWins();
+
+                    // Change amount of dollars
+                    changeDollars(true);
 
                     // Play sound if enabled
                     if(currentGame.getSoundStatus())
@@ -1372,6 +1378,166 @@ public class GUI
                 }
             }
         });
+
+        // Click hooded rat collection image
+        hoodedRatCollectionImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    ratSqueakSound();
+                }
+            }
+        });
+
+        // Click agouti rat collection image
+        agoutiRatCollectionImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    ratSqueakSound();
+                }
+            }
+        });
+
+        // Click berkshire rat collection image
+        berkshireRatCollectionImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    ratSqueakSound();
+                }
+            }
+        });
+
+        // Click roan rat collection image
+        roanRatCollectionImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    ratSqueakSound();
+                }
+            }
+        });
+
+        // Click albino rat collection image
+        albinoRatCollectionImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    ratSqueakSound();
+                }
+            }
+        });
+
+        // Click siamese rat collection image
+        siameseRatCollectionImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    ratSqueakSound();
+                }
+            }
+        });
+
+        // Click hairless rat collection image
+        hairlessRatCollectionImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    ratSqueakSound();
+                }
+            }
+        });
+
+        // Click Russian blue rat collection image
+        russianBlueRatCollectionImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    ratSqueakSound();
+                }
+            }
+        });
+
+        // Click patchwork rat collection image
+        patchworkRatCollectionImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    ratSqueakSound();
+                }
+            }
+        });
+
+        // Click manx rat collection image
+        manxRatCollectionImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    ratSqueakSound();
+                }
+            }
+        });
     }
 
     // Gives values to player board buttons on GUI
@@ -1628,6 +1794,108 @@ public class GUI
         int updatedLosses = (currentGame.getPlayer().getTotalLosses()) + 1;
         lossesTotalLabel.setText(Integer.toString(updatedLosses));
         currentGame.getPlayer().setTotalLosses(updatedLosses);
+    }
+
+    // Changes amount of dollars in GUI and Player class depending on win/loss
+    public void changeDollars(boolean state)
+    {
+        int cornersReward = 10;
+        int diagonalReward = 5;
+        int horizontalReward = 4;
+        int verticalReward = 4;
+        int lReward = 9;
+        int tReward = 8;
+        int xReward = 11;
+        int allReward = 15;
+
+        if(state)
+        {
+            if(currentMode.equals("corners"))
+            {
+                int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
+                currentGame.getPlayer().setTotalDollars(dollarsListed);
+
+                int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + cornersReward;
+                dollarsTotalLabel.setText(Integer.toString(updatedDollars));
+                currentGame.getPlayer().setTotalDollars(updatedDollars);
+            }
+            else if(currentMode.equals("diagonal"))
+            {
+                int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
+                currentGame.getPlayer().setTotalDollars(dollarsListed);
+
+                int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + diagonalReward;
+                dollarsTotalLabel.setText(Integer.toString(updatedDollars));
+                currentGame.getPlayer().setTotalDollars(updatedDollars);
+            }
+            else if(currentMode.equals("horizontal"))
+            {
+                int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
+                currentGame.getPlayer().setTotalDollars(dollarsListed);
+
+                int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + horizontalReward;
+                dollarsTotalLabel.setText(Integer.toString(updatedDollars));
+                currentGame.getPlayer().setTotalDollars(updatedDollars);
+            }
+            else if(currentMode.equals("vertical"))
+            {
+                int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
+                currentGame.getPlayer().setTotalDollars(dollarsListed);
+
+                int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + verticalReward;
+                dollarsTotalLabel.setText(Integer.toString(updatedDollars));
+                currentGame.getPlayer().setTotalDollars(updatedDollars);
+            }
+            else if(currentMode.equals("l"))
+            {
+                int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
+                currentGame.getPlayer().setTotalDollars(dollarsListed);
+
+                int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + lReward;
+                dollarsTotalLabel.setText(Integer.toString(updatedDollars));
+                currentGame.getPlayer().setTotalDollars(updatedDollars);
+            }
+            else if(currentMode.equals("t"))
+            {
+                int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
+                currentGame.getPlayer().setTotalDollars(dollarsListed);
+
+                int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + tReward;
+                dollarsTotalLabel.setText(Integer.toString(updatedDollars));
+                currentGame.getPlayer().setTotalDollars(updatedDollars);
+            }
+            else if(currentMode.equals("x"))
+            {
+                int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
+                currentGame.getPlayer().setTotalDollars(dollarsListed);
+
+                int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + xReward;
+                dollarsTotalLabel.setText(Integer.toString(updatedDollars));
+                currentGame.getPlayer().setTotalDollars(updatedDollars);
+            }
+            else if(currentMode.equals("all"))
+            {
+                int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
+                currentGame.getPlayer().setTotalDollars(dollarsListed);
+
+                int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + allReward;
+                dollarsTotalLabel.setText(Integer.toString(updatedDollars));
+                currentGame.getPlayer().setTotalDollars(updatedDollars);
+            }
+            else
+            {
+                System.out.println("Error: Invalid game mode");
+            }
+        }
+        else
+        {
+            int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
+            currentGame.getPlayer().setTotalDollars(dollarsListed);
+
+            int updatedDollars = (currentGame.getPlayer().getTotalDollars()) - 1;
+            dollarsTotalLabel.setText(Integer.toString(updatedDollars));
+            currentGame.getPlayer().setTotalDollars(updatedDollars);
+        }
     }
 
     // Sets up thread for background caller

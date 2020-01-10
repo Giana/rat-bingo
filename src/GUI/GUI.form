@@ -111,6 +111,26 @@
                   <text value=""/>
                 </properties>
               </component>
+              <component id="265a4" class="javax.swing.JLabel" binding="dollarLogoImage">
+                <constraints/>
+                <properties>
+                  <foreground color="-10106156"/>
+                  <horizontalAlignment value="0"/>
+                  <icon value="Images/DollarLogo.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="f5dde" class="javax.swing.JLabel" binding="dollarsTotalLabel">
+                <constraints/>
+                <properties>
+                  <font name="Segoe MDL2 Assets" size="36" style="1"/>
+                  <foreground color="-10106156"/>
+                  <horizontalAlignment value="0"/>
+                  <text value="5"/>
+                  <verticalAlignment value="0"/>
+                  <verticalTextPosition value="0"/>
+                </properties>
+              </component>
               <component id="433ee" class="javax.swing.JLabel" binding="emptySpaceLabel">
                 <constraints/>
                 <properties>
