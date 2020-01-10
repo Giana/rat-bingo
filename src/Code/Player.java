@@ -1,13 +1,20 @@
 package Code;
 
-import java.util.ArrayList;
-
 public class Player
 {
-    private int totalWins;                                     // Total wins for Player
-    private int totalLosses;                                   // Total losses for Player
-    private int totalDollars;                                  // Amount of money player has
-    private ArrayList<Integer> ratData = new ArrayList<>();    // List for rat collection data
+    private int totalWins;
+    private int totalLosses;
+    private int totalDollars;
+    private int totalHooded;
+    private int totalAgouti;
+    private int totalBerkshire;
+    private int totalRoan;
+    private int totalAlbino;
+    private int totalSiamese;
+    private int totalHairless;
+    private int totalRussianBlue;
+    private int totalPatchwork;
+    private int totalManx;
 
     // Default constructor
     public Player() { }
@@ -32,7 +39,43 @@ public class Player
 
     public void setTotalDollars(int totalDollars) { this.totalDollars = totalDollars; }
 
-    public ArrayList<Integer> getRatData() { return ratData; }
+    public int getTotalHooded() { return totalHooded; }
 
-    public void setRatData(ArrayList<Integer> ratData) { this.ratData = ratData; }
+    public void setTotalHooded(int totalHooded) { this.totalHooded = totalHooded; }
+
+    public int getTotalAgouti() { return totalAgouti; }
+
+    public void setTotalAgouti(int totalAgouti) { this.totalAgouti = totalAgouti; }
+
+    public int getTotalBerkshire() { return totalBerkshire; }
+
+    public void setTotalBerkshire(int totalBerkshire) { this.totalBerkshire = totalBerkshire; }
+
+    public int getTotalRoan() { return totalRoan; }
+
+    public void setTotalRoan(int totalRoan) { this.totalRoan = totalRoan; }
+
+    public int getTotalAlbino() { return totalAlbino; }
+
+    public void setTotalAlbino(int totalAlbino) { this.totalAlbino = totalAlbino; }
+
+    public int getTotalSiamese() { return totalSiamese; }
+
+    public void setTotalSiamese(int totalSiamese) { this.totalSiamese = totalSiamese; }
+
+    public int getTotalHairless() { return totalHairless; }
+
+    public void setTotalHairless(int totalHairless) { this.totalHairless = totalHairless; }
+
+    public int getTotalRussianBlue() { return totalRussianBlue; }
+
+    public void setTotalRussianBlue(int totalRussianBlue) { this.totalRussianBlue = totalRussianBlue; }
+
+    public int getTotalPatchwork() { return totalPatchwork; }
+
+    public void setTotalPatchwork(int totalPatchwork) { this.totalPatchwork = totalPatchwork; }
+
+    public int getTotalManx() { return totalManx; }
+
+    public void setTotalManx(int totalManx) { this.totalManx = totalManx; }
 }

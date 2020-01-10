@@ -385,24 +385,30 @@ public class Game
     }
 
     // TODO: encrypt data
-    // Saves the total wins and losses of Player for the game
+    // Saves the total wins/losses/dollars/rats of Player for the game
     public void saveGame() throws IOException
     {
         FileWriter fileWriter = new FileWriter("Saves/Save.txt");
         PrintWriter printWriter = new PrintWriter(fileWriter);
+
         printWriter.println(player.getTotalWins());
         printWriter.println(player.getTotalLosses());
         printWriter.println(player.getTotalDollars());
-
-        for(int i = 0; i < 10; i++)
-        {
-            printWriter.println(player.getRatData().get(i));
-        }
+        printWriter.println(player.getTotalHooded());
+        printWriter.println(player.getTotalAgouti());
+        printWriter.println(player.getTotalBerkshire());
+        printWriter.println(player.getTotalRoan());
+        printWriter.println(player.getTotalAlbino());
+        printWriter.println(player.getTotalSiamese());
+        printWriter.println(player.getTotalHairless());
+        printWriter.println(player.getTotalRussianBlue());
+        printWriter.println(player.getTotalPatchwork());
+        printWriter.println(player.getTotalManx());
 
         printWriter.close();
     }
 
-    // Loads the total wins and losses of Player for the game
+    // Loads the total wins/losses/dollars/rats of Player for the game
     public void loadGame() throws IOException
     {
         File saveFile = new File("Saves/Save.txt");

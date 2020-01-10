@@ -138,7 +138,7 @@ public class GUI
     private JLabel russianBlueRatCollectionTotal;
     private JLabel patchworkRatCollectionTotal;
     private JLabel manxRatCollectionTotal;
-    private JLabel dollarLogoImage;
+    private JLabel dollarSymbolLabel;
     private JLabel dollarsTotalLabel;
     private JButton cornersButton;
 
@@ -975,8 +975,17 @@ public class GUI
 
                 winsTotalLabel.setText(Integer.toString(currentGame.getGameData().get(0)));
                 lossesTotalLabel.setText(Integer.toString(currentGame.getGameData().get(1)));
-
-                // Code for dollars and rat data labels
+                dollarsTotalLabel.setText(Integer.toString(currentGame.getGameData().get(2)));
+                hoodedRatCollectionTotal.setText(Integer.toString(currentGame.getGameData().get(3)));
+                agoutiRatCollectionTotal.setText(Integer.toString(currentGame.getGameData().get(4)));
+                berkshireRatCollectionTotal.setText(Integer.toString(currentGame.getGameData().get(5)));
+                roanRatCollectionTotal.setText(Integer.toString(currentGame.getGameData().get(6)));
+                albinoRatCollectionTotal.setText(Integer.toString(currentGame.getGameData().get(7)));
+                siameseRatCollectionTotal.setText(Integer.toString(currentGame.getGameData().get(8)));
+                hairlessRatCollectionTotal.setText(Integer.toString(currentGame.getGameData().get(9)));
+                russianBlueRatCollectionTotal.setText(Integer.toString(currentGame.getGameData().get(10)));
+                patchworkRatCollectionTotal.setText(Integer.toString(currentGame.getGameData().get(11)));
+                manxRatCollectionTotal.setText(Integer.toString(currentGame.getGameData().get(12)));
             }
         });
 
@@ -1231,10 +1240,14 @@ public class GUI
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
+                if(makePurchase(5))
                 {
-                    purchaseSound();
+                    int numberListed = Integer.parseInt(hoodedRatCollectionTotal.getText());
+                    currentGame.getPlayer().setTotalHooded(numberListed);
+
+                    int updatedNumber = (currentGame.getPlayer().getTotalHooded()) + 1;
+                    hoodedRatCollectionTotal.setText(Integer.toString(updatedNumber));
+                    currentGame.getPlayer().setTotalHooded(updatedNumber);
                 }
             }
         });
@@ -1245,10 +1258,14 @@ public class GUI
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
+                if(makePurchase(10))
                 {
-                    purchaseSound();
+                    int numberListed = Integer.parseInt(agoutiRatCollectionTotal.getText());
+                    currentGame.getPlayer().setTotalAgouti(numberListed);
+
+                    int updatedNumber = (currentGame.getPlayer().getTotalAgouti()) + 1;
+                    agoutiRatCollectionTotal.setText(Integer.toString(updatedNumber));
+                    currentGame.getPlayer().setTotalAgouti(updatedNumber);
                 }
             }
         });
@@ -1259,10 +1276,14 @@ public class GUI
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
+                if(makePurchase(15))
                 {
-                    purchaseSound();
+                    int numberListed = Integer.parseInt(berkshireRatCollectionTotal.getText());
+                    currentGame.getPlayer().setTotalBerkshire(numberListed);
+
+                    int updatedNumber = (currentGame.getPlayer().getTotalBerkshire()) + 1;
+                    berkshireRatCollectionTotal.setText(Integer.toString(updatedNumber));
+                    currentGame.getPlayer().setTotalBerkshire(updatedNumber);
                 }
             }
         });
@@ -1273,10 +1294,14 @@ public class GUI
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
+                if(makePurchase(20))
                 {
-                    purchaseSound();
+                    int numberListed = Integer.parseInt(roanRatCollectionTotal.getText());
+                    currentGame.getPlayer().setTotalRoan(numberListed);
+
+                    int updatedNumber = (currentGame.getPlayer().getTotalRoan()) + 1;
+                    roanRatCollectionTotal.setText(Integer.toString(updatedNumber));
+                    currentGame.getPlayer().setTotalRoan(updatedNumber);
                 }
             }
         });
@@ -1287,10 +1312,14 @@ public class GUI
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
+                if(makePurchase(25))
                 {
-                    purchaseSound();
+                    int numberListed = Integer.parseInt(albinoRatCollectionTotal.getText());
+                    currentGame.getPlayer().setTotalAlbino(numberListed);
+
+                    int updatedNumber = (currentGame.getPlayer().getTotalAlbino()) + 1;
+                    albinoRatCollectionTotal.setText(Integer.toString(updatedNumber));
+                    currentGame.getPlayer().setTotalAlbino(updatedNumber);
                 }
             }
         });
@@ -1301,10 +1330,14 @@ public class GUI
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
+                if(makePurchase(30))
                 {
-                    purchaseSound();
+                    int numberListed = Integer.parseInt(siameseRatCollectionTotal.getText());
+                    currentGame.getPlayer().setTotalSiamese(numberListed);
+
+                    int updatedNumber = (currentGame.getPlayer().getTotalSiamese()) + 1;
+                    siameseRatCollectionTotal.setText(Integer.toString(updatedNumber));
+                    currentGame.getPlayer().setTotalSiamese(updatedNumber);
                 }
             }
         });
@@ -1315,10 +1348,14 @@ public class GUI
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
+                if(makePurchase(35))
                 {
-                    purchaseSound();
+                    int numberListed = Integer.parseInt(hairlessRatCollectionTotal.getText());
+                    currentGame.getPlayer().setTotalHairless(numberListed);
+
+                    int updatedNumber = (currentGame.getPlayer().getTotalHairless()) + 1;
+                    hairlessRatCollectionTotal.setText(Integer.toString(updatedNumber));
+                    currentGame.getPlayer().setTotalHairless(updatedNumber);
                 }
             }
         });
@@ -1329,10 +1366,14 @@ public class GUI
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
+                if(makePurchase(40))
                 {
-                    purchaseSound();
+                    int numberListed = Integer.parseInt(russianBlueRatCollectionTotal.getText());
+                    currentGame.getPlayer().setTotalRussianBlue(numberListed);
+
+                    int updatedNumber = (currentGame.getPlayer().getTotalRussianBlue()) + 1;
+                    russianBlueRatCollectionTotal.setText(Integer.toString(updatedNumber));
+                    currentGame.getPlayer().setTotalRussianBlue(updatedNumber);
                 }
             }
         });
@@ -1343,10 +1384,14 @@ public class GUI
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
+                if(makePurchase(45))
                 {
-                    purchaseSound();
+                    int numberListed = Integer.parseInt(patchworkRatCollectionTotal.getText());
+                    currentGame.getPlayer().setTotalPatchwork(numberListed);
+
+                    int updatedNumber = (currentGame.getPlayer().getTotalPatchwork()) + 1;
+                    patchworkRatCollectionTotal.setText(Integer.toString(updatedNumber));
+                    currentGame.getPlayer().setTotalPatchwork(updatedNumber);
                 }
             }
         });
@@ -1357,10 +1402,14 @@ public class GUI
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
+                if(makePurchase(50))
                 {
-                    purchaseSound();
+                    int numberListed = Integer.parseInt(manxRatCollectionTotal.getText());
+                    currentGame.getPlayer().setTotalManx(numberListed);
+
+                    int updatedNumber = (currentGame.getPlayer().getTotalManx()) + 1;
+                    manxRatCollectionTotal.setText(Integer.toString(updatedNumber));
+                    currentGame.getPlayer().setTotalManx(updatedNumber);
                 }
             }
         });
@@ -1782,6 +1831,28 @@ public class GUI
         currentGame.getPlayer().setTotalLosses(updatedLosses);
     }
 
+    // Rewards money to player
+    public void reward(int amount)
+    {
+        int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
+        currentGame.getPlayer().setTotalDollars(dollarsListed);
+
+        int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + amount;
+        dollarsTotalLabel.setText(Integer.toString(updatedDollars));
+        currentGame.getPlayer().setTotalDollars(updatedDollars);
+    }
+
+    // Deducts money from player
+    public void deduct(int amount)
+    {
+        int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
+        currentGame.getPlayer().setTotalDollars(dollarsListed);
+
+        int updatedDollars = (currentGame.getPlayer().getTotalDollars()) - amount;
+        dollarsTotalLabel.setText(Integer.toString(updatedDollars));
+        currentGame.getPlayer().setTotalDollars(updatedDollars);
+    }
+
     // Changes amount of dollars in GUI and Player class depending on win/loss
     public void changeDollars(boolean state)
     {
@@ -1800,82 +1871,42 @@ public class GUI
             {
                 case "corners":
                     {
-                    int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
-                    currentGame.getPlayer().setTotalDollars(dollarsListed);
-
-                    int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + cornersReward;
-                    dollarsTotalLabel.setText(Integer.toString(updatedDollars));
-                    currentGame.getPlayer().setTotalDollars(updatedDollars);
+                    reward(cornersReward);
                     break;
                 }
                 case "diagonal":
                     {
-                    int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
-                    currentGame.getPlayer().setTotalDollars(dollarsListed);
-
-                    int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + diagonalReward;
-                    dollarsTotalLabel.setText(Integer.toString(updatedDollars));
-                    currentGame.getPlayer().setTotalDollars(updatedDollars);
+                    reward(diagonalReward);
                     break;
                 }
                 case "horizontal":
                     {
-                    int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
-                    currentGame.getPlayer().setTotalDollars(dollarsListed);
-
-                    int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + horizontalReward;
-                    dollarsTotalLabel.setText(Integer.toString(updatedDollars));
-                    currentGame.getPlayer().setTotalDollars(updatedDollars);
+                    reward(horizontalReward);
                     break;
                 }
                 case "vertical":
                     {
-                    int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
-                    currentGame.getPlayer().setTotalDollars(dollarsListed);
-
-                    int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + verticalReward;
-                    dollarsTotalLabel.setText(Integer.toString(updatedDollars));
-                    currentGame.getPlayer().setTotalDollars(updatedDollars);
+                    reward(verticalReward);
                     break;
                 }
                 case "l":
                     {
-                    int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
-                    currentGame.getPlayer().setTotalDollars(dollarsListed);
-
-                    int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + lReward;
-                    dollarsTotalLabel.setText(Integer.toString(updatedDollars));
-                    currentGame.getPlayer().setTotalDollars(updatedDollars);
+                    reward(lReward);
                     break;
                 }
                 case "t":
                     {
-                    int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
-                    currentGame.getPlayer().setTotalDollars(dollarsListed);
-
-                    int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + tReward;
-                    dollarsTotalLabel.setText(Integer.toString(updatedDollars));
-                    currentGame.getPlayer().setTotalDollars(updatedDollars);
+                    reward(tReward);
                     break;
                 }
                 case "x":
                     {
-                    int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
-                    currentGame.getPlayer().setTotalDollars(dollarsListed);
-
-                    int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + xReward;
-                    dollarsTotalLabel.setText(Integer.toString(updatedDollars));
-                    currentGame.getPlayer().setTotalDollars(updatedDollars);
+                    reward(xReward);
                     break;
                 }
                 case "all":
                     {
-                    int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
-                    currentGame.getPlayer().setTotalDollars(dollarsListed);
-
-                    int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + allReward;
-                    dollarsTotalLabel.setText(Integer.toString(updatedDollars));
-                    currentGame.getPlayer().setTotalDollars(updatedDollars);
+                    reward(allReward);
                     break;
                 }
                 default:
@@ -1885,12 +1916,7 @@ public class GUI
         }
         else
         {
-            int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
-            currentGame.getPlayer().setTotalDollars(dollarsListed);
-
-            int updatedDollars = (currentGame.getPlayer().getTotalDollars()) - 1;
-            dollarsTotalLabel.setText(Integer.toString(updatedDollars));
-            currentGame.getPlayer().setTotalDollars(updatedDollars);
+            deduct(1);
         }
     }
 
@@ -2171,6 +2197,35 @@ public class GUI
         {
             e1.printStackTrace();
         }
+    }
+
+    // Lets method know how much money we have if not established
+    public void establishFunds()
+    {
+        int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
+        currentGame.getPlayer().setTotalDollars(dollarsListed);
+    }
+
+    // To use when purchasing, deducts amount from dollars
+    public boolean makePurchase(int amount)
+    {
+        establishFunds();
+
+        // If they have enough money
+        if(currentGame.getPlayer().getTotalDollars() >= amount)
+        {
+            deduct(amount);
+
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                purchaseSound();
+            }
+
+            return true;
+        }
+
+        return false;
     }
 
     public static void main(String[] args)
