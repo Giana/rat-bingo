@@ -419,18 +419,21 @@ public class Game
             gameData.add(Integer.parseInt(input.nextLine()));
         }
 
-        player.setTotalWins(gameData.get(0));
-        player.setTotalLosses(gameData.get(1));
-        player.setTotalDollars(gameData.get(2));
-        player.setTotalHooded(gameData.get(3));
-        player.setTotalAgouti(gameData.get(4));
-        player.setTotalBerkshire(gameData.get(5));
-        player.setTotalRoan(gameData.get(6));
-        player.setTotalAlbino(gameData.get(7));
-        player.setTotalSiamese(gameData.get(8));
-        player.setTotalHairless(gameData.get(9));
-        player.setTotalRussianBlue(gameData.get(10));
-        player.setTotalPatchwork(gameData.get(11));
-        player.setTotalManx(gameData.get(12));
+        if(!gameData.isEmpty())
+        {
+            player.setTotalWins(gameData.get(0));
+            player.setTotalLosses(gameData.get(1));
+            player.setTotalDollars(gameData.get(2));
+            player.setTotalHooded(gameData.get(3));
+            player.setTotalAgouti(gameData.get(4));
+            player.setTotalBerkshire(gameData.get(5));
+            player.setTotalRoan(gameData.get(6));
+            player.setTotalAlbino(gameData.get(7));
+            player.setTotalSiamese(gameData.get(8));
+            player.setTotalHairless(gameData.get(9));
+            player.setTotalRussianBlue(gameData.get(10));
+            player.setTotalPatchwork(gameData.get(11));
+            player.setTotalManx(gameData.get(12));
+        }
     }
 }

@@ -58,8 +58,6 @@ public class GUI
     private JLabel gLogoImage;
     private JLabel oLogoImage;
     private JLabel smallRatBingoLogoImage;
-    private JPanel gameModeSelectionPanel;
-    private JLabel newGameTitleLogoImage;
     private JLabel cornersLogoImage;
     private JLabel diagonalLogoImage;
     private JLabel horizontalLogoImage;
@@ -70,7 +68,6 @@ public class GUI
     private JLabel allLogoImage;
     private JLabel helpLogoImage;
     private JLabel creditsLogoImage;
-    private JLabel emptySpaceLabel;
     private JPanel infoPanel;
     private JLabel winsLogoImage;
     private JLabel winsTotalLabel;
@@ -138,6 +135,9 @@ public class GUI
     private JLabel russianBlueRatCollectionTotal;
     private JLabel patchworkRatCollectionTotal;
     private JLabel manxRatCollectionTotal;
+    private JPanel bottomLeftMenuPanel;
+    private JPanel gameModeSelectionPanel;
+    private JLabel newGameTitleLogoImage;
     private JLabel dollarSymbolLabel;
     private JLabel dollarsTotalLabel;
     private JButton cornersButton;
