@@ -1219,42 +1219,57 @@
                   </component>
                   <component id="e0498" class="javax.swing.JLabel" binding="hoodedRatCollectionTotal">
                     <constraints>
-                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="Label"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
+                      <foreground color="-503240"/>
+                      <horizontalTextPosition value="0"/>
+                      <text value="0"/>
                     </properties>
                   </component>
                   <component id="85155" class="javax.swing.JLabel" binding="agoutiRatCollectionTotal">
                     <constraints>
-                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="Label"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
+                      <foreground color="-503240"/>
+                      <horizontalAlignment value="0"/>
+                      <text value="0"/>
                     </properties>
                   </component>
                   <component id="8b394" class="javax.swing.JLabel" binding="berkshireRatCollectionTotal">
                     <constraints>
-                      <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="Label"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
+                      <foreground color="-503240"/>
+                      <horizontalAlignment value="0"/>
+                      <text value="0"/>
                     </properties>
                   </component>
                   <component id="e3665" class="javax.swing.JLabel" binding="roanRatCollectionTotal">
                     <constraints>
-                      <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="Label"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
+                      <foreground color="-503240"/>
+                      <horizontalAlignment value="0"/>
+                      <text value="0"/>
                     </properties>
                   </component>
                   <component id="97738" class="javax.swing.JLabel" binding="albinoRatCollectionTotal">
                     <constraints>
-                      <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="Label"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
+                      <foreground color="-503240"/>
+                      <horizontalAlignment value="0"/>
+                      <text value="0"/>
                     </properties>
                   </component>
                   <component id="39a00" class="javax.swing.JLabel" binding="siameseRatCollectionImage">
@@ -1309,42 +1324,57 @@
                   </component>
                   <component id="31c54" class="javax.swing.JLabel" binding="siameseRatCollectionTotal">
                     <constraints>
-                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="Label"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
+                      <foreground color="-503240"/>
+                      <horizontalAlignment value="0"/>
+                      <text value="0"/>
                     </properties>
                   </component>
                   <component id="18518" class="javax.swing.JLabel" binding="hairlessRatCollectionTotal">
                     <constraints>
-                      <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="Label"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
+                      <foreground color="-503240"/>
+                      <horizontalAlignment value="0"/>
+                      <text value="0"/>
                     </properties>
                   </component>
                   <component id="2ae3f" class="javax.swing.JLabel" binding="russianBlueRatCollectionTotal">
                     <constraints>
-                      <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="Label"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
+                      <foreground color="-503240"/>
+                      <horizontalAlignment value="0"/>
+                      <text value="0"/>
                     </properties>
                   </component>
                   <component id="60e9c" class="javax.swing.JLabel" binding="patchworkRatCollectionTotal">
                     <constraints>
-                      <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="Label"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
+                      <foreground color="-503240"/>
+                      <horizontalAlignment value="0"/>
+                      <text value="0"/>
                     </properties>
                   </component>
                   <component id="5318e" class="javax.swing.JLabel" binding="manxRatCollectionTotal">
                     <constraints>
-                      <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="Label"/>
+                      <font name="Segoe MDL2 Assets" size="36" style="1"/>
+                      <foreground color="-503240"/>
+                      <horizontalAlignment value="0"/>
+                      <text value="0"/>
                     </properties>
                   </component>
                 </children>
