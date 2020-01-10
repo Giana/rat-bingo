@@ -1242,12 +1242,7 @@ public class GUI
             {
                 if(makePurchase(5))
                 {
-                    int numberListed = Integer.parseInt(hoodedRatCollectionTotal.getText());
-                    currentGame.getPlayer().setTotalHooded(numberListed);
-
-                    int updatedNumber = (currentGame.getPlayer().getTotalHooded()) + 1;
-                    hoodedRatCollectionTotal.setText(Integer.toString(updatedNumber));
-                    currentGame.getPlayer().setTotalHooded(updatedNumber);
+                    changeHooded();
                 }
             }
         });
@@ -1260,12 +1255,7 @@ public class GUI
             {
                 if(makePurchase(10))
                 {
-                    int numberListed = Integer.parseInt(agoutiRatCollectionTotal.getText());
-                    currentGame.getPlayer().setTotalAgouti(numberListed);
-
-                    int updatedNumber = (currentGame.getPlayer().getTotalAgouti()) + 1;
-                    agoutiRatCollectionTotal.setText(Integer.toString(updatedNumber));
-                    currentGame.getPlayer().setTotalAgouti(updatedNumber);
+                    changeAgouti();
                 }
             }
         });
@@ -1278,12 +1268,7 @@ public class GUI
             {
                 if(makePurchase(15))
                 {
-                    int numberListed = Integer.parseInt(berkshireRatCollectionTotal.getText());
-                    currentGame.getPlayer().setTotalBerkshire(numberListed);
-
-                    int updatedNumber = (currentGame.getPlayer().getTotalBerkshire()) + 1;
-                    berkshireRatCollectionTotal.setText(Integer.toString(updatedNumber));
-                    currentGame.getPlayer().setTotalBerkshire(updatedNumber);
+                    changeBerkshire();
                 }
             }
         });
@@ -1296,12 +1281,7 @@ public class GUI
             {
                 if(makePurchase(20))
                 {
-                    int numberListed = Integer.parseInt(roanRatCollectionTotal.getText());
-                    currentGame.getPlayer().setTotalRoan(numberListed);
-
-                    int updatedNumber = (currentGame.getPlayer().getTotalRoan()) + 1;
-                    roanRatCollectionTotal.setText(Integer.toString(updatedNumber));
-                    currentGame.getPlayer().setTotalRoan(updatedNumber);
+                    changeRoan();
                 }
             }
         });
@@ -1314,12 +1294,7 @@ public class GUI
             {
                 if(makePurchase(25))
                 {
-                    int numberListed = Integer.parseInt(albinoRatCollectionTotal.getText());
-                    currentGame.getPlayer().setTotalAlbino(numberListed);
-
-                    int updatedNumber = (currentGame.getPlayer().getTotalAlbino()) + 1;
-                    albinoRatCollectionTotal.setText(Integer.toString(updatedNumber));
-                    currentGame.getPlayer().setTotalAlbino(updatedNumber);
+                    changeAlbino();
                 }
             }
         });
@@ -1332,12 +1307,7 @@ public class GUI
             {
                 if(makePurchase(30))
                 {
-                    int numberListed = Integer.parseInt(siameseRatCollectionTotal.getText());
-                    currentGame.getPlayer().setTotalSiamese(numberListed);
-
-                    int updatedNumber = (currentGame.getPlayer().getTotalSiamese()) + 1;
-                    siameseRatCollectionTotal.setText(Integer.toString(updatedNumber));
-                    currentGame.getPlayer().setTotalSiamese(updatedNumber);
+                    changeSiamese();
                 }
             }
         });
@@ -1350,12 +1320,7 @@ public class GUI
             {
                 if(makePurchase(35))
                 {
-                    int numberListed = Integer.parseInt(hairlessRatCollectionTotal.getText());
-                    currentGame.getPlayer().setTotalHairless(numberListed);
-
-                    int updatedNumber = (currentGame.getPlayer().getTotalHairless()) + 1;
-                    hairlessRatCollectionTotal.setText(Integer.toString(updatedNumber));
-                    currentGame.getPlayer().setTotalHairless(updatedNumber);
+                    changeHairless();
                 }
             }
         });
@@ -1368,12 +1333,7 @@ public class GUI
             {
                 if(makePurchase(40))
                 {
-                    int numberListed = Integer.parseInt(russianBlueRatCollectionTotal.getText());
-                    currentGame.getPlayer().setTotalRussianBlue(numberListed);
-
-                    int updatedNumber = (currentGame.getPlayer().getTotalRussianBlue()) + 1;
-                    russianBlueRatCollectionTotal.setText(Integer.toString(updatedNumber));
-                    currentGame.getPlayer().setTotalRussianBlue(updatedNumber);
+                    changeRussianBlue();
                 }
             }
         });
@@ -1386,12 +1346,7 @@ public class GUI
             {
                 if(makePurchase(45))
                 {
-                    int numberListed = Integer.parseInt(patchworkRatCollectionTotal.getText());
-                    currentGame.getPlayer().setTotalPatchwork(numberListed);
-
-                    int updatedNumber = (currentGame.getPlayer().getTotalPatchwork()) + 1;
-                    patchworkRatCollectionTotal.setText(Integer.toString(updatedNumber));
-                    currentGame.getPlayer().setTotalPatchwork(updatedNumber);
+                    changePatchwork();
                 }
             }
         });
@@ -1404,12 +1359,7 @@ public class GUI
             {
                 if(makePurchase(50))
                 {
-                    int numberListed = Integer.parseInt(manxRatCollectionTotal.getText());
-                    currentGame.getPlayer().setTotalManx(numberListed);
-
-                    int updatedNumber = (currentGame.getPlayer().getTotalManx()) + 1;
-                    manxRatCollectionTotal.setText(Integer.toString(updatedNumber));
-                    currentGame.getPlayer().setTotalManx(updatedNumber);
+                    changeManx();
                 }
             }
         });
@@ -1867,7 +1817,7 @@ public class GUI
 
         if(state)
         {
-            switch (currentMode)
+            switch(currentMode)
             {
                 case "corners":
                     {
@@ -2200,16 +2150,16 @@ public class GUI
     }
 
     // Lets method know how much money we have if not established
-    public void establishFunds()
+    /*public void establishFunds()
     {
         int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
         currentGame.getPlayer().setTotalDollars(dollarsListed);
-    }
+    }*/
 
     // To use when purchasing, deducts amount from dollars
     public boolean makePurchase(int amount)
     {
-        establishFunds();
+        //establishFunds();
 
         // If they have enough money
         if(currentGame.getPlayer().getTotalDollars() >= amount)
@@ -2226,6 +2176,143 @@ public class GUI
         }
 
         return false;
+    }
+
+    // Changes the amount of hooded rats in GUI and in Player class by 1
+    public void changeHooded()
+    {
+        int numberListed = Integer.parseInt(hoodedRatCollectionTotal.getText());
+        currentGame.getPlayer().setTotalHooded(numberListed);
+
+        int updatedNumber = (currentGame.getPlayer().getTotalHooded()) + 1;
+        hoodedRatCollectionTotal.setText(Integer.toString(updatedNumber));
+        currentGame.getPlayer().setTotalHooded(updatedNumber);
+    }
+
+    // Changes the amount of agouti rats in GUI and in Player class by 1
+    public void changeAgouti()
+    {
+        int numberListed = Integer.parseInt(agoutiRatCollectionTotal.getText());
+        currentGame.getPlayer().setTotalAgouti(numberListed);
+
+        int updatedNumber = (currentGame.getPlayer().getTotalAgouti()) + 1;
+        agoutiRatCollectionTotal.setText(Integer.toString(updatedNumber));
+        currentGame.getPlayer().setTotalAgouti(updatedNumber);
+    }
+
+    // Changes the amount of berkshire rats in GUI and in Player class by 1
+    public void changeBerkshire()
+    {
+        int numberListed = Integer.parseInt(berkshireRatCollectionTotal.getText());
+        currentGame.getPlayer().setTotalBerkshire(numberListed);
+
+        int updatedNumber = (currentGame.getPlayer().getTotalBerkshire()) + 1;
+        berkshireRatCollectionTotal.setText(Integer.toString(updatedNumber));
+        currentGame.getPlayer().setTotalBerkshire(updatedNumber);
+    }
+
+    // Changes the amount of roan rats in GUI and in Player class by 1
+    public void changeRoan()
+    {
+        int numberListed = Integer.parseInt(roanRatCollectionTotal.getText());
+        currentGame.getPlayer().setTotalRoan(numberListed);
+
+        int updatedNumber = (currentGame.getPlayer().getTotalRoan()) + 1;
+        roanRatCollectionTotal.setText(Integer.toString(updatedNumber));
+        currentGame.getPlayer().setTotalRoan(updatedNumber);
+    }
+
+    // Changes the amount of albino rats in GUI and in Player class by 1
+    public void changeAlbino()
+    {
+        int numberListed = Integer.parseInt(albinoRatCollectionTotal.getText());
+        currentGame.getPlayer().setTotalAlbino(numberListed);
+
+        int updatedNumber = (currentGame.getPlayer().getTotalAlbino()) + 1;
+        albinoRatCollectionTotal.setText(Integer.toString(updatedNumber));
+        currentGame.getPlayer().setTotalAlbino(updatedNumber);
+    }
+
+    // Changes the amount of siamese rats in GUI and in Player class by 1
+    public void changeSiamese()
+    {
+        int numberListed = Integer.parseInt(siameseRatCollectionTotal.getText());
+        currentGame.getPlayer().setTotalSiamese(numberListed);
+
+        int updatedNumber = (currentGame.getPlayer().getTotalSiamese()) + 1;
+        siameseRatCollectionTotal.setText(Integer.toString(updatedNumber));
+        currentGame.getPlayer().setTotalSiamese(updatedNumber);
+    }
+
+    // Changes the amount of siamese rats in GUI and in Player class by 1
+    public void changeHairless()
+    {
+        int numberListed = Integer.parseInt(hairlessRatCollectionTotal.getText());
+        currentGame.getPlayer().setTotalHairless(numberListed);
+
+        int updatedNumber = (currentGame.getPlayer().getTotalHairless()) + 1;
+        hairlessRatCollectionTotal.setText(Integer.toString(updatedNumber));
+        currentGame.getPlayer().setTotalHairless(updatedNumber);
+    }
+
+    // Changes the amount of Russian blue rats in GUI and in Player class by 1
+    public void changeRussianBlue()
+    {
+        int numberListed = Integer.parseInt(russianBlueRatCollectionTotal.getText());
+        currentGame.getPlayer().setTotalRussianBlue(numberListed);
+
+        int updatedNumber = (currentGame.getPlayer().getTotalRussianBlue()) + 1;
+        russianBlueRatCollectionTotal.setText(Integer.toString(updatedNumber));
+        currentGame.getPlayer().setTotalRussianBlue(updatedNumber);
+    }
+
+    // Changes the amount of patchwork rats in GUI and in Player class by 1
+    public void changePatchwork()
+    {
+        int numberListed = Integer.parseInt(patchworkRatCollectionTotal.getText());
+        currentGame.getPlayer().setTotalPatchwork(numberListed);
+
+        int updatedNumber = (currentGame.getPlayer().getTotalPatchwork()) + 1;
+        patchworkRatCollectionTotal.setText(Integer.toString(updatedNumber));
+        currentGame.getPlayer().setTotalPatchwork(updatedNumber);
+    }
+
+    // Changes the amount of manx rats in GUI and in Player class by 1
+    public void changeManx()
+    {
+        int numberListed = Integer.parseInt(manxRatCollectionTotal.getText());
+        currentGame.getPlayer().setTotalManx(numberListed);
+
+        int updatedNumber = (currentGame.getPlayer().getTotalManx()) + 1;
+        manxRatCollectionTotal.setText(Integer.toString(updatedNumber));
+        currentGame.getPlayer().setTotalManx(updatedNumber);
+    }
+
+    // TODO: delete if not needed and also convert establishFunds or whatever
+    // Lets method know how many rats we have if not established
+    public void establishCollection()
+    {
+        int numberListed1 = Integer.parseInt(hoodedRatCollectionTotal.getText());
+        int numberListed2 = Integer.parseInt(agoutiRatCollectionTotal.getText());
+        int numberListed3 = Integer.parseInt(berkshireRatCollectionTotal.getText());
+        int numberListed4 = Integer.parseInt(roanRatCollectionTotal.getText());
+        int numberListed5 = Integer.parseInt(albinoRatCollectionTotal.getText());
+        int numberListed6 = Integer.parseInt(siameseRatCollectionTotal.getText());
+        int numberListed7 = Integer.parseInt(hairlessRatCollectionTotal.getText());
+        int numberListed8 = Integer.parseInt(russianBlueRatCollectionTotal.getText());
+        int numberListed9 = Integer.parseInt(patchworkRatCollectionTotal.getText());
+        int numberListed10 = Integer.parseInt(manxRatCollectionTotal.getText());
+
+        currentGame.getPlayer().setTotalHooded(numberListed1);
+        currentGame.getPlayer().setTotalAgouti(numberListed2);
+        currentGame.getPlayer().setTotalBerkshire(numberListed3);
+        currentGame.getPlayer().setTotalRoan(numberListed4);
+        currentGame.getPlayer().setTotalAlbino(numberListed5);
+        currentGame.getPlayer().setTotalSiamese(numberListed6);
+        currentGame.getPlayer().setTotalHairless(numberListed7);
+        currentGame.getPlayer().setTotalRussianBlue(numberListed8);
+        currentGame.getPlayer().setTotalPatchwork(numberListed9);
+        currentGame.getPlayer().setTotalManx(numberListed10);
     }
 
     public static void main(String[] args)
