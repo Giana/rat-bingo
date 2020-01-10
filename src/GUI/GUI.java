@@ -1,7 +1,6 @@
 package GUI;
 
 import Code.Game;
-import com.sun.media.jfxmedia.AudioClip;
 
 import javax.swing.*;
 import java.awt.*;
@@ -142,19 +141,10 @@ public class GUI
     private JLabel dollarLogoImage;
     private JLabel dollarsTotalLabel;
     private JButton cornersButton;
-    private Icon cornersIcon = new ImageIcon("src/Images/CornersLogo.png");
-    private Icon diagonalIcon = new ImageIcon("src/Images/DiagonalLogo.png");
-    private Icon horizontalIcon = new ImageIcon("src/Images/HorizontalLogo.png");
-    private Icon verticalIcon = new ImageIcon("src/Images/VerticalLogo.png");
-    private Icon lIcon = new ImageIcon("src/Images/LLogo.png");
-    private Icon tIcon = new ImageIcon("src/Images/TLogo.png");
-    private Icon xIcon = new ImageIcon("src/Images/XLogo.png");
-    private Icon allIcon = new ImageIcon("src/Images/AllLogo.png");
 
     private Game currentGame = new Game();
     private String currentMode;
     Thread backgroundProcesses;
-    AudioClip wetClick;
 
     public GUI()
     {
@@ -534,8 +524,6 @@ public class GUI
                     {
                         defeatSound();
                     }
-
-                    backgroundProcesses.interrupt();
                 }
                 else
                 {
@@ -553,8 +541,6 @@ public class GUI
                     {
                         victorySound();
                     }
-
-                    backgroundProcesses.interrupt();
                 }
 
                 // Interrupt background processes
@@ -1810,81 +1796,91 @@ public class GUI
 
         if(state)
         {
-            if(currentMode.equals("corners"))
+            switch (currentMode)
             {
-                int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
-                currentGame.getPlayer().setTotalDollars(dollarsListed);
+                case "corners":
+                    {
+                    int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
+                    currentGame.getPlayer().setTotalDollars(dollarsListed);
 
-                int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + cornersReward;
-                dollarsTotalLabel.setText(Integer.toString(updatedDollars));
-                currentGame.getPlayer().setTotalDollars(updatedDollars);
-            }
-            else if(currentMode.equals("diagonal"))
-            {
-                int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
-                currentGame.getPlayer().setTotalDollars(dollarsListed);
+                    int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + cornersReward;
+                    dollarsTotalLabel.setText(Integer.toString(updatedDollars));
+                    currentGame.getPlayer().setTotalDollars(updatedDollars);
+                    break;
+                }
+                case "diagonal":
+                    {
+                    int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
+                    currentGame.getPlayer().setTotalDollars(dollarsListed);
 
-                int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + diagonalReward;
-                dollarsTotalLabel.setText(Integer.toString(updatedDollars));
-                currentGame.getPlayer().setTotalDollars(updatedDollars);
-            }
-            else if(currentMode.equals("horizontal"))
-            {
-                int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
-                currentGame.getPlayer().setTotalDollars(dollarsListed);
+                    int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + diagonalReward;
+                    dollarsTotalLabel.setText(Integer.toString(updatedDollars));
+                    currentGame.getPlayer().setTotalDollars(updatedDollars);
+                    break;
+                }
+                case "horizontal":
+                    {
+                    int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
+                    currentGame.getPlayer().setTotalDollars(dollarsListed);
 
-                int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + horizontalReward;
-                dollarsTotalLabel.setText(Integer.toString(updatedDollars));
-                currentGame.getPlayer().setTotalDollars(updatedDollars);
-            }
-            else if(currentMode.equals("vertical"))
-            {
-                int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
-                currentGame.getPlayer().setTotalDollars(dollarsListed);
+                    int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + horizontalReward;
+                    dollarsTotalLabel.setText(Integer.toString(updatedDollars));
+                    currentGame.getPlayer().setTotalDollars(updatedDollars);
+                    break;
+                }
+                case "vertical":
+                    {
+                    int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
+                    currentGame.getPlayer().setTotalDollars(dollarsListed);
 
-                int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + verticalReward;
-                dollarsTotalLabel.setText(Integer.toString(updatedDollars));
-                currentGame.getPlayer().setTotalDollars(updatedDollars);
-            }
-            else if(currentMode.equals("l"))
-            {
-                int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
-                currentGame.getPlayer().setTotalDollars(dollarsListed);
+                    int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + verticalReward;
+                    dollarsTotalLabel.setText(Integer.toString(updatedDollars));
+                    currentGame.getPlayer().setTotalDollars(updatedDollars);
+                    break;
+                }
+                case "l":
+                    {
+                    int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
+                    currentGame.getPlayer().setTotalDollars(dollarsListed);
 
-                int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + lReward;
-                dollarsTotalLabel.setText(Integer.toString(updatedDollars));
-                currentGame.getPlayer().setTotalDollars(updatedDollars);
-            }
-            else if(currentMode.equals("t"))
-            {
-                int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
-                currentGame.getPlayer().setTotalDollars(dollarsListed);
+                    int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + lReward;
+                    dollarsTotalLabel.setText(Integer.toString(updatedDollars));
+                    currentGame.getPlayer().setTotalDollars(updatedDollars);
+                    break;
+                }
+                case "t":
+                    {
+                    int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
+                    currentGame.getPlayer().setTotalDollars(dollarsListed);
 
-                int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + tReward;
-                dollarsTotalLabel.setText(Integer.toString(updatedDollars));
-                currentGame.getPlayer().setTotalDollars(updatedDollars);
-            }
-            else if(currentMode.equals("x"))
-            {
-                int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
-                currentGame.getPlayer().setTotalDollars(dollarsListed);
+                    int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + tReward;
+                    dollarsTotalLabel.setText(Integer.toString(updatedDollars));
+                    currentGame.getPlayer().setTotalDollars(updatedDollars);
+                    break;
+                }
+                case "x":
+                    {
+                    int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
+                    currentGame.getPlayer().setTotalDollars(dollarsListed);
 
-                int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + xReward;
-                dollarsTotalLabel.setText(Integer.toString(updatedDollars));
-                currentGame.getPlayer().setTotalDollars(updatedDollars);
-            }
-            else if(currentMode.equals("all"))
-            {
-                int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
-                currentGame.getPlayer().setTotalDollars(dollarsListed);
+                    int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + xReward;
+                    dollarsTotalLabel.setText(Integer.toString(updatedDollars));
+                    currentGame.getPlayer().setTotalDollars(updatedDollars);
+                    break;
+                }
+                case "all":
+                    {
+                    int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
+                    currentGame.getPlayer().setTotalDollars(dollarsListed);
 
-                int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + allReward;
-                dollarsTotalLabel.setText(Integer.toString(updatedDollars));
-                currentGame.getPlayer().setTotalDollars(updatedDollars);
-            }
-            else
-            {
-                System.out.println("Error: Invalid game mode");
+                    int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + allReward;
+                    dollarsTotalLabel.setText(Integer.toString(updatedDollars));
+                    currentGame.getPlayer().setTotalDollars(updatedDollars);
+                    break;
+                }
+                default:
+                    System.out.println("Error: Invalid game mode");
+                    break;
             }
         }
         else
@@ -1991,42 +1987,45 @@ public class GUI
     // Sets game mode icon when you select a game mode (so you can see current one)
     public void setGameModeIcon()
     {
-        if(currentMode.equals("corners"))
+        Icon cornersIcon = new ImageIcon("src/Images/CornersLogo.png");
+        Icon diagonalIcon = new ImageIcon("src/Images/DiagonalLogo.png");
+        Icon horizontalIcon = new ImageIcon("src/Images/HorizontalLogo.png");
+        Icon verticalIcon = new ImageIcon("src/Images/VerticalLogo.png");
+        Icon lIcon = new ImageIcon("src/Images/LLogo.png");
+        Icon tIcon = new ImageIcon("src/Images/TLogo.png");
+        Icon xIcon = new ImageIcon("src/Images/XLogo.png");
+        Icon allIcon = new ImageIcon("src/Images/AllLogo.png");
+
+        switch(currentMode)
         {
-            currentGameModeLogoImage.setIcon(cornersIcon);
-        }
-        else if(currentMode.equals("diagonal"))
-        {
-            currentGameModeLogoImage.setIcon(diagonalIcon);
-        }
-        else if(currentMode.equals("horizontal"))
-        {
-            currentGameModeLogoImage.setIcon(horizontalIcon);
-        }
-        else if(currentMode.equals("vertical"))
-        {
-            currentGameModeLogoImage.setIcon(verticalIcon);
-        }
-        else if(currentMode.equals("l"))
-        {
-            currentGameModeLogoImage.setIcon(lIcon);
-        }
-        else if(currentMode.equals("t"))
-        {
-            currentGameModeLogoImage.setIcon(tIcon);
-        }
-        else if(currentMode.equals("x"))
-        {
-            currentGameModeLogoImage.setIcon(xIcon);
-        }
-        else if(currentMode.equals("all"))
-        {
-            currentGameModeLogoImage.setIcon(allIcon);
-        }
-        else
-        {
-            System.out.println("Error: Invalid game mode");
-            currentGameModeLogoImage.setVisible(false);
+            case "corners":
+                currentGameModeLogoImage.setIcon(cornersIcon);
+                break;
+            case "diagonal":
+                currentGameModeLogoImage.setIcon(diagonalIcon);
+                break;
+            case "horizontal":
+                currentGameModeLogoImage.setIcon(horizontalIcon);
+                break;
+            case "vertical":
+                currentGameModeLogoImage.setIcon(verticalIcon);
+                break;
+            case "l":
+                currentGameModeLogoImage.setIcon(lIcon);
+                break;
+            case "t":
+                currentGameModeLogoImage.setIcon(tIcon);
+                break;
+            case "x":
+                currentGameModeLogoImage.setIcon(xIcon);
+                break;
+            case "all":
+                currentGameModeLogoImage.setIcon(allIcon);
+                break;
+            default:
+                System.out.println("Error: Invalid game mode");
+                currentGameModeLogoImage.setVisible(false);
+                break;
         }
     }
 
