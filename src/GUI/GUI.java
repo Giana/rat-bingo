@@ -962,6 +962,20 @@ public class GUI
                 {
                     currentGame.loadGame();
 
+                    winsTotalLabel.setText(Integer.toString(currentGame.getPlayer().getTotalWins()));
+                    lossesTotalLabel.setText(Integer.toString(currentGame.getPlayer().getTotalLosses()));
+                    dollarsTotalLabel.setText(Integer.toString(currentGame.getPlayer().getTotalDollars()));
+                    hoodedRatCollectionTotal.setText(Integer.toString(currentGame.getPlayer().getTotalHooded()));
+                    agoutiRatCollectionTotal.setText(Integer.toString(currentGame.getPlayer().getTotalAgouti()));
+                    berkshireRatCollectionTotal.setText(Integer.toString(currentGame.getPlayer().getTotalBerkshire()));
+                    roanRatCollectionTotal.setText(Integer.toString(currentGame.getPlayer().getTotalRoan()));
+                    albinoRatCollectionTotal.setText(Integer.toString(currentGame.getPlayer().getTotalAlbino()));
+                    siameseRatCollectionTotal.setText(Integer.toString(currentGame.getPlayer().getTotalSiamese()));
+                    hairlessRatCollectionTotal.setText(Integer.toString(currentGame.getPlayer().getTotalHairless()));
+                    russianBlueRatCollectionTotal.setText(Integer.toString(currentGame.getPlayer().getTotalRussianBlue()));
+                    patchworkRatCollectionTotal.setText(Integer.toString(currentGame.getPlayer().getTotalPatchwork()));
+                    manxRatCollectionTotal.setText(Integer.toString(currentGame.getPlayer().getTotalManx()));
+
                     // Play sound if enabled
                     if(currentGame.getSoundStatus())
                     {
@@ -972,20 +986,6 @@ public class GUI
                 {
                     ex.printStackTrace();
                 }
-
-                winsTotalLabel.setText(Integer.toString(currentGame.getGameData().get(0)));
-                lossesTotalLabel.setText(Integer.toString(currentGame.getGameData().get(1)));
-                dollarsTotalLabel.setText(Integer.toString(currentGame.getGameData().get(2)));
-                hoodedRatCollectionTotal.setText(Integer.toString(currentGame.getGameData().get(3)));
-                agoutiRatCollectionTotal.setText(Integer.toString(currentGame.getGameData().get(4)));
-                berkshireRatCollectionTotal.setText(Integer.toString(currentGame.getGameData().get(5)));
-                roanRatCollectionTotal.setText(Integer.toString(currentGame.getGameData().get(6)));
-                albinoRatCollectionTotal.setText(Integer.toString(currentGame.getGameData().get(7)));
-                siameseRatCollectionTotal.setText(Integer.toString(currentGame.getGameData().get(8)));
-                hairlessRatCollectionTotal.setText(Integer.toString(currentGame.getGameData().get(9)));
-                russianBlueRatCollectionTotal.setText(Integer.toString(currentGame.getGameData().get(10)));
-                patchworkRatCollectionTotal.setText(Integer.toString(currentGame.getGameData().get(11)));
-                manxRatCollectionTotal.setText(Integer.toString(currentGame.getGameData().get(12)));
             }
         });
 
@@ -1000,7 +1000,11 @@ public class GUI
 
                 try
                 {
+                    establishFunds();
+                    establishCollection();
+
                     currentGame.saveGame();
+
                     displaySavedScreen();
 
                     // Remove things you should just see in game
@@ -1781,13 +1785,20 @@ public class GUI
         currentGame.getPlayer().setTotalLosses(updatedLosses);
     }
 
-    // Rewards money to player
-    public void reward(int amount)
+    // Establishes how much money we have from GUI
+    public void establishFunds()
     {
         int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
         currentGame.getPlayer().setTotalDollars(dollarsListed);
+    }
+
+    // Rewards money to player
+    public void reward(int amount)
+    {
+        establishFunds();
 
         int updatedDollars = (currentGame.getPlayer().getTotalDollars()) + amount;
+        dollarsTotalLabel.setText(Integer.toString(updatedDollars));
         dollarsTotalLabel.setText(Integer.toString(updatedDollars));
         currentGame.getPlayer().setTotalDollars(updatedDollars);
     }
@@ -1795,8 +1806,7 @@ public class GUI
     // Deducts money from player
     public void deduct(int amount)
     {
-        int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
-        currentGame.getPlayer().setTotalDollars(dollarsListed);
+        establishFunds();
 
         int updatedDollars = (currentGame.getPlayer().getTotalDollars()) - amount;
         dollarsTotalLabel.setText(Integer.toString(updatedDollars));
@@ -2149,17 +2159,11 @@ public class GUI
         }
     }
 
-    // Lets method know how much money we have if not established
-    /*public void establishFunds()
-    {
-        int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
-        currentGame.getPlayer().setTotalDollars(dollarsListed);
-    }*/
-
     // To use when purchasing, deducts amount from dollars
     public boolean makePurchase(int amount)
     {
-        //establishFunds();
+        establishFunds();        // Useful if buying without loading or playing
+        establishCollection();
 
         // If they have enough money
         if(currentGame.getPlayer().getTotalDollars() >= amount)
@@ -2288,7 +2292,6 @@ public class GUI
         currentGame.getPlayer().setTotalManx(updatedNumber);
     }
 
-    // TODO: delete if not needed and also convert establishFunds or whatever
     // Lets method know how many rats we have if not established
     public void establishCollection()
     {
