@@ -146,6 +146,10 @@ public class GUI
     private JLabel purchasedRatImage;
     private JLabel purchasedRatLogo;
     private JLabel purchasedShopLogoImage;
+    private JPanel creditsTextPanel;
+    private JTextPane creditsTextPanePanel;
+    private JPanel helpTextPanel;
+    private JTextPane helpTextPanePanel;
     private JButton cornersButton;
 
     private Game currentGame = new Game();

@@ -954,7 +954,41 @@
               <background color="-6103067"/>
             </properties>
             <border type="none"/>
-            <children/>
+            <children>
+              <grid id="28646" binding="creditsTextPanel" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints border-constraint="Center"/>
+                <properties>
+                  <background color="-6103067"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="ebda3" class="javax.swing.JTextPane" binding="creditsTextPanePanel">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-6103067"/>
+                      <font name="Segoe MDL2 Assets" size="24" style="1"/>
+                      <foreground color="-16750977"/>
+                      <text value="My name is Giana, and I created this game and wrote the code.&#10;&#10;Github: https://github.com/G-i-a-n-a"/>
+                    </properties>
+                  </component>
+                  <hspacer id="380a5">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                  </hspacer>
+                  <vspacer id="a434a">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                  </vspacer>
+                </children>
+              </grid>
+            </children>
           </grid>
           <grid id="6873d" binding="helpPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
             <constraints>
@@ -964,7 +998,38 @@
               <background color="-6103067"/>
             </properties>
             <border type="none"/>
-            <children/>
+            <children>
+              <grid id="2cdf1" binding="helpTextPanel" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints border-constraint="Center"/>
+                <properties>
+                  <background color="-6103067"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="35369" class="javax.swing.JTextPane" binding="helpTextPanePanel">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-6103067"/>
+                    </properties>
+                  </component>
+                  <hspacer id="6ce05">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                  </hspacer>
+                  <vspacer id="1b4d4">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                  </vspacer>
+                </children>
+              </grid>
+            </children>
           </grid>
           <grid id="7ac9" binding="savedPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
             <constraints>
