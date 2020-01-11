@@ -45,6 +45,7 @@
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
+                  <enabled value="true"/>
                   <icon value="Images/LoadLogo.png"/>
                   <text value=""/>
                 </properties>
@@ -218,103 +219,106 @@
         </properties>
         <border type="none"/>
         <children>
-          <grid id="8f914" binding="infoPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+          <grid id="77b39" binding="infoPanel" layout-manager="GridLayoutManager" row-count="10" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
             <constraints border-constraint="Center"/>
             <properties>
               <background color="-503240"/>
             </properties>
             <border type="none"/>
             <children>
-              <component id="cd8d0" class="javax.swing.JLabel" binding="callerLogoImage">
-                <constraints/>
+              <component id="2b638" class="javax.swing.JLabel" binding="callerLogoImage">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
                 <properties>
                   <horizontalAlignment value="0"/>
                   <icon value="Images/CallerLogo.png"/>
-                  <opaque value="false"/>
-                  <requestFocusEnabled value="true"/>
-                  <text value=""/>
-                  <verifyInputWhenFocusTarget value="true"/>
-                  <visible value="false"/>
-                </properties>
-              </component>
-              <component id="912d0" class="javax.swing.JLabel" binding="letterCurrentlabel">
-                <constraints/>
-                <properties>
-                  <background color="-12636826"/>
-                  <font name="Segoe MDL2 Assets" size="36" style="1"/>
-                  <foreground color="-12636826"/>
-                  <horizontalAlignment value="0"/>
                   <text value=""/>
                   <visible value="false"/>
                 </properties>
               </component>
-              <component id="ff65a" class="javax.swing.JLabel" binding="callerCurrentLabel">
-                <constraints/>
+              <vspacer id="4ddc8">
+                <constraints>
+                  <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <component id="f94ab" class="javax.swing.JLabel" binding="winsLogoImage">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
                 <properties>
-                  <background color="-12636826"/>
-                  <font name="Segoe MDL2 Assets" size="36" style="1"/>
-                  <foreground color="-12636826"/>
-                  <horizontalAlignment value="0"/>
-                  <text value="0"/>
-                  <visible value="false"/>
-                </properties>
-              </component>
-              <component id="1095a" class="javax.swing.JLabel" binding="winsLogoImage">
-                <constraints/>
-                <properties>
-                  <horizontalAlignment value="0"/>
                   <icon value="Images/WinsLogo.png"/>
                   <text value=""/>
                 </properties>
               </component>
-              <component id="f5134" class="javax.swing.JLabel" binding="winsTotalLabel">
-                <constraints/>
+              <component id="9fb57" class="javax.swing.JLabel" binding="winsTotalLabel">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
                 <properties>
-                  <background color="-12636826"/>
                   <font name="Segoe MDL2 Assets" size="28" style="1"/>
                   <foreground color="-12636826"/>
+                  <horizontalAlignment value="0"/>
                   <text value="0"/>
                 </properties>
               </component>
-              <component id="96a0f" class="javax.swing.JLabel" binding="lossesLogoImage">
-                <constraints/>
+              <component id="e7cd8" class="javax.swing.JLabel" binding="lossesLogoImage">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
                 <properties>
-                  <horizontalAlignment value="0"/>
                   <icon value="Images/LossesLogo.png"/>
                   <text value=""/>
                 </properties>
               </component>
-              <component id="ab658" class="javax.swing.JLabel" binding="lossesTotalLabel">
-                <constraints/>
+              <component id="afee6" class="javax.swing.JLabel" binding="lossesTotalLabel">
+                <constraints>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
                 <properties>
-                  <background color="-12636826"/>
                   <font name="Segoe MDL2 Assets" size="28" style="1"/>
                   <foreground color="-12636826"/>
+                  <horizontalAlignment value="0"/>
                   <text value="0"/>
                 </properties>
               </component>
-              <component id="e36ea" class="javax.swing.JLabel" binding="startGameLogoImage">
-                <constraints/>
+              <component id="d270f" class="javax.swing.JLabel" binding="startGameLogoImage">
+                <constraints>
+                  <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
                 <properties>
-                  <horizontalAlignment value="0"/>
                   <icon value="Images/StartGameLogo.png"/>
                   <text value=""/>
                   <visible value="false"/>
                 </properties>
               </component>
-              <component id="ed5b" class="javax.swing.JLabel" binding="bingoLogoImage">
-                <constraints/>
+              <component id="446de" class="javax.swing.JLabel" binding="bingoLogoImage">
+                <constraints>
+                  <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
                 <properties>
-                  <horizontalAlignment value="0"/>
                   <icon value="Images/BingoLogo.png"/>
                   <text value=""/>
                   <visible value="false"/>
                 </properties>
               </component>
-              <component id="1f087" class="javax.swing.JLabel" binding="currentGameModeLogoImage">
-                <constraints/>
+              <component id="4f5f2" class="javax.swing.JLabel" binding="currentGameModeLogoImage">
+                <constraints>
+                  <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
                 <properties>
-                  <horizontalAlignment value="0"/>
+                  <text value=""/>
+                  <visible value="false"/>
+                </properties>
+              </component>
+              <component id="8460f" class="javax.swing.JLabel" binding="callerCurrentLabel">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Segoe MDL2 Assets" size="48" style="1"/>
+                  <foreground color="-12636826"/>
                   <text value=""/>
                   <visible value="false"/>
                 </properties>
@@ -1434,6 +1438,43 @@
                       <foreground color="-503240"/>
                       <horizontalAlignment value="0"/>
                       <text value="0"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+            </children>
+          </grid>
+          <grid id="b64a4" binding="purchasedPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+            <constraints>
+              <card name="Card11"/>
+            </constraints>
+            <properties>
+              <background color="-6103067"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <grid id="7abe5" binding="purchasedItemsPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints border-constraint="Center"/>
+                <properties>
+                  <background color="-6103067"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="9106d" class="javax.swing.JLabel" binding="purchasedRatImage">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="11261" class="javax.swing.JLabel" binding="purchasedRatLogo">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value=""/>
                     </properties>
                   </component>
                 </children>

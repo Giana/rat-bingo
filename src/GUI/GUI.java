@@ -68,10 +68,7 @@ public class GUI
     private JLabel allLogoImage;
     private JLabel helpLogoImage;
     private JLabel creditsLogoImage;
-    private JPanel infoPanel;
-    private JLabel winsLogoImage;
     private JLabel winsTotalLabel;
-    private JLabel lossesLogoImage;
     private JLabel lossesTotalLabel;
     private JLabel callerLogoImage;
     private JLabel callerCurrentLabel;
@@ -140,6 +137,14 @@ public class GUI
     private JLabel newGameTitleLogoImage;
     private JLabel dollarSymbolLabel;
     private JLabel dollarsTotalLabel;
+    private JPanel infoPanel;
+    private JPanel callerLabelsPanel;
+    private JLabel winsLogoImage;
+    private JLabel lossesLogoImage;
+    private JPanel purchasedPanel;
+    private JPanel purchasedItemsPanel;
+    private JLabel purchasedRatImage;
+    private JLabel purchasedRatLogo;
     private JButton cornersButton;
 
     private Game currentGame = new Game();
@@ -479,8 +484,8 @@ public class GUI
             {
                 super.mouseClicked(e);
 
-                // Remove things you should just see in game
                 startGameLogoImage.setVisible(false);
+                bingoLogoImage.setVisible(true);
 
                 // Create game of current game mode
                 currentGame = new Game(currentMode);
@@ -981,6 +986,7 @@ public class GUI
                     {
                         saveLoadSound();
                     }
+
                 }
                 catch(IOException ex)
                 {
@@ -1247,6 +1253,7 @@ public class GUI
                 if(makePurchase(5))
                 {
                     changeHooded();
+                    displayPurchasedScreen("hooded");
                 }
             }
         });
@@ -1260,6 +1267,7 @@ public class GUI
                 if(makePurchase(10))
                 {
                     changeAgouti();
+                    displayPurchasedScreen("agouti");
                 }
             }
         });
@@ -1273,6 +1281,7 @@ public class GUI
                 if(makePurchase(15))
                 {
                     changeBerkshire();
+                    displayPurchasedScreen("berkshire");
                 }
             }
         });
@@ -1286,6 +1295,7 @@ public class GUI
                 if(makePurchase(20))
                 {
                     changeRoan();
+                    displayPurchasedScreen("roan");
                 }
             }
         });
@@ -1299,6 +1309,7 @@ public class GUI
                 if(makePurchase(25))
                 {
                     changeAlbino();
+                    displayPurchasedScreen("albino");
                 }
             }
         });
@@ -1312,6 +1323,7 @@ public class GUI
                 if(makePurchase(30))
                 {
                     changeSiamese();
+                    displayPurchasedScreen("siamese");
                 }
             }
         });
@@ -1325,6 +1337,7 @@ public class GUI
                 if(makePurchase(35))
                 {
                     changeHairless();
+                    displayPurchasedScreen("hairless");
                 }
             }
         });
@@ -1338,6 +1351,7 @@ public class GUI
                 if(makePurchase(40))
                 {
                     changeRussianBlue();
+                    displayPurchasedScreen("russian blue");
                 }
             }
         });
@@ -1351,6 +1365,7 @@ public class GUI
                 if(makePurchase(45))
                 {
                     changePatchwork();
+                    displayPurchasedScreen("patchwork");
                 }
             }
         });
@@ -1364,6 +1379,7 @@ public class GUI
                 if(makePurchase(50))
                 {
                     changeManx();
+                    displayPurchasedScreen("manx");
                 }
             }
         });
@@ -1631,7 +1647,6 @@ public class GUI
         o5.setText("");
         o5.setBackground(Color.decode("#00667F"));
 
-        letterCurrentlabel.setText("");
         callerCurrentLabel.setText("");
     }
 
@@ -1641,9 +1656,7 @@ public class GUI
         {
             callerLogoImage.setVisible(true);
             callerCurrentLabel.setVisible(true);
-            letterCurrentlabel.setVisible(true);
             startGameLogoImage.setVisible(true);
-            bingoLogoImage.setVisible(true);
             setGameModeIcon();
             currentGameModeLogoImage.setVisible(true);
         }
@@ -1651,7 +1664,6 @@ public class GUI
         {
             callerLogoImage.setVisible(false);
             callerCurrentLabel.setVisible(false);
-            letterCurrentlabel.setVisible(false);
             startGameLogoImage.setVisible(false);
             bingoLogoImage.setVisible(false);
             currentGameModeLogoImage.setVisible(false);
@@ -1726,6 +1738,92 @@ public class GUI
         switchPanel.add(shopPanel);
         switchPanel.repaint();
         switchPanel.revalidate();
+    }
+
+    // Changes rat image and logo depending on rat type passed
+    public void changePurchasedScreenItems(String rat)
+    {
+        Icon hoodedRatImage = new ImageIcon("src/Images/HoodedRat.png");
+        Icon hoodedRatLogo = new ImageIcon("src/Images/HoodedLogo.png");
+        Icon agoutiRatImage = new ImageIcon("src/Images/AgoutiRat.png");
+        Icon agoutiRatLogo = new ImageIcon("src/Images/AgoutiLogo.png");
+        Icon berkshireRatImage = new ImageIcon("src/Images/BerkshireRat.png");
+        Icon berkshireRatLogo = new ImageIcon("src/Images/BerkshireLogo.png");
+        Icon roanRatImage = new ImageIcon("src/Images/RoanRat.png");
+        Icon roanRatLogo = new ImageIcon("src/Images/RoanLogo.png");
+        Icon albinoRatImage = new ImageIcon("src/Images/AlbinoRat.png");
+        Icon albinoRatLogo = new ImageIcon("src/Images/AlbinoLogo.png");
+        Icon siameseRatImage = new ImageIcon("src/Images/SiameseRat.png");
+        Icon siameseRatLogo = new ImageIcon("src/Images/SiameseLogo.png");
+        Icon hairlessRatImage = new ImageIcon("src/Images/HairlessRat.png");
+        Icon hairlessRatLogo = new ImageIcon("src/Images/HairlessLogo.png");
+        Icon russianBlueRatImage = new ImageIcon("src/Images/RussianBlueRat.png");
+        Icon russianBlueRatLogo = new ImageIcon("src/Images/RussianBlueLogo.png");
+        Icon patchworkRatImage = new ImageIcon("src/Images/PatchworkRat.png");
+        Icon patchworkRatLogo = new ImageIcon("src/Images/PatchworkLogo.png");
+        Icon manxRatImage = new ImageIcon("src/Images/ManxRat.png");
+        Icon manxRatLogo = new ImageIcon("src/Images/ManxLogo.png");
+
+        switch(rat)
+        {
+            case "hooded":
+                purchasedRatImage.setIcon(hoodedRatImage);
+                purchasedRatLogo.setIcon(hoodedRatLogo);
+                break;
+            case "agouti":
+                purchasedRatImage.setIcon(agoutiRatImage);
+                purchasedRatLogo.setIcon(agoutiRatLogo);
+                break;
+            case "berkshire":
+                purchasedRatImage.setIcon(berkshireRatImage);
+                purchasedRatLogo.setIcon(berkshireRatLogo);
+                break;
+            case "roan":
+                purchasedRatImage.setIcon(roanRatImage);
+                purchasedRatLogo.setIcon(roanRatLogo);
+                break;
+            case "albino":
+                purchasedRatImage.setIcon(albinoRatImage);
+                purchasedRatLogo.setIcon(albinoRatLogo);
+                break;
+            case "siamese":
+                purchasedRatImage.setIcon(siameseRatImage);
+                purchasedRatLogo.setIcon(siameseRatLogo);
+                break;
+            case "hairless":
+                purchasedRatImage.setIcon(hairlessRatImage);
+                purchasedRatLogo.setIcon(hairlessRatLogo);
+                break;
+            case "russian blue":
+                purchasedRatImage.setIcon(russianBlueRatImage);
+                purchasedRatLogo.setIcon(russianBlueRatLogo);
+                break;
+            case "patchwork":
+                purchasedRatImage.setIcon(patchworkRatImage);
+                purchasedRatLogo.setIcon(patchworkRatLogo);
+                break;
+            case "manx":
+                purchasedRatImage.setIcon(manxRatImage);
+                purchasedRatLogo.setIcon(manxRatLogo);
+                break;
+            default:
+                System.out.println("Error: Invalid rat");
+                purchasedRatImage.setVisible(false);
+                purchasedRatLogo.setVisible(false);
+                break;
+
+        }
+    }
+
+    // Display purchased panel and correct items (then switch back to shop)
+    public void displayPurchasedScreen(String rat)
+    {
+            changePurchasedScreenItems(rat);
+
+            switchPanel.removeAll();
+            switchPanel.add(purchasedPanel);
+            switchPanel.repaint();
+            switchPanel.revalidate();
     }
 
     // Give a number from the caller, get the letter that goes with it
@@ -1903,11 +2001,8 @@ public class GUI
 
                 String letter = getDisplayLetter(called);
 
-                // Change letter label (once, so we don't have to wait for first call)
-                letterCurrentlabel.setText(letter);
-
                 // Change caller label (once, so we don't have to wait for first call)
-                callerCurrentLabel.setText(Integer.toString(called));
+                callerCurrentLabel.setText(letter + " " + called);
 
                 // Play sound if enabled
                 if(currentGame.getSoundStatus())
@@ -1932,11 +2027,8 @@ public class GUI
 
                     letter = getDisplayLetter(called);
 
-                    // Change letter label
-                    letterCurrentlabel.setText(letter);
-
                     // Change caller label
-                    callerCurrentLabel.setText(Integer.toString(called));
+                    callerCurrentLabel.setText(letter + " " + called);
 
                     // Play sound if enabled
                     if(currentGame.getSoundStatus())
@@ -1945,7 +2037,7 @@ public class GUI
                     }
 
                     // NPC plays game
-                    currentGame.getNpcPlayer().scanBoard(Integer.parseInt(callerCurrentLabel.getText()), currentGame);
+                    currentGame.getNpcPlayer().scanBoard(called, currentGame);
 
                     // TODO: move point adjustments out of win/defeat screens
                     // If NPC won
