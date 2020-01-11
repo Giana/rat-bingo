@@ -145,6 +145,7 @@ public class GUI
     private JPanel purchasedItemsPanel;
     private JLabel purchasedRatImage;
     private JLabel purchasedRatLogo;
+    private JLabel purchasedShopLogoImage;
     private JButton cornersButton;
 
     private Game currentGame = new Game();
@@ -1540,6 +1541,24 @@ public class GUI
                 if(currentGame.getSoundStatus())
                 {
                     ratSqueakSound();
+                }
+            }
+        });
+
+        // Click "Shop" on purchased screen
+        purchasedShopLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                displayShopScreen();
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
                 }
             }
         });
