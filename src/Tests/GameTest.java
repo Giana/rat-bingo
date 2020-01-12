@@ -575,4 +575,16 @@ public class GameTest
 
         assertEquals("all", testGame.checkWin(testBoard));
     }
+
+    @Test // Test callsGenerator()
+    public void callsGeneratorTest()
+    {
+        Game testGame = new Game();
+        ArrayList<Integer> testList = testGame.getToCall();
+
+        for(int i = 1; i <= 75; i++)
+        {
+            assertTrue(testList.contains(i));
+        }
+    }
 }
