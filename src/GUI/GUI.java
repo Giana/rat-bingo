@@ -525,8 +525,14 @@ public class GUI
                 startGameLogoImage.setVisible(false);
                 bingoLogoImage.setVisible(true);
 
+                // Preserve sound status
+                boolean sound = currentGame.getSoundStatus();
+
                 // Create game of current game mode
                 currentGame = new Game(currentMode);
+
+                // Transfer sound status
+                currentGame.setSoundStatus(sound);
 
                 initBoardGUI();
                 setUpBackgroundProcesses();
@@ -1722,6 +1728,31 @@ public class GUI
                 catch(IOException e2)
                 {
                     e2.printStackTrace();
+                }
+            }
+        });
+
+        // Click "Toggle Sound On/Off" on Options page
+        toggleSoundLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                if(currentGame.getSoundStatus())
+                {
+                    currentGame.setSoundStatus(false);
+                }
+                else
+                {
+                    currentGame.setSoundStatus(true);
+
+                    // Play sound
+                    if(currentGame.getSoundStatus())
+                    {
+                        clickSound1();
+                    }
                 }
             }
         });
