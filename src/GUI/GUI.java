@@ -188,7 +188,7 @@ public class GUI
     private Game currentGame = new Game();
     private String currentMode;
     Thread backgroundProcesses;
-    int callerDelay = 5000;
+    int callerDelay = 4000;
 
     public GUI()
     {
@@ -2818,6 +2818,7 @@ public class GUI
         gameFrame.setContentPane(new GUI().parentPanel);
         gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         gameFrame.pack();
+        gameFrame.setLocationRelativeTo(null);
         gameFrame.setVisible(true);
     }
 }
