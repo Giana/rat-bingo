@@ -955,7 +955,7 @@
             </properties>
             <border type="none"/>
             <children>
-              <grid id="28646" binding="creditsTextPanel" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="28646" binding="creditsTextPanel" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints border-constraint="Center"/>
                 <properties>
@@ -965,7 +965,7 @@
                 <children>
                   <component id="ebda3" class="javax.swing.JTextPane" binding="creditsTextPanePanel1">
                     <constraints>
-                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="50"/>
                       </grid>
                     </constraints>
@@ -979,12 +979,12 @@
                   </component>
                   <vspacer id="a434a">
                     <constraints>
-                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                      <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
                     </constraints>
                   </vspacer>
                   <component id="4a3e9" class="javax.swing.JTextPane" binding="creditsTextPanePanel2">
                     <constraints>
-                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="50"/>
                       </grid>
                     </constraints>
@@ -998,7 +998,7 @@
                   </component>
                   <component id="4fb70" class="javax.swing.JTextPane" binding="creditsTextPanePanel3">
                     <constraints>
-                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="50"/>
                       </grid>
                     </constraints>
@@ -1010,6 +1010,11 @@
                       <text value="Sound Credits:&#10;&quot;Bouncy Sound&quot; by josepharaoh99&#10;freesound.org/people/josepharaoh99/sounds/368175/&#10;&#10;&quot;Bubble Pop&quot; by elmasmalo1&#10;freesound.org/people/elmasmalo1/sounds/376968/&#10;&#10;&quot;Cash Register&quot; by kiddpark&#10;freesound.org/people/kiddpark/sounds/201159/&#10;&#10;&quot;Computer Boop&quot; by fordps3&#10;freesound.org/people/fordps3/sounds/186669/&#10;&#10;&quot;Confirm Jingle&quot; by JustInvoke&#10;freesound.org/people/JustInvoke/sounds/446114/&#10;&#10;&quot;Level Up 01&quot; by rhodesmas&#10;freesound.org/people/rhodesmas/sounds/320655/&#10;&#10;&quot;16_Ratón_chillando.wav&quot; by JoseAgudelo&#10;freesound.org/people/JoseAgudelo/sounds/472399/&#10;&#10;&quot;Wet Click&quot; by Breviceps&#10;freesound.org/people/Breviceps/sounds/448080/"/>
                     </properties>
                   </component>
+                  <vspacer id="d517f">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                  </vspacer>
                 </children>
               </grid>
             </children>

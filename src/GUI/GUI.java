@@ -525,6 +525,7 @@ public class GUI
 
                 startGameLogoImage.setVisible(false);
                 bingoLogoImage.setVisible(true);
+                leftMenuPanel.setVisible(false);
 
                 // Preserve sound status
                 boolean sound = currentGame.getSoundStatus();
@@ -560,6 +561,7 @@ public class GUI
                 String winState = currentGame.checkWin(currentGame.getPlayerBoard());
 
                 setGameStatsVisibility(false);
+                leftMenuPanel.setVisible(true);
 
                 if(winState.equals("N/A"))
                 {
@@ -1026,12 +1028,14 @@ public class GUI
                     patchworkRatCollectionTotal.setText(Integer.toString(currentGame.getPlayer().getTotalPatchwork()));
                     manxRatCollectionTotal.setText(Integer.toString(currentGame.getPlayer().getTotalManx()));
 
+                    setGameStatsVisibility(false);
+                    displayMainScreen();
+
                     // Play sound if enabled
                     if(currentGame.getSoundStatus())
                     {
                         saveLoadSound();
                     }
-
                 }
                 catch(IOException ex)
                 {
@@ -1040,7 +1044,6 @@ public class GUI
             }
         });
 
-        // TODO: create a delete save function
         // Click on "Save" on left panel
         saveLogoImage.addMouseListener(new MouseAdapter()
         {
@@ -1741,10 +1744,15 @@ public class GUI
             {
                 super.mouseClicked(e);
 
+                // Sound is enabled (so we are clicking to disable)
                 if(currentGame.getSoundStatus())
                 {
+                    // Play sound
+                    clickSound1();
+
                     currentGame.setSoundStatus(false);
                 }
+                // Sound is disabled (so we are clicking to enable)
                 else
                 {
                     currentGame.setSoundStatus(true);
@@ -2061,6 +2069,15 @@ public class GUI
             currentGame.getPlayerBoard().getMap()[x][y].setSelected(true);
             button.setBackground(Color.decode("#F85238"));
         }
+    }
+
+    // Displays main panel
+    public void displayMainScreen()
+    {
+        switchPanel.removeAll();
+        switchPanel.add(mainMenuPanel);
+        switchPanel.repaint();
+        switchPanel.revalidate();
     }
 
     // Displays win panel
@@ -2424,11 +2441,11 @@ public class GUI
                     // NPC plays game
                     currentGame.getNpcPlayer().scanBoard(called, currentGame);
 
-                    // TODO: move point adjustments out of win/defeat screens
                     // If NPC won
                     if(currentGame.getNpcPlayer().checkForBingo(currentGame))
                     {
                         setGameStatsVisibility(false);
+                        leftMenuPanel.setVisible(true);
                         displayDefeatScreen();
                         changeLosses();
 
