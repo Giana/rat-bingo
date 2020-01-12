@@ -1662,6 +1662,69 @@ public class GUI
                 }
             }
         });
+
+        // Click "Delete Save" on Options page
+        deleteSaveLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                displayConfirmationPage();
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
+                }
+            }
+        });
+
+        // Click "No, go back!" on confirmation page
+        noGoBackLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                displayOptionsScreen();
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
+                }
+            }
+        });
+
+        // Click "Yes, delete!" on confirmation page
+        yesDeleteLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                try
+                {
+                    currentGame.deleteSave();
+
+                    displayOptionsScreen();
+
+                    // Play sound if enabled
+                    if(currentGame.getSoundStatus())
+                    {
+                        saveLoadSound();
+                    }
+                }
+                catch(IOException e2)
+                {
+                    e2.printStackTrace();
+                }
+            }
+        });
     }
 
     // Gives values to player board buttons on GUI
@@ -1855,6 +1918,15 @@ public class GUI
     {
         switchPanel.removeAll();
         switchPanel.add(shopPanel);
+        switchPanel.repaint();
+        switchPanel.revalidate();
+    }
+
+    // Displays confirmation panel
+    public void displayConfirmationPage()
+    {
+        switchPanel.removeAll();
+        switchPanel.add(confirmationPanel);
         switchPanel.repaint();
         switchPanel.revalidate();
     }

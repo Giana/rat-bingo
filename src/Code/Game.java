@@ -384,7 +384,6 @@ public class Game
         return calling;
     }
 
-    // TODO: encrypt data
     // Saves the total wins/losses/dollars/rats of Player for the game
     public void saveGame() throws IOException
     {
@@ -435,5 +434,19 @@ public class Game
             player.setTotalPatchwork(gameData.get(11));
             player.setTotalManx(gameData.get(12));
         }
+    }
+
+    // Deletes items in save file
+    public void deleteSave() throws IOException
+    {
+        FileWriter fileWriter = new FileWriter("Saves/Save.txt");
+        PrintWriter printWriter = new PrintWriter(fileWriter);
+
+        for(int i = 0; i < 13; i++)
+        {
+            printWriter.println("0");
+        }
+
+        printWriter.close();
     }
 }
