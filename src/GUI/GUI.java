@@ -179,6 +179,10 @@ public class GUI
     private JLabel eightSecondsLogoImage;
     private JLabel nineSecondsLogoImage;
     private JPanel confirmationPanel;
+    private JLabel areYouSureLogoImage;
+    private JPanel confirmationItemsPanel;
+    private JLabel noGoBackLogoImage;
+    private JLabel yesDeleteLogoImage;
     private JButton cornersButton;
 
     private Game currentGame = new Game();
