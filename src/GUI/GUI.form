@@ -1480,7 +1480,143 @@
               <background color="-6103067"/>
             </properties>
             <border type="none"/>
-            <children/>
+            <children>
+              <grid id="9ab0b" binding="optionsItemsPanel" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints border-constraint="Center"/>
+                <properties>
+                  <background color="-6103067"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="35d7c" class="javax.swing.JLabel" binding="deleteSaveLogoImage">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <icon value="Images/DeleteSaveLogo.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="d603f" class="javax.swing.JLabel" binding="toggleSoundLogoImage">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <icon value="Images/ToggleSoundLogo.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="ad58c" class="javax.swing.JLabel" binding="callerDelayLogoImage">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <icon value="Images/CallerDelayLogo.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <grid id="c7bc6" binding="callerDelayItems" layout-manager="GridLayoutManager" row-count="2" column-count="9" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-6103067"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="63627" class="javax.swing.JLabel" binding="oneSecondLogoImage">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="Images/1SecondLogo.png"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <vspacer id="b7a82">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                      </vspacer>
+                      <component id="9a2d" class="javax.swing.JLabel" binding="twoSecondsLogoImage">
+                        <constraints>
+                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="Images/2SecondsLogo.png"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="5dde9" class="javax.swing.JLabel" binding="threeSecondsLogoImage">
+                        <constraints>
+                          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="Images/3SecondsLogo.png"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="f7086" class="javax.swing.JLabel" binding="fourSecondsLogoImage">
+                        <constraints>
+                          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="Images/4SecondsLogo.png"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="7508c" class="javax.swing.JLabel" binding="fiveSecondsLogoImage">
+                        <constraints>
+                          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="Images/5SecondsLogo.png"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="b70ef" class="javax.swing.JLabel" binding="sixSecondsLogoImage">
+                        <constraints>
+                          <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="Images/6SecondsLogo.png"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="ef8b9" class="javax.swing.JLabel" binding="sevenSecondsLogoImage">
+                        <constraints>
+                          <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="Images/7SecondsLogo.png"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="c2e4b" class="javax.swing.JLabel" binding="eightSecondsLogoImage">
+                        <constraints>
+                          <grid row="0" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="Images/8SecondsLogo.png"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="dfbaa" class="javax.swing.JLabel" binding="nineSecondsLogoImage">
+                        <constraints>
+                          <grid row="0" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <icon value="Images/9SecondsLogo.png"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+            </children>
           </grid>
           <grid id="b13e2" binding="collectionPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
             <constraints>
@@ -1759,6 +1895,17 @@
                 </children>
               </grid>
             </children>
+          </grid>
+          <grid id="4230b" binding="confirmationPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <card name="Card12"/>
+            </constraints>
+            <properties>
+              <background color="-6103067"/>
+            </properties>
+            <border type="none"/>
+            <children/>
           </grid>
         </children>
       </grid>

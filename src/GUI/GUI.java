@@ -164,6 +164,21 @@ public class GUI
     private JTextPane answer5;
     private JTextPane question6;
     private JTextPane answer6;
+    private JPanel optionsItemsPanel;
+    private JLabel deleteSaveLogoImage;
+    private JLabel toggleSoundLogoImage;
+    private JLabel callerDelayLogoImage;
+    private JPanel callerDelayItems;
+    private JLabel oneSecondLogoImage;
+    private JLabel twoSecondsLogoImage;
+    private JLabel threeSecondsLogoImage;
+    private JLabel fourSecondsLogoImage;
+    private JLabel fiveSecondsLogoImage;
+    private JLabel sixSecondsLogoImage;
+    private JLabel sevenSecondsLogoImage;
+    private JLabel eightSecondsLogoImage;
+    private JLabel nineSecondsLogoImage;
+    private JPanel confirmationPanel;
     private JButton cornersButton;
 
     private Game currentGame = new Game();
