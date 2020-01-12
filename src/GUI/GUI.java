@@ -2,20 +2,23 @@ package GUI;
 
 import Code.Game;
 
-import javax.sound.sampled.*;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URL;
+import javax.swing.*;
 
+/**
+ * The Rat Bingo program is a bingo game with a rat theme.
+ *
+ * @author  Giana (Github: G-i-a-n-a - Website: Giana.dev)
+ * @version 1.0
+ * @since   2019-01-??
+ */
 public class GUI
 {
     private JPanel parentPanel;
@@ -136,8 +139,7 @@ public class GUI
     private JLabel manxRatCollectionTotal;
     private JPanel bottomLeftMenuPanel;
     private JPanel gameModeSelectionPanel;
-    private JLabel newGameTitleLogoImage;
-    private JLabel dollarSymbolLabel;
+    private JLabel gameModesTitleLogoImage;
     private JLabel dollarsTotalLabel;
     private JPanel infoPanel;
     private JPanel callerLabelsPanel;
@@ -184,6 +186,7 @@ public class GUI
     private JPanel confirmationItemsPanel;
     private JLabel noGoBackLogoImage;
     private JLabel yesDeleteLogoImage;
+    private JLabel dollarSymbolLabel;
     private JButton cornersButton;
 
     private Game currentGame = new Game();
@@ -193,7 +196,9 @@ public class GUI
 
     public GUI()
     {
-        // Click small "Rat Bingo" logo on left panel
+        /* This method outlines what happens if you click the Rat
+         * Bingo logo on the top of the left panel.
+         */
         smallRatBingoLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -218,7 +223,9 @@ public class GUI
             }
         });
 
-        // Click "Corners" on left panel
+        /* This method outlines what happens if you click the
+         * "Corners" logo on the left panel.
+         */
         cornersLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -249,7 +256,9 @@ public class GUI
             }
         });
 
-        // Click "Diagonal" on left panel
+        /* This method outlines what happens if you click the
+         * "Diagonal" logo on the left panel.
+         */
         diagonalLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -280,7 +289,9 @@ public class GUI
             }
         });
 
-        // Click "Horizontal" on left panel
+        /* This method outlines what happens if you click the
+         * "Horizontal" logo on the left panel.
+         */
         horizontalLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -311,7 +322,9 @@ public class GUI
             }
         });
 
-        // Click "Vertical" on left panel
+        /* This method outlines what happens if you click the
+         * "Vertical" logo on the left panel.
+         */
         verticalLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -342,7 +355,9 @@ public class GUI
             }
         });
 
-        // Click "L" on left panel
+        /* This method outlines what happens if you click the
+         * "L" logo on the left panel.
+         */
         lLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -373,7 +388,9 @@ public class GUI
             }
         });
 
-        // Click "T" on left panel
+        /* This method outlines what happens if you click the
+         * "T" logo on the left panel.
+         */
         tLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -404,7 +421,9 @@ public class GUI
             }
         });
 
-        // Click "X" on left panel
+        /* This method outlines what happens if you click the
+         * "X" logo on the left panel.
+         */
         xLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -435,7 +454,9 @@ public class GUI
             }
         });
 
-        // Click "All" on left panel
+        /* This method outlines what happens if you click the
+         * "All" logo on the left panel.
+         */
         allLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -466,7 +487,9 @@ public class GUI
             }
         });
 
-        // Click "Credits" on left panel
+        /* This method outlines what happens if you click the
+         * "Credits" logo on the left panel.
+         */
         creditsLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -491,7 +514,9 @@ public class GUI
             }
         });
 
-        // Click "Help" on left panel
+        /* This method outlines what happens if you click the
+         * "Help" logo on the left panel.
+         */
         helpLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -516,7 +541,9 @@ public class GUI
             }
         });
 
-        // Click "Start Game" on right panel
+        /* This method outlines what happens if you click the
+         * "Start Game" logo on the right panel.
+         */
         startGameLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -551,7 +578,9 @@ public class GUI
             }
         });
 
-        // Click "BINGO!" on right panel
+        /* This method outlines what happens if you click the
+         * "BINGO!" logo on the right panel.
+         */
         bingoLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -603,7 +632,9 @@ public class GUI
             }
         });
 
-        // Click on b1 (0,0)
+        /* This method outlines what happens if you click the
+         * "b1" button on the board (at 0,0).
+         */
         b1.addActionListener(e ->
         {
             alterTileGUI(b1, 0, 0);
@@ -615,7 +646,9 @@ public class GUI
             }
         });
 
-        // Click on b2 (1,0)
+        /* This method outlines what happens if you click the
+         * "b2" button on the board (at 1,0).
+         */
         b2.addActionListener(e ->
         {
             alterTileGUI(b2, 1, 0);
@@ -627,7 +660,9 @@ public class GUI
             }
         });
 
-        // Click on b3 (2,0)
+        /* This method outlines what happens if you click the
+         * "b3" button on the board (at 2,0).
+         */
         b3.addActionListener(e ->
         {
             alterTileGUI(b3, 2, 0);
@@ -639,7 +674,9 @@ public class GUI
             }
         });
 
-        // Click on b4 (3,0)
+        /* This method outlines what happens if you click the
+         * "b4" button on the board (at 3,0).
+         */
         b4.addActionListener(e ->
         {
             alterTileGUI(b4, 3, 0);
@@ -651,7 +688,9 @@ public class GUI
             }
         });
 
-        // Click on b5 (4,0)
+        /* This method outlines what happens if you click the
+         * "b5" button on the board (at 4,0).
+         */
         b5.addActionListener(e ->
         {
             alterTileGUI(b5, 4, 0);
@@ -663,7 +702,9 @@ public class GUI
             }
         });
 
-        // Click on i1 (0,1)
+        /* This method outlines what happens if you click the
+         * "i1" button on the board (at 0,1).
+         */
         i1.addActionListener(e ->
         {
             alterTileGUI(i1, 0, 1);
@@ -675,7 +716,9 @@ public class GUI
             }
         });
 
-        // Click on i2 (1,1)
+        /* This method outlines what happens if you click the
+         * "i2" button on the board (at 1,1).
+         */
         i2.addActionListener(e ->
         {
             alterTileGUI(i2, 1, 1);
@@ -687,7 +730,9 @@ public class GUI
             }
         });
 
-        // Click on i3 (2,1)
+        /* This method outlines what happens if you click the
+         * "i3" button on the board (at 2,1).
+         */
         i3.addActionListener(e ->
         {
             alterTileGUI(i3, 2, 1);
@@ -699,7 +744,9 @@ public class GUI
             }
         });
 
-        // Click on i4 (3,1)
+        /* This method outlines what happens if you click the
+         * "i4" button on the board (at 3,1).
+         */
         i4.addActionListener(e ->
         {
             alterTileGUI(i4, 3, 1);
@@ -711,7 +758,9 @@ public class GUI
             }
         });
 
-        // Click on i5 (4,1)
+        /* This method outlines what happens if you click the
+         * "i5" button on the board (at 4,1).
+         */
         i5.addActionListener(e ->
         {
             alterTileGUI(i5, 4, 1);
@@ -723,7 +772,9 @@ public class GUI
             }
         });
 
-        // Click on n1 (0,2)
+        /* This method outlines what happens if you click the
+         * "n1" button on the board (at 0,2).
+         */
         n1.addActionListener(e ->
         {
             alterTileGUI(n1, 0, 2);
@@ -735,7 +786,9 @@ public class GUI
             }
         });
 
-        // Click on n2 (1,2)
+        /* This method outlines what happens if you click the
+         * "n2" button on the board (at 1,2).
+         */
         n2.addActionListener(e ->
         {
             alterTileGUI(n2, 1, 2);
@@ -747,7 +800,9 @@ public class GUI
             }
         });
 
-        // Click on n3 (2,2)
+        /* This method outlines what happens if you click the
+         * "n3" button on the board (at 2,2).
+         */
         n3.addActionListener(e ->
         {
             alterTileGUI(n3, 2, 2);
@@ -759,7 +814,9 @@ public class GUI
             }
         });
 
-        // Click on n4 (3,2)
+        /* This method outlines what happens if you click the
+         * "n4" button on the board (at 3,2).
+         */
         n4.addActionListener(e ->
         {
             alterTileGUI(n4, 3, 2);
@@ -771,7 +828,9 @@ public class GUI
             }
         });
 
-        // Click on n5 (4,2)
+        /* This method outlines what happens if you click the
+         * "n5" button on the board (at 4,2).
+         */
         n5.addActionListener(e ->
         {
             alterTileGUI(n5, 4, 2);
@@ -783,7 +842,9 @@ public class GUI
             }
         });
 
-        // Click on g1 (0,3)
+        /* This method outlines what happens if you click the
+         * "g1" button on the board (at 0,3).
+         */
         g1.addActionListener(e ->
         {
             alterTileGUI(g1, 0, 3);
@@ -795,7 +856,9 @@ public class GUI
             }
         });
 
-        // Click on g2 (1,3)
+        /* This method outlines what happens if you click the
+         * "g2" button on the board (at 1,3).
+         */
         g2.addActionListener(e ->
         {
             alterTileGUI(g2, 1, 3);
@@ -807,7 +870,9 @@ public class GUI
             }
         });
 
-        // Click on g3 (2,3)
+        /* This method outlines what happens if you click the
+         * "g3" button on the board (at 2,3).
+         */
         g3.addActionListener(e ->
         {
             alterTileGUI(g3, 2, 3);
@@ -819,7 +884,9 @@ public class GUI
             }
         });
 
-        // Click on g4 (3,3)
+        /* This method outlines what happens if you click the
+         * "g4" button on the board (at 3,3).
+         */
         g4.addActionListener(e ->
         {
             alterTileGUI(g4, 3, 3);
@@ -831,7 +898,9 @@ public class GUI
             }
         });
 
-        // Click on g5 (4,3)
+        /* This method outlines what happens if you click the
+         * "g5" button on the board (at 4,3).
+         */
         g5.addActionListener(e ->
         {
             alterTileGUI(g5, 4, 3);
@@ -843,7 +912,9 @@ public class GUI
             }
         });
 
-        // Click on o1 (0,4)
+        /* This method outlines what happens if you click the
+         * "o1" button on the board (at 0,4).
+         */
         o1.addActionListener(e ->
         {
             alterTileGUI(o1, 0, 4);
@@ -855,7 +926,9 @@ public class GUI
             }
         });
 
-        // Click on o2 (1,4)
+        /* This method outlines what happens if you click the
+         * "o2" button on the board (at 1,4).
+         */
         o2.addActionListener(e ->
         {
             alterTileGUI(o2, 1, 4);
@@ -867,7 +940,9 @@ public class GUI
             }
         });
 
-        // Click on o3 (2,4)
+        /* This method outlines what happens if you click the
+         * "o3" button on the board (at 2,4).
+         */
         o3.addActionListener(e ->
         {
             alterTileGUI(o3, 2, 4);
@@ -879,7 +954,9 @@ public class GUI
             }
         });
 
-        // Click on o4 (3,4)
+        /* This method outlines what happens if you click the
+         * "o4" button on the board (at 3,4).
+         */
         o4.addActionListener(e ->
         {
             alterTileGUI(o4, 3, 4);
@@ -891,7 +968,9 @@ public class GUI
             }
         });
 
-        // Click on o5 (4,4)
+        /* This method outlines what happens if you click the
+         * "o5" button on the board (at 4,4).
+         */
         o5.addActionListener(e ->
         {
             alterTileGUI(o5, 4, 4);
