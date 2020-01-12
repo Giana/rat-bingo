@@ -11,6 +11,7 @@ import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.URI;
 import java.net.URL;
 
 public class GUI
@@ -147,9 +148,11 @@ public class GUI
     private JLabel purchasedRatLogo;
     private JLabel purchasedShopLogoImage;
     private JPanel creditsTextPanel;
-    private JTextPane creditsTextPanePanel;
+    private JTextPane creditsTextPanePanel1;
     private JPanel helpTextPanel;
     private JTextPane helpTextPanePanel;
+    private JTextPane creditsTextPanePanel2;
+    private JTextPane creditsTextPanePanel3;
     private JButton cornersButton;
 
     private Game currentGame = new Game();
@@ -1563,6 +1566,69 @@ public class GUI
                 if(currentGame.getSoundStatus())
                 {
                     clickSound1();
+                }
+            }
+        });
+
+        // Click first text pane on Credits page
+        creditsTextPanePanel1.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                try
+                {
+                    Desktop desktop = java.awt.Desktop.getDesktop();
+                    URI site = new URI("https://giana.dev/");
+                    desktop.browse(site);
+                }
+                catch(Exception e1)
+                {
+                    e1.printStackTrace();
+                }
+            }
+        });
+
+        // Click second text pane on Credits page
+        creditsTextPanePanel2.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                try
+                {
+                    Desktop desktop = java.awt.Desktop.getDesktop();
+                    URI site = new URI("https://logomakr.com/");
+                    desktop.browse(site);
+                }
+                catch(Exception e1)
+                {
+                    e1.printStackTrace();
+                }
+            }
+        });
+
+        // Click third text pane on Credits page
+        creditsTextPanePanel3.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                try
+                {
+                    Desktop desktop = java.awt.Desktop.getDesktop();
+                    URI site = new URI("https://freesound.org/");
+                    desktop.browse(site);
+                }
+                catch(Exception e1)
+                {
+                    e1.printStackTrace();
                 }
             }
         });
