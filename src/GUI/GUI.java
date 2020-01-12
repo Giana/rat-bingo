@@ -187,6 +187,7 @@ public class GUI
     private JLabel noGoBackLogoImage;
     private JLabel yesDeleteLogoImage;
     private JLabel dollarSymbolLabel;
+    private JLabel mainMenuLogoImage;
     private JButton cornersButton;
 
     private Game currentGame = new Game();
@@ -209,16 +210,35 @@ public class GUI
                 // Remove things you should just see in game
                 setGameStatsVisibility(false);
 
-                // Display main menu panel
-                switchPanel.removeAll();
-                switchPanel.add(mainMenuPanel);
-                switchPanel.repaint();
-                switchPanel.revalidate();
+                displayMainScreen();
 
                 // Play sound if enabled
                 if(currentGame.getSoundStatus())
                 {
                     ratSqueakSound();
+                }
+            }
+        });
+
+        /* This method outlines what happens if you click the
+         * "Main Menu" logo on the top of the left panel.
+         */
+        mainMenuLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                // Remove things you should just see in game
+                setGameStatsVisibility(false);
+
+                displayMainScreen();
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
                 }
             }
         });

@@ -79,7 +79,7 @@
               </component>
             </children>
           </grid>
-          <grid id="f4721" binding="gameModeSelectionPanel" layout-manager="GridLayoutManager" row-count="12" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="f4721" binding="gameModeSelectionPanel" layout-manager="GridLayoutManager" row-count="14" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints border-constraint="Center"/>
             <properties>
@@ -89,12 +89,12 @@
             <children>
               <vspacer id="a754d">
                 <constraints>
-                  <grid row="11" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                  <grid row="13" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
                 </constraints>
               </vspacer>
               <component id="24bb5" class="javax.swing.JLabel" binding="gameModesTitleLogoImage">
                 <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <icon value="Images/GameModesLogo.png"/>
@@ -103,7 +103,7 @@
               </component>
               <component id="efec3" class="javax.swing.JLabel" binding="cornersLogoImage">
                 <constraints>
-                  <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <icon value="Images/CornersLogo.png"/>
@@ -112,7 +112,7 @@
               </component>
               <component id="11d4c" class="javax.swing.JLabel" binding="diagonalLogoImage">
                 <constraints>
-                  <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="4" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <icon value="Images/DiagonalLogo.png"/>
@@ -121,7 +121,7 @@
               </component>
               <component id="9b619" class="javax.swing.JLabel" binding="horizontalLogoImage">
                 <constraints>
-                  <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="5" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <icon value="Images/HorizontalLogo.png"/>
@@ -130,7 +130,7 @@
               </component>
               <component id="971ed" class="javax.swing.JLabel" binding="verticalLogoImage">
                 <constraints>
-                  <grid row="4" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="6" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <icon value="Images/VerticalLogo.png"/>
@@ -139,7 +139,7 @@
               </component>
               <component id="3252a" class="javax.swing.JLabel" binding="lLogoImage">
                 <constraints>
-                  <grid row="5" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="7" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <icon value="Images/LLogo.png"/>
@@ -148,7 +148,7 @@
               </component>
               <component id="f69dc" class="javax.swing.JLabel" binding="tLogoImage">
                 <constraints>
-                  <grid row="6" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="8" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <foreground color="-10106156"/>
@@ -158,7 +158,7 @@
               </component>
               <component id="602c6" class="javax.swing.JLabel" binding="xLogoImage">
                 <constraints>
-                  <grid row="7" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="9" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <icon value="Images/XLogo.png"/>
@@ -167,7 +167,7 @@
               </component>
               <component id="7fb8e" class="javax.swing.JLabel" binding="allLogoImage">
                 <constraints>
-                  <grid row="8" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="10" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <icon value="Images/AllLogo.png"/>
@@ -176,17 +176,17 @@
               </component>
               <vspacer id="92471">
                 <constraints>
-                  <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                  <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
                 </constraints>
               </vspacer>
               <vspacer id="4220d">
                 <constraints>
-                  <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                  <grid row="12" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
                 </constraints>
               </vspacer>
               <component id="d270f" class="javax.swing.JLabel" binding="startGameLogoImage">
                 <constraints>
-                  <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <horizontalAlignment value="0"/>
@@ -195,6 +195,21 @@
                   <visible value="false"/>
                 </properties>
               </component>
+              <component id="b34ba" class="javax.swing.JLabel" binding="mainMenuLogoImage">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <horizontalAlignment value="0"/>
+                  <icon value="Images/MainMenuLogo.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <vspacer id="cfb48">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
             </children>
           </grid>
         </children>
