@@ -188,6 +188,7 @@ public class GUI
     private Game currentGame = new Game();
     private String currentMode;
     Thread backgroundProcesses;
+    int callerDelay = 5000;
 
     public GUI()
     {
@@ -514,7 +515,7 @@ public class GUI
             }
         });
 
-        // Click "StartGame" on right panel
+        // Click "Start Game" on right panel
         startGameLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1756,6 +1757,168 @@ public class GUI
                 }
             }
         });
+
+        // Click "1" on Options page
+        oneSecondLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                callerDelay = 1000;
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
+                }
+            }
+        });
+
+        // Click "2" on Options page
+        twoSecondsLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                callerDelay = 2000;
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
+                }
+            }
+        });
+
+        // Click "3" on Options page
+        threeSecondsLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                callerDelay = 3000;
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
+                }
+            }
+        });
+
+        // Click "4" on Options page
+        fourSecondsLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                callerDelay = 4000;
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
+                }
+            }
+        });
+
+        // Click "5" on Options page
+        fiveSecondsLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                callerDelay = 5000;
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
+                }
+            }
+        });
+
+        // Click "6" on Options page
+        sixSecondsLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                callerDelay = 6000;
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
+                }
+            }
+        });
+
+        // Click "7" on Options page
+        sevenSecondsLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                callerDelay = 7000;
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
+                }
+            }
+        });
+
+        // Click "8" on Options page
+        eightSecondsLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                callerDelay = 8000;
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
+                }
+            }
+        });
+
+        // Click "9" on Options page
+        nineSecondsLogoImage.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                callerDelay = 9000;
+
+                // Play sound if enabled
+                if(currentGame.getSoundStatus())
+                {
+                    clickSound1();
+                }
+            }
+        });
     }
 
     // Gives values to player board buttons on GUI
@@ -2238,7 +2401,7 @@ public class GUI
                     // Sleep for 6 seconds
                     try
                     {
-                        Thread.sleep(3000);
+                        Thread.sleep(callerDelay);
                     }
                     catch(InterruptedException e)
                     {
