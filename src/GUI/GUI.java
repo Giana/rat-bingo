@@ -77,7 +77,6 @@ public class GUI
     private JPanel creditsPanel;
     private JPanel helpPanel;
     private JLabel startGameLogoImage;
-    private JLabel letterCurrentlabel;
     private JLabel loadLogoImage;
     private JLabel saveLogoImage;
     private JLabel currentGameModeLogoImage;
@@ -2316,14 +2315,14 @@ public class GUI
     // Changes amount of dollars in GUI and Player class depending on win/loss
     public void changeDollars(boolean state)
     {
-        int cornersReward = 10;
-        int diagonalReward = 5;
+        int cornersReward = 5;
+        int diagonalReward = 4;
         int horizontalReward = 4;
         int verticalReward = 4;
-        int lReward = 9;
-        int tReward = 8;
-        int xReward = 11;
-        int allReward = 15;
+        int lReward = 10;
+        int tReward = 10;
+        int xReward = 10;
+        int allReward = 20;
 
         if(state)
         {
