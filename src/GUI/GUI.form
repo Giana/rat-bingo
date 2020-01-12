@@ -1219,7 +1219,7 @@
                       <editable value="false"/>
                       <font name="Segoe MDL2 Assets" size="28" style="1"/>
                       <foreground color="-12636826"/>
-                      <text value="How do I get to the main menu?"/>
+                      <text value="When was the last update?"/>
                     </properties>
                   </component>
                   <component id="ff0e2" class="javax.swing.JTextPane" binding="answer6">
@@ -1233,7 +1233,7 @@
                       <editable value="false"/>
                       <font name="Segoe MDL2 Assets" size="16" style="1"/>
                       <foreground color="-16750977"/>
-                      <text value="Click on the &quot;Rat Bingo&quot; logo on the top left panel."/>
+                      <text value="The last update was on January 12th, 2020. This is version 1.0. Click here to check my website for an update."/>
                     </properties>
                   </component>
                   <vspacer id="2f2d7">
@@ -1991,6 +1991,46 @@
                   <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
                 </constraints>
               </vspacer>
+            </children>
+          </grid>
+          <grid id="a543a" binding="lossByBotPanel" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <card name="Card13"/>
+            </constraints>
+            <properties>
+              <background color="-6103067"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="3834e" class="javax.swing.JLabel" binding="defeatByBotLogoImage">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <icon value="Images/DefeatLogo.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <vspacer id="ac6e1">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <vspacer id="5eb7b">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <component id="73f1" class="javax.swing.JLabel" binding="botWinsLogoImage">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <icon value="Images/BotWinsLogo.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
             </children>
           </grid>
         </children>

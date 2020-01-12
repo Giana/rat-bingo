@@ -188,6 +188,9 @@ public class GUI
     private JLabel yesDeleteLogoImage;
     private JLabel dollarSymbolLabel;
     private JLabel mainMenuLogoImage;
+    private JPanel lossByBotPanel;
+    private JLabel defeatByBotLogoImage;
+    private JLabel botWinsLogoImage;
     private JButton cornersButton;
 
     private Game currentGame = new Game();
@@ -197,7 +200,7 @@ public class GUI
 
     public GUI()
     {
-        /* This method outlines what happens if you click the Rat
+        /* This listener outlines what happens if you click the Rat
          * Bingo logo on the top of the left panel.
          */
         smallRatBingoLogoImage.addMouseListener(new MouseAdapter()
@@ -220,7 +223,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "Main Menu" logo on the top of the left panel.
          */
         mainMenuLogoImage.addMouseListener(new MouseAdapter()
@@ -243,7 +246,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "Corners" logo on the left panel.
          */
         cornersLogoImage.addMouseListener(new MouseAdapter()
@@ -276,7 +279,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "Diagonal" logo on the left panel.
          */
         diagonalLogoImage.addMouseListener(new MouseAdapter()
@@ -309,7 +312,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "Horizontal" logo on the left panel.
          */
         horizontalLogoImage.addMouseListener(new MouseAdapter()
@@ -342,7 +345,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "Vertical" logo on the left panel.
          */
         verticalLogoImage.addMouseListener(new MouseAdapter()
@@ -375,7 +378,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "L" logo on the left panel.
          */
         lLogoImage.addMouseListener(new MouseAdapter()
@@ -408,7 +411,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "T" logo on the left panel.
          */
         tLogoImage.addMouseListener(new MouseAdapter()
@@ -441,7 +444,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "X" logo on the left panel.
          */
         xLogoImage.addMouseListener(new MouseAdapter()
@@ -474,7 +477,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "All" logo on the left panel.
          */
         allLogoImage.addMouseListener(new MouseAdapter()
@@ -507,7 +510,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "Credits" logo on the left panel.
          */
         creditsLogoImage.addMouseListener(new MouseAdapter()
@@ -534,7 +537,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "Help" logo on the left panel.
          */
         helpLogoImage.addMouseListener(new MouseAdapter()
@@ -561,7 +564,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "Start Game" logo on the right panel.
          */
         startGameLogoImage.addMouseListener(new MouseAdapter()
@@ -598,7 +601,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "BINGO!" logo on the right panel.
          */
         bingoLogoImage.addMouseListener(new MouseAdapter()
@@ -652,7 +655,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "b1" button on the board (at 0,0).
          */
         b1.addActionListener(e ->
@@ -666,7 +669,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "b2" button on the board (at 1,0).
          */
         b2.addActionListener(e ->
@@ -680,7 +683,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "b3" button on the board (at 2,0).
          */
         b3.addActionListener(e ->
@@ -694,7 +697,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "b4" button on the board (at 3,0).
          */
         b4.addActionListener(e ->
@@ -708,7 +711,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "b5" button on the board (at 4,0).
          */
         b5.addActionListener(e ->
@@ -722,7 +725,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "i1" button on the board (at 0,1).
          */
         i1.addActionListener(e ->
@@ -736,7 +739,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "i2" button on the board (at 1,1).
          */
         i2.addActionListener(e ->
@@ -750,7 +753,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "i3" button on the board (at 2,1).
          */
         i3.addActionListener(e ->
@@ -764,7 +767,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "i4" button on the board (at 3,1).
          */
         i4.addActionListener(e ->
@@ -778,7 +781,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "i5" button on the board (at 4,1).
          */
         i5.addActionListener(e ->
@@ -792,7 +795,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "n1" button on the board (at 0,2).
          */
         n1.addActionListener(e ->
@@ -806,7 +809,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "n2" button on the board (at 1,2).
          */
         n2.addActionListener(e ->
@@ -820,7 +823,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "n3" button on the board (at 2,2).
          */
         n3.addActionListener(e ->
@@ -834,7 +837,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "n4" button on the board (at 3,2).
          */
         n4.addActionListener(e ->
@@ -848,7 +851,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "n5" button on the board (at 4,2).
          */
         n5.addActionListener(e ->
@@ -862,7 +865,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "g1" button on the board (at 0,3).
          */
         g1.addActionListener(e ->
@@ -876,7 +879,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "g2" button on the board (at 1,3).
          */
         g2.addActionListener(e ->
@@ -890,7 +893,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "g3" button on the board (at 2,3).
          */
         g3.addActionListener(e ->
@@ -904,7 +907,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "g4" button on the board (at 3,3).
          */
         g4.addActionListener(e ->
@@ -918,7 +921,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "g5" button on the board (at 4,3).
          */
         g5.addActionListener(e ->
@@ -932,7 +935,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "o1" button on the board (at 0,4).
          */
         o1.addActionListener(e ->
@@ -946,7 +949,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "o2" button on the board (at 1,4).
          */
         o2.addActionListener(e ->
@@ -960,7 +963,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "o3" button on the board (at 2,4).
          */
         o3.addActionListener(e ->
@@ -974,7 +977,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "o4" button on the board (at 3,4).
          */
         o4.addActionListener(e ->
@@ -988,7 +991,7 @@ public class GUI
             }
         });
 
-        /* This method outlines what happens if you click the
+        /* This listener outlines what happens if you click the
          * "o5" button on the board (at 4,4).
          */
         o5.addActionListener(e ->
@@ -1641,7 +1644,7 @@ public class GUI
             {
                 super.mouseClicked(e);
 
-                displayConfirmationPage();
+                displayConfirmationScreen();
 
                 // Play sound if enabled
                 if(currentGame.getSoundStatus())
@@ -1887,6 +1890,27 @@ public class GUI
                 }
             }
         });
+
+        // Click "answer6" on Help page
+        answer6.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                super.mouseClicked(e);
+
+                try
+                {
+                    Desktop desktop = java.awt.Desktop.getDesktop();
+                    URI site = new URI("https://giana.dev/");
+                    desktop.browse(site);
+                }
+                catch(Exception e1)
+                {
+                    e1.printStackTrace();
+                }
+            }
+        });
     }
 
     // Gives values to player board buttons on GUI
@@ -2094,10 +2118,19 @@ public class GUI
     }
 
     // Displays confirmation panel
-    public void displayConfirmationPage()
+    public void displayConfirmationScreen()
     {
         switchPanel.removeAll();
         switchPanel.add(confirmationPanel);
+        switchPanel.repaint();
+        switchPanel.revalidate();
+    }
+
+    // Displays loss by bot panel
+    public void displayDefeatByBotScreen()
+    {
+        switchPanel.removeAll();
+        switchPanel.add(lossByBotPanel);
         switchPanel.repaint();
         switchPanel.revalidate();
     }
@@ -2403,7 +2436,7 @@ public class GUI
                 {
                     setGameStatsVisibility(false);
                     leftMenuPanel.setVisible(true);
-                    displayDefeatScreen();
+                    displayDefeatByBotScreen();
                     changeLosses();
 
                     // Play sound if enabled
