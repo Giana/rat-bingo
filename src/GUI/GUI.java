@@ -150,9 +150,20 @@ public class GUI
     private JPanel creditsTextPanel;
     private JTextPane creditsTextPanePanel1;
     private JPanel helpTextPanel;
-    private JTextPane helpTextPanePanel;
     private JTextPane creditsTextPanePanel2;
     private JTextPane creditsTextPanePanel3;
+    private JTextPane question1;
+    private JTextPane answer1;
+    private JTextPane question2;
+    private JTextPane answer2;
+    private JTextPane question3;
+    private JTextPane answer3;
+    private JTextPane question4;
+    private JTextPane answer4;
+    private JTextPane question5;
+    private JTextPane answer5;
+    private JTextPane question6;
+    private JTextPane answer6;
     private JButton cornersButton;
 
     private Game currentGame = new Game();
