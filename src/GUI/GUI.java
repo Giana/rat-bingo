@@ -1714,6 +1714,9 @@ public class GUI
                     clickSound1();
 
                     currentGame.setSoundStatus(false);
+
+                    // Change to "Toggle Sound On" icon
+                    toggleSoundLogoImage.setEnabled(false);
                 }
                 // Sound is disabled (so we are clicking to enable)
                 else
@@ -1725,6 +1728,9 @@ public class GUI
                     {
                         clickSound1();
                     }
+
+                    // Change to "Toggle Sound Off" icon
+                    toggleSoundLogoImage.setEnabled(true);
                 }
             }
         });
