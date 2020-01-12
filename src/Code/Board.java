@@ -2,6 +2,13 @@ package Code;
 
 import java.util.ArrayList;
 
+/**
+ * The Rat Bingo program is a bingo game with a rat theme.
+ *
+ * @author  Giana (Github: G-i-a-n-a - Website: Giana.dev)
+ * @version 1.0
+ * @since   2019-01-??
+ */
 public class Board
 {
     private int size = 5;                                     // Length/width of bingo board
@@ -97,21 +104,6 @@ public class Board
                 map[o][4] = new Tile(rand);
                 o++;
             }
-        }
-    }
-
-    // For testing purposes
-    public void printBoard()
-    {
-        System.out.println("  B   I   N   G   O  ");
-
-        for(int i = 0; i < size; i++)
-        {
-            for(int j = 0; j < size; j++)
-            {
-                System.out.printf("%3d ", map[i][j].getNumber());
-            }
-            System.out.println();
         }
     }
 }

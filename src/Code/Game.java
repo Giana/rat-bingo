@@ -2,18 +2,23 @@ package Code;
 
 import java.io.File;
 import java.io.FileWriter;
-import java.util.Scanner;
-import java.io.PrintWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 
+/**
+ * The Rat Bingo program is a bingo game with a rat theme.
+ *
+ * @author  Giana (Github: G-i-a-n-a - Website: Giana.dev)
+ * @version 1.0
+ * @since   2019-01-??
+ */
 public class Game
 {
     private Board playerBoard;                                 // Board for the player
     private Board npcBoard;                                    // Board for the NPC
-    private String playerState;                                // Winning state for player
-    private String npcState;                                   // Winning state for NPC
     private String mode;                                       // Game mode
     private ArrayList<Integer> toCall = new ArrayList<>();     // List of random numbers to call
     private ArrayList<String> called = new ArrayList<>();      // List of numbers already called
@@ -29,8 +34,6 @@ public class Game
         player = new Player();
         npcBoard = new Board();
         npcPlayer = new NPC();
-        playerState = "N/A";
-        npcState = "N/A";
         reset();
         callsGenerator();
         called.add("FREE");
@@ -43,8 +46,6 @@ public class Game
         player = new Player();
         npcBoard = new Board();
         npcPlayer = new NPC();
-        playerState = "N/A";
-        npcState = "N/A";
         this.mode = mode;
         reset();
         callsGenerator();
@@ -55,14 +56,6 @@ public class Game
     public Board getPlayerBoard() { return playerBoard; }
 
     public Board getNpcBoard() { return npcBoard; }
-
-    public String getPlayerState() { return playerState; }
-
-    public void setPlayerState(String playerState) { this.playerState = playerState; }
-
-    public String getNpcState() { return npcState; }
-
-    public void setNpcState(String npcState) { this.npcState = npcState; }
 
     public String getMode() { return mode; }
 
@@ -311,10 +304,7 @@ public class Game
             for(int j = 0; j < size; j++)
             {
                 playerBoard.getMap()[i][j].setSelected(false);
-                playerState = "N/A";
-
                 npcBoard.getMap()[i][j].setSelected(false);
-                npcState = "N/A";
             }
         }
 
@@ -327,7 +317,7 @@ public class Game
     {
         String state = "N/A";
 
-        switch (mode)
+        switch(mode)
         {
             case "horizontal":
                 state = checkHorizontal(board);

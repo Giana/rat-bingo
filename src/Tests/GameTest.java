@@ -228,7 +228,7 @@ public class GameTest
         int upperBound = (testBoard.getSize() - 1);
 
         // Check default
-        assertEquals("N/A", testGame.checkX(testBoard));
+        assertEquals("N/A", testGame.checkCorners(testBoard));
 
         // Fill the four corners, check
         called.add(testBoard.getMap()[lowerBound][lowerBound].toString());
@@ -372,6 +372,207 @@ public class GameTest
         assertEquals("N/A", testGame.checkAll(testBoard2));
     }
 
-    // TODO: Add tests for new methods
+    @Test // Test checkWin()
+    public void checkWinTest()
+    {
+        Game testGame = new Game("horizontal");
+        Board testBoard = testGame.getPlayerBoard();
+        ArrayList<String> called = testGame.getCalled();
+        int size = testBoard.getSize();
+        int k = 4;
+        int lowerBound = 0;
+        int upperBound = (testBoard.getSize() - 1);
+        int rowT = 0;
+        int columnT = 2;
+        int rowL = 4;
+        int columnL = 0;
 
+        // Check default
+        assertEquals("N/A", testGame.checkWin(testBoard));
+
+        // Fill a row, check for horizontal win, reset, repeat
+        for(int i = 0; i < size; i++)
+        {
+            for(int j = 0; j < size; j++)
+            {
+                called.add(testBoard.getMap()[i][j].toString());
+                testBoard.getMap()[i][j].setSelected(true);
+            }
+
+            assertEquals("horizontal" + i, testGame.checkWin(testBoard));
+            testGame.reset();
+        }
+
+        // Check for default after reset
+        assertEquals("N/A", testGame.checkWin(testBoard));
+
+        // Change mode
+        testGame.setMode("vertical");
+
+        // Fill a column, check for vertical win, reset, repeat
+        for(int i = 0; i < size; i++)
+        {
+            for(int j = 0; j < size; j++)
+            {
+                called.add(testBoard.getMap()[j][i].toString());
+                testBoard.getMap()[j][i].setSelected(true);
+            }
+
+            assertEquals("vertical" + i, testGame.checkWin(testBoard));
+            testGame.reset();
+        }
+
+        // Check for default after reset
+        assertEquals("N/A", testGame.checkWin(testBoard));
+
+        // Change mode
+        testGame.setMode("diagonal");
+
+        // Fill left diagonal, check, reset
+        for(int i = 0; i < size; i++)
+        {
+            called.add(testBoard.getMap()[i][i].toString());
+            testBoard.getMap()[i][i].setSelected(true);
+        }
+
+        assertEquals("diagonalL", testGame.checkWin(testBoard));
+        testGame.reset();
+
+        // Fill right diagonal, check, reset
+        for(int i = 0; i < size; i++)
+        {
+            called.add(testBoard.getMap()[i][k].toString());
+            testBoard.getMap()[i][k].setSelected(true);
+            k--;
+        }
+
+        assertEquals("diagonalR", testGame.checkWin(testBoard));
+        testGame.reset();
+
+        k = 4;
+
+        // Fill both diagonals, check
+        for(int i = 0; i < size; i++)
+        {
+            // Left
+            called.add(testBoard.getMap()[i][i].toString());
+            testBoard.getMap()[i][i].setSelected(true);
+
+            // Right
+            called.add(testBoard.getMap()[i][k].toString());
+            testBoard.getMap()[i][k].setSelected(true);
+            k--;
+        }
+
+        assertEquals("diagonalLR", testGame.checkWin(testBoard));
+
+        testGame.reset();
+
+        // Check for default after reset
+        assertEquals("N/A", testGame.checkWin(testBoard));
+
+        // Change mode
+        testGame.setMode("x");
+
+        k = 4;
+
+        // Fill both diagonals, check
+        for(int i = 0; i < size; i++)
+        {
+            // Left
+            called.add(testBoard.getMap()[i][i].toString());
+            testBoard.getMap()[i][i].setSelected(true);
+
+            // Right
+            called.add(testBoard.getMap()[i][k].toString());
+            testBoard.getMap()[i][k].setSelected(true);
+            k--;
+        }
+
+        assertEquals("x", testGame.checkWin(testBoard));
+
+        testGame.reset();
+
+        // Check for default after reset
+        assertEquals("N/A", testGame.checkWin(testBoard));
+
+        // Change mode
+        testGame.setMode("corners");
+
+        // Fill the four corners, check
+        called.add(testBoard.getMap()[lowerBound][lowerBound].toString());
+        testBoard.getMap()[lowerBound][lowerBound].setSelected(true);
+        called.add(testBoard.getMap()[lowerBound][upperBound].toString());
+        testBoard.getMap()[lowerBound][upperBound].setSelected(true);
+        called.add(testBoard.getMap()[upperBound][lowerBound].toString());
+        testBoard.getMap()[upperBound][lowerBound].setSelected(true);
+        called.add(testBoard.getMap()[upperBound][upperBound].toString());
+        testBoard.getMap()[upperBound][upperBound].setSelected(true);
+
+        assertEquals("corners", testGame.checkWin(testBoard));
+
+        testGame.reset();
+
+        // Check for default after reset
+        assertEquals("N/A", testGame.checkWin(testBoard));
+
+        // Change mode
+        testGame.setMode("t");
+
+        // Fill row & column for T, check
+        for(int i = 0; i < size; i++)
+        {
+            // Row
+            called.add(testBoard.getMap()[rowT][i].toString());
+            testBoard.getMap()[rowT][i].setSelected(true);
+
+            // Column
+            called.add(testBoard.getMap()[i][columnT].toString());
+            testBoard.getMap()[i][columnT].setSelected(true);
+        }
+
+        assertEquals("t", testGame.checkWin(testBoard));
+
+        testGame.reset();
+
+        // Check for default after reset
+        assertEquals("N/A", testGame.checkWin(testBoard));
+
+        // Change mode
+        testGame.setMode("l");
+
+        // Fill row & column for L, check
+        for(int i = 0; i < size; i++)
+        {
+            // Row
+            called.add(testBoard.getMap()[rowL][i].toString());
+            testBoard.getMap()[rowL][i].setSelected(true);
+
+            // Column
+            called.add(testBoard.getMap()[i][columnL].toString());
+            testBoard.getMap()[i][columnL].setSelected(true);
+        }
+
+        assertEquals("l", testGame.checkWin(testBoard));
+
+        testGame.reset();
+
+        // Check for default after reset
+        assertEquals("N/A", testGame.checkWin(testBoard));
+
+        // Change mode
+        testGame.setMode("all");
+
+        // Fill every cell of board, check
+        for(int i = 0; i < size; i++)
+        {
+            for(int j = 0; j < size; j++)
+            {
+                called.add(testBoard.getMap()[i][j].toString());
+                testBoard.getMap()[i][j].setSelected(true);
+            }
+        }
+
+        assertEquals("all", testGame.checkWin(testBoard));
+    }
 }
