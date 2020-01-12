@@ -602,402 +602,302 @@ public class GUI
         });
 
         // Click on b1 (0,0)
-        b1.addActionListener(new ActionListener()
+        b1.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                alterTileGUI(b1, 0, 0);
+            alterTileGUI(b1, 0, 0);
 
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
-                {
-                    clickSound2();
-                }
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                clickSound2();
             }
         });
 
         // Click on b2 (1,0)
-        b2.addActionListener(new ActionListener()
+        b2.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                alterTileGUI(b2, 1, 0);
+            alterTileGUI(b2, 1, 0);
 
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
-                {
-                    clickSound2();
-                }
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                clickSound2();
             }
         });
 
         // Click on b3 (2,0)
-        b3.addActionListener(new ActionListener()
+        b3.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                alterTileGUI(b3, 2, 0);
+            alterTileGUI(b3, 2, 0);
 
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
-                {
-                    clickSound2();
-                }
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                clickSound2();
             }
         });
 
         // Click on b4 (3,0)
-        b4.addActionListener(new ActionListener()
+        b4.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                alterTileGUI(b4, 3, 0);
+            alterTileGUI(b4, 3, 0);
 
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
-                {
-                    clickSound2();
-                }
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                clickSound2();
             }
         });
 
         // Click on b5 (4,0)
-        b5.addActionListener(new ActionListener()
+        b5.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                alterTileGUI(b5, 4, 0);
+            alterTileGUI(b5, 4, 0);
 
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
-                {
-                    clickSound2();
-                }
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                clickSound2();
             }
         });
 
         // Click on i1 (0,1)
-        i1.addActionListener(new ActionListener()
+        i1.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                alterTileGUI(i1, 0, 1);
+            alterTileGUI(i1, 0, 1);
 
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
-                {
-                    clickSound2();
-                }
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                clickSound2();
             }
         });
 
         // Click on i2 (1,1)
-        i2.addActionListener(new ActionListener()
+        i2.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                alterTileGUI(i2, 1, 1);
+            alterTileGUI(i2, 1, 1);
 
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
-                {
-                    clickSound2();
-                }
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                clickSound2();
             }
         });
 
         // Click on i3 (2,1)
-        i3.addActionListener(new ActionListener()
+        i3.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                alterTileGUI(i3, 2, 1);
+            alterTileGUI(i3, 2, 1);
 
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
-                {
-                    clickSound2();
-                }
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                clickSound2();
             }
         });
 
         // Click on i4 (3,1)
-        i4.addActionListener(new ActionListener()
+        i4.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                alterTileGUI(i4, 3, 1);
+            alterTileGUI(i4, 3, 1);
 
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
-                {
-                    clickSound2();
-                }
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                clickSound2();
             }
         });
 
         // Click on i5 (4,1)
-        i5.addActionListener(new ActionListener()
+        i5.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                alterTileGUI(i5, 4, 1);
+            alterTileGUI(i5, 4, 1);
 
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
-                {
-                    clickSound2();
-                }
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                clickSound2();
             }
         });
 
         // Click on n1 (0,2)
-        n1.addActionListener(new ActionListener()
+        n1.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                alterTileGUI(n1, 0, 2);
+            alterTileGUI(n1, 0, 2);
 
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
-                {
-                    clickSound2();
-                }
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                clickSound2();
             }
         });
 
         // Click on n2 (1,2)
-        n2.addActionListener(new ActionListener()
+        n2.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                alterTileGUI(n2, 1, 2);
+            alterTileGUI(n2, 1, 2);
 
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
-                {
-                    clickSound2();
-                }
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                clickSound2();
             }
         });
 
         // Click on n3 (2,2)
-        n3.addActionListener(new ActionListener()
+        n3.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                alterTileGUI(n3, 2, 2);
+            alterTileGUI(n3, 2, 2);
 
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
-                {
-                    clickSound2();
-                }
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                clickSound2();
             }
         });
 
         // Click on n4 (3,2)
-        n4.addActionListener(new ActionListener()
+        n4.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                alterTileGUI(n4, 3, 2);
+            alterTileGUI(n4, 3, 2);
 
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
-                {
-                    clickSound2();
-                }
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                clickSound2();
             }
         });
 
         // Click on n5 (4,2)
-        n5.addActionListener(new ActionListener()
+        n5.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                alterTileGUI(n5, 4, 2);
+            alterTileGUI(n5, 4, 2);
 
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
-                {
-                    clickSound2();
-                }
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                clickSound2();
             }
         });
 
         // Click on g1 (0,3)
-        g1.addActionListener(new ActionListener()
+        g1.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                alterTileGUI(g1, 0, 3);
+            alterTileGUI(g1, 0, 3);
 
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
-                {
-                    clickSound2();
-                }
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                clickSound2();
             }
         });
 
         // Click on g2 (1,3)
-        g2.addActionListener(new ActionListener()
+        g2.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                alterTileGUI(g2, 1, 3);
+            alterTileGUI(g2, 1, 3);
 
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
-                {
-                    clickSound2();
-                }
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                clickSound2();
             }
         });
 
         // Click on g3 (2,3)
-        g3.addActionListener(new ActionListener()
+        g3.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                alterTileGUI(g3, 2, 3);
+            alterTileGUI(g3, 2, 3);
 
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
-                {
-                    clickSound2();
-                }
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                clickSound2();
             }
         });
 
         // Click on g4 (3,3)
-        g4.addActionListener(new ActionListener()
+        g4.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                alterTileGUI(g4, 3, 3);
+            alterTileGUI(g4, 3, 3);
 
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
-                {
-                    clickSound2();
-                }
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                clickSound2();
             }
         });
 
         // Click on g5 (4,3)
-        g5.addActionListener(new ActionListener()
+        g5.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                alterTileGUI(g5, 4, 3);
+            alterTileGUI(g5, 4, 3);
 
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
-                {
-                    clickSound2();
-                }
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                clickSound2();
             }
         });
 
         // Click on o1 (0,4)
-        o1.addActionListener(new ActionListener()
+        o1.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                alterTileGUI(o1, 0, 4);
+            alterTileGUI(o1, 0, 4);
 
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
-                {
-                    clickSound2();
-                }
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                clickSound2();
             }
         });
 
         // Click on o2 (1,4)
-        o2.addActionListener(new ActionListener()
+        o2.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                alterTileGUI(o2, 1, 4);
+            alterTileGUI(o2, 1, 4);
 
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
-                {
-                    clickSound2();
-                }
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                clickSound2();
             }
         });
 
         // Click on o3 (2,4)
-        o3.addActionListener(new ActionListener()
+        o3.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                alterTileGUI(o3, 2, 4);
+            alterTileGUI(o3, 2, 4);
 
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
-                {
-                    clickSound2();
-                }
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                clickSound2();
             }
         });
 
         // Click on o4 (3,4)
-        o4.addActionListener(new ActionListener()
+        o4.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                alterTileGUI(o4, 3, 4);
+            alterTileGUI(o4, 3, 4);
 
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
-                {
-                    clickSound2();
-                }
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                clickSound2();
             }
         });
 
         // Click on o5 (4,4)
-        o5.addActionListener(new ActionListener()
+        o5.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
-            {
-                alterTileGUI(o5, 4, 4);
+            alterTileGUI(o5, 4, 4);
 
-                // Play sound if enabled
-                if(currentGame.getSoundStatus())
-                {
-                    clickSound2();
-                }
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                clickSound2();
             }
         });
 
@@ -1292,142 +1192,102 @@ public class GUI
         });
 
         // Click hooded rat purchase button
-        hoodedRatButton.addActionListener(new ActionListener()
+        hoodedRatButton.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
+            if(makePurchase(5))
             {
-                if(makePurchase(5))
-                {
-                    changeHooded();
-                    displayPurchasedScreen("hooded");
-                }
+                changeHooded();
+                displayPurchasedScreen("hooded");
             }
         });
 
         // Click agouti rat purchase button
-        agoutiRatButton.addActionListener(new ActionListener()
+        agoutiRatButton.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
+            if(makePurchase(10))
             {
-                if(makePurchase(10))
-                {
-                    changeAgouti();
-                    displayPurchasedScreen("agouti");
-                }
+                changeAgouti();
+                displayPurchasedScreen("agouti");
             }
         });
 
         // Click berkshire rat purchase button
-        berkshireRatButton.addActionListener(new ActionListener()
+        berkshireRatButton.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
+            if(makePurchase(15))
             {
-                if(makePurchase(15))
-                {
-                    changeBerkshire();
-                    displayPurchasedScreen("berkshire");
-                }
+                changeBerkshire();
+                displayPurchasedScreen("berkshire");
             }
         });
 
         // Click roan rat purchase button
-        roanRatButton.addActionListener(new ActionListener()
+        roanRatButton.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
+            if(makePurchase(20))
             {
-                if(makePurchase(20))
-                {
-                    changeRoan();
-                    displayPurchasedScreen("roan");
-                }
+                changeRoan();
+                displayPurchasedScreen("roan");
             }
         });
 
         // Click albino rat purchase button
-        albinoRatButton.addActionListener(new ActionListener()
+        albinoRatButton.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
+            if(makePurchase(25))
             {
-                if(makePurchase(25))
-                {
-                    changeAlbino();
-                    displayPurchasedScreen("albino");
-                }
+                changeAlbino();
+                displayPurchasedScreen("albino");
             }
         });
 
         // Click siamese rat purchase button
-        siameseRatButton.addActionListener(new ActionListener()
+        siameseRatButton.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
+            if(makePurchase(30))
             {
-                if(makePurchase(30))
-                {
-                    changeSiamese();
-                    displayPurchasedScreen("siamese");
-                }
+                changeSiamese();
+                displayPurchasedScreen("siamese");
             }
         });
 
         // Click hairless rat purchase button
-        hairlessRatButton.addActionListener(new ActionListener()
+        hairlessRatButton.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
+            if(makePurchase(35))
             {
-                if(makePurchase(35))
-                {
-                    changeHairless();
-                    displayPurchasedScreen("hairless");
-                }
+                changeHairless();
+                displayPurchasedScreen("hairless");
             }
         });
 
         // Click Russian blue rat purchase button
-        russianBlueRatButton.addActionListener(new ActionListener()
+        russianBlueRatButton.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
+            if(makePurchase(40))
             {
-                if(makePurchase(40))
-                {
-                    changeRussianBlue();
-                    displayPurchasedScreen("russian blue");
-                }
+                changeRussianBlue();
+                displayPurchasedScreen("russian blue");
             }
         });
 
         // Click patchwork rat purchase button
-        patchworkRatButton.addActionListener(new ActionListener()
+        patchworkRatButton.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
+            if(makePurchase(45))
             {
-                if(makePurchase(45))
-                {
-                    changePatchwork();
-                    displayPurchasedScreen("patchwork");
-                }
+                changePatchwork();
+                displayPurchasedScreen("patchwork");
             }
         });
 
         // Click manx rat purchase button
-        manxRatButton.addActionListener(new ActionListener()
+        manxRatButton.addActionListener(e ->
         {
-            @Override
-            public void actionPerformed(ActionEvent e)
+            if(makePurchase(50))
             {
-                if(makePurchase(50))
-                {
-                    changeManx();
-                    displayPurchasedScreen("manx");
-                }
+                changeManx();
+                displayPurchasedScreen("manx");
             }
         });
 
@@ -2383,26 +2243,49 @@ public class GUI
     public void setUpBackgroundProcesses()
     {
         // Thread for caller
-        backgroundProcesses = new Thread(new Runnable()
+        backgroundProcesses = new Thread(() ->
         {
-            @Override
-            public void run()
+            // Sleep for 3 seconds before starting caller
+            try
             {
-                // Sleep for 3 seconds before starting caller
+                Thread.sleep(3000);
+            }
+            catch(InterruptedException e)
+            {
+                e.printStackTrace();
+            }
+
+            int called = currentGame.runCaller();
+
+            String letter = getDisplayLetter(called);
+
+            // Change caller label (once, so we don't have to wait for first call)
+            callerCurrentLabel.setText(letter + " " + called);
+
+            // Play sound if enabled
+            if(currentGame.getSoundStatus())
+            {
+                callerSound();
+            }
+
+            // Now continue for the next 74
+            for(int i = 0; i < 74; i++)
+            {
+                // Sleep for 6 seconds
                 try
                 {
-                    Thread.sleep(3000);
+                    Thread.sleep(callerDelay);
                 }
                 catch(InterruptedException e)
                 {
                     e.printStackTrace();
                 }
 
-                int called = currentGame.runCaller();
+                called = currentGame.runCaller();
 
-                String letter = getDisplayLetter(called);
+                letter = getDisplayLetter(called);
 
-                // Change caller label (once, so we don't have to wait for first call)
+                // Change caller label
                 callerCurrentLabel.setText(letter + " " + called);
 
                 // Play sound if enabled
@@ -2411,55 +2294,28 @@ public class GUI
                     callerSound();
                 }
 
-                // Now continue for the next 74
-                for(int i = 0; i < 74; i++)
+                // NPC plays game
+                currentGame.getNpcPlayer().scanBoard(called, currentGame);
+
+                // If NPC won
+                if(currentGame.getNpcPlayer().checkForBingo(currentGame))
                 {
-                    // Sleep for 6 seconds
-                    try
-                    {
-                        Thread.sleep(callerDelay);
-                    }
-                    catch(InterruptedException e)
-                    {
-                        e.printStackTrace();
-                    }
-
-                    called = currentGame.runCaller();
-
-                    letter = getDisplayLetter(called);
-
-                    // Change caller label
-                    callerCurrentLabel.setText(letter + " " + called);
+                    setGameStatsVisibility(false);
+                    leftMenuPanel.setVisible(true);
+                    displayDefeatScreen();
+                    changeLosses();
 
                     // Play sound if enabled
                     if(currentGame.getSoundStatus())
                     {
-                        callerSound();
+                        defeatSound();
                     }
 
-                    // NPC plays game
-                    currentGame.getNpcPlayer().scanBoard(called, currentGame);
-
-                    // If NPC won
-                    if(currentGame.getNpcPlayer().checkForBingo(currentGame))
-                    {
-                        setGameStatsVisibility(false);
-                        leftMenuPanel.setVisible(true);
-                        displayDefeatScreen();
-                        changeLosses();
-
-                        // Play sound if enabled
-                        if(currentGame.getSoundStatus())
-                        {
-                            defeatSound();
-                        }
-
-                        break;
-                    }
+                    break;
                 }
-
-                backgroundProcesses.interrupt();
             }
+
+            backgroundProcesses.interrupt();
         });
     }
 
