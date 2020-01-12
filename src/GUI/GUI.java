@@ -2,6 +2,7 @@ package GUI;
 
 import Code.Game;
 
+import javax.sound.sampled.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -10,6 +11,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URL;
@@ -2364,7 +2366,6 @@ public class GUI
         }
     }
 
-    // TODO: find a non-deprecated way of playing sound
     // Plays click sound 1
     public void clickSound1()
     {
@@ -2380,7 +2381,6 @@ public class GUI
         }
     }
 
-    // TODO: find a non-deprecated way of playing sound
     // Plays click sound 2
     public void clickSound2()
     {
@@ -2396,7 +2396,6 @@ public class GUI
         }
     }
 
-    // TODO: find a non-deprecated way of playing sound
     // Plays victory sound
     public void victorySound()
     {
@@ -2412,7 +2411,6 @@ public class GUI
         }
     }
 
-    // TODO: find a non-deprecated way of playing sound
     // Plays defeat sound
     public void defeatSound()
     {
@@ -2428,7 +2426,6 @@ public class GUI
         }
     }
 
-    // TODO: find a non-deprecated way of playing sound
     // Plays save/load sound
     public void saveLoadSound()
     {
@@ -2444,7 +2441,6 @@ public class GUI
         }
     }
 
-    // TODO: find a non-deprecated way of playing sound
     // Plays rat squeak sound
     public void ratSqueakSound()
     {
@@ -2460,7 +2456,6 @@ public class GUI
         }
     }
 
-    // TODO: find a non-deprecated way of playing sound
     // Plays start game sound
     public void startGameSound()
     {
@@ -2476,7 +2471,6 @@ public class GUI
         }
     }
 
-    // TODO: find a non-deprecated way of playing sound
     // Plays purchase sound
     public void purchaseSound()
     {
@@ -2492,7 +2486,6 @@ public class GUI
         }
     }
 
-    // TODO: find a non-deprecated way of playing sound
     // Plays caller sound
     public void callerSound()
     {
