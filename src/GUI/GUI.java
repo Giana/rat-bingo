@@ -1005,7 +1005,9 @@ public class GUI
             }
         });
 
-        // Click on "Load" on left panel
+        /* This listener outlines what happens if you click the
+         * "Load" logo on the left panel.
+         */
         loadLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1047,7 +1049,9 @@ public class GUI
             }
         });
 
-        // Click on "Save" on left panel
+        /* This listener outlines what happens if you click the
+         * "Load" logo on the left panel.
+         */
         saveLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1080,7 +1084,9 @@ public class GUI
             }
         });
 
-        // Click on "Collection" on main menu panel
+        /* This listener outlines what happens if you click the
+         * "Collection" logo on the main menu panel.
+         */
         collectionLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1098,7 +1104,9 @@ public class GUI
             }
         });
 
-        // Click on "Options" on main menu panel
+        /* This listener outlines what happens if you click the
+         * "Options" logo on the main menu panel.
+         */
         optionsLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1116,7 +1124,9 @@ public class GUI
             }
         });
 
-        // Click on "Shop" on main menu panel
+        /* This listener outlines what happens if you click the
+         * "Shop" logo on the main menu panel.
+         */
         shopLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1134,8 +1144,9 @@ public class GUI
             }
         });
 
-
-        // Click hooded rat image on shop panel
+        /* This listener outlines what happens if you click the
+         * hooded rat on the shop panel.
+         */
         hoodedRatImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1151,7 +1162,9 @@ public class GUI
             }
         });
 
-        // Click agouti rat image on shop panel
+        /* This listener outlines what happens if you click the
+         * agouti rat on the shop panel.
+         */
         agoutiRatImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1167,7 +1180,9 @@ public class GUI
             }
         });
 
-        // Click berkshire rat image on shop panel
+        /* This listener outlines what happens if you click the
+         * berkshire rat on the shop panel.
+         */
         berkshireRatImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1183,7 +1198,9 @@ public class GUI
             }
         });
 
-        // Click roan rat image on shop panel
+        /* This listener outlines what happens if you click the
+         * roan rat on the shop panel.
+         */
         roanRatImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1199,7 +1216,9 @@ public class GUI
             }
         });
 
-        // Click albino rat image on shop panel
+        /* This listener outlines what happens if you click the
+         * albino rat on the shop panel.
+         */
         albinoRatImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1215,7 +1234,9 @@ public class GUI
             }
         });
 
-        // Click siamese rat image on shop panel
+        /* This listener outlines what happens if you click the
+         * siamese rat on the shop panel.
+         */
         siameseRatImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1231,7 +1252,9 @@ public class GUI
             }
         });
 
-        // Click hairless rat image on shop panel
+        /* This listener outlines what happens if you click the
+         * hairless rat on the shop panel.
+         */
         hairlessRatImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1247,7 +1270,9 @@ public class GUI
             }
         });
 
-        // Click Russian blue rat image on shop panel
+        /* This listener outlines what happens if you click the
+         * Russian blue rat on the shop panel.
+         */
         russianBlueRatImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1263,7 +1288,9 @@ public class GUI
             }
         });
 
-        // Click patchwork rat image on shop panel
+        /* This listener outlines what happens if you click the
+         * patchwork rat on the shop panel.
+         */
         patchworkRatImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1279,7 +1306,9 @@ public class GUI
             }
         });
 
-        // Click manx rat image on shop panel
+        /* This listener outlines what happens if you click the
+         * manx rat on the shop panel.
+         */
         manxRatImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1295,7 +1324,9 @@ public class GUI
             }
         });
 
-        // Click hooded rat purchase button
+        /* This listener outlines what happens if you click the
+         * hooded rat purchase button on the shop panel.
+         */
         hoodedRatButton.addActionListener(e ->
         {
             if(makePurchase(5))
@@ -1305,7 +1336,9 @@ public class GUI
             }
         });
 
-        // Click agouti rat purchase button
+        /* This listener outlines what happens if you click the
+         * agouti rat purchase button on the shop panel.
+         */
         agoutiRatButton.addActionListener(e ->
         {
             if(makePurchase(10))
@@ -1315,7 +1348,9 @@ public class GUI
             }
         });
 
-        // Click berkshire rat purchase button
+        /* This listener outlines what happens if you click the
+         * berkshire rat purchase button on the shop panel.
+         */
         berkshireRatButton.addActionListener(e ->
         {
             if(makePurchase(15))
@@ -1325,7 +1360,9 @@ public class GUI
             }
         });
 
-        // Click roan rat purchase button
+        /* This listener outlines what happens if you click the
+         * roan rat purchase button on the shop panel.
+         */
         roanRatButton.addActionListener(e ->
         {
             if(makePurchase(20))
@@ -1335,7 +1372,9 @@ public class GUI
             }
         });
 
-        // Click albino rat purchase button
+        /* This listener outlines what happens if you click the
+         * albino rat purchase button on the shop panel.
+         */
         albinoRatButton.addActionListener(e ->
         {
             if(makePurchase(25))
@@ -1345,7 +1384,9 @@ public class GUI
             }
         });
 
-        // Click siamese rat purchase button
+        /* This listener outlines what happens if you click the
+         * siamese rat purchase button on the shop panel.
+         */
         siameseRatButton.addActionListener(e ->
         {
             if(makePurchase(30))
@@ -1355,7 +1396,9 @@ public class GUI
             }
         });
 
-        // Click hairless rat purchase button
+        /* This listener outlines what happens if you click the
+         * hairless rat purchase button on the shop panel.
+         */
         hairlessRatButton.addActionListener(e ->
         {
             if(makePurchase(35))
@@ -1365,7 +1408,9 @@ public class GUI
             }
         });
 
-        // Click Russian blue rat purchase button
+        /* This listener outlines what happens if you click the
+         * Russian blue rat purchase button on the shop panel.
+         */
         russianBlueRatButton.addActionListener(e ->
         {
             if(makePurchase(40))
@@ -1375,7 +1420,9 @@ public class GUI
             }
         });
 
-        // Click patchwork rat purchase button
+        /* This listener outlines what happens if you click the
+         * patchwork rat purchase button on the shop panel.
+         */
         patchworkRatButton.addActionListener(e ->
         {
             if(makePurchase(45))
@@ -1385,7 +1432,9 @@ public class GUI
             }
         });
 
-        // Click manx rat purchase button
+        /* This listener outlines what happens if you click the
+         * manx rat purchase button on the shop panel.
+         */
         manxRatButton.addActionListener(e ->
         {
             if(makePurchase(50))
@@ -1395,7 +1444,9 @@ public class GUI
             }
         });
 
-        // Click hooded rat collection image
+        /* This listener outlines what happens if you click the
+         * hooded rat on the collection panel.
+         */
         hoodedRatCollectionImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1411,7 +1462,9 @@ public class GUI
             }
         });
 
-        // Click agouti rat collection image
+        /* This listener outlines what happens if you click the
+         * agouti rat on the collection panel.
+         */
         agoutiRatCollectionImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1427,7 +1480,9 @@ public class GUI
             }
         });
 
-        // Click berkshire rat collection image
+        /* This listener outlines what happens if you click the
+         * berkshire rat on the collection panel.
+         */
         berkshireRatCollectionImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1443,7 +1498,9 @@ public class GUI
             }
         });
 
-        // Click roan rat collection image
+        /* This listener outlines what happens if you click the
+         * roan rat on the collection panel.
+         */
         roanRatCollectionImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1459,7 +1516,9 @@ public class GUI
             }
         });
 
-        // Click albino rat collection image
+        /* This listener outlines what happens if you click the
+         * albino rat on the collection panel.
+         */
         albinoRatCollectionImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1475,7 +1534,9 @@ public class GUI
             }
         });
 
-        // Click siamese rat collection image
+        /* This listener outlines what happens if you click the
+         * siamese rat on the collection panel.
+         */
         siameseRatCollectionImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1491,7 +1552,9 @@ public class GUI
             }
         });
 
-        // Click hairless rat collection image
+        /* This listener outlines what happens if you click the
+         * hairless rat on the collection panel.
+         */
         hairlessRatCollectionImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1507,7 +1570,9 @@ public class GUI
             }
         });
 
-        // Click Russian blue rat collection image
+        /* This listener outlines what happens if you click the
+         * Russian blue rat on the collection panel.
+         */
         russianBlueRatCollectionImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1523,7 +1588,9 @@ public class GUI
             }
         });
 
-        // Click patchwork rat collection image
+        /* This listener outlines what happens if you click the
+         * patchwork rat on the collection panel.
+         */
         patchworkRatCollectionImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1539,7 +1606,9 @@ public class GUI
             }
         });
 
-        // Click manx rat collection image
+        /* This listener outlines what happens if you click the
+         * manx rat on the collection panel.
+         */
         manxRatCollectionImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1555,7 +1624,9 @@ public class GUI
             }
         });
 
-        // Click "Shop" on purchased screen
+        /* This listener outlines what happens if you click the
+         * "Shop" logo on the purchased panel.
+         */
         purchasedShopLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1573,7 +1644,9 @@ public class GUI
             }
         });
 
-        // Click first text pane on Credits page
+        /* This listener outlines what happens if you click the
+         * 1st text pane on the credits panel.
+         */
         creditsTextPanePanel1.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1594,7 +1667,9 @@ public class GUI
             }
         });
 
-        // Click second text pane on Credits page
+        /* This listener outlines what happens if you click the
+         * 2nd text pane on the credits panel.
+         */
         creditsTextPanePanel2.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1615,7 +1690,9 @@ public class GUI
             }
         });
 
-        // Click third text pane on Credits page
+        /* This listener outlines what happens if you click the
+         * 3rd text pane on the credits panel.
+         */
         creditsTextPanePanel3.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1636,7 +1713,9 @@ public class GUI
             }
         });
 
-        // Click "Delete Save" on Options page
+        /* This listener outlines what happens if you click the
+         * "Delete Save" logo on the options panel.
+         */
         deleteSaveLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1654,7 +1733,9 @@ public class GUI
             }
         });
 
-        // Click "No, go back!" on confirmation page
+        /* This listener outlines what happens if you click the
+         * "No, go back!" logo on the confirmation panel.
+         */
         noGoBackLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1672,7 +1753,9 @@ public class GUI
             }
         });
 
-        // Click "Yes, delete!" on confirmation page
+        /* This listener outlines what happens if you click the
+         * "Yes, delete!" logo on the confirmation panel.
+         */
         yesDeleteLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1699,7 +1782,9 @@ public class GUI
             }
         });
 
-        // Click "Toggle Sound On/Off" on Options page
+        /* This listener outlines what happens if you click the
+         * "Toggle Sound On/Off" logo on the options panel.
+         */
         toggleSoundLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1735,7 +1820,9 @@ public class GUI
             }
         });
 
-        // Click "1" on Options page
+        /* This listener outlines what happens if you click the
+         * "1" logo on the options panel.
+         */
         oneSecondLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1753,7 +1840,9 @@ public class GUI
             }
         });
 
-        // Click "2" on Options page
+        /* This listener outlines what happens if you click the
+         * "2" logo on the options panel.
+         */
         twoSecondsLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1771,7 +1860,9 @@ public class GUI
             }
         });
 
-        // Click "3" on Options page
+        /* This listener outlines what happens if you click the
+         * "3" logo on the options panel.
+         */
         threeSecondsLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1789,7 +1880,9 @@ public class GUI
             }
         });
 
-        // Click "4" on Options page
+        /* This listener outlines what happens if you click the
+         * "4" logo on the options panel.
+         */
         fourSecondsLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1807,7 +1900,9 @@ public class GUI
             }
         });
 
-        // Click "5" on Options page
+        /* This listener outlines what happens if you click the
+         * "5" logo on the options panel.
+         */
         fiveSecondsLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1825,7 +1920,9 @@ public class GUI
             }
         });
 
-        // Click "6" on Options page
+        /* This listener outlines what happens if you click the
+         * "6" logo on the options panel.
+         */
         sixSecondsLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1843,7 +1940,9 @@ public class GUI
             }
         });
 
-        // Click "7" on Options page
+        /* This listener outlines what happens if you click the
+         * "7" logo on the options panel.
+         */
         sevenSecondsLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1861,7 +1960,9 @@ public class GUI
             }
         });
 
-        // Click "8" on Options page
+        /* This listener outlines what happens if you click the
+         * "8" logo on the options panel.
+         */
         eightSecondsLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1879,7 +1980,9 @@ public class GUI
             }
         });
 
-        // Click "9" on Options page
+        /* This listener outlines what happens if you click the
+         * "9" logo on the options panel.
+         */
         nineSecondsLogoImage.addMouseListener(new MouseAdapter()
         {
             @Override
@@ -1897,7 +2000,9 @@ public class GUI
             }
         });
 
-        // Click "answer6" on Help page
+        /* This listener outlines what happens if you click the
+         * answer6 text pane on the help panel.
+         */
         answer6.addMouseListener(new MouseAdapter()
         {
             @Override

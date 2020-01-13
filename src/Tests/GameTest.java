@@ -2,13 +2,18 @@ package Tests;
 
 import Code.Board;
 import Code.Game;
+import Code.Player;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
-
-import java.util.ArrayList;
 
 public class GameTest
 {
