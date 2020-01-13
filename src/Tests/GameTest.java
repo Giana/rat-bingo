@@ -587,4 +587,18 @@ public class GameTest
             assertTrue(testList.contains(i));
         }
     }
+
+    @Test // Test runCaller()
+    public void runCallerTest()
+    {
+        Game testGame = new Game();
+        ArrayList<String> testList = testGame.getCalled();
+
+        for(int i = 0; i < 75; i++)
+        {
+            int testInt = testGame.runCaller();
+            assertTrue(testList.contains(Integer.toString(testInt)));
+            assertTrue(testInt >= 1 && testInt <= 75);
+        }
+    }
 }
