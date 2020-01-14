@@ -2307,7 +2307,7 @@ public class GUI
         switchPanel.repaint();
         switchPanel.revalidate();
     }
-
+    
     // Changes rat image and logo depending on rat type passed
     public void changePurchasedScreenItems(String rat)
     {
