@@ -619,7 +619,7 @@ public class GUI
                 if(winState.equals("N/A"))
                 {
                     // Display loss panel
-                    displayDefeatScreen();
+                    displayLossScreen();
 
                     // Change amount of losses
                     changeLosses();
@@ -633,7 +633,7 @@ public class GUI
                 else
                 {
                     // Display win panel
-                    displayVictoryScreen();
+                    displayWinScreen();
 
                     // Change amount of wins
                     changeWins();
@@ -2024,7 +2024,10 @@ public class GUI
         });
     }
 
-    // Gives values to player board buttons on GUI
+    /**
+     * This method is used to initialize the board GUI, which is
+     * the visible text on each button of the board during game.
+     */
     public void initBoardGUI()
     {
         // Set Bs
@@ -2063,7 +2066,12 @@ public class GUI
         o5.setText(Integer.toString(currentGame.getPlayerBoard().getMap()[4][4].getNumber()));
     }
 
-    // Sets all buttons on board GUI back to nothing
+    /**
+     * This method is used to reset the board GUI. It sets the
+     * text of each button back to nothing, resets the
+     * color of each button back to the default, and sets the
+     * text of callerCurrentLabel back to nothing.
+     */
     public void resetGameGUI()
     {
         // Set Bs
@@ -2129,6 +2137,14 @@ public class GUI
         callerCurrentLabel.setText("");
     }
 
+    /**
+     * This method is used to enable or disable the
+     * visibility of the game stats. Game stats
+     * include callerLogoImage, callerCurrentlabel,
+     * startGameLogoImage, and currentGameModeImage.
+     * It also sets the game mode icon.
+     * @param bool If enabling or disabling
+     */
     public void setGameStatsVisibility(boolean bool)
     {
         if(bool)
@@ -2149,6 +2165,15 @@ public class GUI
         }
     }
 
+    /**
+     * This method is used to change the selection status
+     * of a button, depending on whether it is being
+     * selected or deselected. Additionally, it changes
+     * the background color of the button.
+     * @param button Button to be altered
+     * @param x X coordinate of button
+     * @param y Y coordinate of button
+     */
     // Alters button on board depending on circumstances, during game
     public void alterTileGUI(JButton button, int x, int y)
     {
@@ -2166,7 +2191,11 @@ public class GUI
         }
     }
 
-    // Displays main panel
+    /**
+     * This method is used to change the
+     * center panel to display the
+     * mainMenuPanel.
+     */
     public void displayMainScreen()
     {
         switchPanel.removeAll();
@@ -2175,8 +2204,12 @@ public class GUI
         switchPanel.revalidate();
     }
 
-    // Displays win panel
-    public void displayVictoryScreen()
+    /**
+     * This method is used to change the
+     * center panel to display the
+     * winPanel.
+     */
+    public void displayWinScreen()
     {
         switchPanel.removeAll();
         switchPanel.add(winPanel);
@@ -2184,8 +2217,12 @@ public class GUI
         switchPanel.revalidate();
     }
 
-    // Displays loss panel
-    public void displayDefeatScreen()
+    /**
+     * This method is used to change the
+     * center panel to display the
+     * lossPanel.
+     */
+    public void displayLossScreen()
     {
         switchPanel.removeAll();
         switchPanel.add(lossPanel);
@@ -2193,7 +2230,11 @@ public class GUI
         switchPanel.revalidate();
     }
 
-    // Displays saved panel
+    /**
+     * This method is used to change the
+     * center panel to display the
+     * savedPanel.
+     */
     public void displaySavedScreen()
     {
         switchPanel.removeAll();
@@ -2202,7 +2243,11 @@ public class GUI
         switchPanel.revalidate();
     }
 
-    // Displays collection panel
+    /**
+     * This method is used to change the
+     * center panel to display the
+     * collectionPanel.
+     */
     public void displayCollectionScreen()
     {
         switchPanel.removeAll();
@@ -2210,7 +2255,12 @@ public class GUI
         switchPanel.repaint();
         switchPanel.revalidate();
     }
-    // Displays options panel
+
+    /**
+     * This method is used to change the
+     * center panel to display the
+     * optionsPanel.
+     */
     public void displayOptionsScreen()
     {
         switchPanel.removeAll();
@@ -2219,7 +2269,11 @@ public class GUI
         switchPanel.revalidate();
     }
 
-    // Displays shop panel
+    /**
+     * This method is used to change the
+     * center panel to display the
+     * shopPanel.
+     */
     public void displayShopScreen()
     {
         switchPanel.removeAll();
@@ -2228,7 +2282,11 @@ public class GUI
         switchPanel.revalidate();
     }
 
-    // Displays confirmation panel
+    /**
+     * This method is used to change the
+     * center panel to display the
+     * confirmationPanel.
+     */
     public void displayConfirmationScreen()
     {
         switchPanel.removeAll();
@@ -2237,8 +2295,12 @@ public class GUI
         switchPanel.revalidate();
     }
 
-    // Displays loss by bot panel
-    public void displayDefeatByBotScreen()
+    /**
+     * This method is used to change the
+     * center panel to display the
+     * lossByBotPanel.
+     */
+    public void displayLossByBot()
     {
         switchPanel.removeAll();
         switchPanel.add(lossByBotPanel);
@@ -2547,7 +2609,7 @@ public class GUI
                 {
                     setGameStatsVisibility(false);
                     leftMenuPanel.setVisible(true);
-                    displayDefeatByBotScreen();
+                    displayLossByBot();
                     changeLosses();
 
                     // Play sound if enabled
