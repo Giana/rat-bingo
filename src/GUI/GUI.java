@@ -2307,8 +2307,13 @@ public class GUI
         switchPanel.repaint();
         switchPanel.revalidate();
     }
-    
-    // Changes rat image and logo depending on rat type passed
+
+    /**
+     * This method is used to change the purchasedRatImage
+     * and purchasedRatLogo on the purchased panel, according
+     * to the rat type purchased.
+     * @param rat Rat type purchased
+     */
     public void changePurchasedScreenItems(String rat)
     {
         Icon hoodedRatImage = new ImageIcon("src/Images/HoodedRat.png");
@@ -2379,11 +2384,15 @@ public class GUI
                 purchasedRatImage.setVisible(false);
                 purchasedRatLogo.setVisible(false);
                 break;
-
         }
     }
 
-    // Display purchased panel and correct items (then switch back to shop)
+    /**
+     * This method is used to change the items on the
+     * purchased panel, and then to change the center
+     * panel to display the purchased panel.
+     * @param rat Rat type purchased
+     */
     public void displayPurchasedScreen(String rat)
     {
             changePurchasedScreenItems(rat);
@@ -2394,7 +2403,12 @@ public class GUI
             switchPanel.revalidate();
     }
 
-    // Give a number from the caller, get the letter that goes with it
+    /**
+     * This method is used to get the letter
+     * corresponding to the number called.
+     * @param called Number called
+     * @return String Corresponding letter
+     */
     public String getDisplayLetter(int called)
     {
         // B
@@ -2429,6 +2443,11 @@ public class GUI
         }
     }
 
+    /**
+     * This method is used to increase the number
+     * of wins by 1 in the GUI and in the Player
+     * class.
+     */
     // Changes the amount of wins in GUI and in Player class by 1
     public void changeWins()
     {
@@ -2440,6 +2459,11 @@ public class GUI
         currentGame.getPlayer().setTotalWins(updatedWins);
     }
 
+    /**
+     * This method is used to increase the number
+     * of losses by 1 in the GUI and in the Player
+     * class.
+     */
     // Changes the amount of losses in GUI and in Player class by 1
     public void changeLosses()
     {
@@ -2451,14 +2475,24 @@ public class GUI
         currentGame.getPlayer().setTotalLosses(updatedLosses);
     }
 
-    // Establishes how much money we have from GUI
+    /**
+     * This method is used to establish the amount
+     * of money the player has by setting the number
+     * visible in the GUI to the total dollars in the
+     * Player class.
+     */
     public void establishFunds()
     {
         int dollarsListed = Integer.parseInt(dollarsTotalLabel.getText());
         currentGame.getPlayer().setTotalDollars(dollarsListed);
     }
 
-    // Rewards money to player
+    /**
+     * This method is used to reward dollars to
+     * the Player in the GUI and in the Player
+     * class.
+     * @param amount Amount of money to reward
+     */
     public void reward(int amount)
     {
         establishFunds();
@@ -2469,7 +2503,12 @@ public class GUI
         currentGame.getPlayer().setTotalDollars(updatedDollars);
     }
 
-    // Deducts money from player
+    /**
+     * This method is used to deduct dollars from
+     * the Player in the GUI and in the Player
+     * class.
+     * @param amount Amount of money to deduct
+     */
     public void deduct(int amount)
     {
         establishFunds();
@@ -2479,7 +2518,13 @@ public class GUI
         currentGame.getPlayer().setTotalDollars(updatedDollars);
     }
 
-    // Changes amount of dollars in GUI and Player class depending on win/loss
+    /**
+     * This method is used to reward or deduct
+     * dollars to/from the Player in the GUI and
+     * in the Player class, depending on whether
+     * the game was won, and which type was one.
+     * @param state Game win or loss
+     */
     public void changeDollars(boolean state)
     {
         int cornersReward = 5;
@@ -2546,7 +2591,12 @@ public class GUI
         }
     }
 
-    // Sets up thread for background caller
+    /**
+     * This method is used to set up and define the
+     * behavior of the background process, a thread
+     * which handles the caller as well as the NPC
+     * playing.
+     */
     public void setUpBackgroundProcesses()
     {
         // Thread for caller
@@ -2626,6 +2676,11 @@ public class GUI
         });
     }
 
+    /**
+     * This method is used to set the
+     * currentGameModeLogoImage, based on the
+     * current game mode.
+     */
     // Sets game mode icon when you select a game mode (so you can see current one)
     public void setGameModeIcon()
     {
@@ -2671,7 +2726,10 @@ public class GUI
         }
     }
 
-    // Plays click sound 1
+    /**
+     * This method is used to play
+     * "ClickSound1.wav".
+     */
     public void clickSound1()
     {
         try
@@ -2686,7 +2744,10 @@ public class GUI
         }
     }
 
-    // Plays click sound 2
+    /**
+     * This method is used to play
+     * "ClickSound2.wav".
+     */
     public void clickSound2()
     {
         try
@@ -2701,7 +2762,10 @@ public class GUI
         }
     }
 
-    // Plays victory sound
+    /**
+     * This method is used to play
+     * "VictorySound.wav".
+     */
     public void victorySound()
     {
         try
@@ -2716,7 +2780,10 @@ public class GUI
         }
     }
 
-    // Plays defeat sound
+    /**
+     * This method is used to play
+     * "DefeatSound.wav".
+     */
     public void defeatSound()
     {
         try
@@ -2731,7 +2798,10 @@ public class GUI
         }
     }
 
-    // Plays save/load sound
+    /**
+     * This method is used to play
+     * "SaveLoadSound.wav".
+     */
     public void saveLoadSound()
     {
         try
@@ -2746,7 +2816,10 @@ public class GUI
         }
     }
 
-    // Plays rat squeak sound
+    /**
+     * This method is used to play
+     * "RatSqueakSound.wav".
+     */
     public void ratSqueakSound()
     {
         try
