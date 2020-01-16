@@ -200,7 +200,8 @@ public class GUI
 
     public GUI()
     {
-        /* This listener outlines what happens if you click the Rat
+        /*
+         * This listener outlines what happens if you click the Rat
          * Bingo logo on the top of the left panel.
          */
         smallRatBingoLogoImage.addMouseListener(new MouseAdapter()
@@ -223,7 +224,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "Main Menu" logo on the top of the left panel.
          */
         mainMenuLogoImage.addMouseListener(new MouseAdapter()
@@ -246,7 +248,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "Corners" logo on the left panel.
          */
         cornersLogoImage.addMouseListener(new MouseAdapter()
@@ -279,7 +282,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "Diagonal" logo on the left panel.
          */
         diagonalLogoImage.addMouseListener(new MouseAdapter()
@@ -312,7 +316,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "Horizontal" logo on the left panel.
          */
         horizontalLogoImage.addMouseListener(new MouseAdapter()
@@ -345,7 +350,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "Vertical" logo on the left panel.
          */
         verticalLogoImage.addMouseListener(new MouseAdapter()
@@ -378,7 +384,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "L" logo on the left panel.
          */
         lLogoImage.addMouseListener(new MouseAdapter()
@@ -411,7 +418,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "T" logo on the left panel.
          */
         tLogoImage.addMouseListener(new MouseAdapter()
@@ -444,7 +452,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "X" logo on the left panel.
          */
         xLogoImage.addMouseListener(new MouseAdapter()
@@ -477,7 +486,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "All" logo on the left panel.
          */
         allLogoImage.addMouseListener(new MouseAdapter()
@@ -510,7 +520,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "Credits" logo on the left panel.
          */
         creditsLogoImage.addMouseListener(new MouseAdapter()
@@ -537,7 +548,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "Help" logo on the left panel.
          */
         helpLogoImage.addMouseListener(new MouseAdapter()
@@ -564,7 +576,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "Start Game" logo on the right panel.
          */
         startGameLogoImage.addMouseListener(new MouseAdapter()
@@ -601,7 +614,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "BINGO!" logo on the right panel.
          */
         bingoLogoImage.addMouseListener(new MouseAdapter()
@@ -655,7 +669,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "b1" button on the board (at 0,0).
          */
         b1.addActionListener(e ->
@@ -669,7 +684,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "b2" button on the board (at 1,0).
          */
         b2.addActionListener(e ->
@@ -683,7 +699,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "b3" button on the board (at 2,0).
          */
         b3.addActionListener(e ->
@@ -697,7 +714,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "b4" button on the board (at 3,0).
          */
         b4.addActionListener(e ->
@@ -711,7 +729,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "b5" button on the board (at 4,0).
          */
         b5.addActionListener(e ->
@@ -725,7 +744,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "i1" button on the board (at 0,1).
          */
         i1.addActionListener(e ->
@@ -739,7 +759,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "i2" button on the board (at 1,1).
          */
         i2.addActionListener(e ->
@@ -753,7 +774,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "i3" button on the board (at 2,1).
          */
         i3.addActionListener(e ->
@@ -767,7 +789,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "i4" button on the board (at 3,1).
          */
         i4.addActionListener(e ->
@@ -781,7 +804,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "i5" button on the board (at 4,1).
          */
         i5.addActionListener(e ->
@@ -795,7 +819,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "n1" button on the board (at 0,2).
          */
         n1.addActionListener(e ->
@@ -809,7 +834,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "n2" button on the board (at 1,2).
          */
         n2.addActionListener(e ->
@@ -823,7 +849,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "n3" button on the board (at 2,2).
          */
         n3.addActionListener(e ->
@@ -837,7 +864,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "n4" button on the board (at 3,2).
          */
         n4.addActionListener(e ->
@@ -851,7 +879,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "n5" button on the board (at 4,2).
          */
         n5.addActionListener(e ->
@@ -865,7 +894,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "g1" button on the board (at 0,3).
          */
         g1.addActionListener(e ->
@@ -879,7 +909,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "g2" button on the board (at 1,3).
          */
         g2.addActionListener(e ->
@@ -893,7 +924,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "g3" button on the board (at 2,3).
          */
         g3.addActionListener(e ->
@@ -907,7 +939,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "g4" button on the board (at 3,3).
          */
         g4.addActionListener(e ->
@@ -921,7 +954,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "g5" button on the board (at 4,3).
          */
         g5.addActionListener(e ->
@@ -935,7 +969,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "o1" button on the board (at 0,4).
          */
         o1.addActionListener(e ->
@@ -949,7 +984,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "o2" button on the board (at 1,4).
          */
         o2.addActionListener(e ->
@@ -963,7 +999,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "o3" button on the board (at 2,4).
          */
         o3.addActionListener(e ->
@@ -977,7 +1014,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "o4" button on the board (at 3,4).
          */
         o4.addActionListener(e ->
@@ -991,7 +1029,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "o5" button on the board (at 4,4).
          */
         o5.addActionListener(e ->
@@ -1005,7 +1044,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "Load" logo on the left panel.
          */
         loadLogoImage.addMouseListener(new MouseAdapter()
@@ -1049,7 +1089,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "Load" logo on the left panel.
          */
         saveLogoImage.addMouseListener(new MouseAdapter()
@@ -1084,7 +1125,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "Collection" logo on the main menu panel.
          */
         collectionLogoImage.addMouseListener(new MouseAdapter()
@@ -1104,7 +1146,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "Options" logo on the main menu panel.
          */
         optionsLogoImage.addMouseListener(new MouseAdapter()
@@ -1124,7 +1167,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "Shop" logo on the main menu panel.
          */
         shopLogoImage.addMouseListener(new MouseAdapter()
@@ -1144,7 +1188,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * hooded rat on the shop panel.
          */
         hoodedRatImage.addMouseListener(new MouseAdapter()
@@ -1162,7 +1207,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * agouti rat on the shop panel.
          */
         agoutiRatImage.addMouseListener(new MouseAdapter()
@@ -1180,7 +1226,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * berkshire rat on the shop panel.
          */
         berkshireRatImage.addMouseListener(new MouseAdapter()
@@ -1198,7 +1245,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * roan rat on the shop panel.
          */
         roanRatImage.addMouseListener(new MouseAdapter()
@@ -1216,7 +1264,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * albino rat on the shop panel.
          */
         albinoRatImage.addMouseListener(new MouseAdapter()
@@ -1234,7 +1283,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * siamese rat on the shop panel.
          */
         siameseRatImage.addMouseListener(new MouseAdapter()
@@ -1252,7 +1302,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * hairless rat on the shop panel.
          */
         hairlessRatImage.addMouseListener(new MouseAdapter()
@@ -1270,7 +1321,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * Russian blue rat on the shop panel.
          */
         russianBlueRatImage.addMouseListener(new MouseAdapter()
@@ -1288,7 +1340,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * patchwork rat on the shop panel.
          */
         patchworkRatImage.addMouseListener(new MouseAdapter()
@@ -1306,7 +1359,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * manx rat on the shop panel.
          */
         manxRatImage.addMouseListener(new MouseAdapter()
@@ -1324,7 +1378,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * hooded rat purchase button on the shop panel.
          */
         hoodedRatButton.addActionListener(e ->
@@ -1336,7 +1391,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * agouti rat purchase button on the shop panel.
          */
         agoutiRatButton.addActionListener(e ->
@@ -1348,7 +1404,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * berkshire rat purchase button on the shop panel.
          */
         berkshireRatButton.addActionListener(e ->
@@ -1360,7 +1417,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * roan rat purchase button on the shop panel.
          */
         roanRatButton.addActionListener(e ->
@@ -1372,7 +1430,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * albino rat purchase button on the shop panel.
          */
         albinoRatButton.addActionListener(e ->
@@ -1384,7 +1443,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * siamese rat purchase button on the shop panel.
          */
         siameseRatButton.addActionListener(e ->
@@ -1396,7 +1456,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * hairless rat purchase button on the shop panel.
          */
         hairlessRatButton.addActionListener(e ->
@@ -1408,7 +1469,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * Russian blue rat purchase button on the shop panel.
          */
         russianBlueRatButton.addActionListener(e ->
@@ -1420,7 +1482,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * patchwork rat purchase button on the shop panel.
          */
         patchworkRatButton.addActionListener(e ->
@@ -1432,7 +1495,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * manx rat purchase button on the shop panel.
          */
         manxRatButton.addActionListener(e ->
@@ -1444,7 +1508,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * hooded rat on the collection panel.
          */
         hoodedRatCollectionImage.addMouseListener(new MouseAdapter()
@@ -1462,7 +1527,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * agouti rat on the collection panel.
          */
         agoutiRatCollectionImage.addMouseListener(new MouseAdapter()
@@ -1480,7 +1546,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * berkshire rat on the collection panel.
          */
         berkshireRatCollectionImage.addMouseListener(new MouseAdapter()
@@ -1498,7 +1565,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * roan rat on the collection panel.
          */
         roanRatCollectionImage.addMouseListener(new MouseAdapter()
@@ -1516,7 +1584,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * albino rat on the collection panel.
          */
         albinoRatCollectionImage.addMouseListener(new MouseAdapter()
@@ -1534,7 +1603,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * siamese rat on the collection panel.
          */
         siameseRatCollectionImage.addMouseListener(new MouseAdapter()
@@ -1552,7 +1622,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * hairless rat on the collection panel.
          */
         hairlessRatCollectionImage.addMouseListener(new MouseAdapter()
@@ -1570,7 +1641,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * Russian blue rat on the collection panel.
          */
         russianBlueRatCollectionImage.addMouseListener(new MouseAdapter()
@@ -1588,7 +1660,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * patchwork rat on the collection panel.
          */
         patchworkRatCollectionImage.addMouseListener(new MouseAdapter()
@@ -1606,7 +1679,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * manx rat on the collection panel.
          */
         manxRatCollectionImage.addMouseListener(new MouseAdapter()
@@ -1624,7 +1698,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "Shop" logo on the purchased panel.
          */
         purchasedShopLogoImage.addMouseListener(new MouseAdapter()
@@ -1644,7 +1719,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * 1st text pane on the credits panel.
          */
         creditsTextPanePanel1.addMouseListener(new MouseAdapter()
@@ -1667,7 +1743,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * 2nd text pane on the credits panel.
          */
         creditsTextPanePanel2.addMouseListener(new MouseAdapter()
@@ -1690,7 +1767,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * 3rd text pane on the credits panel.
          */
         creditsTextPanePanel3.addMouseListener(new MouseAdapter()
@@ -1713,7 +1791,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "Delete Save" logo on the options panel.
          */
         deleteSaveLogoImage.addMouseListener(new MouseAdapter()
@@ -1733,7 +1812,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "No, go back!" logo on the confirmation panel.
          */
         noGoBackLogoImage.addMouseListener(new MouseAdapter()
@@ -1753,7 +1833,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "Yes, delete!" logo on the confirmation panel.
          */
         yesDeleteLogoImage.addMouseListener(new MouseAdapter()
@@ -1782,7 +1863,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "Toggle Sound On/Off" logo on the options panel.
          */
         toggleSoundLogoImage.addMouseListener(new MouseAdapter()
@@ -1820,7 +1902,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "1" logo on the options panel.
          */
         oneSecondLogoImage.addMouseListener(new MouseAdapter()
@@ -1840,7 +1923,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "2" logo on the options panel.
          */
         twoSecondsLogoImage.addMouseListener(new MouseAdapter()
@@ -1860,7 +1944,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "3" logo on the options panel.
          */
         threeSecondsLogoImage.addMouseListener(new MouseAdapter()
@@ -1880,7 +1965,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "4" logo on the options panel.
          */
         fourSecondsLogoImage.addMouseListener(new MouseAdapter()
@@ -1900,7 +1986,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "5" logo on the options panel.
          */
         fiveSecondsLogoImage.addMouseListener(new MouseAdapter()
@@ -1920,7 +2007,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "6" logo on the options panel.
          */
         sixSecondsLogoImage.addMouseListener(new MouseAdapter()
@@ -1940,7 +2028,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "7" logo on the options panel.
          */
         sevenSecondsLogoImage.addMouseListener(new MouseAdapter()
@@ -1960,7 +2049,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "8" logo on the options panel.
          */
         eightSecondsLogoImage.addMouseListener(new MouseAdapter()
@@ -1980,7 +2070,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * "9" logo on the options panel.
          */
         nineSecondsLogoImage.addMouseListener(new MouseAdapter()
@@ -2000,7 +2091,8 @@ public class GUI
             }
         });
 
-        /* This listener outlines what happens if you click the
+        /*
+         * This listener outlines what happens if you click the
          * answer6 text pane on the help panel.
          */
         answer6.addMouseListener(new MouseAdapter()
@@ -2174,7 +2266,6 @@ public class GUI
      * @param x X coordinate of button
      * @param y Y coordinate of button
      */
-    // Alters button on board depending on circumstances, during game
     public void alterTileGUI(JButton button, int x, int y)
     {
         // If it's selected (and user is therefore clicking to deselect)
@@ -2448,7 +2539,6 @@ public class GUI
      * of wins by 1 in the GUI and in the Player
      * class.
      */
-    // Changes the amount of wins in GUI and in Player class by 1
     public void changeWins()
     {
         int winsListed = Integer.parseInt(winsTotalLabel.getText());
@@ -2464,7 +2554,6 @@ public class GUI
      * of losses by 1 in the GUI and in the Player
      * class.
      */
-    // Changes the amount of losses in GUI and in Player class by 1
     public void changeLosses()
     {
         int lossesListed = Integer.parseInt(lossesTotalLabel.getText());
@@ -2681,7 +2770,6 @@ public class GUI
      * currentGameModeLogoImage, based on the
      * current game mode.
      */
-    // Sets game mode icon when you select a game mode (so you can see current one)
     public void setGameModeIcon()
     {
         Icon cornersIcon = new ImageIcon("src/Images/CornersLogo.png");
@@ -2834,7 +2922,10 @@ public class GUI
         }
     }
 
-    // Plays start game sound
+    /**
+     * This method is used to play
+     * "StartGameSound.wav".
+     */
     public void startGameSound()
     {
         try
@@ -2849,7 +2940,10 @@ public class GUI
         }
     }
 
-    // Plays purchase sound
+    /**
+     * This method is used to play
+     * "PurchaseSound.wav".
+     */
     public void purchaseSound()
     {
         try
@@ -2864,12 +2958,15 @@ public class GUI
         }
     }
 
-    // Plays caller sound
+    /**
+     * This method is used to play
+     * "CallerSound.wav".
+     */
     public void callerSound()
     {
         try
         {
-            URL soundByte = new File("src/Sounds/callerSound.wav").toURI().toURL();
+            URL soundByte = new File("src/Sounds/CallerSound.wav").toURI().toURL();
             java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
             clickSound.play();
         }
@@ -2879,7 +2976,13 @@ public class GUI
         }
     }
 
-    // To use when purchasing, deducts amount from dollars
+    /**
+     * This method is used to deduct dollars from
+     * the Player in the GUI and in the Player class
+     * when a purchase from the shop is made.
+     * @param amount Amount of money to deduct
+     * @return boolean Purchase success/failure
+     */
     public boolean makePurchase(int amount)
     {
         establishFunds();        // Useful if buying without loading or playing
@@ -2902,7 +3005,11 @@ public class GUI
         return false;
     }
 
-    // Changes the amount of hooded rats in GUI and in Player class by 1
+    /**
+     * This method is used to increase the amount
+     * of hooded rats by 1 in the collection,
+     * in the GUI and in the Player class.
+     */
     public void changeHooded()
     {
         int numberListed = Integer.parseInt(hoodedRatCollectionTotal.getText());
@@ -2913,7 +3020,11 @@ public class GUI
         currentGame.getPlayer().setTotalHooded(updatedNumber);
     }
 
-    // Changes the amount of agouti rats in GUI and in Player class by 1
+    /**
+     * This method is used to increase the amount
+     * of agouti rats by 1 in the collection,
+     * in the GUI and in the Player class.
+     */
     public void changeAgouti()
     {
         int numberListed = Integer.parseInt(agoutiRatCollectionTotal.getText());
@@ -2924,7 +3035,11 @@ public class GUI
         currentGame.getPlayer().setTotalAgouti(updatedNumber);
     }
 
-    // Changes the amount of berkshire rats in GUI and in Player class by 1
+    /**
+     * This method is used to increase the amount
+     * of berkshire rats by 1 in the collection,
+     * in the GUI and in the Player class.
+     */
     public void changeBerkshire()
     {
         int numberListed = Integer.parseInt(berkshireRatCollectionTotal.getText());
@@ -2935,7 +3050,11 @@ public class GUI
         currentGame.getPlayer().setTotalBerkshire(updatedNumber);
     }
 
-    // Changes the amount of roan rats in GUI and in Player class by 1
+    /**
+     * This method is used to increase the amount
+     * of roan rats by 1 in the collection,
+     * in the GUI and in the Player class.
+     */
     public void changeRoan()
     {
         int numberListed = Integer.parseInt(roanRatCollectionTotal.getText());
@@ -2946,7 +3065,11 @@ public class GUI
         currentGame.getPlayer().setTotalRoan(updatedNumber);
     }
 
-    // Changes the amount of albino rats in GUI and in Player class by 1
+    /**
+     * This method is used to increase the amount
+     * of albino rats by 1 in the collection,
+     * in the GUI and in the Player class.
+     */
     public void changeAlbino()
     {
         int numberListed = Integer.parseInt(albinoRatCollectionTotal.getText());
@@ -2957,7 +3080,11 @@ public class GUI
         currentGame.getPlayer().setTotalAlbino(updatedNumber);
     }
 
-    // Changes the amount of siamese rats in GUI and in Player class by 1
+    /**
+     * This method is used to increase the amount
+     * of siamese rats by 1 in the collection,
+     * in the GUI and in the Player class.
+     */
     public void changeSiamese()
     {
         int numberListed = Integer.parseInt(siameseRatCollectionTotal.getText());
@@ -2968,7 +3095,11 @@ public class GUI
         currentGame.getPlayer().setTotalSiamese(updatedNumber);
     }
 
-    // Changes the amount of siamese rats in GUI and in Player class by 1
+    /**
+     * This method is used to increase the amount
+     * of hairless rats by 1 in the collection,
+     * in the GUI and in the Player class.
+     */
     public void changeHairless()
     {
         int numberListed = Integer.parseInt(hairlessRatCollectionTotal.getText());
@@ -2979,7 +3110,11 @@ public class GUI
         currentGame.getPlayer().setTotalHairless(updatedNumber);
     }
 
-    // Changes the amount of Russian blue rats in GUI and in Player class by 1
+    /**
+     * This method is used to increase the amount
+     * of Russian blue rats by 1 in the collection,
+     * in the GUI and in the Player class.
+     */
     public void changeRussianBlue()
     {
         int numberListed = Integer.parseInt(russianBlueRatCollectionTotal.getText());
@@ -2990,7 +3125,11 @@ public class GUI
         currentGame.getPlayer().setTotalRussianBlue(updatedNumber);
     }
 
-    // Changes the amount of patchwork rats in GUI and in Player class by 1
+    /**
+     * This method is used to increase the amount
+     * of patchwork rats by 1 in the collection,
+     * in the GUI and in the Player class.
+     */
     public void changePatchwork()
     {
         int numberListed = Integer.parseInt(patchworkRatCollectionTotal.getText());
@@ -3001,7 +3140,11 @@ public class GUI
         currentGame.getPlayer().setTotalPatchwork(updatedNumber);
     }
 
-    // Changes the amount of manx rats in GUI and in Player class by 1
+    /**
+     * This method is used to increase the amount
+     * of manx rats by 1 in the collection,
+     * in the GUI and in the Player class.
+     */
     public void changeManx()
     {
         int numberListed = Integer.parseInt(manxRatCollectionTotal.getText());
@@ -3012,7 +3155,11 @@ public class GUI
         currentGame.getPlayer().setTotalManx(updatedNumber);
     }
 
-    // Lets method know how many rats we have if not established
+    /**
+     * This method is used to establish the amount of
+     * each rat in the collection GUI to the Player
+     * class.
+     */
     public void establishCollection()
     {
         int numberListed1 = Integer.parseInt(hoodedRatCollectionTotal.getText());
