@@ -12,29 +12,52 @@ public class Tile
     private int number;
     private boolean selected;
 
-    // Default constructor
+    /**
+     * This is the default constructor for Tile.
+     * It sets the selection status to false.
+     */
     public Tile()
     {
         selected = false;
     }
 
-    // Parameterized constructor
+    /**
+     * This is the parameterized constructor
+     * for Tile. It assigns a number to Tile,
+     * and sets the selection status to false.
+     * @param number Number to assign to Tile
+     */
     public Tile(int number)
     {
         this.number = number;
         selected = false;
     }
 
-    // Various getters & setters
+    /**
+     * @return int Number assigned to Tile
+     */
     public int getNumber() { return number; }
 
+    /**
+     * @param number Number to assign to Tile
+     */
     public void setNumber(int number) { this.number = number; }
 
+    /**
+     * @return boolean Selection status of Tile
+     */
     public boolean getSelected() { return selected; }
 
+    /**
+     * @param selected Selection status to assign to Tile
+     */
     public void setSelected(boolean selected) { this.selected = selected; }
 
-    // Returns tile value as a string
+    /**
+     * This method is used to return
+     * the Tile number as a string.
+     * @return String Tile number as a string
+     */
     public String toString()
     {
         return Integer.toString(number);
