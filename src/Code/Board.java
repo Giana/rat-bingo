@@ -15,21 +15,35 @@ public class Board
     private ArrayList<Integer> numbers = new ArrayList<>();   // Holds numbers on board
     private Tile[][] map;                                     // Holds all tiles in matrix
 
-    // Default constructor
+    /**
+     * This is the default constructor for Board.
+     * It creates a new map (2D array) of Tiles,
+     * and generates a number for each Tile in
+     * the map.
+     */
     public Board()
     {
         map = new Tile[size][size];
         numbersGenerator();
     }
 
-    // Getters & setters
+    /**
+     * @return int Size of Board
+     */
     public int getSize() { return size; }
 
-    public ArrayList<Integer> getNumbers() { return numbers; }
-
+    /**
+     * @return int Size of Board
+     */
     public Tile[][] getMap() { return map; }
 
-    // Randomly selects numbers for the board
+    /**
+     * This method is used to fill
+     * the Board (map of Tiles) with
+     * numbers. The range of numbers
+     * is dependent on whether the
+     * column is B, I, N, G, or O.
+     */
     public void numbersGenerator()
     {
         int b = 0, i = 0, n = 0, g = 0, o = 0;
