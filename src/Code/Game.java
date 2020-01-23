@@ -27,7 +27,17 @@ public class Game
     private ArrayList<Integer> gameData = new ArrayList<>();   // List for game stats
     private boolean soundStatus = true;                        // If sound is on/muted
 
-    // Default constructor - for testing where mode is irrelevant
+    /**
+     * This is the default constructor for Game.
+     * It creates new instances of a Player and
+     * an NPC, and generates a new Board for the
+     * Player, and a new Board for the NPC. It
+     * resets the Player and NPC Boards back to
+     * default, as well as the call lists. It
+     * creates a new shuffled list of numbers to
+     * call, and adds the free space to the list
+     * of numbers already called.
+     */
     public Game()
     {
         playerBoard = new Board();
@@ -39,7 +49,19 @@ public class Game
         called.add("FREE");
     }
 
-    // Parameterized constructor
+    /**
+     * This is the parameterized constructor
+     * for Game. It creates new instances of a
+     * Player and an NPC, and generates a new
+     * Board for the Player, and a new Board for
+     * the NPC. It resets the Player and NPC
+     * Boards back to default, as well as the call
+     * lists. It creates a new shuffled list of
+     * numbers to call, and adds the free space to
+     * the list of numbers already called. It also
+     * assigns a game mode to the Game.
+     * @param mode Game mode to assign to Game
+     */
     public Game(String mode)
     {
         playerBoard = new Board();
@@ -52,33 +74,49 @@ public class Game
         called.add("FREE");
     }
 
-    // Getters & setters
+    /**
+     * @return Board Player's Board
+     */
     public Board getPlayerBoard() { return playerBoard; }
 
+    /**
+     * @return Board NPC's Board
+     */
     public Board getNpcBoard() { return npcBoard; }
 
-    public String getMode() { return mode; }
-
+    /**
+     * @param mode Mode to assign to Game
+     */
     public void setMode(String mode) { this.mode = mode; }
 
+    /**
+     * @return ArrayList<Integer> List of numbers to call
+     */
     public ArrayList<Integer> getToCall() { return toCall; }
 
+    /**
+     * @return ArrayList<Integer> List of numbers called
+     */
     public ArrayList<String> getCalled() { return called; }
 
-    public NPC getNpcPlayer() { return npcPlayer; }
-
-    public void setNpcPlayer(NPC npcPlayer) { this.npcPlayer = npcPlayer; }
-
+    /**
+     * @return Player Game's Player
+     */
     public Player getPlayer() { return player; }
 
-    public void setPlayer(Player player) { this.player = player; }
+    /**
+     * @return NPC Game's NPC player
+     */
+    public NPC getNpcPlayer() { return npcPlayer; }
 
-    public ArrayList<Integer> getGameData() { return gameData; }
-
-    public void setGameData(ArrayList<Integer> gameData) { this.gameData = gameData; }
-
+    /**
+     * @return boolean Status of sound (toggled on/off)
+     */
     public boolean getSoundStatus() { return soundStatus; }
 
+    /**
+     * @param soundStatus Sound status to assign to Game (toggle on/off)
+     */
     public void setSoundStatus(boolean soundStatus) { this.soundStatus = soundStatus; }
 
     // Checks a single row for a horizontal win
