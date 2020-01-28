@@ -119,7 +119,14 @@ public class Game
      */
     public void setSoundStatus(boolean soundStatus) { this.soundStatus = soundStatus; }
 
-    // Checks a single row for a horizontal win
+    /**
+     * This method is used to check a given row
+     * on a Board to see if each Tile is selected
+     * and called, indicating a horizontal win.
+     * @param board Board to be checked
+     * @param row Row to be checked
+     * @return boolean If row is a win
+     */
     public boolean checkRow(Board board, int row)
     {
         int size = board.getSize();
@@ -136,7 +143,13 @@ public class Game
         return true;
     }
 
-    // Checks for a horizontal win
+    /**
+     * This method is used to check each row on
+     * a Board for a horizontal win.
+     * @param board Board to be checked
+     * @return String "N/A" if no win, "horizontal"
+     *         + row if win
+     */
     public String checkHorizontal(Board board)
     {
         int size = board.getSize();
@@ -152,7 +165,14 @@ public class Game
         return "N/A";
     }
 
-    // Checks a single column for a vertical win
+    /**
+     * This method is used to check a given column
+     * on a Board to see if each Tile is selected
+     * and called, indicating a vertical win.
+     * @param board Board to be checked
+     * @param column Column to be checked
+     * @return boolean If column is a win
+     */
     public boolean checkColumn(Board board, int column)
     {
         int size = board.getSize();
@@ -169,7 +189,13 @@ public class Game
         return true;
     }
 
-    // Checks for a vertical win
+    /**
+     * This method is used to check each column on
+     * a Board for a vertical win.
+     * @param board Board to be checked
+     * @return String "N/A" if no win, "vertical"
+     *         + column if win
+     */
     public String checkVertical(Board board)
     {
         int size = board.getSize();
@@ -185,7 +211,13 @@ public class Game
         return "N/A";
     }
 
-    // Check for a diagonal win
+    /**
+     * This method is used to check each diagonal
+     * on a Board for a diagonal win.
+     * @param board Board to be checked
+     * @return String "N/A" if no win, "diagonal"
+     *         + direction(s) if win
+     */
     public String checkDiagonal(Board board)
     {
         int size = board.getSize();
@@ -246,7 +278,13 @@ public class Game
         }
     }
 
-    // Check for an X win
+    /**
+     * This method is used to check both
+     * diagonals on a Board for an X win.
+     * @param board Board to be checked
+     * @return String "N/A" if no win,
+     *         "x" if win
+     */
     public String checkX(Board board)
     {
         String state = checkDiagonal(board);
@@ -262,7 +300,13 @@ public class Game
         }
     }
 
-    // Check for a four corners win
+    /**
+     * This method is used to check all 4
+     * corners on a Board for a corners win.
+     * @param board Board to be checked
+     * @return String "N/A" if no win,
+     *         "corners" if win
+     */
     public String checkCorners(Board board)
     {
         int lowerBound = 0;
@@ -284,7 +328,13 @@ public class Game
         return state;
     }
 
-    // Check for a T win
+    /**
+     * This method is used to check row
+     * 0 and column 2 for a T win.
+     * @param board Board to be checked
+     * @return String "N/A" if no win,
+     *         "t" if win
+     */
     public String checkT(Board board)
     {
         int row = 0;
@@ -300,7 +350,13 @@ public class Game
         return "N/A";
     }
 
-    // Check for L win
+    /**
+     * This method is used to check row
+     * 4 and column 0 for an L win.
+     * @param board Board to be checked
+     * @return String "N/A" if no win,
+     *         "l" if win
+     */
     public String checkL(Board board)
     {
         int row = 4;
@@ -316,7 +372,13 @@ public class Game
         return "N/A";
     }
 
-    // Check for all win
+    /**
+     * This method is used to check every
+     * Tile on the Board for an all win.
+     * @param board Board to be checked
+     * @return String "N/A" if no win,
+     *         "all" if win
+     */
     public String checkAll(Board board)
     {
         int size = board.getSize();
@@ -332,7 +394,11 @@ public class Game
         return "all";
     }
 
-    // Resets player and NPC boards to have no calls/wins, resets call lists
+    /**
+     * This method is used to reset the Player
+     * and NPC Boards to have no selections. It
+     * also clears the toCall and called lists.
+     */
     public void reset()
     {
         int size = playerBoard.getSize();
@@ -350,7 +416,14 @@ public class Game
         called.clear();
     }
 
-    // Checks a board for a win based on the game mode
+    /**
+     * This method is used to check a Board
+     * for a win based on the game mode.
+     * @param board Board to be checked
+     * @return String "N/A" if no win,
+     *         designated String for win
+     *         variety if win
+     */
     public String checkWin(Board board)
     {
         String state = "N/A";
@@ -386,7 +459,11 @@ public class Game
         return state;
     }
 
-    // Initializes calls list
+    /**
+     * This method is used to initialize
+     * toCall to have numbers 1 through
+     * 75, shuffled.
+     */
     public void callsGenerator()
     {
         // Add possible numbers to calls list (1 - 75)
@@ -399,7 +476,12 @@ public class Game
         Collections.shuffle(toCall);
     }
 
-    // Returns first number from the toCall list (pre-shuffled)
+    /**
+     * This method is used to return the
+     * first number in toCall, remove it
+     * from toCall, and add it to called.
+     * @return int Number called
+     */
     public int runCaller()
     {
         int calling = toCall.get(0);
@@ -412,7 +494,12 @@ public class Game
         return calling;
     }
 
-    // Saves the total wins/losses/dollars/rats of Player for the game
+    /**
+     * This method is used to save the total wins,
+     * losses, dollars, and rats for Player into
+     * the Save.txt file.
+     * @throws IOException On file error
+     */
     public void saveGame() throws IOException
     {
         FileWriter fileWriter = new FileWriter("Saves/Save.txt");
@@ -435,7 +522,12 @@ public class Game
         printWriter.close();
     }
 
-    // Loads the total wins/losses/dollars/rats of Player for the game
+    /**
+     * This method is used to load the total wins,
+     * losses, dollars, and rats for Player from
+     * the Save.txt file, into Player variables.
+     * @throws IOException On file error
+     */
     public void loadGame() throws IOException
     {
         File saveFile = new File("Saves/Save.txt");
@@ -464,7 +556,11 @@ public class Game
         }
     }
 
-    // Deletes items in save file
+    /**
+     * This method is used to clear the Save.txt
+     * file by replacing every value with a 0.
+     * @throws IOException On file error
+     */
     public void deleteSave() throws IOException
     {
         FileWriter fileWriter = new FileWriter("Saves/Save.txt");
