@@ -9,17 +9,35 @@ package Code;
  */
 public class NPC
 {
-    // Default constructor
+    /**
+     * This is the default constructor for NPC.
+     */
     public NPC() { }
 
-    // Selects location on board depending on circumstances, during game
+    /**
+     * This method is used to select a Tile on the Board
+     * based on its location for the NPC. It is logically
+     * equivalent to a Player clicking on a Tile during a
+     * Game, indicating that they are selecting that Tile.
+     * @param currentGame Current Game
+     * @param x X-intercept of Tile on Board
+     * @param y Y-intercept of Tile on Board
+     */
     public void selectTile(Game currentGame, int x, int y)
     {
         currentGame.getNpcBoard().getMap()[x][y].setSelected(true);
     }
 
-    // Knowing the number called, search the board for it (and select if present)
-    public void scanBoard(int called, Game currentGame)
+    /**
+     * This method is used to scan the Board for a Tile with
+     * the number called for the NPC. That Tile is then selected
+     * if found. It is logically equivalent to a Player checking
+     * their Board for the number called, and clicking on the
+     * Tile if it is present.
+     * @param currentGame Current Game
+     * @param called Number called
+     */
+    public void scanBoard(Game currentGame, int called)
     {
         int size = currentGame.getNpcBoard().getSize();
         Board board = currentGame.getNpcBoard();
@@ -92,6 +110,13 @@ public class NPC
         }
     }
 
+    /**
+     * This method is used to check for a win for the
+     * NPC. It is logically equivalent to a Player
+     * checking their Board for "bingo".
+     * @param currentGame Current Game
+     * @return boolean If win is found
+     */
     // Checks win state and returns if bingo has been achieved
     public boolean checkForBingo(Game currentGame)
     {

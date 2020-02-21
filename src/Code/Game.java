@@ -17,13 +17,13 @@ import java.util.Scanner;
  */
 public class Game
 {
-    private Board playerBoard;                                 // Board for the player
+    private Board playerBoard;                                 // Board for the Player
     private Board npcBoard;                                    // Board for the NPC
     private String mode;                                       // Game mode
     private ArrayList<Integer> toCall = new ArrayList<>();     // List of random numbers to call
     private ArrayList<String> called = new ArrayList<>();      // List of numbers already called
-    private NPC npcPlayer;                                     // NPC playing against player
-    private Player player;                                     // The player
+    private NPC npcPlayer;                                     // NPC playing against Player
+    private Player player;                                     // The Player
     private ArrayList<Integer> gameData = new ArrayList<>();   // List for game stats
     private boolean soundStatus = true;                        // If sound is on/muted
 
