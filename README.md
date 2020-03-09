@@ -2,11 +2,11 @@
 
 A Java-made desktop game. It's traditional Bingo with a rat theme!
 
-![Main menu](https://ibb.co/GpKFck0)
+![Main menu](https://i.ibb.co/3dDkBW7/rat-Bingo-Main-Menu.png)
 
-![Gameplay](https://ibb.co/BfrvWGG)
+![Gameplay](https://i.ibb.co/S6dHYcc/rat-Bingo-Gameplay.png)
 
-![Rat Shop](https://ibb.co/vdWC5V6)
+![Rat Shop](https://i.ibb.co/wQqZHBF/rat-Bingo-Shop.png)
 
 ## Version
 The game is yet to be officially "released". I'm stil working out some minor quirks.
