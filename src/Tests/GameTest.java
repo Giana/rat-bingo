@@ -2,19 +2,21 @@ package Tests;
 
 import Code.Board;
 import Code.Game;
-import Code.Player;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
+/**
+ * The Rat Bingo program is a bingo game with a rat theme.
+ *
+ * @author  Giana (Github: G-i-a-n-a - Website: Giana.dev)
+ * @version 1.0
+ * @since   2019-01-??
+ */
 public class GameTest
 {
     @Test // Test checkRow()
