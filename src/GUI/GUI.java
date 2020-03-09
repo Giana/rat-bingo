@@ -2741,7 +2741,7 @@ public class GUI
                 }
 
                 // NPC plays game
-                currentGame.getNpcPlayer().scanBoard(called, currentGame);
+                currentGame.getNpcPlayer().scanBoard(currentGame, called);
 
                 // If NPC won
                 if(currentGame.getNpcPlayer().checkForBingo(currentGame))
