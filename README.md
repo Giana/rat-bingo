@@ -9,7 +9,7 @@ A Java-made desktop game. It's traditional Bingo with a rat theme!
 ![Rat Shop](https://i.ibb.co/wQqZHBF/rat-Bingo-Shop.png)
 
 ## Version
-The game is yet to be officially "released". I'm stilL working out some minor quirks.
+The game is yet to be officially "released". I'm still working out some minor quirks.
 
 ## To Launch
 Check back soon for instructions on how to play!
