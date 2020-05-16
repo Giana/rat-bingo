@@ -1233,7 +1233,7 @@
                       <editable value="false"/>
                       <font name="Segoe MDL2 Assets" size="16" style="1"/>
                       <foreground color="-16750977"/>
-                      <text value="The last update was on May 15th, 2020. This is version 1.0. Click here to check my website for an update."/>
+                      <text value="The last update was on May 16th, 2020. This is version 1.0.1. Click here to check my website for an update."/>
                     </properties>
                   </component>
                   <vspacer id="2f2d7">

@@ -5,7 +5,6 @@ import main.Code.Game;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.*;
-import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URI;
@@ -17,8 +16,7 @@ import javax.swing.*;
  * The Rat Bingo program is a bingo game with a rat theme.
  *
  * @author  Giana (Github: G-i-a-n-a - Website: Giana.dev)
- * @version 1.0
- * @since   2020-05-15
+ * @version 1.0.1
  */
 public class GUI
 {

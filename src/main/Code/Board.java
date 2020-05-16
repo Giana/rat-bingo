@@ -6,8 +6,7 @@ import java.util.ArrayList;
  * The Rat Bingo program is a bingo game with a rat theme.
  *
  * @author  Giana (Github: G-i-a-n-a - Website: Giana.dev)
- * @version 1.0
- * @since   2020-05-15
+ * @version 1.0.1
  */
 public class Board
 {
