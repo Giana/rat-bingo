@@ -1,6 +1,6 @@
 package GUI;
 
-import Code.Game;
+import main.Code.Game;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import javax.swing.*;
 
@@ -17,7 +18,7 @@ import javax.swing.*;
  *
  * @author  Giana (Github: G-i-a-n-a - Website: Giana.dev)
  * @version 1.0
- * @since   2019-01-??
+ * @since   2020-05-15
  */
 public class GUI
 {
@@ -193,6 +194,11 @@ public class GUI
     private JLabel botWinsLogoImage;
     private JButton cornersButton;
 
+    URL callerSoundURL, clickSound1URL, clickSound2URL, defeatSoundURL, purchaseSoundURL,
+        ratSqueakSoundURL, saveLoadSoundURL, startGameSoundURL, victorySoundURL;
+
+    Icon cornersIcon, diagonalIcon, horizontalIcon, verticalIcon, lIcon, tIcon, xIcon, allIcon;
+
     private Game currentGame = new Game();
     private String currentMode;
     Thread backgroundProcesses;
@@ -200,6 +206,16 @@ public class GUI
 
     public GUI()
     {
+        callerSoundURL = getClass().getResource("/Sounds/CallerSound.wav");
+        clickSound1URL = getClass().getResource("/Sounds/ClickSound1.wav");
+        clickSound2URL = getClass().getResource("/Sounds/ClickSound2.wav");
+        defeatSoundURL = getClass().getResource("/Sounds/DefeatSound.wav");
+        purchaseSoundURL = getClass().getResource("/Sounds/PurchaseSound.wav");
+        ratSqueakSoundURL = getClass().getResource("/Sounds/RatSqueakSound.wav");
+        saveLoadSoundURL = getClass().getResource("/Sounds/SaveLoadSound.wav");
+        startGameSoundURL = getClass().getResource("/Sounds/StartGameSound.wav");
+        victorySoundURL = getClass().getResource("/Sounds/VictorySound.wav");
+
         /*
          * This listener outlines what happens if you click the Rat
          * Bingo logo on the top of the left panel.
@@ -1384,10 +1400,17 @@ public class GUI
          */
         hoodedRatButton.addActionListener(e ->
         {
-            if(makePurchase(5))
+            try
             {
-                changeHooded();
-                displayPurchasedScreen("hooded");
+                if(makePurchase(5))
+                {
+                    changeHooded();
+                    displayPurchasedScreen("hooded");
+                }
+            }
+            catch(MalformedURLException | URISyntaxException ex)
+            {
+                ex.printStackTrace();
             }
         });
 
@@ -1397,10 +1420,17 @@ public class GUI
          */
         agoutiRatButton.addActionListener(e ->
         {
-            if(makePurchase(10))
+            try
             {
-                changeAgouti();
-                displayPurchasedScreen("agouti");
+                if(makePurchase(10))
+                {
+                    changeAgouti();
+                    displayPurchasedScreen("agouti");
+                }
+            }
+            catch(MalformedURLException | URISyntaxException ex)
+            {
+                ex.printStackTrace();
             }
         });
 
@@ -1410,10 +1440,17 @@ public class GUI
          */
         berkshireRatButton.addActionListener(e ->
         {
-            if(makePurchase(15))
+            try
             {
-                changeBerkshire();
-                displayPurchasedScreen("berkshire");
+                if(makePurchase(15))
+                {
+                    changeBerkshire();
+                    displayPurchasedScreen("berkshire");
+                }
+            }
+            catch(MalformedURLException | URISyntaxException ex)
+            {
+                ex.printStackTrace();
             }
         });
 
@@ -1423,10 +1460,17 @@ public class GUI
          */
         roanRatButton.addActionListener(e ->
         {
-            if(makePurchase(20))
+            try
             {
-                changeRoan();
-                displayPurchasedScreen("roan");
+                if(makePurchase(20))
+                {
+                    changeRoan();
+                    displayPurchasedScreen("roan");
+                }
+            }
+            catch(MalformedURLException | URISyntaxException ex)
+            {
+                ex.printStackTrace();
             }
         });
 
@@ -1436,10 +1480,17 @@ public class GUI
          */
         albinoRatButton.addActionListener(e ->
         {
-            if(makePurchase(25))
+            try
             {
-                changeAlbino();
-                displayPurchasedScreen("albino");
+                if(makePurchase(25))
+                {
+                    changeAlbino();
+                    displayPurchasedScreen("albino");
+                }
+            }
+            catch(MalformedURLException | URISyntaxException ex)
+            {
+                ex.printStackTrace();
             }
         });
 
@@ -1449,10 +1500,17 @@ public class GUI
          */
         siameseRatButton.addActionListener(e ->
         {
-            if(makePurchase(30))
+            try
             {
-                changeSiamese();
-                displayPurchasedScreen("siamese");
+                if(makePurchase(30))
+                {
+                    changeSiamese();
+                    displayPurchasedScreen("siamese");
+                }
+            }
+            catch(MalformedURLException | URISyntaxException ex)
+            {
+                ex.printStackTrace();
             }
         });
 
@@ -1462,10 +1520,17 @@ public class GUI
          */
         hairlessRatButton.addActionListener(e ->
         {
-            if(makePurchase(35))
+            try
             {
-                changeHairless();
-                displayPurchasedScreen("hairless");
+                if(makePurchase(35))
+                {
+                    changeHairless();
+                    displayPurchasedScreen("hairless");
+                }
+            }
+            catch(MalformedURLException | URISyntaxException ex)
+            {
+                ex.printStackTrace();
             }
         });
 
@@ -1475,10 +1540,17 @@ public class GUI
          */
         russianBlueRatButton.addActionListener(e ->
         {
-            if(makePurchase(40))
+            try
             {
-                changeRussianBlue();
-                displayPurchasedScreen("russian blue");
+                if(makePurchase(40))
+                {
+                    changeRussianBlue();
+                    displayPurchasedScreen("russian blue");
+                }
+            }
+            catch(MalformedURLException | URISyntaxException ex)
+            {
+                ex.printStackTrace();
             }
         });
 
@@ -1488,10 +1560,17 @@ public class GUI
          */
         patchworkRatButton.addActionListener(e ->
         {
-            if(makePurchase(45))
+            try
             {
-                changePatchwork();
-                displayPurchasedScreen("patchwork");
+                if(makePurchase(45))
+                {
+                    changePatchwork();
+                    displayPurchasedScreen("patchwork");
+                }
+            }
+            catch(MalformedURLException | URISyntaxException ex)
+            {
+                ex.printStackTrace();
             }
         });
 
@@ -1501,10 +1580,17 @@ public class GUI
          */
         manxRatButton.addActionListener(e ->
         {
-            if(makePurchase(50))
+            try
             {
-                changeManx();
-                displayPurchasedScreen("manx");
+                if(makePurchase(50))
+                {
+                    changeManx();
+                    displayPurchasedScreen("manx");
+                }
+            }
+            catch(MalformedURLException | URISyntaxException ex)
+            {
+                ex.printStackTrace();
             }
         });
 
@@ -2407,26 +2493,26 @@ public class GUI
      */
     public void changePurchasedScreenItems(String rat)
     {
-        Icon hoodedRatImage = new ImageIcon("src/Images/HoodedRat.png");
-        Icon hoodedRatLogo = new ImageIcon("src/Images/HoodedLogo.png");
-        Icon agoutiRatImage = new ImageIcon("src/Images/AgoutiRat.png");
-        Icon agoutiRatLogo = new ImageIcon("src/Images/AgoutiLogo.png");
-        Icon berkshireRatImage = new ImageIcon("src/Images/BerkshireRat.png");
-        Icon berkshireRatLogo = new ImageIcon("src/Images/BerkshireLogo.png");
-        Icon roanRatImage = new ImageIcon("src/Images/RoanRat.png");
-        Icon roanRatLogo = new ImageIcon("src/Images/RoanLogo.png");
-        Icon albinoRatImage = new ImageIcon("src/Images/AlbinoRat.png");
-        Icon albinoRatLogo = new ImageIcon("src/Images/AlbinoLogo.png");
-        Icon siameseRatImage = new ImageIcon("src/Images/SiameseRat.png");
-        Icon siameseRatLogo = new ImageIcon("src/Images/SiameseLogo.png");
-        Icon hairlessRatImage = new ImageIcon("src/Images/HairlessRat.png");
-        Icon hairlessRatLogo = new ImageIcon("src/Images/HairlessLogo.png");
-        Icon russianBlueRatImage = new ImageIcon("src/Images/RussianBlueRat.png");
-        Icon russianBlueRatLogo = new ImageIcon("src/Images/RussianBlueLogo.png");
-        Icon patchworkRatImage = new ImageIcon("src/Images/PatchworkRat.png");
-        Icon patchworkRatLogo = new ImageIcon("src/Images/PatchworkLogo.png");
-        Icon manxRatImage = new ImageIcon("src/Images/ManxRat.png");
-        Icon manxRatLogo = new ImageIcon("src/Images/ManxLogo.png");
+        Icon hoodedRatImage = new ImageIcon(getClass().getResource("/Images/HoodedRat.png"));
+        Icon hoodedRatLogo = new ImageIcon(getClass().getResource("/Images/HoodedLogo.png"));
+        Icon agoutiRatImage = new ImageIcon(getClass().getResource("/Images/AgoutiRat.png"));
+        Icon agoutiRatLogo = new ImageIcon(getClass().getResource("/Images/AgoutiLogo.png"));
+        Icon berkshireRatImage = new ImageIcon(getClass().getResource("/Images/BerkshireRat.png"));
+        Icon berkshireRatLogo = new ImageIcon(getClass().getResource("/Images/BerkshireLogo.png"));
+        Icon roanRatImage = new ImageIcon(getClass().getResource("/Images/RoanRat.png"));
+        Icon roanRatLogo = new ImageIcon(getClass().getResource("/Images/RoanLogo.png"));
+        Icon albinoRatImage = new ImageIcon(getClass().getResource("/Images/AlbinoRat.png"));
+        Icon albinoRatLogo = new ImageIcon(getClass().getResource("/Images/AlbinoLogo.png"));
+        Icon siameseRatImage = new ImageIcon(getClass().getResource("/Images/SiameseRat.png"));
+        Icon siameseRatLogo = new ImageIcon(getClass().getResource("/Images/SiameseLogo.png"));
+        Icon hairlessRatImage = new ImageIcon(getClass().getResource("/Images/HairlessRat.png"));
+        Icon hairlessRatLogo = new ImageIcon(getClass().getResource("/Images/HairlessLogo.png"));
+        Icon russianBlueRatImage = new ImageIcon(getClass().getResource("/Images/RussianBlueRat.png"));
+        Icon russianBlueRatLogo = new ImageIcon(getClass().getResource("/Images/RussianBlueLogo.png"));
+        Icon patchworkRatImage = new ImageIcon(getClass().getResource("/Images/PatchworkRat.png"));
+        Icon patchworkRatLogo = new ImageIcon(getClass().getResource("/Images/PatchworkLogo.png"));
+        Icon manxRatImage = new ImageIcon(getClass().getResource("/Images/ManxRat.png"));
+        Icon manxRatLogo = new ImageIcon(getClass().getResource("/Images/ManxLogo.png"));
 
         switch(rat)
         {
@@ -2772,14 +2858,14 @@ public class GUI
      */
     public void setGameModeIcon()
     {
-        Icon cornersIcon = new ImageIcon("src/Images/CornersLogo.png");
-        Icon diagonalIcon = new ImageIcon("src/Images/DiagonalLogo.png");
-        Icon horizontalIcon = new ImageIcon("src/Images/HorizontalLogo.png");
-        Icon verticalIcon = new ImageIcon("src/Images/VerticalLogo.png");
-        Icon lIcon = new ImageIcon("src/Images/LLogo.png");
-        Icon tIcon = new ImageIcon("src/Images/TLogo.png");
-        Icon xIcon = new ImageIcon("src/Images/XLogo.png");
-        Icon allIcon = new ImageIcon("src/Images/AllLogo.png");
+        cornersIcon = new ImageIcon(getClass().getResource("/Images/CornersLogo.png"));
+        diagonalIcon = new ImageIcon(getClass().getResource("/Images/DiagonalLogo.png"));
+        horizontalIcon = new ImageIcon(getClass().getResource("/Images/HorizontalLogo.png"));
+        verticalIcon = new ImageIcon(getClass().getResource("/Images/VerticalLogo.png"));
+        lIcon = new ImageIcon(getClass().getResource("/Images/LLogo.png"));
+        tIcon = new ImageIcon(getClass().getResource("/Images/TLogo.png"));
+        xIcon = new ImageIcon(getClass().getResource("/Images/XLogo.png"));
+        allIcon = new ImageIcon(getClass().getResource("/Images/AllLogo.png"));
 
         switch(currentMode)
         {
@@ -2820,16 +2906,9 @@ public class GUI
      */
     public void clickSound1()
     {
-        try
-        {
-            URL soundByte = new File("src/Sounds/ClickSound1.wav").toURI().toURL();
-            java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
-            clickSound.play();
-        }
-        catch(MalformedURLException e1)
-        {
-            e1.printStackTrace();
-        }
+        URL soundByte = clickSound1URL;
+        java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
+        clickSound.play();
     }
 
     /**
@@ -2838,16 +2917,9 @@ public class GUI
      */
     public void clickSound2()
     {
-        try
-        {
-            URL soundByte = new File("src/Sounds/ClickSound2.wav").toURI().toURL();
-            java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
-            clickSound.play();
-        }
-        catch(MalformedURLException e1)
-        {
-            e1.printStackTrace();
-        }
+        URL soundByte = clickSound2URL;
+        java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
+        clickSound.play();
     }
 
     /**
@@ -2856,16 +2928,9 @@ public class GUI
      */
     public void victorySound()
     {
-        try
-        {
-            URL soundByte = new File("src/Sounds/VictorySound.wav").toURI().toURL();
-            java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
-            clickSound.play();
-        }
-        catch(MalformedURLException e1)
-        {
-            e1.printStackTrace();
-        }
+        URL soundByte = victorySoundURL;
+        java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
+        clickSound.play();
     }
 
     /**
@@ -2874,16 +2939,9 @@ public class GUI
      */
     public void defeatSound()
     {
-        try
-        {
-            URL soundByte = new File("src/Sounds/DefeatSound.wav").toURI().toURL();
-            java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
-            clickSound.play();
-        }
-        catch(MalformedURLException e1)
-        {
-            e1.printStackTrace();
-        }
+        URL soundByte = defeatSoundURL;
+        java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
+        clickSound.play();
     }
 
     /**
@@ -2892,16 +2950,9 @@ public class GUI
      */
     public void saveLoadSound()
     {
-        try
-        {
-            URL soundByte = new File("src/Sounds/SaveLoadSound.wav").toURI().toURL();
-            java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
-            clickSound.play();
-        }
-        catch(MalformedURLException e1)
-        {
-            e1.printStackTrace();
-        }
+        URL soundByte = saveLoadSoundURL;
+        java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
+        clickSound.play();
     }
 
     /**
@@ -2910,16 +2961,9 @@ public class GUI
      */
     public void ratSqueakSound()
     {
-        try
-        {
-            URL soundByte = new File("src/Sounds/RatSqueakSound.wav").toURI().toURL();
-            java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
-            clickSound.play();
-        }
-        catch(MalformedURLException e1)
-        {
-            e1.printStackTrace();
-        }
+        URL soundByte = ratSqueakSoundURL;
+        java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
+        clickSound.play();
     }
 
     /**
@@ -2928,16 +2972,9 @@ public class GUI
      */
     public void startGameSound()
     {
-        try
-        {
-            URL soundByte = new File("src/Sounds/StartGameSound.wav").toURI().toURL();
-            java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
-            clickSound.play();
-        }
-        catch(MalformedURLException e1)
-        {
-            e1.printStackTrace();
-        }
+        URL soundByte = startGameSoundURL;
+        java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
+        clickSound.play();
     }
 
     /**
@@ -2946,16 +2983,9 @@ public class GUI
      */
     public void purchaseSound()
     {
-        try
-        {
-            URL soundByte = new File("src/Sounds/PurchaseSound.wav").toURI().toURL();
-            java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
-            clickSound.play();
-        }
-        catch(MalformedURLException e1)
-        {
-            e1.printStackTrace();
-        }
+        URL soundByte = purchaseSoundURL;
+        java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
+        clickSound.play();
     }
 
     /**
@@ -2964,16 +2994,9 @@ public class GUI
      */
     public void callerSound()
     {
-        try
-        {
-            URL soundByte = new File("src/Sounds/CallerSound.wav").toURI().toURL();
-            java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
-            clickSound.play();
-        }
-        catch(MalformedURLException e1)
-        {
-            e1.printStackTrace();
-        }
+        URL soundByte = callerSoundURL;
+        java.applet.AudioClip clickSound = java.applet.Applet.newAudioClip(soundByte);
+        clickSound.play();
     }
 
     /**
@@ -2983,8 +3006,7 @@ public class GUI
      * @param amount Amount of money to deduct
      * @return boolean Purchase success/failure
      */
-    public boolean makePurchase(int amount)
-    {
+    public boolean makePurchase(int amount) throws MalformedURLException, URISyntaxException {
         establishFunds();        // Useful if buying without loading or playing
         establishCollection();
 

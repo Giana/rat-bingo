@@ -1,8 +1,8 @@
 package Tests;
 
-import Code.Board;
-import Code.Game;
-import Code.Tile;
+import main.Code.Board;
+import main.Code.Game;
+import main.Code.Tile;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -13,7 +13,7 @@ import org.junit.Test;
  *
  * @author  Giana (Github: G-i-a-n-a - Website: Giana.dev)
  * @version 1.0
- * @since   2019-01-??
+ * @since   2020-05-15
  */
 public class TileTest
 {
